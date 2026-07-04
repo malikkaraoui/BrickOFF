@@ -20,5 +20,20 @@
     "_duplicates_detail_file": "duplicates_detail.json",
     "dataset": "gdansk_det",
     "checked_at": "2026-07-04T19:18:35.604456+00:00"
+  },
+  "legobricks_hf": {
+    "dataset": "legobricks_hf",
+    "format": "parquet (images embarquées)",
+    "total_images": 400000,
+    "sampled_decoded": 2550,
+    "decode_failures": [],
+    "classes": {
+      "count": 1000,
+      "images_min": 400,
+      "images_max": 400,
+      "images_median": 400.0,
+      "under_50_images": []
+    },
+    "checked_at": "2026-07-04T19:28:38.281524+00:00"
   }
 }
