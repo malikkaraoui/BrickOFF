@@ -11,8 +11,8 @@
 | 0.1 Licence Rebrickable | ⏸ v0 contesté | `legal/REBRICKABLE_LICENSE.md` | **AUTORISÉ AVEC CONDITIONS** ("any purpose, including commercial", attribution appréciée non obligatoire) — email de confirmation à envoyer (action PO) |
 | 0.2 Marque LEGO & nom | ⏸ v0 contesté | `legal/BRAND_COMPLIANCE.md` | **"BrickOFF" viable** (pas de "LEGO" dans le nom, "brick" générique, nom libre sur les stores) — clearance EUIPO/INPI à avancer |
 | 0.3 Licences ML | ⏸ v0 contesté | `legal/ML_LICENSES.md` | Chaîne permissive confirmée (LDraw CC BY, dataset Apache-2.0, YOLOX/RT-DETR Apache-2.0) **SAUF** Brickognize (non-commercial → gelé) et dataset de détection (non identifié → bloquant) |
-| 0.4 Comptes & accès | ⏸ **bloqué PO** | — | Nécessite Malik : Apple Developer (99 $/an), compte HF, compte Rebrickable + clé API, choix GPU (local vs cloud ~50–200 €) |
-| 0.5 Environnements | ⬜ | — | Démarre après 0.4 |
+| 0.4 Comptes & accès | 🔶 partiel | — | ✅ Compte Apple existant (confirmé PO 2026-07-04). Restent : vérifier l'adhésion Developer Program active, compte HF, compte Rebrickable + clé API, choix GPU (local vs cloud ~50–200 €) |
+| 0.5 Environnements | 🔶 partiel | — | ✅ Xcode déjà installé (confirmé PO 2026-07-04). Restent : env Python ML, devices de test physiques |
 
 ### Découvertes majeures (remontées au plan)
 
@@ -50,6 +50,15 @@ mieux qu'un document parfait invisible — la contestation fait partie du livrab
 | R9 | Corriger les plans B Rebrickable (proxy maison, droit sui generis UE) | Majeur 8 | IA |
 | R10 | Amender doc 13 : géométrie dans les alternatives de slots + stratégie de validation | Majeur 12 | IA (avant V1.5) |
 | R11 | Mineurs 15–19 (citations, étiquetages, règle assets CC0, vocabulaire marketing) | Mineurs | IA |
+
+### Confirmations product owner (2026-07-04, oral)
+
+- Compte Apple existant ; Xcode installé sur la machine de dev.
+- Séquencement re-confirmé : **iOS d'abord, bascule Android seulement une fois iOS validé** (aligné D01).
+- Brevets génération d'instructions : position PO = analyser et **contourner** (design-around,
+  innovation, pas de copie) → R6 orientée liberté d'exploitation + stratégie de contournement.
+- Piste design (icône, assets stores) lancée en parallèle dans une session Claude dédiée :
+  brief autonome dans `docs/design/BRIEF_CLAUDE_DESIGN.md`.
 
 ### Écarts au plan
 
