@@ -36,7 +36,9 @@
 | [D05](D05_METHODO_ENTRAINEMENT.md) | Méthodologie entraînement | **Le doc 14 gouverne** : audit dataset obligatoire, 6 itérations max, voie synthétique, portes de sortie. CH-2 reste la structure de jalons | ✅ Tranché |
 | [D06](D06_GENERATION.md) | Génération de constructions | Roadmap du doc 13 **officialisée** : V1 = matching seul ; V1.5 = blueprints (A1) + équivalences (A2) ; A3 = spike V3 | ✅ Tranché |
 | [D07](D07_HYGIENE_DOCUMENTAIRE.md) | Hygiène documentaire | `1RR-brief-design.md` = **hors projet** (autre produit) ; doublons "copie" à supprimer ; `Sans titre.md` = archive historique | ✅ Tranché (actions manuelles restantes) |
-| [D08](D08_NOM_APP.md) | Nom de l'app | **"BrickOFF" = nom de travail candidat n°1**, validation formelle en CH-0 jalon 0.2 | ✅ Tranché (validation CH-0 requise) |
+| [D08](D08_NOM_APP.md) | Nom de l'app | **"BrickOFF" = nom de travail candidat n°1**, validation formelle en CH-0 jalon 0.2 | ✅ Tranché — clearance R8 : voie libre |
+| [D09](D09_VISUELS_SETS.md) | Visuels sets/pièces | **Jamais d'images officielles ni Rebrickable** : vignettes et rendus LDraw maison (même pipeline que l'entraînement) ; carte set sans photo de boîte | ✅ Tranché |
+| [D10](D10_INFRA_ENTRAINEMENT.md) | Infra d'entraînement | **MacBook M1 (PyTorch MPS) en nominal**, cloud en escalade chiffrée (> 48 h projetées) ; iPad M4 = device de test, pas d'entraînement (limite iPadOS) | ✅ Tranché (matériel PO) |
 
 ---
 
