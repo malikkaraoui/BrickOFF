@@ -4,7 +4,7 @@ _hors_projet/
 # Salle blanche — clones de repos tiers étudiés en lecture seule.
 # Jamais commités : certains sont sans licence (tous droits réservés) ;
 # on publie nos notes de conception, pas leur code.
-research/
+/research/
 
 # Données & modèles — trop lourds pour git, stockage externe documenté dans docs/ACCESS.md
 data/raw/
@@ -33,3 +33,4 @@ xcuserdata/
 *.xcuserstate
 build/
 DerivedData/
+.gstack/
