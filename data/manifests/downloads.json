@@ -14,5 +14,11 @@
     "size_bytes": 6469779381,
     "extracted_to": "data/raw/gdansk_cls",
     "downloaded_at": "2026-07-04T19:22:24.001819+00:00"
+  },
+  "legobricks_hf": {
+    "source": "hf:pvrancx/legobricks",
+    "license": "Apache-2.0",
+    "extracted_to": "data/raw/legobricks_hf",
+    "downloaded_at": "2026-07-04T19:27:18.688719+00:00"
   }
 }
