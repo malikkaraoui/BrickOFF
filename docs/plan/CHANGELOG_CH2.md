@@ -17,7 +17,21 @@
   flagger les pièces coupées au bord) et 1.4 (occlusions synthétiques, petites cibles,
   renforcement éclairage chaud).
 
+## 2026-07-05 — Jalon 2.1 (baseline DET v0) : entraînement LANCÉ
+
+- Modèle : SSDLite320-MobileNetV3 (torchvision, BSD-3), mono-classe, backbone pré-entraîné.
+  **Écart au plan consigné** : le plan visait "YOLO nano du framework CH-0" — SSDLite est retenu
+  pour la baseline v0 (compatibilité MPS immédiate, philosophie doc 14 : la baseline localise le
+  problème, elle ne fixe pas l'architecture de production, qui reste YOLOX/RT-DETR par D02).
+- Config : 50 epochs max, early stopping patience 8, batch 16, AdamW 1e-3 cosine, seed 42.
+- Smoke test : 39 s/epoch sur 200 images → run complet projeté 10-14 h. Critère D10 (< 48 h) OK,
+  entraînement local M1 confirmé.
+- Run en cours : `ml/runs/det_v0/` (config.json, history.json par epoch, best.pt).
+  **Pour vérifier en reprenant** : `tail data/…/ml/runs/det_v0/history.json` ou relancer
+  `caffeinate -i .venv/bin/python ml/det/train_baseline.py --epochs 50 --batch 16 --patience 8`
+  (le run repart de zéro — pas de resume implémenté en v0, choix assumé de simplicité baseline).
+
 ### Prochaines étapes
-1. Jalon 1.3 (CH-1) — conversions VOC→YOLO et ImageFolder (avec les recommandations d'audit)
-2. Pipeline de scènes synthétiques multi-pièces (doc 14 §2.1) — le vrai socle DET
-3. Jalon 2.1 — baseline DET sur M1 (D10), time-box 1 semaine, configs par défaut
+1. Attendre la fin du run → rapport EVAL_DET_V0 (critères jalon 2.1 : mAP@50 ≥ 0.85, rappel ≥ 0.90 sur test split)
+2. Pipeline de scènes synthétiques multi-pièces (doc 14 §2.1) — le vrai socle DET du produit
+3. Jalon 1.2 (scope classes) dès réception des CSV Rebrickable (action PO)

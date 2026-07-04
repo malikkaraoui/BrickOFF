@@ -26,13 +26,11 @@
 
 ## 3. Tâches de fond éventuellement en cours (à vérifier en reprenant)
 
-- **Téléchargement datasets** : si `data/raw/legobricks_hf/` est incomplet ou absent du manifest
-  `data/manifests/downloads.json`, relancer `.venv/bin/python data/scripts/01_download.py`
-  (idempotent, reprend où il s'était arrêté).
-- **Contrôles d'intégrité restants** :
-  `.venv/bin/python data/scripts/02_integrity_check.py --dataset-dir data/raw/gdansk_cls --classes-from-dirs`
-  puis idem sur `data/raw/legobricks_hf` (⚠️ format parquet HF : adapter le script ou lire via
-  `datasets`/pandas — les images sont DANS les parquet, pas en fichiers).
+- **ENTRAÎNEMENT BASELINE DET (lancé 2026-07-05, ~10-14 h)** : vérifier `ml/runs/det_v0/history.json`
+  (une ligne JSON par epoch). Si le run est mort avant la fin : relancer
+  `caffeinate -i .venv/bin/python ml/det/train_baseline.py --epochs 50 --batch 16 --patience 8`
+  (repart de zéro, ~12 h). Le Mac doit rester branché secteur, couvercle ouvert.
+- Datasets : acquisition et intégrité TERMINÉES (jalon 1.1 clos) — ne rien relancer.
 
 ## 4. File d'attente des prochaines actions (dans l'ordre)
 
