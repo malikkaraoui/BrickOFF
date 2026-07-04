@@ -2,7 +2,7 @@
 
 > **Si l'exécutant actuel (humain ou IA) disparaît, ce document permet de reprendre le projet
 > sans perte.** Il est mis à jour à chaque étape significative. Dernière mise à jour :
-> **2026-07-04 ~21h30 (Europe/Paris)**.
+> **2026-07-05 (matin)**.
 
 ## 1. Ordre de lecture pour reprendre à froid
 
@@ -18,8 +18,8 @@
 | Chantier | État | Détail |
 |---|---|---|
 | CH-0 Légal | **95 %** | 8/11 remédiations levées. Restent : R3/R4 (emails PO), R7 ✅ (D09). Voir `CHANGELOG_CH0.md` |
-| CH-1 Dataset | **jalon 1.1 en cours** | gdansk_det ✅ acquis+vérifié (5841 img, 0 défaut) ; gdansk_cls ✅ acquis ; legobricks_hf ⏳ en téléchargement. Voir `CHANGELOG_CH1.md` |
-| CH-2 Training | ⬜ | Attend CH-1. Méthode = doc 14 (jalon 2.0 audit obligatoire d'abord) |
+| CH-1 Dataset | **jalon 1.1 ✅ clos** | 3 sources acquises + certifiées (1,03 M images, manifests versionnés). Voir `CHANGELOG_CH1.md` |
+| CH-2 Training | **jalon 2.0 ✅ clos** | Audit : feu vert, aucun critère de bascule ; corpus réel 82 % mono-pièce → tas = synthétique + jalon 1.7. Voir `CHANGELOG_CH2.md` + `ml/AUDIT_DATASET.md` |
 | CH-4 iOS | **jalons 4.1+4.2 ✅** | Build + 11 tests verts. Restent 4.3 (navigation/permissions) et 4.4 (CI). Voir `CHANGELOG_CH4.md` |
 | Design | ⏳ parallèle | Session Claude dédiée lancée par le PO avec `docs/design/BRIEF_CLAUDE_DESIGN.md` |
 | Autres | ⬜ | Dans l'ordre du Master Plan |
@@ -36,9 +36,10 @@
 
 ## 4. File d'attente des prochaines actions (dans l'ordre)
 
-1. Finir jalon 1.1 : intégrité gdansk_cls + legobricks_hf → compléter `dataset_stats.json`, committer.
-2. **Jalon 2.0 (doc 14 Phase 1) — audit qualité AVANT tout entraînement** : échantillon 500 images,
-   grille HTML, % annotations fausses, % studio. Livrable `ml/AUDIT_DATASET.md`. C'est LE garde-fou.
+1. Jalon 1.3 — conversion DET : gdansk_det VOC→YOLO mono-classe (splits par image source,
+   préserver le marqueur `-test` des noms, flag pièces au bord — cf. recommandations d'audit).
+2. Pipeline de scènes synthétiques multi-pièces (doc 14 §2.1) — nécessite Blender (brew install --cask blender)
+   + ldr_tools_blender (MIT) + bibliothèque LDraw. C'est le socle DET du produit (scan de TAS).
 3. Jalon 1.2 — scope des 1000 classes : nécessite les CSV Rebrickable (⚠️ téléchargement MANUEL
    depuis rebrickable.com/downloads — pas de script, clause anti-automation, cf.
    `legal/REBRICKABLE_LICENSE.md`) : sets, inventories, inventory_parts, parts, colors, themes.
