@@ -79,6 +79,9 @@
 - **Chaque lot de livrables sensibles passe par une revue adversaire** (agent indépendant chargé de
   démolir) avant d'être considéré acquis — cf. `legal/CHALLENGE_CH0_REVUE_ADVERSAIRE.md`.
 - Toute décision structurante = un fichier `Dxx` dans `docs/plan/ARBITRAGES/` + ligne dans l'index.
+- **Le README (feuille de route + tableau d'avancement par chantier) se met à jour à CHAQUE étape
+  significative, en même temps que ce fichier et le CHANGELOG du chantier** — demande explicite du
+  PO : le README GitHub est sa vue de pilotage.
 - Paralléliser par sous-agents quand les tâches sont indépendantes ; toujours faire écrire les
   livrables dans le repo, committer depuis la session principale.
 - En cas de doute juridique : lecture conservatrice + question dans l'email de confirmation concerné.

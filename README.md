@@ -15,20 +15,38 @@ entièrement sur le téléphone. Gratuit, financé par la publicité.
 
 ---
 
-## Vision & feuille de route
+## Feuille de route
 
 La vision complète est dans **[docs/VISION.md](docs/VISION.md)**. En résumé :
 
 | Palier | Contenu | Statut |
 |---|---|---|
-| **V1** — iOS | Scan → inventaire → sets officiels réalisables (catalogue Rebrickable offline) | 🚧 En cours (CH-0) |
-| **V1.5** | "Choisis une construction" : blueprints adaptés à VOS pièces + guidage pas-à-pas | Planifié |
+| **V1** — iOS | Scan → inventaire → sets officiels réalisables (catalogue Rebrickable offline) | 🚧 **En cours** |
+| **V1.5** | "Choisis une construction" : blueprints adaptés à VOS pièces + guidage pas-à-pas | Planifié (risque brevet levé, format blueprint spécifié) |
 | **V2** | Android + catalogue de constructions enrichi en continu (OTA) | Planifié |
 | **V3** | Génération libre de plans inédits par IA embarquée | Spike Go/No-Go d'abord |
 
 **Cible produit : iOS et Android.** L'exécution est séquencée iOS d'abord — on prouve le pipeline
 de vision sur un parc de devices homogène avant de doubler la surface (justification :
 [D01](docs/plan/ARBITRAGES/D01_PLATEFORME.md)).
+
+### Avancement V1, chantier par chantier — *mis à jour le 2026-07-04 au soir*
+
+| Chantier | État | Dernier fait marquant |
+|---|---|---|
+| **CH-0** Légal & préalables | 🟢 **~95 %** | Licences vérifiées + revue adversaire passée ; marque libre ; brevets : risque nul pour le guidage V1.5. Restent 2 emails de confirmation (PO) |
+| **CH-1** Dataset | 🟢 **Jalon 1.1 clos** | 1,03 M d'images acquises et certifiées (3 sources, licences propres, 0 corruption) |
+| **CH-2** Entraînement | 🟡 **Jalon 2.0 en cours** | Audit qualité pré-entraînement (le garde-fou anti domain-gap) en exécution |
+| **CH-3** Export CoreML | ⬜ | Attend CH-2 |
+| **CH-4** Fondations iOS | 🟢 **Jalons 4.1+4.2 ✅** | App squelette : build + 11 tests verts (XcodeGen, iOS 17, GRDB seul) |
+| **CH-5** Pipeline scan | ⬜ | Attend CH-3 + CH-4 |
+| **CH-6** Inventaire | ⬜ | Attend CH-4 |
+| **CH-7** Matching | ⬜ | Attend CH-6 + CSV Rebrickable |
+| **CH-8** UI/UX | ⬜ | Design en piste parallèle (session dédiée : icône, assets stores) |
+| **CH-9** QA & beta | ⬜ | L'iPad M4 du PO sera le device d'endurance |
+| **CH-10** Release | ⬜ | Monétisation actée : gratuit + pub ([D03](docs/plan/ARBITRAGES/D03_MONETISATION.md)) |
+
+État détaillé et reprise : **[docs/REPRISE.md](docs/REPRISE.md)** · Journaux : `docs/plan/CHANGELOG_CH*.md`
 
 ## Architecture (V1)
 
@@ -68,9 +86,3 @@ source (crédités dans la veille), on réécrit depuis notre compréhension, on
 code non licencié. Pourquoi : le projet est destiné à une distribution commerciale ; la propreté
 juridique est vérifiée *avant* d'écrire le code, pas au moment de la release.
 
-## État d'avancement
-
-- ✅ Corpus documentaire consolidé, divergences arbitrées (D01→D08)
-- ✅ Veille open source (frameworks Apache-2.0 identifiés, chaîne synthétique LDraw→Blender repérée)
-- 🚧 **CH-0 en cours** : vérifications légales (licences Rebrickable, LEGO Fair Play, dataset, frameworks)
-- ⬜ CH-1 Dataset → CH-10 Release : à venir, dans l'ordre du [Master Plan](docs/plan/00_MASTER_PLAN.md)
