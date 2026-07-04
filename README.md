@@ -50,6 +50,7 @@ et les deux modèles s'améliorent indépendamment.
 ```
 docs/
 ├── VISION.md            ← l'étoile du Nord — commencer ici
+├── REPRISE.md           ← document de continuité : état instantané + comment reprendre le travail
 ├── plan/                ← plan d'exécution complet, chantier par chantier (CH-0 → CH-10)
 │   ├── 00_MASTER_PLAN.md      ← document racine du plan
 │   ├── ARBITRAGES/            ← registre des décisions (D01→D08) — prime sur le reste
