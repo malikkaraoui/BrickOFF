@@ -1,0 +1,35 @@
+# Hors projet — documents d'autres projets, jamais publiés
+_hors_projet/
+
+# Salle blanche — clones de repos tiers étudiés en lecture seule.
+# Jamais commités : certains sont sans licence (tous droits réservés) ;
+# on publie nos notes de conception, pas leur code.
+research/
+
+# Données & modèles — trop lourds pour git, stockage externe documenté dans docs/ACCESS.md
+data/raw/
+data/processed/
+*.pt
+*.pth
+*.onnx
+*.mlpackage
+*.sqlite
+*.ckpt
+
+# Secrets
+.env
+*.pem
+*_key*
+secrets/
+
+# Python
+.venv/
+__pycache__/
+*.egg-info/
+
+# Xcode / macOS
+.DS_Store
+xcuserdata/
+*.xcuserstate
+build/
+DerivedData/
