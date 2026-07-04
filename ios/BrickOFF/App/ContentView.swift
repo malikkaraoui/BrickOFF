@@ -1,24 +1,60 @@
 import SwiftUI
 
+/// Racine de navigation : TabView 3 onglets (Scan / Inventaire / Constructions),
+/// Réglages accessibles depuis la barre de navigation de chaque onglet (sheet).
 struct ContentView: View {
+    @State private var isSettingsPresented = false
+
     var body: some View {
         TabView {
-            Text("Scan")
-                .tabItem {
-                    Label("Scan", systemImage: "camera.viewfinder")
+            featureTab("Scan", systemImage: "camera.viewfinder") {
+                ScanView()
+            }
+            featureTab("Inventaire", systemImage: "square.grid.2x2") {
+                InventoryView()
+            }
+            featureTab("Constructions", systemImage: "building.2") {
+                MatchesView()
+            }
+        }
+        .sheet(isPresented: $isSettingsPresented) {
+            NavigationStack {
+                SettingsView()
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("OK") { isSettingsPresented = false }
+                        }
+                    }
+            }
+        }
+    }
+
+    /// Onglet standard : NavigationStack + titre + bouton Réglages en toolbar.
+    private func featureTab(
+        _ title: String,
+        systemImage: String,
+        @ViewBuilder content: () -> some View
+    ) -> some View {
+        NavigationStack {
+            content()
+                .navigationTitle(title)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            isSettingsPresented = true
+                        } label: {
+                            Label("Réglages", systemImage: "gearshape")
+                        }
+                    }
                 }
-            Text("Inventaire")
-                .tabItem {
-                    Label("Inventaire", systemImage: "square.grid.2x2")
-                }
-            Text("Constructions")
-                .tabItem {
-                    Label("Constructions", systemImage: "building.2")
-                }
+        }
+        .tabItem {
+            Label(title, systemImage: systemImage)
         }
     }
 }
 
 #Preview {
     ContentView()
+        .environment(AppState())
 }
