@@ -20,7 +20,7 @@
 | CH-0 Légal | **95 %** | 8/11 remédiations levées. Restent : R3/R4 (emails PO), R7 ✅ (D09). Voir `CHANGELOG_CH0.md` |
 | CH-1 Dataset | **jalon 1.1 ✅ clos** | 3 sources acquises + certifiées (1,03 M images, manifests versionnés). Voir `CHANGELOG_CH1.md` |
 | CH-2 Training | **jalon 2.0 ✅ clos** | Audit : feu vert, aucun critère de bascule ; corpus réel 82 % mono-pièce → tas = synthétique + jalon 1.7. Voir `CHANGELOG_CH2.md` + `ml/AUDIT_DATASET.md` |
-| CH-4 iOS | **jalons 4.1+4.2 ✅** | Build + 11 tests verts. Restent 4.3 (navigation/permissions) et 4.4 (CI). Voir `CHANGELOG_CH4.md` |
+| CH-4 iOS | **✅ CLOS (4.1→4.4)** | 22 tests verts, CI GitHub Actions (macos-26). Reste : run sur device physique (PO). Voir `CHANGELOG_CH4.md` |
 | Design | ⏳ parallèle | Session Claude dédiée lancée par le PO avec `docs/design/BRIEF_CLAUDE_DESIGN.md` |
 | Autres | ⬜ | Dans l'ordre du Master Plan |
 
@@ -36,10 +36,9 @@
 
 ## 4. File d'attente des prochaines actions (dans l'ordre)
 
-1. Jalon 1.3 — conversion DET : gdansk_det VOC→YOLO mono-classe (splits par image source,
-   préserver le marqueur `-test` des noms, flag pièces au bord — cf. recommandations d'audit).
-2. Pipeline de scènes synthétiques multi-pièces (doc 14 §2.1) — nécessite Blender (brew install --cask blender)
-   + ldr_tools_blender (MIT) + bibliothèque LDraw. C'est le socle DET du produit (scan de TAS).
+1. Jalon 2.1 — baseline DET sur M1 (time-box 1 semaine, configs par défaut, cf. D10).
+2. Pipeline de scènes synthétiques multi-pièces (doc 14 §2.1) — Blender ✅ installé,
+   ldr_tools_blender (MIT) en salle blanche, bibliothèque LDraw à télécharger. Socle DET du produit.
 3. Jalon 1.2 — scope des 1000 classes : nécessite les CSV Rebrickable (⚠️ téléchargement MANUEL
    depuis rebrickable.com/downloads — pas de script, clause anti-automation, cf.
    `legal/REBRICKABLE_LICENSE.md`) : sets, inventories, inventory_parts, parts, colors, themes.

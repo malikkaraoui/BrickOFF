@@ -38,7 +38,7 @@ de vision sur un parc de devices homogène avant de doubler la surface (justific
 | **CH-1** Dataset | 🟢 **Jalons 1.1 + 1.3-DET clos** | 1,03 M d'images certifiées ; détection convertie en YOLO avec validation numérique + visuelle |
 | **CH-2** Entraînement | 🟢 **Jalon 2.0 clos** | Audit qualité : feu vert (2-6 % d'annotations douteuses, seuil 10 %) ; le scan de TAS reposera sur les scènes synthétiques + corpus maison |
 | **CH-3** Export CoreML | ⬜ | Attend CH-2 |
-| **CH-4** Fondations iOS | 🟢 **Jalons 4.1+4.2 ✅** | App squelette : build + 11 tests verts (XcodeGen, iOS 17, GRDB seul) |
+| **CH-4** Fondations iOS | 🟢 **CLOS (4.1→4.4)** | Navigation 3 onglets, permission caméra testable (22 tests verts), CI GitHub Actions active — reste le run sur device (PO) |
 | **CH-5** Pipeline scan | ⬜ | Attend CH-3 + CH-4 |
 | **CH-6** Inventaire | ⬜ | Attend CH-4 |
 | **CH-7** Matching | ⬜ | Attend CH-6 + CSV Rebrickable |
