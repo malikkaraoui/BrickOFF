@@ -35,21 +35,23 @@ Passée le 2026-07-04, 19 constats (4 critiques, 10 majeurs, 5 mineurs) :
 des critiques. Pourquoi on committe quand même : un verdict provisoire tracé et contesté vaut
 mieux qu'un document parfait invisible — la contestation fait partie du livrable.
 
-### Plan de remédiation (backlog CH-0, ordonné)
+### Plan de remédiation (backlog CH-0, ordonné) — état au 2026-07-04 soir
 
-| # | Action | Lève | Qui |
-|---|---|---|---|
-| R1 | Identifier le dataset de détection/segmentation réel + licence (ou acter qu'il n'existe pas → la voie synthétique DET devient nominale) | Critique 1 | IA |
-| R2 | Compléter `ML_LICENSES.md` : clause anti-IA Rebrickable + analyse "curation ≠ entraînement" ; sourcer A1/Blender/CC0 LDraw | Critiques 2, Majeur 10 | IA |
-| R3 | **Envoyer l'email Rebrickable** (déjà rédigé dans le livrable 0.1, complété du point classes) | Critique 2, Majeur 7 | **Malik** |
-| R4 | **Envoyer l'email Brickognize** (piotr.rybak@brickognize.com) | Majeur 13 | **Malik** |
-| R5 | Amender CH-1/doc 14 : données réelles d'entraînement en voie nominale (protocole photos maison en volume, distinct du realworld test) | Critique 3 | IA |
-| R6 | Analyse brevets génération d'instructions (revendications, expirations) → registre des risques | Critique 4 | IA (relecture avocat recommandée avant V1.5) |
-| R7 | Trancher "images de sets dans l'app" (probable : rendus LDraw maison ou placeholders) + règle screenshots store (brique-à-tenons) | Majeurs 5, 6 | IA + PO |
-| R8 | Recherche tmview/EUIPO "BrickOFF" (1 h) + archives Wayback des sources Fair Play | Majeurs 9, 11 | IA |
-| R9 | Corriger les plans B Rebrickable (proxy maison, droit sui generis UE) | Majeur 8 | IA |
-| R10 | Amender doc 13 : géométrie dans les alternatives de slots + stratégie de validation | Majeur 12 | IA (avant V1.5) |
-| R11 | Mineurs 15–19 (citations, étiquetages, règle assets CC0, vocabulaire marketing) | Mineurs | IA |
+| # | Action | Lève | Qui | Statut |
+|---|---|---|---|---|
+| R1 | Identifier le dataset de détection réel + licence | Critique 1 | IA | ✅ **Trouvé** : "Tagged images with LEGO bricks" (Gdańsk UT, CC BY 4.0, 2 933 scènes réelles annotées) + 77k crops réels de classification (447/1000 classes) → `docs/research/DATASETS_SURVEY.md`. Synthétique = voie de volume, réel = fine-tuning |
+| R2 | Clause anti-IA Rebrickable analysée + sourçage ML_LICENSES | Critique 2, Majeur 10 | IA | ✅ Fait (v0.1). Découverte : clause ajoutée post-février 2026 |
+| R3 | **Envoyer l'email Rebrickable** (brouillon prêt, question classes incluse) | Critique 2, Majeur 7 | **Malik** | ⏳ En attente PO |
+| R4 | **Envoyer l'email Brickognize** (piotr.rybak@brickognize.com) | Majeur 13 | **Malik** | ⏳ En attente PO |
+| R5 | Corpus réel d'entraînement en voie nominale (jalon 1.7 créé) | Critique 3 | IA | ✅ Fait — CH-1 et doc 14 amendés |
+| R6 | Analyse brevets → `legal/PATENTS_ANALYSIS.md` | Critique 4 | IA | ✅ Fait. **Risque nul pour A1.** Garde-fous : pas d'étapes auto par désassemblage avant 2028-03, pas d'AR sur flux caméra avant 2032-05 (EP2714223 actif FR, litigé). Relecture conseil PI avant V1.5 |
+| R7 | Trancher "images de sets dans l'app" + règle screenshots store | Majeurs 5, 6 | IA + PO | ⬜ **Reste à faire** (piste : rendus LDraw maison — décision D09 à rédiger) |
+| R8 | Clearance marque + archives sources | Majeurs 9, 11 | IA | ✅ Fait. Voie libre (TMview/EUIPO/USPTO/INPI : 0 conflit). → PO : enregistrer brickoff.app/.fr (libres), dépôt EUIPO cl. 9+42 avant CH-8 |
+| R9 | Plans B Rebrickable corrigés (CDN maison, droit sui generis UE) | Majeur 8 | IA | ✅ Fait (v0.1) |
+| R10 | Doc 13 : géométrie des alternatives + steps par slots + validation éditoriale | Majeur 12 | IA | ✅ Fait |
+| R11 | Mineurs 15–19 | Mineurs | IA | ✅ Fait (sources FSF/Blender/CC0 LDraw, assets CC0 only, interdits marketing) |
+
+**Bilan : 8/11 remédiations levées le jour même. Restent : R3+R4 (emails, action PO) et R7 (décision produit images de sets).**
 
 ### Confirmations product owner (2026-07-04, oral)
 
