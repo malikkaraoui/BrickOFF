@@ -7,6 +7,11 @@
 > 2. Brochure officielle « Fair Play — a guide compiled by the LEGO Group », PDF hébergé sur le CDN de lego.com — https://www.lego.com/cdn/cs/legal/assets/blt1a4c9a959ce8e1cb/LEGO_Fairplay_Nov2018.pdf (©2018 The LEGO Group, datée 01.11.18 ; c'est le document que la page Fair Play actuelle distribue — téléchargé et lu intégralement le 2026-07-04)
 > 3. « Guidelines for the Use of the LEGO Group Intellectual Property Assets by Recognized LEGO® Fan Communities » (LEGO Ambassador Network) — copie publique : https://forums.quelug.org/uploads/short-url/oBmqIkIRdr7KjapbeDFwTqxLoQR.pdf (téléchargée et lue le 2026-07-04)
 >
+> **Copies d'archive (remédiation R8 / constat 9 — sources fragiles archivées ; captures Wayback existantes vérifiées via l'API CDX le 2026-07-04, aucune nouvelle soumission) :**
+> 1. Page Fair Play — capture la plus récente : **2026-07-03** → https://web.archive.org/web/20260703153053/https://www.lego.com/en-us/legal/notices-and-policies/fair-play (captures 200 régulières depuis 2025)
+> 2. Brochure PDF Fair Play — capture complète la plus récente (application/pdf, 7,4 Mo, statut 200) : **2026-05-05** → https://web.archive.org/web/20260505050629/https://www.lego.com/cdn/cs/legal/assets/blt1a4c9a959ce8e1cb/LEGO_Fairplay_Nov2018.pdf (revisites Wayback jusqu'au 2026-06-17 avec digest identique `7NELE6EP…` → contenu inchangé)
+> 3. Guidelines fan communities (miroir quelug.org) — capture : **2024-08-05** → https://web.archive.org/web/20240805161607/https://forums.quelug.org/uploads/short-url/oBmqIkIRdr7KjapbeDFwTqxLoQR.pdf (digest identique à la capture 2023 → fichier stable). Rappel : ce document ne couvre que les fans **non commerciaux** ; il est cité comme indice du positionnement de LEGO, pas comme autorisation applicable à BrickOFF.
+>
 > ⚠️ BrickOFF est une **app commerciale**. Les tolérances que LEGO accorde aux sites de fans **non commerciaux** ne nous couvrent pas ; nous nous plaçons sur le terrain plus étroit de l'usage descriptif/référentiel d'une marque d'autrui, ce qui impose la discipline décrite ici.
 
 ---
@@ -61,7 +66,7 @@ Aucun des trois documents ne revendique le **mot** « brick » comme marque. Au 
 
 - La politique LEGO **prescrit** le mot générique : "say 'MODELS BUILT OF LEGO BRICKS'. Never say 'MODELS BUILT OF LEGOs'" (page Fair Play) — « bricks » est précisément le nom commun que LEGO demande d'utiliser.
 - Les guidelines fan communities citent en exemple **approuvé** un nom d'événement construit sur « Brick » : "Use of the LEGO name is permitted in a sub-heading […] confined to 'descriptive use' (e.g. **'BrickFair: a LEGO® Fan Event'**)." (section 2).
-- L'écosystème tiers commercial utilise massivement « Brick » sans opposition connue : Brickit, Brickset, Rebrickable, BrickOwl, Brickognize, BrickEconomy, BrickSearch, BrickScan, BrickLens, BrickSnap…
+- L'écosystème tiers commercial utilise massivement « Brick » sans opposition connue : Brickit, Brickset, Rebrickable, BrickOwl, Brickognize, BrickEconomy, BrickSearch, BrickScan, BrickLens, BrickSnap… **⚠️ Requalification (constat 17, revue adversaire) : cet argument est un raisonnement de survivant — on n'observe que les projets qui n'ont pas été attaqués (ou qui ont cédé discrètement), pas ceux qui ont disparu. C'est un indice de tolérance de fait, pas une preuve de droit.** Les deux premiers points (LEGO prescrit le mot « bricks » ; LEGO cite « BrickFair » en exemple approuvé) restent, eux, des éléments sourcés directement chez LEGO.
 
 **MAIS** la **forme** de la brique est revendiquée. Brochure, p. 8 :
 
@@ -96,20 +101,22 @@ Côté droit d'auteur (brochure, p. 10) — les visuels officiels (photos de cat
 
 ## 2. Verdict sur « BrickOFF »
 
-**✅ VIABLE — retenu comme nom officiel, sous réserve d'une clearance formelle avant lancement public.**
+**✅ VIABLE — retenu comme nom du produit. Clearance des registres exécutée le 2026-07-04 (section 6) : aucun conflit trouvé. Reste dû : le dépôt de la marque avant premier usage public (6.5).**
+
+*(« nom officiel » remplacé par « nom du produit » : le mot « officiel » est banni de notre vocabulaire public — voir interdit n°9, section 5.)*
 
 | Critère | Résultat (vérifié le 2026-07-04) |
 |---|---|
 | Contient « LEGO » ? | Non → conforme Fair Play (1.1) |
-| « Brick » problématique ? | Non : mot générique, prescrit par LEGO lui-même, usage massif par l'écosystème tiers (1.4) |
+| « Brick » problématique ? | Non : mot générique, prescrit par LEGO lui-même (1.4) ; l'usage massif par l'écosystème tiers est un **indice** convergent, pas une preuve (constat 17) |
 | Risque de confusion avec une marque LEGO ? | Aucune marque LEGO proche ; ne mime ni la typo ni le trade dress LEGO |
 | App Store | Aucune app « BrickOff » trouvée (recherche `site:apps.apple.com`). Apps proches distinctes : Brickit (id1477221636), « Brick — Ditch Distractions » (id6448794069, hors LEGO), BrickSearch (id1317166952), BrickLens (id6759543533), BrickSnap (id6760638357) |
 | Google Play | Aucune app « BrickOff » trouvée (recherche `site:play.google.com`). Proches : Brickit, BrickScan: AI Minifig Scanner (io.brickmonkey.minifigapp), Brickify |
-| Conflits de marque évidents | Aucun dépôt « BrickOff » trouvé via recherche web. Seule homonymie : « Brickoff », petit jeu de puzzle web gratuit d'un particulier (offtonic.com/brickoff/) — pas une marque déposée, pas d'app store, risque faible |
+| Conflits de marque évidents | Aucun dépôt « BrickOff » trouvé — confirmé par la clearance registres du 2026-07-04 (TMview/EUIPO/USPTO/INPI : 0 résultat, section 6.1). Seule homonymie : « Brickoff », jeu web gratuit d'un particulier (offtonic.com/brickoff/), évalué en 6.2 — actif depuis ≤ 2016, non commercial, risque faible |
 
 **Point d'attention :** « BrickScan », le nom d'exemple utilisé dans `05_CH4_IOS_FOUNDATIONS.md`, est **déjà pris** sur Google Play (« BrickScan: AI Minifig Scanner ») — la décision D08 de le remplacer par BrickOFF est donc doublement justifiée.
 
-**Réserve :** une recherche web n'est pas une recherche d'antériorité formelle. Avant tout usage public (fiche store, site, com') : recherche EUIPO (tmview) + INPI + USPTO sur « BrickOff »/« Brick Off » en classes 9 et 42, et idéalement dépôt de la marque. À faire au plus tard en CH-10 (release).
+**Réserve (mise à jour R8) :** la recherche d'antériorité sur les registres (TMview, agrégeant EUIPO, USPTO, INPI et ~70 offices) a été **avancée et exécutée le 2026-07-04** — voir section 6 : aucun conflit trouvé. Reste ouvert : le **dépôt** de la marque (recommandé avant tout usage public, voir 6.5) et le fait qu'une recherche par identité/similarité de nom ne remplace pas une recherche d'antériorité professionnelle complète (marques figuratives, droits non enregistrés, raisons sociales).
 
 ---
 
@@ -155,12 +162,67 @@ Chaque interdit découle d'une règle sourcée en section 1 :
 6. **Screenshots store & marketing** : nos propres photos de pièces en situation de scan, sans logo LEGO ni minifigure visibles à l'image, disclaimer présent sur la fiche. (1.1 + 1.2.)
 7. **Rédaction** : « LEGO » toujours en capitales, toujours adjectif suivi d'un nom (« briques LEGO® »), ® à la première occurrence par page/écran, jamais « des legos », « LEGO's », « LEGO-bricks ». (1.3, p. 7.)
 8. **Nom, sous-titre, mots-clés App Store sans « LEGO »** : la mention descriptive « pour briques LEGO® » n'est admissible que dans le corps de la description, accompagnée du disclaimer — jamais dans le nom ni le sous-titre. (1.1 ; réduit aussi le risque de rejet Apple guideline 5.2 sur les marques tierces.)
+9. **Vocabulaire marketing — jamais « officiel », jamais « comme une notice LEGO »** (constat 19 de la revue adversaire) : ne jamais employer publiquement (store, site, réseaux, communiqués, réponses aux avis) les mots « officiel »/« official » à propos de l'app ou de ses instructions, ni les formules « comme une notice LEGO® », « comme une notice LEGO officielle », « qualité LEGO », ou toute comparaison assimilant notre rendu à un produit du groupe LEGO. Ces formules créent exactement l'« attempted association » visée p. 11 de la brochure et annulent l'effet du disclaimer (p. 10 : le disclaimer « will not undo » un usage fautif). Formulation admise : décrire nos instructions par leurs propriétés propres (« étapes claires, pièce par pièce »), sans référence comparative à LEGO.
+
+---
+
+## 6. Clearance de marque (R8, 2026-07-04)
+
+> **Remédiation R8** (revue adversaire CH-0, constats 9, 11, 17) : la clearance du nom, initialement repoussée à CH-10, a été exécutée le **2026-07-04**. Méthode : interrogation directe de l'API TMview (POST `https://www.tmdn.org/tmview/api/search/results`), qui agrège EUIPO (EM), USPTO (US), INPI (FR), UKIPO (GB), WIPO et ~70 autres offices ; recoupement par recherche web USPTO ; API iTunes Search officielle ; recherche Google Play ; whois/DNS ; API CDX de la Wayback Machine.
+
+### 6.1 — Registres de marques : aucun conflit trouvé
+
+| Requête | Résultat (TMview, 2026-07-04) |
+|---|---|
+| `brickoff` (exact/contient) | **0 résultat** sur l'ensemble des offices agrégés (dont EUIPO, USPTO, INPI, WIPO) |
+| `brick off` (recherche floue) | 81 résultats, **aucun « BRICK OFF » ni « BRICKOFF » exact**. Balayage complet des 3 pages : quasi exclusivement des « Brick Office » / « … Coffee » |
+| `brick-off` (recherche floue) | Mêmes 81 résultats (même index flou), aucun exact |
+
+Marques les plus « proches » relevées (toutes jugées non confusantes — nom, produits et classes éloignés) :
+- **BRICK OFFICE** (BR, cl. 35, Filed 2025) et **ＢＲＩＣＫ ＯＦＦＩＣＥ** (JP, cl. 36, Registered 2025) — immobilier/services de bureau ;
+- **BO BRICK OFFICE ESTD. 1896** (CZ, cl. 35/36/43, Registered 2022) ;
+- **OFFICEBRICKS** (EUIPO + UK, cl. 17/19/20/35, GmbH allemande — cabines acoustiques de bureau) ;
+- **COFFEE BRICKWORLD** (CN, cl. 21/25/28/35/43, 2017) — seule occurrence en **classe 28**, mais enseigne de café chinoise, nom et signe éloignés ;
+- rien de pertinent en **classes 9, 41, 42** (l'unique hit cl. 9/41/42 du balayage : « YOU'RE BETTER OFF AT THE BRICK », CA, **Expired**, chaîne de meubles canadienne).
+
+**Couverture des quatre registres demandés :** EUIPO ✅ (résultats EM présents dans l'index, aucun sur brickoff), USPTO ✅ (résultats US présents + recoupement web sans hit), INPI ✅ (office FR agrégé dans TMview, aucun hit FR), UKIPO/WIPO ✅ (idem). Recherche web « "brickoff" trademark USPTO » : aucun dépôt trouvé.
+
+### 6.2 — L'homonyme « Brickoff » (offtonic.com) : évalué, risque faible
+
+- **Toujours actif** : https://www.offtonic.com/brickoff/ répond HTTP 200 le 2026-07-04 (« Brickoff by Mauro Braunstein »).
+- **Antériorité** : en ligne depuis au moins le **2016-07-09** (première capture Wayback CDX), soit ~10 ans d'usage continu.
+- **Nature** : jeu web gratuit de type breakout/air-hockey sur le site personnel d'un particulier. Aucune monétisation détectée sur la page (pas de pub, don, achat), aucune mention ™/®, aucun dépôt (cf. 6.1 : 0 résultat), aucune présence App Store/Google Play.
+- **Analyse common law US** : des droits d'usage (unregistered/common law) supposent un usage **« in commerce »** ; un jeu de loisir gratuit et non monétisé en construit difficilement, et leur portée serait de toute façon limitée au territoire de notoriété effective et à la catégorie « jeu d'arcade en ligne » — distincte de notre produit (utilitaire de scan/inventaire de pièces, cl. 9/42).
+- **Risque résiduel** : faible mais non nul. Mesures : (a) ne jamais positionner BrickOFF comme un « jeu » dans le naming/ASO ; (b) graphie distincte « BrickOFF » ; (c) si un mode ludique était ajouté un jour, réévaluer.
+
+### 6.3 — Stores (seconde vérification, 2026-07-04, via API/recherche directe)
+
+- **App Store** (API iTunes Search officielle, `term=brickoff`, 19 résultats) : **aucune app nommée « BrickOff »**. Les résultats sont des casse-briques génériques (« Brick Out », « Bricks Breaker »…) + Brickit (id1477221636).
+- **Google Play** (recherche `q=brickoff`) : **aucune app « BrickOff »** ; les seules occurrences de « brickoff » dans la page de résultats sont l'écho de la requête elle-même.
+
+### 6.4 — Domaines (whois/DNS, 2026-07-04)
+
+| Domaine | Statut |
+|---|---|
+| brickoff.com | **Pris** depuis le 2017-02-22 — parqué chez HugeDomains (page « à vendre », aucun usage actif). Pas un conflit de marque, mais le .com n'est pas disponible gratuitement |
+| brickoff.app | **Disponible** (NXDOMAIN au registre .app) |
+| brickoff.fr | **Disponible** (whois AFNIC : NOT FOUND) |
+| brickoff.io | Aucun DNS (probablement disponible, non confirmé au registre) |
+
+**Action recommandée :** enregistrer brickoff.app (et brickoff.fr si marché FR visé) dès maintenant — coût marginal, et le .app impose HTTPS, cohérent avec le produit.
+
+### 6.5 — Limites & prochaine étape
+
+Cette clearance couvre l'identité et la similarité de **nom** sur les registres publics. Elle ne couvre pas : les marques purement figuratives, les droits non enregistrés hors web indexé, les raisons sociales/noms commerciaux nationaux. **Recommandation : déposer « BrickOFF » (EUIPO, classes 9 et 42 ; option cl. 41/28 selon roadmap) avant le premier usage public (fiche store/site), au plus tard en début de CH-8** — le dépôt cristallise la priorité et coûte peu (~850 € EUIPO deux classes). Ne pas attendre CH-10.
 
 ---
 
 ## Critères d'acceptation du jalon 0.2
 
 - [x] Règles Fair Play résumées et sourcées (citations verbatim, URL, date : 2026-07-04)
-- [x] Nom candidat n°1 « BrickOFF » validé : sans « LEGO », disponible App Store & Google Play, pas de conflit de marque évident
+- [x] Sources fragiles archivées : URLs Wayback vérifiées pour la page Fair Play (capture 2026-07-03), la brochure PDF (capture 2026-05-05) et le miroir des guidelines (capture 2024-08-05) — voir en-tête (R8, constat 9)
+- [x] Nom candidat n°1 « BrickOFF » validé : sans « LEGO », disponible App Store & Google Play (revérifié le 2026-07-04 via API iTunes + Google Play), pas de conflit de marque trouvé
 - [x] 2 noms de secours conformes et disponibles : StudScout, PieceScout (soit 3 candidats au total avec BrickOFF, conformément au jalon)
-- [ ] (Recommandé avant release, CH-10) Recherche d'antériorité formelle EUIPO/INPI/USPTO + dépôt de « BrickOFF »
+- [x] Recherche d'antériorité sur registres exécutée le 2026-07-04 (R8, constat 11 — avancée depuis CH-10) : TMview (EUIPO + USPTO + INPI + WIPO agrégés) sur « brickoff »/« brick off »/« brick-off » → 0 conflit (section 6). ⚠️ Limites en 6.5 : ne remplace pas une recherche professionnelle complète (figuratives, droits non enregistrés)
+- [ ] **Dépôt** de la marque « BrickOFF » (EUIPO, cl. 9 + 42) — à faire avant le premier usage public, au plus tard début CH-8 (voir 6.5)
+- [ ] Enregistrement des domaines brickoff.app (disponible) / brickoff.fr (disponible) — le .com est parqué chez un revendeur (voir 6.4)
