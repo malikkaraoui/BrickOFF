@@ -35,7 +35,7 @@ de vision sur un parc de devices homogène avant de doubler la surface (justific
 | Chantier | État | Dernier fait marquant |
 |---|---|---|
 | **CH-0** Légal & préalables | 🟢 **~95 %** | Licences vérifiées + revue adversaire passée ; marque libre ; brevets : risque nul pour le guidage V1.5. Restent 2 emails de confirmation (PO) |
-| **CH-1** Dataset | 🟢 **Jalon 1.1 clos** | 1,03 M d'images acquises et certifiées (3 sources, licences propres, 0 corruption) |
+| **CH-1** Dataset | 🟢 **Jalons 1.1 + 1.3-DET clos** | 1,03 M d'images certifiées ; détection convertie en YOLO avec validation numérique + visuelle |
 | **CH-2** Entraînement | 🟢 **Jalon 2.0 clos** | Audit qualité : feu vert (2-6 % d'annotations douteuses, seuil 10 %) ; le scan de TAS reposera sur les scènes synthétiques + corpus maison |
 | **CH-3** Export CoreML | ⬜ | Attend CH-2 |
 | **CH-4** Fondations iOS | 🟢 **Jalons 4.1+4.2 ✅** | App squelette : build + 11 tests verts (XcodeGen, iOS 17, GRDB seul) |

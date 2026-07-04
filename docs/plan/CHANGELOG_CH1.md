@@ -25,11 +25,22 @@ Scripts livrés : `data/scripts/01_download.py` (idempotent, provenance DOI+lice
 - Incident mineur : URL gdansk_cls initialement extrapolée au lieu d'être résolue via DOI — détectée
   par le garde-fou d'intégrité zip, corrigée (leçon : toujours résoudre les DOI, jamais deviner un slug).
 
+## 2026-07-05 — Jalon 1.3 (partie DET) ✅
+
+- Conversion gdansk_det VOC→YOLO mono-classe : 5 096 train / 566 val / 179 test, 7 688 bboxes.
+- Critères prouvés : aller-retour numérique ≤ 1 px sur 100 % des boxes (échec bloquant sinon),
+  inspection visuelle d'un échantillon reconverti (`ml/validation_yolo_sample.png`), aucune image
+  dans deux splits (répartition par fichier), chaque split non vide.
+- Recommandations d'audit appliquées : split -test d'origine préservé, 121 images à pièce au bord
+  tracées au manifest (`data/manifests/splits_detection.json`), conservées à l'entraînement.
+- La partie CLS du jalon 1.3 (ImageFolder unifié + mapping classes) attend le jalon 1.2 (scope),
+  lui-même en attente des CSV Rebrickable (téléchargement manuel PO).
+
 ### Prochaines étapes (ordre)
 
-1. **Jalon 2.0 — audit qualité (doc 14 Phase 1)** : grilles générées (script 04), audit visuel par agent en cours
-2. Jalon 1.2 — scope classes (préalable : CSV Rebrickable en téléchargement MANUEL, cf. legal/)
-3. Jalon 1.3 — conversions (VOC→YOLO pour DET, ImageFolder pour CLS)
+1. Jalon 2.1 — baseline DET sur M1 (time-box 1 semaine, configs par défaut)
+2. Pipeline de scènes synthétiques multi-pièces (Blender installé, ldr_tools_blender MIT en salle blanche)
+3. Jalon 1.2 — scope classes (préalable : CSV Rebrickable en téléchargement MANUEL, cf. legal/)
 
 Note d'audit : la fiche gdansk_cls annonce 447 classes, le papier 431, le disque en contient 448 —
 écart mineur à élucider au jalon 1.2 (probable : dossiers de variantes/molds fusionnés différemment).
