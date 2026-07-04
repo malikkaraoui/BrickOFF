@@ -2,6 +2,11 @@
 
 > Remplace et approfondit CH-2. Le jalon apprentissage est LE point de défaillance possible du projet.
 > Philosophie : ne jamais dépendre d'une seule voie. Chaque étape a un plan B chiffré et un critère de bascule.
+>
+> **Amendé le 2026-07-04 (post-revue adversaire CH-0)** : le domain gap n'est plus un risque mais
+> un état de départ certain (dataset public = rendus LDraw, constat 3) ; la stratégie nominale intègre
+> le corpus réel d'entraînement (jalon 1.7) ; l'usage Brickognize est gelé et le coût d'annotation
+> manuelle est chiffré (constat 13).
 
 ---
 
@@ -9,13 +14,14 @@
 
 | Cause d'échec | Probabilité | Détectable quand |
 |---|---|---|
-| Dataset public de qualité insuffisante (annotations bruitées, biais studio) | Moyenne-haute | Semaine 1–2 (audit) |
-| Écart domaine : dataset ≠ photos réelles utilisateur (le "domain gap") | **Haute** — c'est LE risque | Première éval realworld |
+| Dataset public de qualité insuffisante (annotations bruitées) | Moyenne-haute | Semaine 1–2 (audit) |
+| Écart domaine : dataset ≠ photos réelles utilisateur (le "domain gap") | **Certaine — état de départ, plus un risque** : le dataset public est 100 % synthétique (rendus LDraw, vérifié CH-0, constat 3) | Connu dès CH-0 (rien à détecter) |
+| Corpus réel d'entraînement (jalon 1.7) trop lent/coûteux à constituer, surtout si Brickognize reste gelé (constat 13) | Moyenne | Premières sessions d'annotation |
 | Classes visuellement indiscernables (variantes de molds) | Certaine sur une fraction des classes | Matrice de confusion v0 |
 | Sous-performance couleur en éclairage chaud | Haute | Éval COLOR realworld |
 | GPU/temps insuffisant pour itérer | Moyenne | Planning |
 
-**Principe directeur : le dataset public sert à apprendre la FORME générique ; le domain gap se comble par données synthétiques + données réelles maison, pas en espérant.**
+**Principe directeur (amendé CH-0) : le domain gap n'est plus une hypothèse à surveiller, c'est l'état de départ certain. Stratégie nominale : pré-entraînement synthétique massif (§2.1) + fine-tuning sur le corpus réel maison (jalon 1.7) + évaluation sur le realworld test (jalon 1.6) — pas d'espoir, un plan.**
 
 ---
 
@@ -26,7 +32,7 @@
 1. Échantillonner 500 images au hasard, inspection visuelle outillée (grille HTML générée par script)
 2. Mesurer : % annotations fausses, % images "studio" (fond uniforme, éclairage parfait) vs "réalistes", diversité réelle des angles
 3. **Critère de bascule** : si > 10% d'annotations fausses → nettoyage prioritaire avant entraînement (semi-automatique : entraîner un modèle rapide, flagger les images où il diverge fortement du label, revue humaine)
-4. **Critère de bascule** : si > 90% d'images studio → activer immédiatement la voie synthétique (§2.1) sans attendre une mauvaise éval
+4. ~~**Critère de bascule** : si > 90% d'images studio → activer immédiatement la voie synthétique (§2.1)~~ *(amendé CH-0 : critère satisfait par construction — le dataset est 100 % synthétique, donc §2.1 et le jalon 1.7 sont actifs d'office ; l'audit reste utile pour mesurer le bruit d'annotations)*
 
 Livrable : `AUDIT_DATASET.md` avec verdict chiffré et voies activées.
 
@@ -62,14 +68,16 @@ Sur le realworld test, classer CHAQUE erreur (script + revue) dans une taxonomie
 - Annotations PARFAITES et gratuites (bbox + classe connues par construction)
 - Volume : 50 000–200 000 images en quelques jours de calcul
 
-**Quand l'activer** : domain gap détecté (Phase 1 ou 3), ou classes pauvres en images.
-**Piège connu** : le synthétique pur crée son propre domain gap. Recette éprouvée : mélange synthétique + réel (ratio à tester : départ 70/30), ou pré-entraînement synthétique puis fine-tuning sur réel.
+**Quand l'activer** *(amendé CH-0)* : dès le départ — ce n'est plus un remède conditionnel, c'est la **voie nominale**. Le dataset public EST déjà du synthétique (rendus LDraw) ; la valeur ajoutée du pipeline maison est le réalisme (fonds, HDRI, bruit capteur) et le contrôle total des classes.
+**Piège connu** : le synthétique pur crée son propre domain gap — et le dataset public en souffre déjà par construction. Recette nominale (amendée CH-0) : pré-entraînement synthétique massif puis **fine-tuning sur le corpus réel maison du jalon 1.7** (mélange possible, ratio à tester : départ 70/30), évaluation uniquement sur le realworld test (1.6). Générer plus de rendus ne comble PAS le gap à lui seul (remède partiellement circulaire, constat 3) : les données réelles de 1.7 sont indispensables.
 **Coût** : ~1–2 semaines de mise en place du pipeline, réutilisable à vie (y compris pour étendre les classes en V2 — c'est un investissement, pas un coût).
 
 ### 2.2 — Auto-annotation assistée par grand modèle (bootstrap)
 Utiliser un gros modèle de détection serveur (le LocateAnything-3B du doc initial, ou SAM pour la segmentation) pour PRÉ-annoter des photos réelles en masse, puis correction humaine rapide (valider/corriger est 10× plus vite qu'annoter de zéro).
-**Quand** : besoin de volume réel rapidement (catégorie "plus de données réelles").
+**Quand** : besoin de volume réel rapidement (catégorie "plus de données réelles") — c'est le mécanisme du jalon 1.7.
 **Note** : le gros modèle tourne côté serveur/poste de travail pendant le DÉVELOPPEMENT uniquement — aucune contradiction avec l'app offline.
+**⚠️ Gel licence (amendé CH-0, constat 13)** : l'usage de **Brickognize est GELÉ par `ML_LICENSES.md`** (ToS non-commercial) tant que l'accord écrit n'est pas obtenu — le pré-annotateur par défaut est donc notre propre baseline entraîné sur synthétique (+ SAM pour les masques), sans risque licence.
+**Coût honnête si le gel persiste** : annotation manuelle de zéro ≈ 60–90 s/pièce (bbox + part_id parmi 1000 classes + couleur) → **~85–125 h** pour les 5000 pièces du jalon 1.7, auxquelles s'ajoutent les ~2000 pièces × 2 passes du realworld test 1.6 (**~70–100 h**, incompressibles car ce set doit rester annoté à la main). Avec pré-annotation baseline + correction humaine (~6–10 s/pièce), le 1.7 retombe à **~15–25 h**. À budgéter comme du temps humain réel dans le planning CH-1/CH-2, pas comme un détail.
 
 ### 2.3 — Architecture alternative pour les classes confusables : métrique learning
 Si la matrice de confusion révèle des grappes de classes indiscernables (probable : variantes de molds quasi identiques) :

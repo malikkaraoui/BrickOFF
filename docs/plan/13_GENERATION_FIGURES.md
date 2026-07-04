@@ -1,6 +1,10 @@
 # 13 — Génération de figures : 3 approches détaillées
 
 > Extension hors brief initial. Objectif : proposer des constructions réalisables avec l'inventaire scanné, au-delà du simple matching de sets existants.
+>
+> **Amendé le 2026-07-04 (post-revue adversaire CH-0)** : format blueprint A1 mis en conformité avec
+> `docs/research/INSTRUCTIONS_FORMATS.md` (R1–R7) — géométrie portée par les alternatives, champ
+> `steps` référencé par slots, règle de validation éditoriale (constats 12 et 16).
 
 ---
 
@@ -24,7 +28,7 @@
 ### Principe
 Une bibliothèque de constructions conçues À L'AVANCE (50 → 200 modèles : animaux, véhicules, maisons, robots...), mais définies de façon **flexible** : chaque emplacement du modèle accepte plusieurs pièces alternatives.
 
-### Format blueprint (proposition)
+### Format blueprint (proposition — amendée 2026-07-04 selon `docs/research/INSTRUCTIONS_FORMATS.md`, R1–R7)
 ```json
 {
   "id": "duck_small",
@@ -34,17 +38,37 @@ Une bibliothèque de constructions conçues À L'AVANCE (50 → 200 modèles : a
     {
       "slot_id": "body",
       "alternatives": [
-        [{"part_id": "3001", "qty": 2}],
-        [{"part_id": "3003", "qty": 4}]
+        {"parts": [
+          {"part_id": "3001", "pos": [0, 0, 0], "rot": 0},
+          {"part_id": "3001", "pos": [0, 0, 2], "rot": 0}
+        ]},
+        {"parts": [
+          {"part_id": "3003", "pos": [0, 0, 0], "rot": 0},
+          {"part_id": "3003", "pos": [2, 0, 0], "rot": 0},
+          {"part_id": "3003", "pos": [0, 0, 2], "rot": 0},
+          {"part_id": "3003", "pos": [2, 0, 2], "rot": 0}
+        ]}
       ],
       "color_group": "A"
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "placements": [{"slot_id": "body", "pos": [0, 0, 0], "rot": 0}],
+      "camera": {"yaw": 30, "pitch": 20}
     }
   ],
   "color_rules": {"A": "any_uniform", "B": "contrast_with_A"}
 }
 ```
-- `alternatives` : listes de pièces interchangeables pour remplir le slot (1 brique 2x4 OU 2 briques 2x2)
+- `alternatives` : pièces interchangeables pour remplir le slot (2 briques 2x4 OU 4 briques 2x2) — **chaque alternative porte sa GÉOMÉTRIE** : positions relatives des pièces dans le slot (`pos` = `[x, y, z]`, x/z en studs, y en plates ; convention compatible LDraw : 1 stud = 20 LDU, 1 plate = 8 LDU, 1 brique = 3 plates — cf. R7). Sans cette géométrie, le rendu pas-à-pas serait impossible (R1) — c'était le trou du schéma initial (constat 12)
+- `steps` : séquence d'étapes référençant des **`slot_id`, jamais des pièces concrètes** → les mêmes steps restent valides quelle que soit l'alternative choisie par le solveur ; l'inventaire d'étape est dérivé après résolution, jamais stocké (R1/R6). `camera` optionnel : absent = angle hérité de l'étape précédente, présent = rotation explicite (équivalent `ROTSTEP` LDraw, R4)
+- Granularité des steps : **1 à 5 pièces nouvelles par étape selon `difficulty` — CHOIX ÉDITORIAL BrickOFF à calibrer en beta**, pas un standard LEGO (LEGO ne publie aucun chiffre, cf. constat 16 et R2)
 - `color_rules` : contraintes souples ("uniforme", "contraste") plutôt que couleurs imposées → maximise la solvabilité
+
+### Règle de validation (outil éditorial — R3)
+La connectivité et la stabilité de chaque **préfixe d'étapes** (après chaque étape, le modèle partiel tient seul, aucune pièce flottante, bottom-up par défaut) sont vérifiées **côté OUTIL ÉDITORIAL**, jamais sur mobile — le mobile fait confiance au blueprint, cohérent avec "garanti par design". La validation doit couvrir **toutes les combinaisons d'alternatives** ; pour maîtriser l'explosion combinatoire, **contrainte d'édition** : les alternatives d'un même slot doivent être **géométriquement équivalentes** (même encombrement, mêmes points de connexion exposés) — c'est ce qui rend la validation slot par slot suffisante. Détails et justifications sourcées : `docs/research/INSTRUCTIONS_FORMATS.md` (R1–R7).
 
 ### Solveur
 Backtracking simple : pour chaque slot, choisir une alternative satisfiable avec l'inventaire restant ; si impasse, revenir en arrière. Espace de recherche minuscule (modèles < 100 pièces, < 5 alternatives/slot) → résolution en millisecondes.

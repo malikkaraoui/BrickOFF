@@ -2,6 +2,9 @@
 
 > Durée : 2–3 semaines. Dépend de CH-0 (licences validées).
 > C'est le chantier le plus déterminant pour la qualité finale. Ne pas le bâcler.
+>
+> **Amendé le 2026-07-04 (post-revue adversaire CH-0)** : ajout du jalon 1.7 — corpus réel
+> d'ENTRAÎNEMENT (constats 3 et 13 : dataset public 100 % synthétique, gel Brickognize).
 
 ---
 
@@ -160,6 +163,42 @@ Si une classe a < 50 images → la flagger. Ces classes seront soit exclues du s
 - [ ] ≥ 200 photos, ≥ 2000 pièces annotées au total
 - [ ] Les 3 conditions d'éclairage représentées à parts comparables
 - [ ] Double vérification des annotations (2 passes ou 2 annotateurs)
+
+---
+
+## Jalon 1.7 — Corpus réel d'ENTRAÎNEMENT *(ajouté 2026-07-04, post-revue CH-0)*
+
+> Pourquoi : la revue adversaire CH-0 (constat 3) a établi que le dataset public est **100 %
+> synthétique** (rendus LDraw) — sans ce jalon, le plan n'a AUCUNE image réelle d'entraînement,
+> puisque le set 1.6 est interdit d'entraînement.
+
+Distinct du jalon 1.6 : le realworld test (1.6) reste **strictement interdit d'entraînement**
+(seul juge des métriques). Le corpus 1.7 est destiné au **fine-tuning** (doc 14 §2.1), et à lui seul.
+
+### Tâches
+1. Photographier en volume **500+ photos** de scènes réelles (tas et pièces étalées), mêmes
+   variations que 1.6 : 3 éclairages (lumière du jour, LED intérieure, lampe chaude),
+   3 fonds (table bois, sol clair, tapis), smartphones différents si possible
+2. **Séparation stricte avec 1.6** : sessions, arrangements et images distincts — aucun
+   recouvrement train/test (vérifié par hash + manifests de session)
+3. **Annotation assistée** : pré-annotation (bbox + part_id proposé) par le modèle baseline
+   entraîné sur le synthétique (doc 14, Phase 2), puis correction humaine (Label Studio/CVAT) —
+   valider/corriger est ~10× plus rapide qu'annoter de zéro. **Brickognize ne peut servir de
+   pré-annotateur QUE si l'accord écrit est obtenu** (gel `ML_LICENSES.md`, constat 13)
+4. Boucle d'amorçage : réentraîner périodiquement le pré-annotateur avec le corpus déjà corrigé
+   → pré-annotations meilleures → correction encore plus rapide
+
+### Livrable
+- `data/processed/realworld_train/` : images + annotations (splits train/val uniquement, jamais test)
+- `data/scripts/07_preannotate.py` (pré-annotation par le baseline)
+- Section "corpus d'entraînement" ajoutée à `docs/REALWORLD_PROTOCOL.md`
+
+### Critères d'acceptation
+- [ ] ≥ 500 photos de scènes, ≥ 5000 pièces annotées (bbox + part_id + color_id)
+- [ ] Les 3 éclairages et les 3 fonds représentés à parts comparables
+- [ ] Zéro recouvrement avec le set 1.6 (vérification par hash + sessions documentées)
+- [ ] 100 % des pré-annotations revues par un humain ; contrôle qualité : ≤ 2 % d'erreurs
+      résiduelles sur un échantillon aléatoire de 200 pièces
 
 ---
 
