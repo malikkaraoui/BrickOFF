@@ -3,15 +3,15 @@
 > Journal du chantier (exigence Master Plan §3.6). Amendement structurant : le jalon 1.7
 > (corpus réel d'entraînement) a été ajouté suite à la revue adversaire CH-0 (constat 3).
 
-## 2026-07-04 — Ouverture, jalon 1.1 (acquisition) en cours
+## 2026-07-04 — Ouverture, jalon 1.1 (acquisition) ✅ CLOS le jour même
 
 ### Jalon 1.1 — Acquisition
 
 | Source | Statut | Preuve |
 |---|---|---|
 | gdansk_det (DOI 10.34808/anq4-rn44, CC BY 4.0) | ✅ acquis + intègre | 5 841 images (= 2 933 réelles + 2 908 rendus du papier, compte exact), 0 corrompue, 0 doublon — `data/manifests/dataset_stats.json` |
-| gdansk_cls (DOI 10.34808/rcza-jy08, CC BY 4.0) | ✅ acquis, intégrité à lancer | sha256 tracé dans `downloads.json` (6,5 Go) |
-| legobricks_hf (Apache-2.0, 400k rendus) | ⏳ téléchargement en cours | ~15,6 Go via huggingface_hub (reprise automatique) |
+| gdansk_cls (DOI 10.34808/rcza-jy08, CC BY 4.0) | ✅ acquis + intègre | 620 078 images (= 52 597 photos + 567 481 rendus du papier, compte exact), 0 corrompue, 0 doublon, 448 classes (1 seule < 50 img) |
+| legobricks_hf (Apache-2.0, 400k rendus) | ✅ acquis + intègre | 400 000 images / 1 000 classes exactement, échantillon de 2 550 décodé sans échec |
 
 Scripts livrés : `data/scripts/01_download.py` (idempotent, provenance DOI+licence+sha256 tracée),
 `data/scripts/02_integrity_check.py` (PIL.verify, doublons MD5, distribution par classe, exit 1 si corruption).
@@ -27,7 +27,9 @@ Scripts livrés : `data/scripts/01_download.py` (idempotent, provenance DOI+lice
 
 ### Prochaines étapes (ordre)
 
-1. Intégrité gdansk_cls (`--classes-from-dirs`) + legobricks_hf (⚠️ format parquet : images embarquées,
-   passer par pandas/pyarrow, pas par le scan de fichiers)
-2. **Jalon 2.0 — audit qualité (doc 14 Phase 1)** avant toute conversion/entraînement
-3. Jalon 1.2 — scope classes (préalable : CSV Rebrickable en téléchargement MANUEL, cf. legal/)
+1. **Jalon 2.0 — audit qualité (doc 14 Phase 1)** : grilles générées (script 04), audit visuel par agent en cours
+2. Jalon 1.2 — scope classes (préalable : CSV Rebrickable en téléchargement MANUEL, cf. legal/)
+3. Jalon 1.3 — conversions (VOC→YOLO pour DET, ImageFolder pour CLS)
+
+Note d'audit : la fiche gdansk_cls annonce 447 classes, le papier 431, le disque en contient 448 —
+écart mineur à élucider au jalon 1.2 (probable : dossiers de variantes/molds fusionnés différemment).

@@ -35,5 +35,37 @@
       "under_50_images": []
     },
     "checked_at": "2026-07-04T19:28:38.281524+00:00"
+  },
+  "gdansk_cls": {
+    "total_images": 620078,
+    "corrupt": [],
+    "corrupt_count": 0,
+    "duplicate_groups": 0,
+    "duplicate_files": 0,
+    "top_resolutions": {
+      "121x124": 149,
+      "118x125": 121,
+      "174x174": 92,
+      "147x115": 90,
+      "29x25": 87,
+      "113x134": 87,
+      "122x123": 86,
+      "34x31": 84,
+      "23x19": 81,
+      "121x125": 80
+    },
+    "classes": {
+      "count": 448,
+      "images_min": 22,
+      "images_max": 6182,
+      "images_median": 1099.5,
+      "under_50_images": [
+        "58176"
+      ],
+      "under_50_count": 1
+    },
+    "_duplicates_detail_file": "duplicates_detail.json",
+    "dataset": "gdansk_cls",
+    "checked_at": "2026-07-04T19:30:38.390823+00:00"
   }
 }
