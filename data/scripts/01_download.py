@@ -31,7 +31,7 @@ DATASETS: dict[str, dict[str, str]] = {
         "description": "LEGO bricks for training classification network (Gdańsk UT) — classification, 447 classes, photos réelles + rendus",
         "license": "CC BY 4.0",
         "doi": "10.34808/rcza-jy08",
-        "url": "https://mostwiedzy.pl/en/open-research-data/lego-bricks-for-training-classification-network,202309140843579455029-0/download",
+        "url": "https://mostwiedzy.pl/en/open-research-data/lego-bricks-for-training-classification-network,202309140842198941751-0/download",
         "filename": "gdansk_cls.zip",
         "target_dir": "gdansk_cls",
     },
