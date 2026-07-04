@@ -1,0 +1,84 @@
+# REPRISE — document de continuité ("le testament")
+
+> **Si l'exécutant actuel (humain ou IA) disparaît, ce document permet de reprendre le projet
+> sans perte.** Il est mis à jour à chaque étape significative. Dernière mise à jour :
+> **2026-07-04 ~21h30 (Europe/Paris)**.
+
+## 1. Ordre de lecture pour reprendre à froid
+
+1. `docs/VISION.md` — ce qu'on construit et pourquoi (normatif, formulation du PO)
+2. `docs/plan/ARBITRAGES/00_INDEX.md` — les 10 décisions D01→D10 (priment sur tout le reste)
+3. `docs/plan/00_MASTER_PLAN.md` — le plan chantier par chantier (amendé, voir bandeau en tête)
+4. Les `docs/plan/CHANGELOG_CHx.md` existants (CH-0, CH-1, CH-4) — où en est chaque chantier
+5. `docs/plan/12_CONVENTIONS_AI.md` — conventions de code et contrats AVANT d'écrire une ligne
+6. Ce fichier — état instantané et prochaines actions
+
+## 2. État instantané des chantiers
+
+| Chantier | État | Détail |
+|---|---|---|
+| CH-0 Légal | **95 %** | 8/11 remédiations levées. Restent : R3/R4 (emails PO), R7 ✅ (D09). Voir `CHANGELOG_CH0.md` |
+| CH-1 Dataset | **jalon 1.1 en cours** | gdansk_det ✅ acquis+vérifié (5841 img, 0 défaut) ; gdansk_cls ✅ acquis ; legobricks_hf ⏳ en téléchargement. Voir `CHANGELOG_CH1.md` |
+| CH-2 Training | ⬜ | Attend CH-1. Méthode = doc 14 (jalon 2.0 audit obligatoire d'abord) |
+| CH-4 iOS | **jalons 4.1+4.2 ✅** | Build + 11 tests verts. Restent 4.3 (navigation/permissions) et 4.4 (CI). Voir `CHANGELOG_CH4.md` |
+| Design | ⏳ parallèle | Session Claude dédiée lancée par le PO avec `docs/design/BRIEF_CLAUDE_DESIGN.md` |
+| Autres | ⬜ | Dans l'ordre du Master Plan |
+
+## 3. Tâches de fond éventuellement en cours (à vérifier en reprenant)
+
+- **Téléchargement datasets** : si `data/raw/legobricks_hf/` est incomplet ou absent du manifest
+  `data/manifests/downloads.json`, relancer `.venv/bin/python data/scripts/01_download.py`
+  (idempotent, reprend où il s'était arrêté).
+- **Contrôles d'intégrité restants** :
+  `.venv/bin/python data/scripts/02_integrity_check.py --dataset-dir data/raw/gdansk_cls --classes-from-dirs`
+  puis idem sur `data/raw/legobricks_hf` (⚠️ format parquet HF : adapter le script ou lire via
+  `datasets`/pandas — les images sont DANS les parquet, pas en fichiers).
+
+## 4. File d'attente des prochaines actions (dans l'ordre)
+
+1. Finir jalon 1.1 : intégrité gdansk_cls + legobricks_hf → compléter `dataset_stats.json`, committer.
+2. **Jalon 2.0 (doc 14 Phase 1) — audit qualité AVANT tout entraînement** : échantillon 500 images,
+   grille HTML, % annotations fausses, % studio. Livrable `ml/AUDIT_DATASET.md`. C'est LE garde-fou.
+3. Jalon 1.2 — scope des 1000 classes : nécessite les CSV Rebrickable (⚠️ téléchargement MANUEL
+   depuis rebrickable.com/downloads — pas de script, clause anti-automation, cf.
+   `legal/REBRICKABLE_LICENSE.md`) : sets, inventories, inventory_parts, parts, colors, themes.
+4. Jalon 1.5 — palette LAB depuis colors.csv (script 06, à écrire).
+5. CH-4 jalons 4.3 (navigation + permission caméra) et 4.4 (CI GitHub Actions).
+6. Pipeline synthétique de scènes DET (doc 14 §2.1) : partir de `research/ldr_tools_blender` (MIT),
+   s'inspirer de `research/LegoBrickClassification` (SANS copier — pas de licence).
+7. Baseline DET sur M1 (D10) une fois 1.1–1.4 faits.
+
+## 5. Actions en attente côté product owner (Malik)
+
+- [ ] Envoyer l'email Rebrickable (brouillon : `legal/REBRICKABLE_LICENSE.md`) — confirmation, non bloquant
+- [ ] Envoyer l'email Brickognize (brouillon : `legal/ML_LICENSES.md`) — débloque la pré-annotation
+- [ ] Enregistrer les domaines brickoff.app / brickoff.fr (libres au 2026-07-04)
+- [ ] Dépôt marque EUIPO classes 9+42 (avant CH-8)
+- [ ] Vérifier adhésion Apple Developer Program active (le compte existe)
+- [ ] Entériner : cible iOS 17 + XcodeGen (écarts CH-4), décision D03 pub (renversée par PO, actée)
+- [ ] Brancher un iPhone pour valider le run sur device (critère CH-4 en attente)
+
+## 6. Spécificités machine & environnement (M1, 16 Go)
+
+- Python : `.venv/` (3.12) à la racine — `source .venv/bin/activate`. Deps gelées : `ml/requirements.txt`.
+  torch 2.12.1, **MPS vérifié actif** (D10 : entraînement local nominal, escalade cloud si > 48 h projetées).
+- iOS : Xcode 26.6, **XcodeGen** (`cd ios && xcodegen generate`) — le `.xcodeproj` est un artefact,
+  seul `ios/project.yml` fait foi. Tests : `xcodebuild build test -scheme BrickOFF -destination
+  'platform=iOS Simulator,name=iPhone 17'`.
+- Git : remote SSH `git@github.com:malikkaraoui/BrickOFF.git`, tout sur `main`, commits fréquents.
+  Style de message : **le POURQUOI, jamais le comment**. Identité locale du repo : karaoui.malik@gmail.com
+  (le config global a une typo @hmail.com, ne pas s'y fier).
+- `research/` = clones d'étude **gitignorés** : certains sans licence → **ne jamais publier ni copier
+  leur code** (salle blanche : lire, comprendre, fermer, réécrire). `_hors_projet/` = hors BrickOFF.
+- `data/raw/`, `data/processed/`, poids, sqlite : gitignorés. Les **manifests** (provenance, sha256,
+  stats) sont versionnés — c'est la preuve d'acceptation des jalons data.
+
+## 7. Méthode de travail (à perpétuer)
+
+- Un jalon = livrables + critères binaires prouvés. Compte-rendu format `12_CONVENTIONS_AI.md` §3.2.
+- **Chaque lot de livrables sensibles passe par une revue adversaire** (agent indépendant chargé de
+  démolir) avant d'être considéré acquis — cf. `legal/CHALLENGE_CH0_REVUE_ADVERSAIRE.md`.
+- Toute décision structurante = un fichier `Dxx` dans `docs/plan/ARBITRAGES/` + ligne dans l'index.
+- Paralléliser par sous-agents quand les tâches sont indépendantes ; toujours faire écrire les
+  livrables dans le repo, committer depuis la session principale.
+- En cas de doute juridique : lecture conservatrice + question dans l'email de confirmation concerné.

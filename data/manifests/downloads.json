@@ -6,5 +6,13 @@
     "size_bytes": 6016987324,
     "extracted_to": "data/raw/gdansk_det",
     "downloaded_at": "2026-07-04T19:16:32.706183+00:00"
+  },
+  "gdansk_cls": {
+    "doi": "10.34808/rcza-jy08",
+    "license": "CC BY 4.0",
+    "sha256": "f727daddcfc9aed36b1e69044344812e08ab9533b2ed44965075f92575b9ec11",
+    "size_bytes": 6469779381,
+    "extracted_to": "data/raw/gdansk_cls",
+    "downloaded_at": "2026-07-04T19:22:24.001819+00:00"
   }
 }
