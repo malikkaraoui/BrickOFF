@@ -1,5 +1,7 @@
 # ML_LICENSES.md — Licences des composants ML/data (CH-0, jalon 0.3)
 
+> **Historique** : v0.1 (2026-07-04) : durcissement post-revue adversaire (R2/R9/R11).
+
 > **Date de vérification : 2026-07-04.** Toutes les licences ci-dessous ont été vérifiées ce jour
 > sur les sources primaires (fichiers LICENSE réels, dataset cards, ToS en ligne) — rien n'est
 > affirmé de mémoire. Contexte : BrickOFF est une **app iOS commerciale fermée** ; les modèles
@@ -11,7 +13,7 @@
 
 | # | Composant | Licence vérifiée (source, 2026-07-04) | Usage prévu | Compatible app commerciale fermée ? | Conditions |
 |---|---|---|---|---|---|
-| 1 | **Bibliothèque de pièces LDraw** (ldraw.org, 16 873 formes au parts update 2026-06) | **CC BY 2.0** (pièces historiques) + **CC BY 4.0** (contributions depuis le CA de 2022) + option **CC0** (depuis 2024-06). Vérifié dans le `CAreadme.txt` distribué avec la bibliothèque et dans l'en-tête des fichiers de pièces eux-mêmes (ex. `3001.dat` : `0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt`) ; nouveau Contributor Agreement : « *the Author agrees to release the Work under the Creative Commons Attribution License 4.0* » (forums.ldraw.org/thread-26086.html) | Rendu d'images synthétiques (Blender) pour entraîner détecteur + classifieur. Les fichiers .dat **ne sont pas embarqués** dans l'app | **OUI** | Attribution requise. Le CAreadme est explicite : « *You are free … to make commercial use of the CA approved LDraw Parts Library* » et « *The LDraw Steering Committee (SteerCo) also holds an attribution to 'The LDraw Parts Library' in such Derivative Works to be sufficient in lieu of a full list of authors* » → une mention « The LDraw Parts Library » suffit |
+| 1 | **Bibliothèque de pièces LDraw** (ldraw.org, 16 873 formes au parts update 2026-06) | **CC BY 2.0** (pièces historiques) + **CC BY 4.0** (contributions depuis le CA de 2022) + option **CC0** au choix de l'auteur (révision du Contributor Agreement du 2024-06-06, vérifiée le 2026-07-04 sur https://ldraw.org/ldraw-org-contributor-agreement : « *the public domain via the Creative Commons CC0 Public Domain Dedication ("CC0")* »). Vérifié dans le `CAreadme.txt` distribué avec la bibliothèque et dans l'en-tête des fichiers de pièces eux-mêmes (ex. `3001.dat` : `0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt`) ; nouveau Contributor Agreement : « *the Author agrees to release the Work under the Creative Commons Attribution License 4.0* » (forums.ldraw.org/thread-26086.html) | Rendu d'images synthétiques (Blender) pour entraîner détecteur + classifieur. Les fichiers .dat **ne sont pas embarqués** dans l'app | **OUI** | Attribution requise. Le CAreadme est explicite : « *You are free … to make commercial use of the CA approved LDraw Parts Library* » et « *The LDraw Steering Committee (SteerCo) also holds an attribution to 'The LDraw Parts Library' in such Derivative Works to be sufficient in lieu of a full list of authors* » → une mention « The LDraw Parts Library » suffit |
 | 2 | **Dataset Hugging Face `pvrancx/legobricks`** (400 000 images, 1 000 classes = part IDs Rebrickable, 400 img/classe, images générées depuis LDraw) | **Apache-2.0** (champ `license` de la dataset card, https://huggingface.co/datasets/pvrancx/legobricks). La card précise : « *Images generated using ldraw. This dataset is not created or endorsed by LEGO.* » | Entraînement du classifieur (et pré-entraînement éventuel du détecteur) | **OUI** | Apache-2.0 : conserver la notice. ⚠️ Nuance : les images étant des rendus de la bibliothèque LDraw (CC BY), l'attribution « The LDraw Parts Library » couvre aussi ce dataset par prudence (voir Ambiguïté A2) |
 | 3 | **YOLOX** (github.com/Megvii-BaseDetection/YOLOX) | **Apache License 2.0**, copyright Megvii Inc. 2021-2022 — vérifié sur le fichier `LICENSE` du repo (raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/main/LICENSE) | Framework d'entraînement + architecture du détecteur (poids exportés CoreML embarqués) | **OUI** | Conserver notice + texte de licence dans les mentions légales ; indiquer les modifications si le code est redistribué (il ne l'est pas : seul le modèle exporté est embarqué) |
 | 4 | **RT-DETR** (github.com/lyuwenyu/RT-DETR) | **Apache License 2.0** — vérifié sur le fichier `LICENSE` du repo (raw.githubusercontent.com/lyuwenyu/RT-DETR/main/LICENSE) | Candidat alternatif au détecteur (favori à date selon la veille, maintenance active) | **OUI** | Identiques à YOLOX (Apache-2.0) |
@@ -20,6 +22,7 @@
 | 7 | **coremltools** (github.com/apple/coremltools) | **BSD 3-Clause**, « Copyright © 2020-2023, Apple Inc. All rights reserved. » — vérifié sur `LICENSE.txt` du repo | Conversion PyTorch/ONNX → CoreML (outil de build, pas embarqué) | **OUI** | Aucune obligation dans l'app (outil interne, non distribué). Notice conservée dans le repo ML par hygiène |
 | 8a | **ldr_tools_blender** (github.com/ScanMountGoat/ldr_tools_blender) | **MIT**, « Copyright (c) 2023 SMG » — vérifié sur `LICENSE` du repo | Import LDraw dans Blender pour le pipeline de rendu synthétique (outil interne) | **OUI** | MIT : conserver la notice si le code est redistribué (il ne l'est pas). Forkable librement si besoin |
 | 8b | **ImportLDraw** (github.com/TobyLobster/ImportLDraw) | **GPL-2.0 or later** — vérifié : README « *Import Ldraw is licensed under the GPLv2 or any later version* » + badge GitHub GPL-2.0 | Alternative d'import LDraw (outil interne uniquement) | **OUI** (sans impact sur l'app — voir explication ci-dessous) | Aucune condition côté app. Si on modifie et **redistribue** le plugin, alors seulement le GPL s'applique (au plugin) |
+| 9 | **Assets de rendu synthétique** (fonds, textures, HDRI des scènes Blender) | Règle de sourcing : **CC0 exclusivement**. Source par défaut : **Poly Haven** — licence vérifiée le 2026-07-04 sur https://polyhaven.com/license : tous les assets sont **CC0** ; « *You can use our assets for any purpose, including commercial work* » et « *You do not need to give credit or attribution when using them (although it is appreciated)* » | Décors, éclairage (HDRI) et textures des scènes du pipeline de rendu synthétique (jamais embarqués dans l'app) | **OUI** | Aucune obligation (CC0 = domaine public). Discipline interne : consigner la provenance (URL + date) de chaque asset dans le repo ML ; tout asset non-CC0 (attribution, NC, licence inconnue) est **interdit** dans le pipeline — la chaîne d'entraînement reste 100 % propre |
 
 ---
 
@@ -32,11 +35,23 @@ Point souvent mal compris, documenté ici une fois pour toutes :
    Le plugin n'est **jamais distribué** par nous : pas de déclencheur.
 2. **Les sorties d'un programme GPL ne sont pas des œuvres dérivées du programme.** Les images PNG
    rendues sont dérivées des **données d'entrée** (les fichiers LDraw, CC BY) et de la scène, pas du
-   code du plugin. Le GPL lui-même ne revendique les sorties que si elles incorporent des portions
-   du programme (cas type : `bison` embarquant son squelette dans le parser généré) — rien de tel
-   ici : aucun octet du plugin ne se retrouve dans une image, ni a fortiori dans des poids de
-   modèle entraînés sur ces images. Blender (lui-même GPL) documente exactement la même position
-   pour ses rendus : les artworks produits appartiennent à leur auteur.
+   code du plugin. C'est la position officielle de la FSF elle-même — FAQ GNU sur la GPL
+   (https://www.gnu.org/licenses/gpl-faq.html, consultée le 2026-07-04) :
+   - entrée « *In what cases is the output of a GPL program covered by the GPL too?* »
+     (ancre `#WhatCaseIsOutputGPL`) : « *The output of a program is not, in general, covered by the
+     copyright on the code of the program. So the license of the code does not apply to the
+     output* » — l'exception visée est le cas où la sortie **incorpore des portions du programme**
+     (cas type : `bison` embarquant son squelette dans le parser généré) ;
+   - entrée « *Is there some way that I can GPL the output people get from use of my program?* »
+     (ancre `#GPLOutput`) : « *In general this is legally impossible; copyright law does not give
+     you any say in the use of the output people make from their data using your program.* »
+
+   Rien de tel ici : aucun octet du plugin ne se retrouve dans une image, ni a fortiori dans des
+   poids de modèle entraînés sur ces images. Blender (lui-même GPL) documente exactement la même
+   position pour ses rendus — https://www.blender.org/about/license/, section « Your Artwork »
+   (consultée le 2026-07-04) : « *What you create with Blender is your sole property. All your
+   artwork – images or movie files – including the .blend files and other data files Blender can
+   write, is free for you to use as you like.* »
 3. **Chaîne complète** : plugin GPL → images (pas dérivées du plugin) → poids de modèle (pas dérivés
    des images du point de vue du GPL, et encore moins du plugin) → app. Aucun maillon ne transporte
    d'obligation GPL vers l'app.
@@ -54,8 +69,14 @@ données : outil interne, sorties non dérivées, rien n'atteint l'app.
 ### 1. LDraw — OUI
 La bibliothèque est sous licences Creative Commons **Attribution** (mélange CC BY 2.0 pour le stock
 historique — la ligne `!LICENSE` figure dans chaque fichier de pièce — et CC BY 4.0 pour les
-contributions postérieures au Contributor Agreement du 2022-02-23, plus une option CC0 ajoutée le
-2024-06-06). Les deux CC BY autorisent **explicitement** l'usage commercial et les œuvres dérivées ;
+contributions postérieures au Contributor Agreement du 2022-02-23, plus une option CC0 ajoutée par
+la révision du Contributor Agreement du 2024-06-06 — **vérifiée le 2026-07-04** sur
+https://ldraw.org/ldraw-org-contributor-agreement : l'auteur peut, à son choix, placer sa
+contribution « *in the public domain via the Creative Commons CC0 Public Domain Dedication
+("CC0")* », le passage à CC0 étant permanent (« *The decision to use the CC0 license is permanent
+and cannot be changed* »). Précision importante : le CC0 est une **option par auteur**, pas un
+relicenciement global — la bibliothèque dans son ensemble doit être traitée comme CC BY
+(attribution)). Les deux CC BY autorisent **explicitement** l'usage commercial et les œuvres dérivées ;
 le CAreadme le dit mot pour mot (« *to make commercial use* », « *to make derivative works* »).
 Rendre des images depuis les fichiers de pièces pour entraîner un modèle commercial est donc permis.
 La seule obligation est l'**attribution**, et LDraw simplifie : la mention « The LDraw Parts
@@ -110,6 +131,53 @@ l'app (le runtime CoreML fait partie d'iOS, sous licence Apple OS). Aucune oblig
 ldr_tools_blender est MIT : aucun sujet, y compris en cas de fork redistribué. ImportLDraw est
 GPL-2.0+ mais utilisé exclusivement comme outil interne : voir la section dédiée ci-dessus — aucune
 obligation ne remonte jusqu'à l'app. Le choix par défaut reste ldr_tools_blender (MIT) par confort.
+
+---
+
+## Clause anti-IA Rebrickable (propagation du jalon 0.1 — R2)
+
+**Citation** — ToS Rebrickable, section 5 « Automation » (relevée le 2026-07-04 sur
+https://rebrickable.com/terms/ lors de la vérification du jalon 0.1) :
+
+> "**No Rebrickable content may be used in the training of AI models.**"
+
+Note de datation : le snapshot Wayback du 2026-02-01
+(web.archive.org/web/20260201035309/https://rebrickable.com/terms/) ne contient **pas** encore
+cette phrase — c'est un ajout récent aux ToS ; voir la note de citation de
+`REBRICKABLE_LICENSE.md` §(d) pour la localisation exacte dans la section 5.
+
+**Analyse pour la chaîne ML BrickOFF :**
+
+1. **Aucun contenu Rebrickable n'entre dans l'entraînement.** Les données d'entraînement sont
+   exclusivement : (a) des rendus synthétiques générés par nous depuis la bibliothèque LDraw
+   (composants 1, 8a/8b, 9 du tableau), (b) le dataset `pvrancx/legobricks` (lui-même des rendus
+   LDraw), (c) des photos maison prises par nous. Ni les CSV, ni les images, ni les textes de
+   Rebrickable ne sont des entrées du pipeline d'entraînement (ni features, ni labels, ni
+   augmentation).
+2. **L'usage d'`inventory_parts` pour sélectionner les 1000 classes est de la curation de scope,
+   pas de l'entraînement.** Le fichier sert uniquement à décider *quelles* pièces (les plus
+   fréquentes du catalogue officiel) le modèle doit savoir reconnaître — il définit le périmètre
+   du problème, il n'alimente aucun gradient. Aucune donnée Rebrickable n'est encodée dans les
+   poids du modèle.
+3. **Les part IDs utilisés comme noms de classes ne sont pas une création Rebrickable.** Ce sont
+   les *design IDs* d'origine LEGO (moulés sur les pièces elles-mêmes), repris par tout
+   l'écosystème — BrickLink, LDraw (noms des fichiers `.dat`, ex. `3001.dat`), BrickOwl. Étiqueter
+   une classe « 3001 » n'utilise pas du « Rebrickable content » : l'identifiant préexiste à
+   Rebrickable et provient de LEGO.
+
+**Risque résiduel : faible.** Une lecture maximaliste de « used in the training » (couvrant toute
+utilisation même indirecte, comme la sélection de la liste des classes) est concevable mais peu
+plausible au regard de l'objet visible de la clause (empêcher l'ingestion du contenu du site —
+notamment les MOC des designers — par des modèles génératifs ou de reconnaissance). Par
+précaution, le point est **explicitement posé dans l'email de confirmation à Rebrickable**
+(question n°3 du brouillon de `REBRICKABLE_LICENSE.md`) : si Rebrickable objectait même à la
+curation de scope, le plan B est trivial — dériver la liste des 1000 classes depuis les fréquences
+d'apparition dans les fichiers OMR/LDraw ou les données BrickLink, sans toucher aux CSV
+Rebrickable.
+
+**Garde-fou opérationnel** : le repo ML documente la provenance de chaque source de données
+d'entraînement ; toute PR ajoutant une source de données doit prouver qu'elle ne contient pas de
+contenu Rebrickable (règle miroir de l'action n°4 de `REBRICKABLE_LICENSE.md`).
 
 ---
 
@@ -179,4 +247,8 @@ huggingface.co/datasets/pvrancx/legobricks ; fichiers LICENSE bruts des repos Gi
 pytorch/vision, apple/coremltools, ScanMountGoat/ldr_tools_blender ; README de
 TobyLobster/ImportLDraw ; docs.pytorch.org/vision/stable/models.html ; image-net.org/download.php ;
 brickognize.com/terms-of-service (rendu complet via navigateur headless) + OpenAPI
-api.brickognize.com/openapi.json.*
+api.brickognize.com/openapi.json. Ajouts v0.1 (consultés le 2026-07-04) :
+gnu.org/licenses/gpl-faq.html (entrées #WhatCaseIsOutputGPL et #GPLOutput) ;
+blender.org/about/license/ (section « Your Artwork ») ; ldraw.org/ldraw-org-contributor-agreement
+(révision 2024-06-06, option CC0) ; polyhaven.com/license (CC0) ;
+web.archive.org/web/20260201035309/https://rebrickable.com/terms/ (datation de la clause anti-IA).*

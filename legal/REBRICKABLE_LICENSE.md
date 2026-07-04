@@ -1,5 +1,7 @@
 # Licence des données Rebrickable — vérification pour BrickOFF
 
+> **Historique** : v0.1 (2026-07-04) : durcissement post-revue adversaire (R2/R9/R11).
+
 > **Jalon 0.1 (CH-0).** Vérification effectuée le **4 juillet 2026** sur les pages en ligne de rebrickable.com. Toutes les citations ci-dessous sont reproduites verbatim (en anglais) depuis les pages consultées ce jour-là.
 
 ---
@@ -65,7 +67,7 @@ Note : l'ancienne URL de ToS (`/help/terms-of-service/`) renvoie une 404 ; le do
 **Limites explicites qui s'appliquent à nous :**
 
 1. **Données/Images MOC exclues.** ToS §5.2 : *"you may not use MOC images for any purpose."* et §6.1 : *"MOCs - these materials are owned by the original designer […] You may not use these images for your own purposes."* → Le snapshot embarqué ne doit contenir **que** le catalogue officiel (sets, parts, colors, inventories, minifigs) — c'est justement tout ce que contiennent les CSV de la page Downloads : *"This database stores only official LEGO items - Sets, Parts and Minifigs (no B-Models, Sub-Sets, MOCs)"* (Downloads, 2026-07-04).
-2. **Interdiction d'entraînement IA.** ToS §5.3 : *"**No Rebrickable content may be used in the training of AI models.**"* → Les CSV/images Rebrickable ne doivent **jamais** alimenter l'entraînement de nos modèles de détection/classification (chantiers ML). Embarquer les données comme base de consultation dans l'app n'est pas de l'entraînement ; la frontière doit rester étanche et documentée.
+2. **Interdiction d'entraînement IA.** ToS, section 5 « Automation » (clause anti-IA — ajout récent aux ToS, voir la note de citation sous (d) pour sa localisation exacte) : *"**No Rebrickable content may be used in the training of AI models.**"* → Les CSV/images Rebrickable ne doivent **jamais** alimenter l'entraînement de nos modèles de détection/classification (chantiers ML). Embarquer les données comme base de consultation dans l'app n'est pas de l'entraînement ; la frontière doit rester étanche et documentée. L'analyse détaillée (curation de scope vs entraînement, statut des part IDs) est écrite dans `ML_LICENSES.md`, section « Clause anti-IA Rebrickable ».
 3. **Images = PI LEGO, régime séparé.** ToS §6.1 : *"LEGO-owned IP - images such as Sets/Parts/Minifigs/Instructions are LEGO IP. You may use them, but their usage must adhere to the LEGO copyright rules."* → Si l'app embarque des images de pièces/sets, la conformité relève du jalon 0.2 (Fair Play LEGO), pas de la seule permission Rebrickable. Les CSV eux-mêmes ne contiennent pas d'images (seulement des URLs).
 
 ---
@@ -82,6 +84,30 @@ Note : l'ancienne URL de ToS (`/help/terms-of-service/`) renvoie une 404 ; le do
 - **Snapshots CSV** : aucune limite de volume — c'est le canal *prévu* pour le volume. Régénérés quotidiennement côté Rebrickable (vérifié : les 12 fichiers étaient horodatés « July 4, 2026, 7:12 a.m. » le jour de la consultation).
 - **API** : rate-limitée, explicitement inadaptée au bulk. Pour BrickOFF (snapshot embarqué), l'API ne sert au plus qu'à des vérifications ponctuelles.
 - **Point de vigilance réel** : le §5.3 interdit les « automation tools to download data ». Un cron qui re-télécharge les CSV chaque nuit serait défendable (fichiers publiés pour le téléchargement en masse) mais s'expose à une lecture littérale de la clause. Notre besoin est faible (rafraîchir le snapshot à chaque release, soit quelques téléchargements par mois) : un téléchargement **manuel ou déclenché manuellement** à chaque mise à jour du snapshot nous place hors de toute zone grise.
+
+**Note de citation — structure exacte de la section 5 des ToS (deux clauses distinctes).** Ce
+document cite « §5.3 » pour deux règles différentes (interdiction d'automation *et* interdiction
+d'entraînement IA) ; la revue adversaire (constat 15) a demandé de clarifier. Vérification du
+2026-07-04 : la page live https://rebrickable.com/terms/ est servie derrière une vérification
+anti-bot Cloudflare qui bloque la consultation automatisée (ce qui est cohérent avec le §5.3
+lui-même) ; la structure a donc été recoupée sur le snapshot Wayback du **2026-02-01**
+(https://web.archive.org/web/20260201035309/https://rebrickable.com/terms/) :
+
+> **5. Automation**
+> **5.1 API Usage** — "The Rebrickable API may be used for any purpose, including commercial. […]"
+> **5.2 Images** — "Images of Sets, Parts and Minifigs may be used on external websites or apps. […]"
+> **5.3 Scrapers/Bots** — "Under no circumstances are you allowed to use automation tools to
+> download data or to automate traffic, doing so will get your IP and/or account banned."
+
+À cette date d'archive, le §5.3 intitulé « Scrapers/Bots » contient **uniquement** la phrase
+anti-automation ci-dessus. La phrase « *No Rebrickable content may be used in the training of AI
+models* » n'y figure **pas** : c'est un **ajout récent** (postérieur au 2026-02-01), relevé lors de
+la consultation live du 2026-07-04 (jalon 0.1). Les deux clauses sont donc bien **distinctes** :
+l'anti-automation est le §5.3 historique ; la clause anti-IA est un ajout dont la numérotation
+exacte (phrase ajoutée au §5.3 ou nouveau sous-paragraphe, p. ex. §5.4) devra être **confirmée et
+capturée (archive datée)** lors de la re-vérification manuelle prévue à l'action n°7 — la
+consultation automatisée ne permet pas de trancher aujourd'hui. Dans la suite du document, la
+clause anti-IA est référencée « ToS, section 5 "Automation" (clause anti-IA) ».
 
 ---
 
@@ -101,6 +127,7 @@ L'unique zone non nommée explicitement est la **redistribution embarquée** (le
 >
 > 1. Does "any purpose" cover redistributing an extract of the catalog data embedded inside a commercial app distributed to the public?
 > 2. Is manually downloading the CSV files a few times per month, tied to our release cycle, an acceptable usage pattern under section 5.3 (Scrapers/Bots)?
+> 3. Regarding your Terms' rule that "No Rebrickable content may be used in the training of AI models": our recognition models are trained exclusively on our own synthetic renders (from the LDraw parts library) and our own photos — no Rebrickable content is ever used as training data. We do, however, use the part numbers in inventory_parts to decide *which* ~1000 part classes the model should support (scope selection only; these part numbers are the original LEGO design IDs also used by LDraw and BrickLink). We read this as compatible with your Terms — please tell us if you see it differently.
 >
 > We will of course display a clear attribution in the app ("Catalog data sourced from Rebrickable.com") with a link to your site, and we will never use any Rebrickable content for AI model training, per your Terms.
 >
@@ -111,9 +138,34 @@ L'unique zone non nommée explicitement est la **redistribution embarquée** (le
 
 **Plans B si la réponse était négative (peu probable) :**
 
-1. **Mode connecté à la première ouverture** : l'app télécharge elle-même le snapshot CSV public depuis rebrickable.com (ou notre proxy le renvoyant à l'identique) au premier lancement, au lieu de l'embarquer dans le binaire — la « redistribution » disparaît, l'usage redevient un simple téléchargement par l'utilisateur final. Perte : première ouverture non offline.
-2. **Base maison réduite** : reconstruire une base minimale (numéros de sets, noms de pièces, couleurs) à partir de sources factuelles non protégées — les données factuelles brutes (un set contient X pièces de couleur Y) sont peu protégeables en soi ; coût élevé de constitution et de maintenance.
-3. **Accord commercial / partenariat** : négocier une licence écrite dédiée avec Rebrickable Pty Ltd (éventuellement adossée à leur programme d'affiliation, lien « Affiliates » en pied de page), qui sécuriserait aussi les images.
+1. **Snapshot servi par NOTRE infrastructure (CDN maison)** : au lieu d'embarquer les données dans
+   le binaire, l'app télécharge au premier lancement le snapshot depuis **notre** CDN. Ce CDN est
+   alimenté **manuellement, par release** : un humain télécharge les CSV depuis la page Downloads
+   (quelques fois par mois), les filtre et les publie sur notre infrastructure. **Aucune requête de
+   l'app vers rebrickable.com** : une app distribuée à des milliers d'utilisateurs qui
+   téléchargerait elle-même depuis rebrickable.com serait précisément l'« automation » interdite
+   par le §5.3 (« *Under no circumstances are you allowed to use automation tools to download data
+   or to automate traffic* ») — c'était le défaut de la première version de ce plan B, corrigé
+   post-revue adversaire (constat 8). Pertes : première ouverture non offline + coût
+   d'infrastructure. Note : ce plan B suppose que servir le snapshot depuis notre CDN reste couvert
+   par « any purpose » — à inclure dans la négociation si on en arrive là.
+2. **Base maison réduite — plan FAIBLE en UE, à ne pas surestimer** : reconstruire une base
+   minimale (numéros de sets, noms de pièces, couleurs) « à partir de sources factuelles ». Le
+   caractère factuel des données ne suffit **pas** en Europe : le **droit sui generis des bases de
+   données** (directive 96/9/CE, art. 7§1, texte vérifié le 2026-07-04 sur
+   https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:31996L0009) protège le producteur
+   d'une base ayant fait l'objet d'un investissement substantiel contre « *extraction and/or
+   re-utilization of the whole or of a substantial part, evaluated qualitatively and/or
+   quantitatively, of the contents of that database* » — **indépendamment** de l'originalité ou du
+   caractère factuel des données elles-mêmes ; et l'art. 7§5 interdit aussi « *the repeated and
+   systematic extraction and/or re-utilization of insubstantial parts* » qui contrarie
+   l'exploitation normale de la base. Reconstituer notre base « depuis » Rebrickable (ou depuis
+   BrickLink, également protégée) serait une extraction substantielle au sens de l'art. 7§2
+   (« *transfer of all or a substantial part of the contents of a database to another medium* »).
+   Ce plan B n'est donc viable que si les données sont **recollectées à des sources indépendantes**
+   (catalogues officiels LEGO, saisie manuelle depuis les produits) — coût prohibitif. À traiter
+   comme dernier recours, pas comme filet de sécurité.
+3. **Accord commercial / partenariat** : négocier une licence écrite dédiée avec Rebrickable Pty Ltd (éventuellement adossée à leur programme d'affiliation, lien « Affiliates » en pied de page), qui sécuriserait aussi les images. C'est le plan B le plus solide des trois.
 
 ---
 
@@ -122,7 +174,7 @@ L'unique zone non nommée explicitement est la **redistribution embarquée** (le
 1. **Attribution dans l'app** (écran Settings/À propos) : « Catalog data sourced from Rebrickable.com » + lien vers https://rebrickable.com — répond à la demande du §5.1 des ToS.
 2. **Pipeline de snapshot** : téléchargement des CSV **déclenché manuellement** à chaque release depuis https://rebrickable.com/downloads/ (pas de cron ni de scraping) ; consigner la date du snapshot et l'afficher dans l'app (« Données du catalogue : snapshot du JJ/MM/AAAA »).
 3. **Périmètre des données embarquées** : uniquement les CSV du catalogue officiel (themes, colors, part_categories, parts, part_relationships, elements, sets, minifigs, inventories, inventory_parts, inventory_sets, inventory_minifigs). **Aucune donnée ni image de MOC.**
-4. **Garde-fou ML (à propager vers le jalon 0.3 et les chantiers ML)** : interdiction absolue d'utiliser du contenu Rebrickable (CSV, images, textes) dans l'entraînement des modèles — ToS §5.3. Le dataset d'entraînement doit provenir d'autres sources (LEGOBricks/HF, photos maison).
+4. **Garde-fou ML (propagé au jalon 0.3 : voir `ML_LICENSES.md`, section « Clause anti-IA Rebrickable »)** : interdiction absolue d'utiliser du contenu Rebrickable (CSV, images, textes) dans l'entraînement des modèles — ToS, section 5 « Automation » (clause anti-IA). Le dataset d'entraînement doit provenir d'autres sources (LEGOBricks/HF, photos maison).
 5. **Images de pièces/sets** : si l'app en embarque, elles relèvent de la PI LEGO (ToS §6.1) → à instruire au jalon 0.2 (Fair Play), indépendamment de la permission Rebrickable. Les CSV seuls ne posent pas ce problème.
 6. **Envoyer l'email de confirmation** ci-dessus via https://rebrickable.com/contact/ — recommandé pour verrouiller le point « redistribution embarquée » ; n'est pas bloquant pour démarrer les chantiers data.
 7. **Re-vérifier les ToS avant la release publique** (elles peuvent changer ; la présente vérification date du 2026-07-04).
