@@ -1,0 +1,10 @@
+{
+  "gdansk_det": {
+    "doi": "10.34808/anq4-rn44",
+    "license": "CC BY 4.0",
+    "sha256": "d26c27721848fe65ba2f35a7ec3590a2316ba39c7564f626f26955798227f22c",
+    "size_bytes": 6016987324,
+    "extracted_to": "data/raw/gdansk_det",
+    "downloaded_at": "2026-07-04T19:16:32.706183+00:00"
+  }
+}

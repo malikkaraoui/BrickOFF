@@ -1,0 +1,24 @@
+{
+  "gdansk_det": {
+    "total_images": 5841,
+    "corrupt": [],
+    "corrupt_count": 0,
+    "duplicate_groups": 0,
+    "duplicate_files": 0,
+    "top_resolutions": {
+      "400x600": 1634,
+      "3120x4160": 1434,
+      "800x1200": 1004,
+      "2448x3264": 934,
+      "400x400": 270,
+      "4160x3120": 264,
+      "6000x8000": 44,
+      "803x825": 2,
+      "1298x1265": 1,
+      "1397x1353": 1
+    },
+    "_duplicates_detail_file": "duplicates_detail.json",
+    "dataset": "gdansk_det",
+    "checked_at": "2026-07-04T19:18:35.604456+00:00"
+  }
+}
