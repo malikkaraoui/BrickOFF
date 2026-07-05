@@ -39,7 +39,20 @@
 - Boucle d'itérations ouverte (budget : 6) : It.1 early stopping sur val photos seules ;
   It.2 augmentation photométrique forte ; It.3 (levier principal) scènes synthétiques réalistes.
 
+## 2026-07-05 — Itérations 1+2 lancées (chaîne de 2 runs, décision PO : durcir)
+
+**Bug découvert en préparant It.2** : le flip horizontal de la v0 ne retournait pas les bboxes
+(moitié de la supervision décalée). Corrigé (tv_tensors) — la v0 est donc invalidée comme référence
+fine ; la chaîne repart proprement :
+- `det_v0_1` : bugfix + early stopping sur val PHOTOS seules (It.1) — 60 epochs max, aug light.
+  Relance : `caffeinate -i .venv/bin/python ml/det/train_baseline.py --epochs 60 --batch 16 --patience 10 --aug light --val-photos-only --out ml/runs/det_v0_1`
+- `det_v1` : + augmentation FORTE (rotations 90° exactes + ±20°, zoom-out petites cibles,
+  photométrie éclairage/flou — reco audit + demande PO) — 80 epochs max.
+  Relance : idem avec `--epochs 80 --patience 12 --aug strong --out ml/runs/det_v1`
+Chaque run est suivi d'une éval test automatique (`eval_test.json`). Comparaison attendue :
+v0→v0_1 = effet bugfix+métrique ; v0_1→v1 = effet augmentation.
+
 ### Prochaines étapes
-1. It.1 (un seul changement : métrique d'arrêt sur photos) → réentraîner, comparer
+1. Bilan chaîne → tableau comparatif v0 / v0_1 / v1 sur test
 2. Pipeline de scènes synthétiques réalistes multi-pièces (doc 14 §2.1) — attaque le gap ET prépare le scan de tas
 3. Jalon 1.2 (scope classes) dès réception des CSV Rebrickable (action PO)
