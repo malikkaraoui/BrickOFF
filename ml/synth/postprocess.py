@@ -87,6 +87,8 @@ def draw_params(rng: random.Random, cfg: dict) -> dict:
     prm["noise_read_sigma"] = round(rng.uniform(*cfg["noise_read_sigma"]), 5)
     prm["noise_photon_fullwell"] = round(rng.uniform(*cfg["noise_photon_fullwell"]))
     prm["jpeg_quality"] = rng.randint(*cfg["jpeg_quality"])
+    prm["sat_boost"] = round(rng.uniform(*cfg["sat_boost"]), 3)
+    prm["contrast_s"] = round(rng.uniform(*cfg["contrast_s"]), 3)
     return prm
 
 
@@ -145,6 +147,12 @@ def apply_sensor(img: Image.Image, prm: dict, nprng: np.random.Generator,
                     + prm["noise_read_sigma"] ** 2)
     lin += nprng.standard_normal(lin.shape, dtype=np.float32) * sigma
     out = linear_to_srgb(np.clip(lin, 0.0, 1.0))
+    # signature ISP téléphone : vibrance + courbe en S en espace d'affichage,
+    # après AWB — corrige le voile pastel désaturé (spot-the-fake, tell n°3)
+    luma = (0.2126 * out[..., 0] + 0.7152 * out[..., 1] + 0.0722 * out[..., 2])[..., None]
+    out = np.clip(luma + (out - luma) * prm.get("sat_boost", 1.0), 0.0, 1.0)
+    c = prm.get("contrast_s", 0.0)
+    out = np.clip(out + c * (out * out * (3.0 - 2.0 * out) - out), 0.0, 1.0)
     return Image.fromarray(np.clip(out * 255.0 + 0.5, 0, 255).astype(np.uint8))
 
 

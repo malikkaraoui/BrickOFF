@@ -177,7 +177,7 @@ camera:
     - {p: 0.40, min: 30.0, max: 60.0}
   fill_fraction: [0.30, 0.80]  # étendue du tas / largeur image
   tilt_deg: 10.0             # roll ±10°
-  aim_offset_frac: 0.15      # décentrage de la visée, fraction du rayon du tas
+  aim_offset_frac: 0.35   # élargi (spot-the-fake tell n°4 : tas trop centrés)      # décentrage de la visée, fraction du rayon du tas
   bg_virtual_radius: [0.8, 3.0]  # "rayon de tas" fictif pour cadrer les scènes fond seul
 
 # --- distracteurs non-LEGO (jamais annotés) ----------------------------
@@ -210,6 +210,10 @@ postprocess:
   dof_center_jitter: 0.12            # jitter du centre de netteté (fraction image)
   # dérive balance des blancs (AWB smartphone qui se trompe)
   wb_delta_k: [-800.0, 800.0]
+  # signature ISP téléphone (correctif spot-the-fake, tell n°3) : les pipelines
+  # photo resaturent et contrastent APRÈS l'AWB — sans ça, voile pastel désaturé
+  sat_boost: [1.08, 1.30]            # vibrance post-AWB
+  contrast_s: [0.06, 0.20]           # force de la courbe en S
   wb_base_k: 6500.0
   # vignettage léger
   vignette_p: 0.8
