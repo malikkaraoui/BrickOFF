@@ -99,11 +99,19 @@ PIECE_MAT_NAME = "bo_piece_shared"
 
 def make_piece_material() -> bpy.types.Material:
     """UN node-tree partagé pour TOUTES les pièces, paramétré par attributs objet
-    (décision plan 16 : pas de node-tree par pièce ; hooks S.3) :
-      - obj.color                  -> Base Color (Object Info)
+    (décision plan 16 : pas de node-tree par pièce) :
+      - obj.color                  -> Base Color (Object Info) — HSV jitter déjà
+                                      appliqué côté Python (sample_pieces)
       - obj["bo_rough_min"/"max"]  -> plage de la roughness bruitée (Attribute OBJECT)
       - obj["bo_sss"]              -> poids subsurface
       - obj["bo_bump"]             -> intensité micro-normales
+      - obj["bo_scratch"]          -> intensité rayures (voronoï anisotrope) — S.3
+      - obj["bo_dust"]             -> intensité poussière (noise pondéré 'up') — S.3
+      - obj["bo_texoff"]           -> offset des coordonnées de texture par pièce
+                                      (décorrèle deux pièces identiques) — S.3
+      - obj["bo_trans"]            -> poids transmission (pièces trans-*) — S.3
+    Les rayures et la poussière sont mixées dans la ROUGHNESS et la NORMALE
+    uniquement (pas de textures externes, plan S.3).
     """
     mat = bpy.data.materials.get(PIECE_MAT_NAME)
     if mat is not None:
@@ -113,24 +121,88 @@ def make_piece_material() -> bpy.types.Material:
     nt = mat.node_tree
     bsdf = nt.nodes.get("Principled BSDF")
     out = nt.nodes.get("Material Output")
+    p = make_piece_material  # paramètres de classe (config)
 
     obj_info = nt.nodes.new("ShaderNodeObjectInfo")
     nt.links.new(obj_info.outputs["Color"], bsdf.inputs["Base Color"])
 
-    # roughness bruitée entre bo_rough_min et bo_rough_max (esprit ldr_tools_blender)
     def attr(name: str):
         n = nt.nodes.new("ShaderNodeAttribute")
         n.attribute_type = "OBJECT"
         n.attribute_name = name
         return n
 
+    def math_node(op: str, v0=None, v1=None):
+        n = nt.nodes.new("ShaderNodeMath")
+        n.operation = op
+        if v0 is not None:
+            n.inputs[0].default_value = v0
+        if v1 is not None:
+            n.inputs[1].default_value = v1
+        return n
+
+    # coordonnées objet + offset par pièce (décorrèle les pièces identiques)
+    coord = nt.nodes.new("ShaderNodeTexCoord")
+    off = nt.nodes.new("ShaderNodeVectorMath")
+    off.operation = "ADD"
+    nt.links.new(coord.outputs["Object"], off.inputs[0])
+    nt.links.new(attr("bo_texoff").outputs["Vector"], off.inputs[1])
+
+    # roughness bruitée entre bo_rough_min et bo_rough_max (esprit ldr_tools_blender)
     noise_r = nt.nodes.new("ShaderNodeTexNoise")
-    noise_r.inputs["Scale"].default_value = float(make_piece_material.rough_noise_scale)
+    noise_r.inputs["Scale"].default_value = float(p.rough_noise_scale)
+    nt.links.new(off.outputs["Vector"], noise_r.inputs["Vector"])
     mr = nt.nodes.new("ShaderNodeMapRange")
     nt.links.new(noise_r.outputs["Fac"], mr.inputs["Value"])
     nt.links.new(attr("bo_rough_min").outputs["Fac"], mr.inputs["To Min"])
     nt.links.new(attr("bo_rough_max").outputs["Fac"], mr.inputs["To Max"])
-    nt.links.new(mr.outputs["Result"], bsdf.inputs["Roughness"])
+
+    # rayures : voronoï F1 sur coordonnées étirées (stries directionnelles),
+    # seuillé -> lignes fines, pondéré par bo_scratch
+    stretch = nt.nodes.new("ShaderNodeMapping")
+    stretch.inputs["Scale"].default_value = (1.0, float(p.scratch_aniso),
+                                             float(p.scratch_aniso))
+    nt.links.new(off.outputs["Vector"], stretch.inputs["Vector"])
+    voro = nt.nodes.new("ShaderNodeTexVoronoi")
+    voro.feature = "F1"
+    voro.inputs["Scale"].default_value = float(p.scratch_scale)
+    nt.links.new(stretch.outputs["Vector"], voro.inputs["Vector"])
+    lines = math_node("LESS_THAN", v1=float(p.scratch_threshold))
+    nt.links.new(voro.outputs["Distance"], lines.inputs[0])
+    scratch = math_node("MULTIPLY")
+    nt.links.new(lines.outputs["Value"], scratch.inputs[0])
+    nt.links.new(attr("bo_scratch").outputs["Fac"], scratch.inputs[1])
+
+    # poussière : noise basse fréquence contrasté, pondéré par l'orientation 'up'
+    # (la poussière se dépose dessus) et par bo_dust
+    noise_d = nt.nodes.new("ShaderNodeTexNoise")
+    noise_d.inputs["Scale"].default_value = float(p.dust_scale)
+    nt.links.new(off.outputs["Vector"], noise_d.inputs["Vector"])
+    dmask = nt.nodes.new("ShaderNodeMapRange")   # contraste : [0.55;0.8] -> [0;1]
+    dmask.inputs["From Min"].default_value = 0.55
+    dmask.inputs["From Max"].default_value = 0.80
+    nt.links.new(noise_d.outputs["Fac"], dmask.inputs["Value"])
+    geom = nt.nodes.new("ShaderNodeNewGeometry")
+    sep = nt.nodes.new("ShaderNodeSeparateXYZ")
+    nt.links.new(geom.outputs["Normal"], sep.inputs["Vector"])
+    up = math_node("MAXIMUM", v1=0.0)            # max(Nz, 0)
+    nt.links.new(sep.outputs["Z"], up.inputs[0])
+    dust_up = math_node("MULTIPLY")
+    nt.links.new(dmask.outputs["Result"], dust_up.inputs[0])
+    nt.links.new(up.outputs["Value"], dust_up.inputs[1])
+    dust = math_node("MULTIPLY")
+    nt.links.new(dust_up.outputs["Value"], dust.inputs[0])
+    nt.links.new(attr("bo_dust").outputs["Fac"], dust.inputs[1])
+
+    # roughness finale = clamp(base + rayures + poussière)
+    add1 = math_node("ADD")
+    nt.links.new(mr.outputs["Result"], add1.inputs[0])
+    nt.links.new(scratch.outputs["Value"], add1.inputs[1])
+    add2 = math_node("ADD")
+    add2.use_clamp = True
+    nt.links.new(add1.outputs["Value"], add2.inputs[0])
+    nt.links.new(dust.outputs["Value"], add2.inputs[1])
+    nt.links.new(add2.outputs["Value"], bsdf.inputs["Roughness"])
 
     # subsurface léger (ABS translucide)
     if "Subsurface Weight" in bsdf.inputs:
@@ -138,11 +210,23 @@ def make_piece_material() -> bpy.types.Material:
         if "Subsurface Scale" in bsdf.inputs:
             bsdf.inputs["Subsurface Scale"].default_value = 0.05
 
-    # micro-normales (bump bruité, intensité par objet)
+    # transmission (pièces trans-* — test S.3, activée par bo_trans)
+    if "Transmission Weight" in bsdf.inputs:
+        nt.links.new(attr("bo_trans").outputs["Fac"], bsdf.inputs["Transmission Weight"])
+        if "IOR" in bsdf.inputs:
+            bsdf.inputs["IOR"].default_value = float(p.trans_ior)
+
+    # micro-normales : bump bruité + composante rayures (intensité par objet)
     noise_b = nt.nodes.new("ShaderNodeTexNoise")
-    noise_b.inputs["Scale"].default_value = float(make_piece_material.bump_noise_scale)
+    noise_b.inputs["Scale"].default_value = float(p.bump_noise_scale)
+    nt.links.new(off.outputs["Vector"], noise_b.inputs["Vector"])
+    h_scr = math_node("MULTIPLY", v1=0.35)       # les rayures marquent la normale
+    nt.links.new(scratch.outputs["Value"], h_scr.inputs[0])
+    height = math_node("ADD")
+    nt.links.new(noise_b.outputs["Fac"], height.inputs[0])
+    nt.links.new(h_scr.outputs["Value"], height.inputs[1])
     bump = nt.nodes.new("ShaderNodeBump")
-    nt.links.new(noise_b.outputs["Fac"], bump.inputs["Height"])
+    nt.links.new(height.outputs["Value"], bump.inputs["Height"])
     nt.links.new(attr("bo_bump").outputs["Fac"], bump.inputs["Strength"])
     nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
 
@@ -152,6 +236,11 @@ def make_piece_material() -> bpy.types.Material:
 
 make_piece_material.rough_noise_scale = 30.0
 make_piece_material.bump_noise_scale = 350.0
+make_piece_material.scratch_scale = 55.0
+make_piece_material.scratch_aniso = 8.0
+make_piece_material.scratch_threshold = 0.08
+make_piece_material.dust_scale = 6.0
+make_piece_material.trans_ior = 1.55
 
 
 def simple_material(name: str, rgb, rough: float, metallic: float = 0.0) -> bpy.types.Material:
@@ -319,12 +408,31 @@ def add_walls(extent: float, cfg: dict) -> list:
     return walls
 
 
+def jitter_hsv(rng: random.Random, hexstr: str, jcfg: dict) -> tuple[str, dict]:
+    """Jitter HSV par pièce (S.3) : ±h teinte (fraction du cercle), ±s/±v
+    multiplicatifs — les vraies pièces déteignent/jaunissent. Sur le sRGB."""
+    h = hexstr.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
+    import colorsys
+    hh, ss, vv = colorsys.rgb_to_hsv(r, g, b)
+    dh = rng.uniform(-jcfg["h"], jcfg["h"])
+    ks = 1.0 + rng.uniform(-jcfg["s"], jcfg["s"])
+    kv = 1.0 + rng.uniform(-jcfg["v"], jcfg["v"])
+    hh = (hh + dh) % 1.0
+    ss = min(1.0, max(0.0, ss * ks))
+    vv = min(1.0, max(0.0, vv * kv))
+    r, g, b = colorsys.hsv_to_rgb(hh, ss, vv)
+    out = "#%02X%02X%02X" % tuple(int(round(c * 255)) for c in (r, g, b))
+    return out, {"dh": round(dh, 4), "ks": round(ks, 4), "kv": round(kv, 4)}
+
+
 def sample_pieces(rng: random.Random, cfg: dict, parts_pool: dict, palette: dict,
                   n: int) -> list[dict]:
     """Tire N (part_id, couleur, params matière) : 70 % fréq. empiriques / 30 % uniforme."""
     ids = parts_pool["ids"]
     emp_w = parts_pool["weights_empirical"]
     pm = cfg["piece_material"]
+    ccfg = cfg["colors"]
     out = []
     for _ in range(n):
         if rng.random() < cfg["parts"]["p_empirical"]:
@@ -333,21 +441,36 @@ def sample_pieces(rng: random.Random, cfg: dict, parts_pool: dict, palette: dict
         else:
             pid = ids[rng.randrange(len(ids))]
             src = "uniform"
-        if rng.random() < cfg["colors"]["p_uniform_solid"]:
+        transparent = (ccfg.get("p_transparent", 0.0) > 0.0 and palette.get("trans")
+                       and rng.random() < ccfg["p_transparent"])
+        if transparent:
+            col = palette["trans"][rng.randrange(len(palette["trans"]))]
+            csrc = "uniform_trans"
+        elif rng.random() < ccfg["p_uniform_solid"]:
             col = palette["solid"][rng.randrange(len(palette["solid"]))]
             csrc = "uniform_solid"
         else:
             col = pick_weighted(rng, palette["weighted"], palette["weighted_w"])
             csrc = "weighted"
-        rmin = rng.uniform(*pm["rough_min"])
+        hex_j, jit = jitter_hsv(rng, col["hex"], pm["hsv_jitter"])
+        if transparent:
+            rmin = rng.uniform(*ccfg["trans_roughness"])
+            rmax = min(rmin + 0.03, ccfg["trans_roughness"][1])
+        else:
+            rmin = rng.uniform(*pm["rough_min"])
+            rmax = rmin + rng.uniform(*pm["rough_span"])
         out.append({
             "part_id": pid, "dat": parts_pool["dat_by_id"][pid], "part_source": src,
             "color_code": col["code"], "color_name": col["name"], "color_hex": col["hex"],
-            "color_source": csrc,
+            "color_hex_jittered": hex_j, "hsv_jitter": jit,
+            "color_source": csrc, "transparent": bool(transparent),
             "rough_min": round(rmin, 4),
-            "rough_max": round(rmin + rng.uniform(*pm["rough_span"]), 4),
-            "sss": round(rng.uniform(*pm["sss_weight"]), 4),
+            "rough_max": round(rmax, 4),
+            "sss": 0.0 if transparent else round(rng.uniform(*pm["sss_weight"]), 4),
             "bump": round(rng.uniform(*pm["bump_strength"]), 4),
+            "scratch": round(rng.uniform(*pm["scratch_strength"]), 4),
+            "dust": round(rng.uniform(*pm["dust_strength"]), 4),
+            "texoff": [round(rng.uniform(-50.0, 50.0), 3) for _ in range(3)],
         })
     return out
 
@@ -368,12 +491,16 @@ def build_pile(rng: random.Random, cfg: dict, specs: list[dict], params: dict) -
         obj.data.materials.append(shared)
         obj.data.polygons.foreach_set(
             "material_index", np.zeros(len(obj.data.polygons), dtype=np.int32))
-        rgb = hex_to_linear_rgb(spec["color_hex"])
+        rgb = hex_to_linear_rgb(spec["color_hex_jittered"])
         obj.color = (*rgb, 1.0)
         obj["bo_rough_min"] = spec["rough_min"]
         obj["bo_rough_max"] = spec["rough_max"]
         obj["bo_sss"] = spec["sss"]
         obj["bo_bump"] = spec["bump"]
+        obj["bo_scratch"] = spec["scratch"]
+        obj["bo_dust"] = spec["dust"]
+        obj["bo_texoff"] = spec["texoff"]
+        obj["bo_trans"] = 1.0 if spec["transparent"] else 0.0
         # spawn SANS interpénétration (sphères englobantes) : l'empilement à pas
         # fixe créait des chevauchements -> impulsions de dépénétration explosives
         dims = common.object_dims(obj)
@@ -414,6 +541,18 @@ def build_pile(rng: random.Random, cfg: dict, specs: list[dict], params: dict) -
             spec["obj_name"] = obj.name
             kept.append(obj)
     params["n_rejected_out_of_zone"] = n_rejected
+
+    # micro-bevel S.3 : ajouté APRÈS la simulation (ne touche pas la shape Bullet ;
+    # rendu seulement — le coverage raycast reste sur le mesh de base, écart
+    # sub-pixel à 640²). Node Bevel = Cycles-only, ce modifier est le chemin EEVEE.
+    bevel_w = cfg["piece_material"].get("bevel_width", 0.0)
+    if bevel_w > 0.0:
+        for obj in kept:
+            mod = obj.modifiers.new("bo_bevel", "BEVEL")
+            mod.width = float(bevel_w)
+            mod.segments = 1
+            mod.limit_method = "ANGLE"
+            mod.angle_limit = math.radians(60.0)
     return kept
 
 
@@ -717,8 +856,18 @@ def place_distractors(rng: random.Random, cfg: dict, models: list[dict], pieces:
 # ---------------------------------------------------------------------------
 
 
-def render_scene(exr_path: Path, png_path: Path, res: int, samples: int) -> dict:
+def render_scene(exr_path: Path, png_path: Path, res: int, samples: int,
+                 has_trans: bool = False) -> dict:
     common.setup_eevee(res=res, samples=samples, transparent=False)
+    if has_trans:  # test S.3 : transmission EEVEE = raytracing requis
+        ee = bpy.context.scene.eevee
+        if hasattr(ee, "use_raytracing"):
+            ee.use_raytracing = True
+        mat = bpy.data.materials.get(PIECE_MAT_NAME)
+        if mat is not None:
+            for attr_name in ("use_raytrace_refraction", "use_screen_refraction"):
+                if hasattr(mat, attr_name):
+                    setattr(mat, attr_name, True)
     vl = bpy.context.view_layer
     vl.use_pass_cryptomatte_object = True
     if hasattr(vl, "pass_cryptomatte_depth"):
@@ -841,8 +990,14 @@ def generate_scene(job: dict, scene_def: dict) -> dict:
            "seed": scene_def["seed"], "dataset_id": job["dataset_id"],
            "generator": job["generator"], "params": params}
 
-    make_piece_material.rough_noise_scale = cfg["piece_material"]["rough_noise_scale"]
-    make_piece_material.bump_noise_scale = cfg["piece_material"]["bump_noise_scale"]
+    pm = cfg["piece_material"]
+    make_piece_material.rough_noise_scale = pm["rough_noise_scale"]
+    make_piece_material.bump_noise_scale = pm["bump_noise_scale"]
+    make_piece_material.scratch_scale = pm["scratch_scale"]
+    make_piece_material.scratch_aniso = pm["scratch_aniso"]
+    make_piece_material.scratch_threshold = pm["scratch_threshold"]
+    make_piece_material.dust_scale = pm["dust_scale"]
+    make_piece_material.trans_ior = cfg["colors"].get("trans_ior", 1.55)
 
     common.reset_scene()
     scene = bpy.context.scene
@@ -874,7 +1029,8 @@ def generate_scene(job: dict, scene_def: dict) -> dict:
     out = Path(job["out_dir"])
     png = out / "images" / f"{scene_def['name']}.png"
     exr = Path(job["run_dir"]) / f"{scene_def['name']}.exr"
-    rt = render_scene(exr, png, res, cfg["render"]["eevee_samples"])
+    rt = render_scene(exr, png, res, cfg["render"]["eevee_samples"],
+                      has_trans=any(s.get("transparent") for s in specs))
     params.update(rt)
 
     if pieces:

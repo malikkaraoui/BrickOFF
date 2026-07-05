@@ -64,6 +64,15 @@ parts:
 
 # --- couleurs : palette LDraw (LDConfig.ldr, couleurs de l'addon) -----
 colors:
+  # S.3 : transparents TESTÉS en EEVEE et EXCLUS v1 (décision plan, flag) :
+  # brique isolée en gros plan = OK, mais en tas à 640² les pièces trans-*
+  # rendent opaques/ternes et les teintes claires sont viciées (transmission
+  # raytracée EEVEE insuffisante à cette échelle) — détail CHANGELOG_CHS.md S.3.
+  # p_transparent > 0 = fraction de pièces tirées dans les couleurs trans-*
+  # (ALPHA de LDConfig, glitter/opal exclus).
+  p_transparent: 0.0
+  trans_roughness: [0.01, 0.10]   # roughness des pièces transparentes (si activées)
+  trans_ior: 1.55
   p_uniform_solid: 0.25      # tirage uniforme parmi TOUTES les couleurs solides LDConfig
   # sinon : tirage pondéré parmi les couleurs LEGO courantes (code LDraw: poids)
   weighted_codes:
@@ -110,12 +119,29 @@ colors:
 # (obj.color = couleur LDraw linéaire ; custom props bo_* lus par des
 #  nœuds Attribute type OBJECT — hooks du durcissement S.3)
 piece_material:
-  rough_min: [0.05, 0.20]    # borne basse de la roughness bruitée, tirée par pièce
-  rough_span: [0.05, 0.15]   # rough_max = rough_min + span
+  # S.3 : plage totale de roughness par pièce = [0.05 ; 0.35] (design inputs §2.2),
+  # variation spatiale par noise partagée (rough_noise_scale) + offset UV par pièce.
+  rough_min: [0.05, 0.25]    # borne basse de la roughness bruitée, tirée par pièce
+  rough_span: [0.04, 0.10]   # rough_max = rough_min + span (max 0.35)
   rough_noise_scale: 30.0
   sss_weight: [0.05, 0.15]   # subsurface léger (ABS)
   bump_strength: [0.005, 0.03]
   bump_noise_scale: 350.0
+  # S.3 : micro-imperfections procédurales SUBTILES (pas de textures externes)
+  scratch_strength: [0.0, 0.12]  # rayures (voronoï anisotrope) ajoutées à la roughness
+  scratch_scale: 55.0            # densité des rayures (coordonnées objet étirées)
+  scratch_aniso: 8.0             # étirement directionnel (rayures, pas des points)
+  scratch_threshold: 0.08        # largeur des rayures (distance voronoï < seuil)
+  dust_strength: [0.0, 0.10]     # poussière (noise pondéré 'up') ajoutée à la roughness
+  dust_scale: 6.0
+  # S.3 : jitter HSV par pièce (les vraies pièces déteignent/jaunissent)
+  hsv_jitter:
+    h: 0.03                  # ±3 % de teinte (fraction du cercle)
+    s: 0.08                  # ±8 % multiplicatif
+    v: 0.08                  # ±8 % multiplicatif
+  # S.3 : micro-bevel — le node Bevel est Cycles-only (no-op EEVEE) ; un modifier
+  # Bevel par pièce est le seul chemin EEVEE -> coût mesuré, voir CHANGELOG.
+  bevel_width: 0.0           # unités scène (0 = désactivé)
 
 # --- sol --------------------------------------------------------------
 floor:
@@ -164,6 +190,32 @@ distractors:
   min_gap_units: 0.35        # écart minimal aux pièces du tas
   max_place_tries: 12
   img_margin: 0.12           # placement visé dans [margin, 1-margin] de l'image
+
+# --- post-process capteur (S.3) — ml/synth/postprocess.py ---------------
+# Appliqué APRÈS extraction des labels, sur les PNG rendus (jamais sur les
+# labels) ; paramètres tirés PAR IMAGE (seed scène + 1000003) et tracés dans
+# le manifest (clé "postprocess"). Sortie : .jpg (le .png est supprimé).
+postprocess:
+  enabled: true
+  # bruit ISO : gaussien (lecture) + poisson léger (photons), en linéaire
+  noise_read_sigma: [0.002, 0.010]   # écart-type gaussien (échelle 0-1)
+  noise_photon_fullwell: [500, 3000] # photons à pleine échelle (poisson ~ sqrt(I/N))
+  # flou de bougé directionnel (moyenne d'images décalées sub-pixel)
+  motion_blur_p: 0.5
+  motion_blur_px: [0.4, 1.5]         # longueur totale du segment (<= 1.5 px, plan)
+  # DoF simulé simple : flou progressif hors zone centrale (approximation)
+  dof_p: 0.7
+  dof_sharp_radius: [0.30, 0.60]     # rayon net (fraction de la demi-diagonale)
+  dof_max_sigma: [0.6, 2.2]          # sigma gaussien au coin (px)
+  dof_center_jitter: 0.12            # jitter du centre de netteté (fraction image)
+  # dérive balance des blancs (AWB smartphone qui se trompe)
+  wb_delta_k: [-800.0, 800.0]
+  wb_base_k: 6500.0
+  # vignettage léger
+  vignette_p: 0.8
+  vignette_strength: [0.04, 0.22]    # assombrissement au coin (facteur * r^2)
+  # compression finale
+  jpeg_quality: [70, 95]
 
 # --- labels (convention data/manifests/annotation_convention.md) -------
 labels:

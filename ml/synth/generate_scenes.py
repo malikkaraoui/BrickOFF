@@ -37,6 +37,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_BLENDER = "/Applications/Blender.app/Contents/MacOS/Blender"
 GENERATOR_FILES = [Path(__file__).resolve(),
                    Path(__file__).resolve().parent / "blender_scene.py",
+                   Path(__file__).resolve().parent / "postprocess.py",
                    Path(__file__).resolve().parent / "preflight" / "common.py"]
 
 
@@ -112,6 +113,7 @@ FINISH_KEYWORDS = ("CHROME", "PEARLESCENT", "METAL", "MATTE_METALLIC", "RUBBER",
 def load_palette(cfg: dict) -> dict:
     ldconfig = REPO_ROOT / cfg["paths"]["ldraw"] / "LDConfig.ldr"
     solid: list[dict] = []
+    trans: list[dict] = []
     by_code: dict[int, dict] = {}
     pat = re.compile(r"^0 !COLOUR (\S+)\s+CODE\s+(\d+)\s+VALUE\s+(#[0-9A-Fa-f]{6})(.*)$")
     for line in ldconfig.read_text(errors="replace").splitlines():
@@ -121,14 +123,19 @@ def load_palette(cfg: dict) -> dict:
         name, code, hexval, rest = m.group(1), int(m.group(2)), m.group(3), m.group(4)
         entry = {"code": code, "name": name, "hex": hexval}
         by_code[code] = entry
+        if code > 511 or "_INK" in name.upper():
+            # codes > 511 = couleurs spéciales LDraw (encres 10xxx, Modulex 30xxx…)
+            continue
+        upper = name.upper()
+        if ("ALPHA" in rest and upper.startswith("TRANS")
+                and not any(k in rest for k in FINISH_KEYWORDS)
+                and not any(k in upper for k in ("GLITTER", "OPAL"))):
+            trans.append(entry)  # trans-* purs (test S.3)
+            continue
         if "ALPHA" in rest or any(k in rest for k in FINISH_KEYWORDS):
             continue
-        if any(k in name.upper() for k in ("TRANS", "CHROME", "PEARL", "METALLIC",
-                                           "GLITTER", "OPAL", "RUBBER", "SPECKLE")):
-            continue
-        # codes > 511 = couleurs spéciales LDraw (encres d'impression 10xxx,
-        # Modulex 30xxx…) — pas des plastiques LEGO courants
-        if code > 511 or "_INK" in name.upper():
+        if any(k in upper for k in ("TRANS", "CHROME", "PEARL", "METALLIC",
+                                    "GLITTER", "OPAL", "RUBBER", "SPECKLE")):
             continue
         solid.append(entry)
     weighted, weighted_w = [], []
@@ -139,8 +146,10 @@ def load_palette(cfg: dict) -> dict:
             continue
         weighted.append(entry)
         weighted_w.append(float(w))
-    print(f"[palette] {len(weighted)} couleurs pondérées, {len(solid)} solides (uniforme)")
-    return {"weighted": weighted, "weighted_w": weighted_w, "solid": solid}
+    print(f"[palette] {len(weighted)} couleurs pondérées, {len(solid)} solides "
+          f"(uniforme), {len(trans)} trans-*")
+    return {"weighted": weighted, "weighted_w": weighted_w, "solid": solid,
+            "trans": trans}
 
 
 # ---------------------------------------------------------------------------
@@ -189,10 +198,14 @@ def generator_meta(config_path: Path) -> dict:
     h = hashlib.sha256()
     for f in [*GENERATOR_FILES, config_path]:
         h.update(f.read_bytes())
+    try:
+        config_rel = str(config_path.relative_to(REPO_ROOT))
+    except ValueError:  # config hors dépôt (tests)
+        config_rel = str(config_path)
     return {"git_commit": git("rev-parse", "HEAD"),
             "git_dirty": bool(git("status", "--porcelain")),
             "code_config_sha256": h.hexdigest()[:16],
-            "config": str(config_path.relative_to(REPO_ROOT))}
+            "config": config_rel}
 
 
 # ---------------------------------------------------------------------------
@@ -239,7 +252,7 @@ def run_batches(cfg: dict, args, scenes: list[dict], job_base: dict, out_dir: Pa
 
 
 def check_and_summarize(cfg: dict, scenes: list[dict], out_dir: Path,
-                        wall_s: float) -> dict:
+                        wall_s: float, post_stats: dict | None = None) -> dict:
     errors: list[str] = []
     stats = {"n_scenes_expected": len(scenes), "n_scenes_ok": 0, "n_background": 0,
              "n_with_distractors": 0, "n_pos_total": 0, "n_hard_total": 0,
@@ -296,6 +309,8 @@ def check_and_summarize(cfg: dict, scenes: list[dict], out_dir: Path,
     n_ok = max(stats["n_scenes_ok"], 1)
     per_img_blender = sum(stats["scene_s"]) / n_ok
     per_img_wall = wall_s / n_ok
+    post_s = (post_stats or {}).get("wall_s", 0.0)
+    per_img_total = per_img_wall + post_s / n_ok
     summary = {
         "errors": errors,
         "stats": {k: v for k, v in stats.items() if k not in ("scene_s", "coverage_pos")},
@@ -305,8 +320,12 @@ def check_and_summarize(cfg: dict, scenes: list[dict], out_dir: Path,
             "wall_s_total": round(wall_s, 1),
             "s_per_image_blender": round(per_img_blender, 2),
             "s_per_image_wall": round(per_img_wall, 2),
-            "projection_10k_h_wall": round(per_img_wall * 10000 / 3600, 2),
+            "postprocess_wall_s": round(post_s, 1),
+            "s_per_image_postprocess": round(post_s / n_ok, 3),
+            "s_per_image_total": round(per_img_total, 2),
+            "projection_10k_h_wall": round(per_img_total * 10000 / 3600, 2),
         },
+        "postprocess": post_stats,
     }
     return summary
 
@@ -320,7 +339,8 @@ def build_grid(out_dir: Path, grid_path: Path, dataset_id: str, thumb: int = 320
                limit: int | None = None) -> None:
     from PIL import Image, ImageDraw
 
-    images = sorted((out_dir / "images").glob("*.png"))
+    images = sorted([*(out_dir / "images").glob("*.png"),
+                     *(out_dir / "images").glob("*.jpg")])
     if limit:
         images = images[:limit]
     cells = []
@@ -399,6 +419,8 @@ def main() -> None:
     ap.add_argument("--no-grid", action="store_true")
     ap.add_argument("--grid-only", action="store_true",
                     help="ne génère pas, reconstruit la grille + summary")
+    ap.add_argument("--no-postprocess", action="store_true",
+                    help="debug S.3 : garde les PNG bruts, pas de pipeline capteur")
     args = ap.parse_args()
 
     cfg = yaml.safe_load(args.config.read_text())
@@ -412,6 +434,7 @@ def main() -> None:
                "name": f"{dataset_id}_{i:05d}"} for i in range(args.n)]
 
     wall_s = 0.0
+    post_stats: dict | None = None
     if not args.grid_only:
         parts_pool = build_parts_pool(cfg)
         palette = load_palette(cfg)
@@ -427,7 +450,12 @@ def main() -> None:
         run_dir.mkdir(parents=True, exist_ok=True)
         wall_s = run_batches(cfg, args, scenes, job_base, out_dir, run_dir)
 
-    summary = check_and_summarize(cfg, scenes, out_dir, wall_s)
+        # S.3 : post-process capteur (APRÈS labels — étape post-batch)
+        if cfg.get("postprocess", {}).get("enabled") and not args.no_postprocess:
+            from postprocess import process_dataset
+            post_stats = process_dataset(out_dir, cfg["postprocess"])
+
+    summary = check_and_summarize(cfg, scenes, out_dir, wall_s, post_stats)
     (run_dir if run_dir.exists() else out_dir).mkdir(parents=True, exist_ok=True)
     (run_dir / "summary.json").write_text(json.dumps(summary, indent=1,
                                                      ensure_ascii=False))
@@ -436,8 +464,9 @@ def main() -> None:
     for e in summary["errors"][:20]:
         print(f"  - {e}")
     th = summary["throughput"]
-    print(f"[throughput] {th['s_per_image_wall']} s/image (mur, relances incluses), "
-          f"{th['s_per_image_blender']} s/image (scène Blender) ; "
+    print(f"[throughput] {th['s_per_image_wall']} s/image rendu (mur, relances "
+          f"incluses) + {th['s_per_image_postprocess']} s/image post = "
+          f"{th['s_per_image_total']} s/image total ; "
           f"projection 10 k = {th['projection_10k_h_wall']} h")
 
     if not args.no_grid:

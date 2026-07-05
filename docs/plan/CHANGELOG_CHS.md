@@ -4,6 +4,117 @@
 > Jalons antérieurs documentés dans leurs rapports dédiés : S.1-pré →
 > `docs/research/SYNTH_PREFLIGHT.md` (gate GO), S.1 → `docs/research/SYNTH_ASSETS_REPORT.md`.
 
+## Jalon S.3 — Réalisme matière & capteur
+
+- Statut : ⚠️ (2026-07-05) — code et pipeline livrés, throughput conforme, MAIS le
+  critère falsifiable spot-the-fake ÉCHOUE (0 erreur/30 sur deux grilles, détail
+  ci-dessous). Les causes identifiées sont surtout HORS matière (fonds, ombres,
+  étalonnage, composition) — liste des « tells » consignée pour l'itération.
+- Livrables produits :
+  - `ml/synth/blender_scene.py` — shader partagé durci (toujours UN node-tree,
+    nouveaux attributs objet) : roughness par pièce élargie à [0,05 ; 0,35]
+    (tirage par pièce + noise spatiale + offset UV par pièce `bo_texoff` qui
+    décorrèle deux pièces identiques) ; rayures procédurales (voronoï anisotrope
+    seuillé → stries fines, `bo_scratch` ∈ [0 ; 0,12], mixées dans roughness ET
+    normale) ; poussière (noise contrasté pondéré par l'orientation « up »,
+    `bo_dust` ∈ [0 ; 0,10], roughness) ; jitter HSV par pièce (±3 % teinte,
+    ±8 % sat/val, appliqué côté Python sur `obj.color`, tracé au manifest) ;
+    SSS conservé ; transmission `bo_trans` câblée pour le test transparents.
+  - `ml/synth/postprocess.py` — post-process capteur PIL/numpy APRÈS labels :
+    bruit ISO (gaussien lecture + poisson photons, en linéaire), flou de bougé
+    directionnel ≤ 1,5 px (moyenne de décalages sub-pixel bilinéaires), DoF
+    simulé simple (mix net/flou radial hors zone centrale), dérive AWB ±800 K
+    (gains RGB linéaires normalisés au vert), vignettage léger, JPEG q70-95
+    (l'image finale devient .jpg, le .png est supprimé). Paramètres tirés PAR
+    IMAGE (seed scène + 1000003) et tracés au manifest (clé `postprocess`).
+    Idempotent, intégré à `generate_scenes.py` (étape post-batch,
+    `--no-postprocess` pour debug), CLI autonome disponible.
+  - `ml/synth/config_v1.yaml` — sections `piece_material` (imperfections, jitter
+    HSV, bevel) et `postprocess` ; flag transparents `colors.p_transparent`.
+  - `data/processed/synth_v11_val/` — 60 scènes de validation
+    (`--dataset-id synth_v1.1_val`), 60/60 OK, 0 erreur d'auto-contrôle, 5,8 Mo
+    (JPEG vs 63 Mo PNG pour 100 scènes S.2). Grille : `ml/synth_v11_val_grid.html`.
+  - `ml/spot_the_fake/` — grille v1 (20 synth + 10 réelles gdansk_det recadrées
+    640², noms neutres `spot_XX.jpg`, `key.json`) et `v2/` (version corrigée des
+    biais du protocole, voir ci-dessous).
+- Critères d'acceptation :
+  - [x] **Throughput re-mesuré** (constat 16) : **2,54 s/image rendu + 0,07 s/image
+        post = 2,62 s/image total** (60 scènes, 1 batch, 0 relance) — identique aux
+        2,6 s/image de S.2 (le durcissement shader est gratuit : mêmes nœuds
+        évalués, EEVEE 32 samples inchangé) ; **projection 10 k ≈ 7,3 h machine**.
+  - [x] **Labels calés après post-process** : 8 images .jpg vérifiées avec bboxes
+        dessinées (dont les 5 aux flou de bougé/DoF max : 1,49 px / σ 2,1) —
+        boîtes au pixel sur la silhouette visible, distracteurs jamais annotés.
+        Le flou ≤ 1,5 px déplace les bords < 1 px : convention 25 % non affectée.
+  - [ ] **Spot-the-fake ÉCHOUÉ** : relecteur (agent vision, cette session) —
+        **0 erreur / 30** sur la grille v1, puis **0 erreur / 30** sur une grille
+        v2 assainie (synth jamais vues pendant le dev, réelles stratifiées sur
+        les dossiers multi-pièces 4-32 de gdansk_det). Critère plan : ≥ 4 erreurs.
+        Verdicts notés avant lecture de la clé (key.json) dans les deux cas.
+- **Ce qui trahit encore le synthétique** (par ordre d'importance constatée) :
+  1. **Fonds** : les ~15 textures PBR se reconnaissent en quelques images (même
+     tapis moucheté, même denim, même plâtre, même damier) ; grain uniforme sans
+     usure locale, ni miettes/poussière/objets de contexte. Le réel gdansk =
+     papier/bureau avec fouillis authentique (câbles, fruits, jouets).
+  2. **Ombres EEVEE** : ombre portée unique, longue et dure (ou halos rectangulaires
+     doux « fantômes ») ; le réel a des ombres de contact riches et multi-sources.
+  3. **Étalonnage** : la dérive AWB + vignettage produit un voile pastel désaturé
+     uniforme (« scènes lavées ») qu'aucune vraie photo n'a — un vrai pipeline
+     smartphone resature/contraste après l'AWB. Ajouter une courbe de contraste
+     saturation post-AWB serait le correctif le plus rentable.
+  4. **Composition** : tas = amas balistique circulaire centré à mi-distance sur
+     fond nu ; les photos réelles sont cadrées près, pièces éparses posées main.
+     (Ce point est en partie voulu — le cas produit EST le tas — mais un régime
+     « éparses proches » type photos réelles réduirait le tell.)
+  5. **Distracteurs procéduraux** (bouchon-cylindre, monnaie-disque) repérables
+     comme primitives ; les modèles Poly Haven passent mieux.
+  6. **Matière** : à 640², la matière n'est PAS le tell dominant — les rayures/
+     poussière sont sous le pixel ; ce qui manque visuellement : logo des tenons,
+     reflets spéculaires brisés en gros plan. Le durcissement S.3 reste utile
+     (anti-« plastique parfait ») mais ne suffit pas seul.
+  - NB méthodologique : le relecteur est aussi l'auteur du générateur (il connaît
+    les assets) — un relecteur humain naïf (PO, 15 min prévues au plan) pourrait
+    scorer différemment ; recommandé avant toute re-conception lourde.
+- **Transparents (verdict, décision plan)** : EXCLUS v1, flag
+  `colors.p_transparent: 0.0`. Test : 3 scènes 10-18 pièces avec ~50 % trans-*
+  (23 pièces trans visibles) + 1 rendu brique isolée. Brique 2×4 Trans_Red en
+  gros plan : rendu correct (translucidité crédible, raytracing EEVEE activé,
+  `use_raytrace_refraction`). En tas à 640² : les pièces trans rendent
+  **opaques et ternes** (aucune réfraction visible à cette taille) et les teintes
+  claires sont viciées (ex. Trans_Bright_Light_Orange → brun-gris) — artefact
+  de domaine pire que l'absence. Le câblage `bo_trans` reste en place pour un
+  re-test Cycles ou EEVEE plus tard.
+- Écarts au plan :
+  1. **Micro-bevel non activé** (`bevel_width: 0.0`) : le node Bevel est
+     Cycles-only (no-op EEVEE) → pas de chemin « coût nul » ; un modifier Bevel
+     par pièce coûte de la géométrie pour un effet sub-pixel à 640²
+     (0,25 mm ≈ 0,3 px). Réévaluer si passage à Cycles ou résolution ×2.
+  2. **Jitter teinte ±3 %** interprété comme fraction du cercle chromatique
+     (±10,8°) — tiré uniformément, tracé par pièce (`hsv_jitter` au manifest).
+  3. **Grille spot-the-fake v1 biaisée** (constaté et corrigé) : le tirage
+     aléatoire des réelles est tombé 10/10 sur `photos/1` (mono-pièce) et 4-5
+     scènes synth avaient été vues pendant le dev → grille v2 assainie
+     (`ml/spot_the_fake/v2/`). Les DEUX scorent 0 erreur : l'échec du critère
+     n'est pas un artefact de protocole.
+  4. Le dataset final est en **.jpg** (post-process) : `build_grid` et les
+     manifests (`image`) suivent ; les labels YOLO et leur nommage sont inchangés.
+- Blocages / questions : l'échec du spot-the-fake ne bloque PAS mécaniquement
+  S.4/S.5 (le juge réel de l'utilité est S.5/recette C sur le set TAS), mais le
+  plan exige la décision PO : itérer sur les tells 1-3 (fonds réels photographiés
+  à l'échelle, contact shadows, courbe post-AWB) avant le tir 10 k, ou assumer
+  le gap et laisser S.5 trancher.
+
+### Throughput S.3 (mesure du 2026-07-05, M1 16 Go, 60 scènes)
+| Mesure | S.2 | S.3 |
+|---|---|---|
+| s/image rendu (mur) | 2,6 | 2,54 |
+| s/image post-process | — | 0,072 |
+| **s/image total** | **2,6** | **2,62** |
+| Projection 10 k | ≈ 7,2 h | **≈ 7,3 h** |
+
+Reproduction : `.venv/bin/python ml/synth/generate_scenes.py --n 60
+--dataset-id synth_v1.1_val --out data/processed/synth_v11_val`.
+
 ## Jalon S.2 — Générateur de scènes v0
 
 - Statut : ✅ (2026-07-05)
