@@ -54,6 +54,9 @@ def main() -> None:
     parser.add_argument("--device", default="mps", choices=["mps", "cpu", "cuda"])
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--limit", type=int, default=None, help="sous-échantillon (smoke test)")
+    parser.add_argument("--aug", default="light", choices=["light", "strong"])
+    parser.add_argument("--val-photos-only", action="store_true",
+                        help="early stopping sur les photos réelles seules (la val mélangée est gonflée par les rendus)")
     parser.add_argument("--patience", type=int, default=8)
     parser.add_argument("--out", type=Path, default=REPO_ROOT / "ml" / "runs" / "det_v0")
     args = parser.parse_args()
@@ -62,9 +65,10 @@ def main() -> None:
     device = torch.device(args.device)
     args.out.mkdir(parents=True, exist_ok=True)
 
-    train_ds = LegoDetectionDataset(args.data / "train", train=True, limit=args.limit)
+    train_ds = LegoDetectionDataset(args.data / "train", train=True, limit=args.limit, aug=args.aug)
     val_ds = LegoDetectionDataset(args.data / "val", train=False,
-                                  limit=max(50, args.limit // 4) if args.limit else None)
+                                  limit=max(50, args.limit // 4) if args.limit else None,
+                                  photos_only=args.val_photos_only)
     train_dl = DataLoader(train_ds, batch_size=args.batch, shuffle=True,
                           collate_fn=collate, num_workers=4, persistent_workers=True)
     val_dl = DataLoader(val_ds, batch_size=args.batch, collate_fn=collate,
