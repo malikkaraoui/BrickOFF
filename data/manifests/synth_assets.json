@@ -1,0 +1,2241 @@
+{
+ "dataset": "synth_assets",
+ "version": "1.0",
+ "date": "2026-07-05",
+ "milestone": "CH-S / S.1",
+ "licenses": {
+  "polyhaven": "CC0 — https://polyhaven.com/license (verifiee 2026-07-05)",
+  "ambientcg": "CC0 1.0 — https://docs.ambientcg.com/license/ (verifiee 2026-07-05)"
+ },
+ "thermal_method": "HDR 2k lu en RGB lineaire (OpenCV), reduit a 256x128 ; moyenne RGB ponderee par la luminance Rec.709 (clippee au percentile 99,5) ; ratio R/B + CCT via sRGB->XYZ->xy et approximation McCamy 1992. Classes : warm = CCT<4500K ou R/B>1.35 ; cold = CCT>5800K et R/B<1.05 ; neutral sinon. CCT hors [1000;25000]K -> R/B seul. Script : ml/synth/classify_hdri_temperature.py",
+ "summary": {
+  "hdri_count": 60,
+  "hdri_thermal": {
+   "warm": 33,
+   "neutral": 13,
+   "cold": 14
+  },
+  "hdri_warm_pct": 55.0,
+  "texture_count": 15,
+  "texture_by_category": {
+   "fabric_carpet": 4,
+   "concrete_stone": 3,
+   "tiles": 3,
+   "wood": 5
+  },
+  "distractor_count": 10,
+  "total_size_bytes": 744333107,
+  "total_size_mb": 744.3
+ },
+ "assets": [
+  {
+   "id": "adams_place_bridge",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/adams_place_bridge_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/adams_place_bridge",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/adams_place_bridge_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6556038,
+   "sha256": "959fe12fde275e55cfe8953e845c30b66af38da9ba57eab5490fd6b6da5a33cc",
+   "md5_api": "af1b77d25770ae924330edaeb0741484",
+   "categories": [
+    "indoor",
+    "urban",
+    "high contrast",
+    "artificial light"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.295,
+   "thermal_cct_est_K": 5592
+  },
+  {
+   "id": "aft_lounge",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/aft_lounge_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/aft_lounge",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/aft_lounge_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6861496,
+   "sha256": "4e1f3e1fb96eeb5f3fdb5df51c3238a5401288f6136d9258ed902b8017a9d84c",
+   "md5_api": "30a3840a39aa12cfd2a0415b74e15484",
+   "categories": [
+    "indoor",
+    "urban",
+    "sunrise-sunset",
+    "clear",
+    "high contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.062,
+   "thermal_cct_est_K": 4569
+  },
+  {
+   "id": "anniversary_lounge",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/anniversary_lounge_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/anniversary_lounge",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/anniversary_lounge_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6461923,
+   "sha256": "94415a293982ea8b90db35e51e22fcec6d4b9da98726a1fea8f86a51ec315887",
+   "md5_api": "2abe7be03ac56282a223f69a6ebfc142",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.708,
+   "thermal_cct_est_K": 4916
+  },
+  {
+   "id": "ballroom",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/ballroom_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/ballroom",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/ballroom_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6536947,
+   "sha256": "a0904a3b9c6bdb7415b4e27663dbbf2add24743f15f7320272121fe81de1a100",
+   "md5_api": "a862b43742236dbc0e6f3d00f9e4c1ec",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light",
+    "natural light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.927,
+   "thermal_cct_est_K": 6841
+  },
+  {
+   "id": "bank_vault",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/bank_vault_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/bank_vault",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/bank_vault_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6660066,
+   "sha256": "477da44a53b78f31d7f5bf3b943d858b69286cf0e59273398c2fd54c01eca8c3",
+   "md5_api": "75ccab3ecd19f987174d6a64e12b3bf3",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "medium contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.486,
+   "thermal_cct_est_K": 5245
+  },
+  {
+   "id": "bathroom",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/bathroom_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/bathroom",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/bathroom_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6473273,
+   "sha256": "fc54a5d79f73839ea48fc7cb86ba85be24a53c3aa342401dbd76e50f69baa591",
+   "md5_api": "a3b67928255bd7d33288dd1c4273f4a7",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.56,
+   "thermal_cct_est_K": 9568
+  },
+  {
+   "id": "billiard_hall",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/billiard_hall_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/billiard_hall",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/billiard_hall_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6546781,
+   "sha256": "a8a843d2d380e742ce873dcf23201e95e34ed583023908de4838c8e7f5eed3e6",
+   "md5_api": "987f5967d3eb0f2cbf6bbc473a506dc5",
+   "categories": [
+    "indoor",
+    "urban",
+    "natural light",
+    "artificial light",
+    "medium contrast",
+    "morning-afternoon"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 1.025,
+   "thermal_cct_est_K": 6391
+  },
+  {
+   "id": "blender_institute",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/blender_institute_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/blender_institute",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/blender_institute_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6307270,
+   "sha256": "8263e246a16bd0daf0df06f510ea669c31c9d3ee27b8d786fdc8eb06b72cab95",
+   "md5_api": "83a521ae7a04943b98c5ecd973a63e4b",
+   "categories": [
+    "indoor",
+    "urban",
+    "low contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.248,
+   "thermal_cct_est_K": 4513
+  },
+  {
+   "id": "boiler_room",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/boiler_room_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/boiler_room",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/boiler_room_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6707438,
+   "sha256": "07c353cb275f1e359cdfa1710acb77c5cd075ce7770859ca56641993263d2d19",
+   "md5_api": "324d15c18b121a23fda28e35ba280072",
+   "categories": [
+    "indoor",
+    "urban",
+    "low contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.972,
+   "thermal_cct_est_K": 6606
+  },
+  {
+   "id": "brown_photostudio_01",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/brown_photostudio_01_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/brown_photostudio_01",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/brown_photostudio_01_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6510194,
+   "sha256": "c0e352abc756fcaf557538eaab6878637936bbad4a84b07ca682625d0e25d66d",
+   "md5_api": "68850369d34d65fdd044b471581bc707",
+   "categories": [
+    "indoor",
+    "urban",
+    "natural light",
+    "artificial light",
+    "medium contrast",
+    "studio",
+    "low contrast"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.927,
+   "thermal_cct_est_K": 6839
+  },
+  {
+   "id": "cabin",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/cabin_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/cabin",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/cabin_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6582652,
+   "sha256": "5d2a8bff70a1283cde546c570fb8a5aebe80042232b48827ec473eff040c6785",
+   "md5_api": "014ba9af3dc1813469110f9feb2a5b37",
+   "categories": [
+    "indoor",
+    "urban",
+    "high contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.593,
+   "thermal_cct_est_K": 4469
+  },
+  {
+   "id": "cayley_interior",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/cayley_interior_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/cayley_interior",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/cayley_interior_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6693660,
+   "sha256": "848a809b90358a52cb89fb2a327fb1c16eb1783a759c58e89c1e7b5fd5b49246",
+   "md5_api": "96c874e6e3adafd7e4d8b2c0d44ff116",
+   "categories": [
+    "indoor",
+    "urban",
+    "sunrise-sunset",
+    "artificial light",
+    "natural light",
+    "high contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.658,
+   "thermal_cct_est_K": 3940
+  },
+  {
+   "id": "christmas_photo_studio_01",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/christmas_photo_studio_01_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/christmas_photo_studio_01",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/christmas_photo_studio_01_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6615048,
+   "sha256": "407061ffb835e219676ce910bde9c2b602f8797bb5441c88aba7d3bbb1f10d4d",
+   "md5_api": "775750d7ea7f12d9cd5be6acf3583899",
+   "categories": [
+    "indoor",
+    "urban",
+    "night",
+    "high contrast",
+    "artificial light",
+    "studio"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.301,
+   "thermal_cct_est_K": 5575
+  },
+  {
+   "id": "cinema_hall",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/cinema_hall_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/cinema_hall",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/cinema_hall_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6749730,
+   "sha256": "fcf385372acfa3147d853a530b360ccf40265b9d56b623adb4aa32b381aee33f",
+   "md5_api": "eb202157072a432883df143632d488ac",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 6.407,
+   "thermal_cct_est_K": 3136
+  },
+  {
+   "id": "cinema_lobby",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/cinema_lobby_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/cinema_lobby",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/cinema_lobby_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6678705,
+   "sha256": "0e5b8043545c8dd0e08faacb4318ce4e7632b802c45a9e030dc13310b3ec4613",
+   "md5_api": "d1961c60896989c95bdbb3eb8d2e5d9b",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.142,
+   "thermal_cct_est_K": 6018
+  },
+  {
+   "id": "comfy_cafe",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/comfy_cafe_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/comfy_cafe",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/comfy_cafe_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6260522,
+   "sha256": "00597d2a2174b7803c10bd2d690922e170bb614bce6c98c9c9b688698f1d234d",
+   "md5_api": "e8d670a951dcbb06c0bb1d3a7b351f15",
+   "categories": [
+    "indoor",
+    "urban",
+    "low contrast",
+    "artificial light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 1.041,
+   "thermal_cct_est_K": 6342
+  },
+  {
+   "id": "cowboy_town_hall",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/cowboy_town_hall_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/cowboy_town_hall",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/cowboy_town_hall_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6861473,
+   "sha256": "3582ba7933820fe7f0ca82c4a14d8cec4592034f155bfded661cf8ec883fc47e",
+   "md5_api": "a4ac747e49ab74f0cfe93ef5c99211d1",
+   "categories": [
+    "indoor",
+    "urban",
+    "natural light",
+    "artificial light",
+    "medium contrast",
+    "morning-afternoon"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.572,
+   "thermal_cct_est_K": 4971
+  },
+  {
+   "id": "dancing_hall",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/dancing_hall_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/dancing_hall",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/dancing_hall_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6793001,
+   "sha256": "43a086ca57b4f1586b085f39c9e3d2407cae81078f53430e01e5b551f8bb0a00",
+   "md5_api": "af4d64c9a2742cca8342d4007b4d3096",
+   "categories": [
+    "urban",
+    "medium contrast",
+    "indoor",
+    "artificial light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.95,
+   "thermal_cct_est_K": 6739
+  },
+  {
+   "id": "de_balie",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/de_balie_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/de_balie",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/de_balie_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5996024,
+   "sha256": "02e028aad845b06d873c1e46441ffd2eb996cb9edc62d06a67901147e956bc08",
+   "md5_api": "9f2a39bc1354e762843c849c8cf18113",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.633,
+   "thermal_cct_est_K": 3660
+  },
+  {
+   "id": "dresden_station_night",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/dresden_station_night_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/dresden_station_night",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/dresden_station_night_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6806640,
+   "sha256": "c825fa36208881432981ea5bbf1ad1d0b19070b5ae3c7d555b734b7f726f05c1",
+   "md5_api": "64511a838dfd805e64f3e785c0283fdd",
+   "categories": [
+    "indoor",
+    "urban",
+    "night",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.517,
+   "thermal_cct_est_K": 5210
+  },
+  {
+   "id": "empty_play_room",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/empty_play_room_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/empty_play_room",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/empty_play_room_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6479703,
+   "sha256": "9551d1cf18d9637bdbd599d286a8efa0051782031f2eda413f9afe9b607a17ed",
+   "md5_api": "9f2668e4a3425d8e0d0b14cffbce356f",
+   "categories": [
+    "indoor",
+    "urban",
+    "natural light",
+    "artificial light",
+    "medium contrast",
+    "morning-afternoon"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.245,
+   "thermal_cct_est_K": 5731
+  },
+  {
+   "id": "en_suite",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/en_suite_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/en_suite",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/en_suite_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6282889,
+   "sha256": "d5d9a0d331f9fc30053c5cbcb0a407e75e20d723a94623e2f9e12909c6938f6f",
+   "md5_api": "ea75c502ae2c68b086307307ad14a5c6",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "high contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.128,
+   "thermal_cct_est_K": 4407
+  },
+  {
+   "id": "entrance_hall",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/entrance_hall_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/entrance_hall",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/entrance_hall_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6330494,
+   "sha256": "4408e7e747af46fe1980c4a7c5b1b96e511819bc40021356eae3e3420a9520cc",
+   "md5_api": "afa92bd8f1aa4d0b362020e80c1fa49c",
+   "categories": [
+    "indoor",
+    "urban",
+    "midday",
+    "medium contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 1.035,
+   "thermal_cct_est_K": 6362
+  },
+  {
+   "id": "fireplace",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/fireplace_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/fireplace",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/fireplace_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6012743,
+   "sha256": "5a66c591329199ee234dd0c84221f5bc807b380757909beb6bd1c73392ecd96c",
+   "md5_api": "ba8837fa368e40a397272cb869e1439c",
+   "categories": [
+    "indoor",
+    "urban",
+    "night",
+    "high contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 9.651,
+   "thermal_cct_est_K": 2889
+  },
+  {
+   "id": "gear_store",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/gear_store_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/gear_store",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/gear_store_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6339788,
+   "sha256": "c38423bd524800cc188e544ee4bc19c4bf485468c1de4f29df42f598f62872f6",
+   "md5_api": "b15822ba67d35a8976e86cccb6df8ad6",
+   "categories": [
+    "indoor",
+    "artificial light",
+    "urban",
+    "medium contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.279,
+   "thermal_cct_est_K": 4551
+  },
+  {
+   "id": "graaff_reinet_groote_kerk",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/graaff_reinet_groote_kerk_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/graaff_reinet_groote_kerk",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/graaff_reinet_groote_kerk_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6645536,
+   "sha256": "a93e8ba05ef6eab80a15fb75e6f1b5ec943da6b1db32f483c9e4dc2c9b2b99d0",
+   "md5_api": "d6ac669f7ef81fa54c35d2ee85c85453",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "medium contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.481,
+   "thermal_cct_est_K": 5287
+  },
+  {
+   "id": "hall_of_mammals",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/hall_of_mammals_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/hall_of_mammals",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/hall_of_mammals_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6607673,
+   "sha256": "5e3fe1ee19c6e3d611a15b4ce32bd7c8950bf6d9d926f75690552c4b334fcd2b",
+   "md5_api": "671cd8c1e2cf4efb61d2465cb956f463",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.081,
+   "thermal_cct_est_K": 6163
+  },
+  {
+   "id": "hospital_room",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/hospital_room_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/hospital_room",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/hospital_room_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5323237,
+   "sha256": "49ec7b400fe397007515120f6c8b41026d0fc85da772a7d1bb53c41de881c059",
+   "md5_api": "ad5478c7018508b5c47b54e8b0e1354a",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.221,
+   "thermal_cct_est_K": 5807
+  },
+  {
+   "id": "hotel_room",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/hotel_room_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/hotel_room",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/hotel_room_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6186669,
+   "sha256": "14fdf682ee084d8ad68c77b47031e473fd89413c8b99cb988366c6ac1afb3918",
+   "md5_api": "c9c57b1e904f6003a30d08074a807125",
+   "categories": [
+    "indoor",
+    "urban",
+    "high contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.162,
+   "thermal_cct_est_K": 4395
+  },
+  {
+   "id": "indoor_pool",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/indoor_pool_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/indoor_pool",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/indoor_pool_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5926534,
+   "sha256": "6318b6937f5831d3449e247affa39af0831b8f5e1fca120200e960bf486eadd0",
+   "md5_api": "acf0b5200b9c7eb66f79c0d96e567047",
+   "categories": [
+    "indoor",
+    "urban",
+    "low contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.641,
+   "thermal_cct_est_K": 4948
+  },
+  {
+   "id": "kiara_interior",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/kiara_interior_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/kiara_interior",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kiara_interior_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6724948,
+   "sha256": "553a14947afb83f3cec2619994cb4f1f14c205ebd9d32280524e004b1b0296ce",
+   "md5_api": "690242ed5333041c7521e8b81fecb140",
+   "categories": [
+    "indoor",
+    "urban",
+    "sunrise-sunset",
+    "medium contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.493,
+   "thermal_cct_est_K": 11909
+  },
+  {
+   "id": "lapa",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/lapa_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/lapa",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/lapa_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6779825,
+   "sha256": "05f35efc01e71bb19075192b9c15b5b0f37f425560409423c7fd68a07b58e526",
+   "md5_api": "aefa8320441c7ca383b26ef29c6ae21a",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.088,
+   "thermal_cct_est_K": 6185
+  },
+  {
+   "id": "lebombo",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/lebombo_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/lebombo",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/lebombo_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6010815,
+   "sha256": "d9581004963990b0e740e26f6468b87903bc2b79c1efd54adfbac985fbf7ec1b",
+   "md5_api": "64e113e1206870e7683c4c519d4fc61a",
+   "categories": [
+    "indoor",
+    "urban",
+    "morning-afternoon",
+    "low contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.856,
+   "thermal_cct_est_K": 7270
+  },
+  {
+   "id": "lythwood_lounge",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/lythwood_lounge_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/lythwood_lounge",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/lythwood_lounge_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6090881,
+   "sha256": "04cce69276d91353c41804c3a6b2d65bfef0119372aac5707ab73790933e60b7",
+   "md5_api": "a35c9a2e4a6e699135c99ef690f9c045",
+   "categories": [
+    "indoor",
+    "urban",
+    "midday",
+    "overcast",
+    "medium contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.817,
+   "thermal_cct_est_K": 4825
+  },
+  {
+   "id": "lythwood_room",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/lythwood_room_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/lythwood_room",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/lythwood_room_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5817367,
+   "sha256": "c01266ac94735d84524853e5aa4821723346a9beec8a87b3b0001e616711fd8e",
+   "md5_api": "2c314878df439e93bc7ea4ddb8358517",
+   "categories": [
+    "indoor",
+    "urban",
+    "midday",
+    "overcast",
+    "low contrast",
+    "natural light",
+    "artificial light"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.306,
+   "thermal_cct_est_K": 5604
+  },
+  {
+   "id": "metro_noord",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/metro_noord_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/metro_noord",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/metro_noord_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6852060,
+   "sha256": "e662181d58ff296c05f94c00d2cbbbc5eec5314155b3f7b074d6e56644b83729",
+   "md5_api": "31c096f71b1f292e26001fad1c8d2fc1",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "night",
+    "medium contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.595,
+   "thermal_cct_est_K": 4030
+  },
+  {
+   "id": "museum_of_ethnography",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/museum_of_ethnography_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/museum_of_ethnography",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/museum_of_ethnography_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6489316,
+   "sha256": "7637cdffdae665403b99ba3761541d51c2bb94ca7e9a1be0707c25736ca62619",
+   "md5_api": "7e1f9cbdbf5615b0ce046ecf02713bea",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.73,
+   "thermal_cct_est_K": 5027
+  },
+  {
+   "id": "music_hall_01",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/music_hall_01_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/music_hall_01",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/music_hall_01_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6462080,
+   "sha256": "5a073442c6863dadd116405a443190ee834196815ff14923af89a4720e79f0e0",
+   "md5_api": "30d3574875c0ba15c46c07e78cccacae",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.378,
+   "thermal_cct_est_K": 5390
+  },
+  {
+   "id": "newman_cafeteria",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/newman_cafeteria_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/newman_cafeteria",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/newman_cafeteria_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5949265,
+   "sha256": "05a9bf773b9182d744e11baa0bc940290aa1c04ef1358ed416d8e3f7e63b1357",
+   "md5_api": "59bb3ed9a6d2e70aaaa7cf184fa92b31",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "medium contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.555,
+   "thermal_cct_est_K": 4313
+  },
+  {
+   "id": "phone_shop",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/phone_shop_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/phone_shop",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/phone_shop_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6680034,
+   "sha256": "1d9d5355c3af6f4a4f32461d4edaabd00ac8184f7fe36aeb6deff0697ca8fea5",
+   "md5_api": "8bb838b7614325dccde770ad5392ac10",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.421,
+   "thermal_cct_est_K": 5394
+  },
+  {
+   "id": "photo_studio_01",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/photo_studio_01_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/photo_studio_01",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/photo_studio_01_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6375901,
+   "sha256": "b6178cf04ea2ac9390b8794d3088a04c0254905f335f5f30d2b582c57c40f387",
+   "md5_api": "f00538a101775f76b3f2e96304e8311e",
+   "categories": [
+    "indoor",
+    "studio",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.905,
+   "thermal_cct_est_K": 6923
+  },
+  {
+   "id": "pine_attic",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/pine_attic_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/pine_attic",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/pine_attic_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6447421,
+   "sha256": "fed78e178e61b6b39d6e7e5340bdec046799b230fad6b13c221f202c3db6a5db",
+   "md5_api": "fe9c3d03dc5eaa8dd850afc7a85cfa45",
+   "categories": [
+    "indoor",
+    "artificial light",
+    "natural light",
+    "urban",
+    "medium contrast"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 0.783,
+   "thermal_cct_est_K": 7601
+  },
+  {
+   "id": "pretville_cinema",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/pretville_cinema_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/pretville_cinema",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/pretville_cinema_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6088474,
+   "sha256": "af2a60ee9c63907a528cae4c934fc77b1b2cb55008da9d42dd9423c354bbe0e7",
+   "md5_api": "406c01275af36c26387a9a2464fb34c3",
+   "categories": [
+    "indoor",
+    "artificial light",
+    "medium contrast",
+    "urban"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 5.419,
+   "thermal_cct_est_K": 3420
+  },
+  {
+   "id": "rostock_arches",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/rostock_arches_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/rostock_arches",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/rostock_arches_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6598965,
+   "sha256": "0750975e9e5d4c3917810967c51f814f55802c4f1d968a7f5e43cf2c3874a069",
+   "md5_api": "2e59feafb6fdd26e04272199288c7889",
+   "categories": [
+    "indoor",
+    "artificial light",
+    "night",
+    "urban",
+    "low contrast"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.074,
+   "thermal_cct_est_K": 6233
+  },
+  {
+   "id": "royal_esplanade",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/royal_esplanade_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/royal_esplanade",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/royal_esplanade_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6487325,
+   "sha256": "2bd8099000281b03ddabc815d05ebacba8c75feb09e6cd9c376907b471f8fa14",
+   "md5_api": "fc9d5bfc0b17c120f5988180e360f35a",
+   "categories": [
+    "indoor",
+    "urban",
+    "high contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.886,
+   "thermal_cct_est_K": 4218
+  },
+  {
+   "id": "school_hall",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/school_hall_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/school_hall",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/school_hall_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6640427,
+   "sha256": "1c55b3e315ef6feb0e0515d349654d45cbe0a558b8f74fe6f11566caf59d7fa1",
+   "md5_api": "fc8a677ba3285866c53da27d893dd2f8",
+   "categories": [
+    "indoor",
+    "natural light",
+    "artificial light",
+    "urban",
+    "medium contrast",
+    "morning-afternoon"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.001,
+   "thermal_cct_est_K": 4492
+  },
+  {
+   "id": "small_empty_room_2",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/small_empty_room_2_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/small_empty_room_2",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/small_empty_room_2_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6007733,
+   "sha256": "ecb18591beecf48941556f8c73a9de04645be8dd98407871c1b4b26823f81589",
+   "md5_api": "850441fa1b5b89f35d5b1063348515c6",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "medium contrast",
+    "night"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.068,
+   "thermal_cct_est_K": 6244
+  },
+  {
+   "id": "small_workshop",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/small_workshop_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/small_workshop",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/small_workshop_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6755781,
+   "sha256": "8144e1b038a17537c3cb4d37deef352dc817c50a9990229f87d71809d3f4b5e9",
+   "md5_api": "49729aaea6f3328d8264fb7010f3852c",
+   "categories": [
+    "artificial light",
+    "natural light",
+    "indoor",
+    "urban",
+    "low contrast",
+    "medium contrast",
+    "morning-afternoon"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.114,
+   "thermal_cct_est_K": 6091
+  },
+  {
+   "id": "st_fagans_interior",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/st_fagans_interior_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/st_fagans_interior",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/st_fagans_interior_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6124146,
+   "sha256": "de2234891e18f8371c1619e6ee98ba04f29d46fc347bcce95f4ee25bd9b4082e",
+   "md5_api": "b7f34884fb7a3c88308243b2831a8065",
+   "categories": [
+    "indoor",
+    "urban",
+    "low contrast",
+    "artificial light"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.258,
+   "thermal_cct_est_K": 5693
+  },
+  {
+   "id": "storeroom",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/storeroom_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/storeroom",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/storeroom_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6603693,
+   "sha256": "ab0582219ee677740b82b6d0e125e0f205935b4e83d7b248869c024683c4045c",
+   "md5_api": "94887e4603a9400bad32ed977b28a201",
+   "categories": [
+    "indoor",
+    "urban",
+    "high contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.534,
+   "thermal_cct_est_K": 5316
+  },
+  {
+   "id": "studio_kominka_01",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/studio_kominka_01_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/studio_kominka_01",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/studio_kominka_01_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5808737,
+   "sha256": "cc8bef43668ee75d9c9ff3c894c4fcb156c9924f9ea7f553db1df23ed7fa80cb",
+   "md5_api": "82a9c6cfe27a2144cbacfafeb93cc01e",
+   "categories": [
+    "studio",
+    "indoor",
+    "artificial light",
+    "urban",
+    "high contrast"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 1.034,
+   "thermal_cct_est_K": 6403
+  },
+  {
+   "id": "thatch_chapel",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/thatch_chapel_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/thatch_chapel",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/thatch_chapel_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6850929,
+   "sha256": "3fedadf8988d9cb729ddc8c664b3edf6abbcb3ae7ad6d9435966084fd6217b37",
+   "md5_api": "da3523098378bdc67c582d32432c90e9",
+   "categories": [
+    "artificial light",
+    "indoor",
+    "urban",
+    "high contrast",
+    "morning-afternoon"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 3.37,
+   "thermal_cct_est_K": 3757
+  },
+  {
+   "id": "theater_01",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/theater_01_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/theater_01",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/theater_01_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6481655,
+   "sha256": "886362068d945edb49fe5bc4b4a1adb31b2b9bc23f5d1daf2255b8b98bb81da3",
+   "md5_api": "9b73eaff6c7d916bdb43dfdebafa5cb1",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.954,
+   "thermal_cct_est_K": 3841
+  },
+  {
+   "id": "theater_02",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/theater_02_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/theater_02",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/theater_02_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6551244,
+   "sha256": "e4f0ed80e9903c540ed837442dbe2539d2f4991381c9bba1f6b45f24fb251ea6",
+   "md5_api": "c09081034e9e5de7928b0581e6c61cc2",
+   "categories": [
+    "indoor",
+    "urban",
+    "medium contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 2.27,
+   "thermal_cct_est_K": 4277
+  },
+  {
+   "id": "warm_bar",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/warm_bar_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/warm_bar",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/warm_bar_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5816931,
+   "sha256": "e7e804805fe654176857c00601fe387562673b12c0facd2a18daa94c7581c0ee",
+   "md5_api": "0d4e532d924ecbb167d5704c2f5a85b1",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "night",
+    "medium contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 7.649,
+   "thermal_cct_est_K": 2785
+  },
+  {
+   "id": "warm_reception_dinner",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/warm_reception_dinner_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/warm_reception_dinner",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/warm_reception_dinner_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5923230,
+   "sha256": "675d357e12eedd127c38de870d7634c87ded9270124d21104d190a10025e31c0",
+   "md5_api": "870ba1f529402d6709b49650653a4aef",
+   "categories": [
+    "indoor",
+    "artificial light",
+    "urban",
+    "medium contrast",
+    "morning-afternoon"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 5.634,
+   "thermal_cct_est_K": 3024
+  },
+  {
+   "id": "warm_restaurant_night",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/warm_restaurant_night_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/warm_restaurant_night",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/warm_restaurant_night_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5710994,
+   "sha256": "115fdee7807078798e72277357d40df9671eb65e7667d79ece813f4e06b5d92a",
+   "md5_api": "204912b76d7756ccbfb87719fd540aa5",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "night",
+    "medium contrast"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 6.773,
+   "thermal_cct_est_K": 3031
+  },
+  {
+   "id": "white_studio_02",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/white_studio_02_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/white_studio_02",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/white_studio_02_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 5355873,
+   "sha256": "f59ec20b1a31569c789aba73a3e50aba17019fb1060ffa81ff99690ecaa88745",
+   "md5_api": "e41d2bc3fca3052e28a7caa6f3978c1c",
+   "categories": [
+    "studio",
+    "indoor",
+    "artificial light",
+    "urban",
+    "low contrast"
+   ],
+   "thermal_class": "cold",
+   "thermal_rb_ratio": 1.023,
+   "thermal_cct_est_K": 6421
+  },
+  {
+   "id": "wooden_lounge",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/wooden_lounge_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/wooden_lounge",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/wooden_lounge_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6418235,
+   "sha256": "128a17aa4b184752f8db938d7a6c02269e8521a7a6963f3170cb25d478dc1e9a",
+   "md5_api": "78cf3ef839f3683fbc762f2e84bfe287",
+   "categories": [
+    "indoor",
+    "urban",
+    "high contrast",
+    "artificial light"
+   ],
+   "thermal_class": "warm",
+   "thermal_rb_ratio": 1.679,
+   "thermal_cct_est_K": 4883
+  },
+  {
+   "id": "yoga_room",
+   "type": "hdri",
+   "file": "data/raw/synth_assets/hdri/yoga_room_2k.hdr",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/yoga_room",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/yoga_room_2k.hdr",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "resolution": "2k",
+   "size_bytes": 6347339,
+   "sha256": "57164b4c5eaa85ae08711caa296db593858ecc2972b0d5b88be72053849f93a8",
+   "md5_api": "05ea4d4ca1835aef76ac41ec33c5231b",
+   "categories": [
+    "indoor",
+    "urban",
+    "artificial light",
+    "medium contrast"
+   ],
+   "thermal_class": "neutral",
+   "thermal_rb_ratio": 1.06,
+   "thermal_cct_est_K": 6276
+  },
+  {
+   "id": "Carpet001",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Carpet001_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Carpet001/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Carpet001",
+   "download_url": "https://ambientcg.com/get?file=Carpet001_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "fabric_carpet",
+   "size_bytes": 29563179,
+   "sha256": "d41f13b273b88cad717add9dea455da8aa8f075046a4fc7f71833fc4f02a66a2",
+   "maps": [
+    "Carpet001.png",
+    "Carpet001_2K-JPG.blend",
+    "Carpet001_2K-JPG.mtlx",
+    "Carpet001_2K-JPG.tres",
+    "Carpet001_2K-JPG.usdc",
+    "Carpet001_2K-JPG_Color.jpg",
+    "Carpet001_2K-JPG_Displacement.jpg",
+    "Carpet001_2K-JPG_NormalDX.jpg",
+    "Carpet001_2K-JPG_NormalGL.jpg",
+    "Carpet001_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Carpet011",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Carpet011_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Carpet011/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Carpet011",
+   "download_url": "https://ambientcg.com/get?file=Carpet011_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "fabric_carpet",
+   "size_bytes": 40902347,
+   "sha256": "f1b2ead4a3c87247a37551da76c0fb536d4f3afa142afba0b80bdfe3d5c20be6",
+   "maps": [
+    "Carpet011.png",
+    "Carpet011_2K-JPG.blend",
+    "Carpet011_2K-JPG.mtlx",
+    "Carpet011_2K-JPG.tres",
+    "Carpet011_2K-JPG.usdc",
+    "Carpet011_2K-JPG_AmbientOcclusion.jpg",
+    "Carpet011_2K-JPG_Color.jpg",
+    "Carpet011_2K-JPG_Displacement.jpg",
+    "Carpet011_2K-JPG_NormalDX.jpg",
+    "Carpet011_2K-JPG_NormalGL.jpg",
+    "Carpet011_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Concrete016",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Concrete016_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Concrete016/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Concrete016",
+   "download_url": "https://ambientcg.com/get?file=Concrete016_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "concrete_stone",
+   "size_bytes": 26351833,
+   "sha256": "9bf09f42aabe3fadd125d65c86dbec5b9d5dfe9841306b0127422911317334e7",
+   "maps": [
+    "Concrete016.png",
+    "Concrete016_2K-JPG.blend",
+    "Concrete016_2K-JPG.mtlx",
+    "Concrete016_2K-JPG.tres",
+    "Concrete016_2K-JPG.usdc",
+    "Concrete016_2K-JPG_Color.jpg",
+    "Concrete016_2K-JPG_Displacement.jpg",
+    "Concrete016_2K-JPG_NormalDX.jpg",
+    "Concrete016_2K-JPG_NormalGL.jpg",
+    "Concrete016_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Concrete019",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Concrete019_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Concrete019/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Concrete019",
+   "download_url": "https://ambientcg.com/get?file=Concrete019_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "concrete_stone",
+   "size_bytes": 28881739,
+   "sha256": "27b584111d2d0fe839163d6729272b0e7ba133b4cc257ac2747d77b8917a54b3",
+   "maps": [
+    "Concrete019.png",
+    "Concrete019_2K-JPG.blend",
+    "Concrete019_2K-JPG.mtlx",
+    "Concrete019_2K-JPG.tres",
+    "Concrete019_2K-JPG.usdc",
+    "Concrete019_2K-JPG_Color.jpg",
+    "Concrete019_2K-JPG_Displacement.jpg",
+    "Concrete019_2K-JPG_NormalDX.jpg",
+    "Concrete019_2K-JPG_NormalGL.jpg",
+    "Concrete019_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Concrete034",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Concrete034_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Concrete034/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Concrete034",
+   "download_url": "https://ambientcg.com/get?file=Concrete034_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "concrete_stone",
+   "size_bytes": 10598720,
+   "sha256": "fafd7cd3aee2b703abbb12b7810ef565ab76ac7ea3b1ea9a73b088e423e670b3",
+   "maps": [
+    "Concrete034.png",
+    "Concrete034_2K-JPG.blend",
+    "Concrete034_2K-JPG.mtlx",
+    "Concrete034_2K-JPG.tres",
+    "Concrete034_2K-JPG.usdc",
+    "Concrete034_2K-JPG_Color.jpg",
+    "Concrete034_2K-JPG_Displacement.jpg",
+    "Concrete034_2K-JPG_NormalDX.jpg",
+    "Concrete034_2K-JPG_NormalGL.jpg",
+    "Concrete034_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Fabric023",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Fabric023_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Fabric023/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Fabric023",
+   "download_url": "https://ambientcg.com/get?file=Fabric023_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "fabric_carpet",
+   "size_bytes": 31784452,
+   "sha256": "48e56288c001ff26dc6067a8547d47c032f63dda1b63e8ecf02ab16e6854aaeb",
+   "maps": [
+    "Fabric023.png",
+    "Fabric023_2K-JPG.blend",
+    "Fabric023_2K-JPG.mtlx",
+    "Fabric023_2K-JPG.tres",
+    "Fabric023_2K-JPG.usdc",
+    "Fabric023_2K-JPG_Color.jpg",
+    "Fabric023_2K-JPG_Displacement.jpg",
+    "Fabric023_2K-JPG_NormalDX.jpg",
+    "Fabric023_2K-JPG_NormalGL.jpg",
+    "Fabric023_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Fabric026",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Fabric026_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Fabric026/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Fabric026",
+   "download_url": "https://ambientcg.com/get?file=Fabric026_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "fabric_carpet",
+   "size_bytes": 27483409,
+   "sha256": "d25e9cdd1727d0343375f46bf6307d2c06fe35f4eae7697f73c4c724bf5950d4",
+   "maps": [
+    "Fabric026.png",
+    "Fabric026_2K-JPG.blend",
+    "Fabric026_2K-JPG.mtlx",
+    "Fabric026_2K-JPG.tres",
+    "Fabric026_2K-JPG.usdc",
+    "Fabric026_2K-JPG_Color.jpg",
+    "Fabric026_2K-JPG_Displacement.jpg",
+    "Fabric026_2K-JPG_NormalDX.jpg",
+    "Fabric026_2K-JPG_NormalGL.jpg",
+    "Fabric026_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Tiles036",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Tiles036_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Tiles036/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Tiles036",
+   "download_url": "https://ambientcg.com/get?file=Tiles036_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "tiles",
+   "size_bytes": 14365292,
+   "sha256": "548005dc451d0b52026a3b8811c4cfe9db6cd1d40f4d31abbe37d6256c0a9229",
+   "maps": [
+    "Tiles036.png",
+    "Tiles036_2K-JPG.blend",
+    "Tiles036_2K-JPG.mtlx",
+    "Tiles036_2K-JPG.tres",
+    "Tiles036_2K-JPG.usdc",
+    "Tiles036_2K-JPG_Color.jpg",
+    "Tiles036_2K-JPG_Displacement.jpg",
+    "Tiles036_2K-JPG_NormalDX.jpg",
+    "Tiles036_2K-JPG_NormalGL.jpg",
+    "Tiles036_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Tiles074",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Tiles074_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Tiles074/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Tiles074",
+   "download_url": "https://ambientcg.com/get?file=Tiles074_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "tiles",
+   "size_bytes": 11108251,
+   "sha256": "8c9439bd30113c9ab4e223cf4e1fb08265d0a34978d02b5b61d7754c68cfc74f",
+   "maps": [
+    "Tiles074.png",
+    "Tiles074_2K-JPG.blend",
+    "Tiles074_2K-JPG.mtlx",
+    "Tiles074_2K-JPG.tres",
+    "Tiles074_2K-JPG.usdc",
+    "Tiles074_2K-JPG_Color.jpg",
+    "Tiles074_2K-JPG_Displacement.jpg",
+    "Tiles074_2K-JPG_NormalDX.jpg",
+    "Tiles074_2K-JPG_NormalGL.jpg",
+    "Tiles074_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Tiles101",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Tiles101_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Tiles101/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Tiles101",
+   "download_url": "https://ambientcg.com/get?file=Tiles101_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "tiles",
+   "size_bytes": 15521037,
+   "sha256": "db3c1cd1faa475782c3c3cf3127b772d41c46670066af3d485f94bed070e7cd5",
+   "maps": [
+    "Tiles101.png",
+    "Tiles101_2K-JPG.blend",
+    "Tiles101_2K-JPG.mtlx",
+    "Tiles101_2K-JPG.tres",
+    "Tiles101_2K-JPG.usdc",
+    "Tiles101_2K-JPG_AmbientOcclusion.jpg",
+    "Tiles101_2K-JPG_Color.jpg",
+    "Tiles101_2K-JPG_Displacement.jpg",
+    "Tiles101_2K-JPG_NormalDX.jpg",
+    "Tiles101_2K-JPG_NormalGL.jpg",
+    "Tiles101_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Wood026",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Wood026_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Wood026/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Wood026",
+   "download_url": "https://ambientcg.com/get?file=Wood026_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "wood",
+   "size_bytes": 23373008,
+   "sha256": "42eff14049fe440b55206d3ba49689e584620a8b9dca51f79c02af18653633bc",
+   "maps": [
+    "Wood026.png",
+    "Wood026_2K-JPG.blend",
+    "Wood026_2K-JPG.mtlx",
+    "Wood026_2K-JPG.tres",
+    "Wood026_2K-JPG.usdc",
+    "Wood026_2K-JPG_Color.jpg",
+    "Wood026_2K-JPG_Displacement.jpg",
+    "Wood026_2K-JPG_NormalDX.jpg",
+    "Wood026_2K-JPG_NormalGL.jpg",
+    "Wood026_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "Wood051",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/Wood051_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/Wood051/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/Wood051",
+   "download_url": "https://ambientcg.com/get?file=Wood051_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "wood",
+   "size_bytes": 23152632,
+   "sha256": "ef50cd051a1d998bf2a03e243e991474415d948af6d4b76d291c937654c97d4b",
+   "maps": [
+    "Wood051.png",
+    "Wood051_2K-JPG.blend",
+    "Wood051_2K-JPG.mtlx",
+    "Wood051_2K-JPG.tres",
+    "Wood051_2K-JPG.usdc",
+    "Wood051_2K-JPG_Color.jpg",
+    "Wood051_2K-JPG_Displacement.jpg",
+    "Wood051_2K-JPG_NormalDX.jpg",
+    "Wood051_2K-JPG_NormalGL.jpg",
+    "Wood051_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "WoodFloor007",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/WoodFloor007_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/WoodFloor007/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/WoodFloor007",
+   "download_url": "https://ambientcg.com/get?file=WoodFloor007_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "wood",
+   "size_bytes": 22818683,
+   "sha256": "8d7065ec1281113d68c1e9dd7593df833a9727b4c9bc46e98ac68a65c9374063",
+   "maps": [
+    "WoodFloor007.png",
+    "WoodFloor007_2K-JPG.blend",
+    "WoodFloor007_2K-JPG.mtlx",
+    "WoodFloor007_2K-JPG.tres",
+    "WoodFloor007_2K-JPG.usdc",
+    "WoodFloor007_2K-JPG_AmbientOcclusion.jpg",
+    "WoodFloor007_2K-JPG_Color.jpg",
+    "WoodFloor007_2K-JPG_Displacement.jpg",
+    "WoodFloor007_2K-JPG_NormalDX.jpg",
+    "WoodFloor007_2K-JPG_NormalGL.jpg",
+    "WoodFloor007_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "WoodFloor039",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/WoodFloor039_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/WoodFloor039/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/WoodFloor039",
+   "download_url": "https://ambientcg.com/get?file=WoodFloor039_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "wood",
+   "size_bytes": 20626265,
+   "sha256": "0413ffe5d60d724e6bcaf7a86f6ea24c6bc93b743f0ccd9ed7ba53aadf097fe4",
+   "maps": [
+    "WoodFloor039.png",
+    "WoodFloor039_2K-JPG.blend",
+    "WoodFloor039_2K-JPG.mtlx",
+    "WoodFloor039_2K-JPG.tres",
+    "WoodFloor039_2K-JPG.usdc",
+    "WoodFloor039_2K-JPG_AmbientOcclusion.jpg",
+    "WoodFloor039_2K-JPG_Color.jpg",
+    "WoodFloor039_2K-JPG_Displacement.jpg",
+    "WoodFloor039_2K-JPG_NormalDX.jpg",
+    "WoodFloor039_2K-JPG_NormalGL.jpg",
+    "WoodFloor039_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "WoodFloor043",
+   "type": "texture_pbr",
+   "file": "data/raw/synth_assets/textures/WoodFloor043_2K-JPG.zip",
+   "extracted_dir": "data/raw/synth_assets/textures/WoodFloor043/",
+   "source": "ambientCG",
+   "source_page": "https://ambientcg.com/a/WoodFloor043",
+   "download_url": "https://ambientcg.com/get?file=WoodFloor043_2K-JPG.zip",
+   "license": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+   "resolution": "2K-JPG",
+   "material_category": "wood",
+   "size_bytes": 10308598,
+   "sha256": "5f9cab5c67eeeb441a6aa6744f9ebbd56186dfeab4f9c1d924220d3d43b73bdb",
+   "maps": [
+    "WoodFloor043.png",
+    "WoodFloor043_2K-JPG.blend",
+    "WoodFloor043_2K-JPG.mtlx",
+    "WoodFloor043_2K-JPG.tres",
+    "WoodFloor043_2K-JPG.usdc",
+    "WoodFloor043_2K-JPG_AmbientOcclusion.jpg",
+    "WoodFloor043_2K-JPG_Color.jpg",
+    "WoodFloor043_2K-JPG_Displacement.jpg",
+    "WoodFloor043_2K-JPG_Metalness.jpg",
+    "WoodFloor043_2K-JPG_NormalDX.jpg",
+    "WoodFloor043_2K-JPG_NormalGL.jpg",
+    "WoodFloor043_2K-JPG_Roughness.jpg"
+   ]
+  },
+  {
+   "id": "alarm_clock_01",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/alarm_clock_01/",
+   "description": "alarm clock",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/alarm_clock_01",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 2730845,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/alarm_clock_01/alarm_clock_01_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/alarm_clock_01/alarm_clock_01_1k.blend",
+     "size_bytes": 624073,
+     "sha256": "e0ed418b5dc31df2d6f0225d4da100419065d7e0bacc2dd09325367fa46da8b4"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/alarm_clock_01/textures/alarm_clock_01_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/alarm_clock_01/alarm_clock_01_nor_gl_1k.exr",
+     "size_bytes": 886704,
+     "sha256": "f2f5a991b0a6a488847d903884189029c5e6b25353456a3ef9e479f369a8e4ce"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/alarm_clock_01/textures/alarm_clock_01_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/alarm_clock_01/alarm_clock_01_rough_1k.exr",
+     "size_bytes": 496768,
+     "sha256": "575b1f4a5d3399d5c7b120ce21d5eec77d37de7b7778df74337de3bda18dbfe6"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/alarm_clock_01/textures/alarm_clock_01_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/alarm_clock_01/alarm_clock_01_diff_1k.jpg",
+     "size_bytes": 404998,
+     "sha256": "deb82094c2c1aa8cda0a0ce7192b193a81c5376743344503764abbcd2db19ac1"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/alarm_clock_01/textures/alarm_clock_01_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/alarm_clock_01/alarm_clock_01_metal_1k.exr",
+     "size_bytes": 318302,
+     "sha256": "8d9ad5da9862aa8203f64266424c98036a3118399e8f08758bf05fabd098ed7e"
+    }
+   ]
+  },
+  {
+   "id": "digital_wrist_watch",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/digital_wrist_watch/",
+   "description": "wrist watch",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/digital_wrist_watch",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 2867427,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/digital_wrist_watch/digital_wrist_watch_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/digital_wrist_watch/digital_wrist_watch_1k.blend",
+     "size_bytes": 392318,
+     "sha256": "8d18c53b1df4842fdfe83fb1dcca1bb780ca92a4a642391a98e29c7b219e83bc"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/digital_wrist_watch/textures/digital_wrist_watch_alpha_1k.png",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/digital_wrist_watch/digital_wrist_watch_alpha_1k.png",
+     "size_bytes": 52342,
+     "sha256": "0a5710ca9bcdf1a1845ce7082a9607f65123fe577d09282b7201e652475350a8"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/digital_wrist_watch/textures/digital_wrist_watch_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/digital_wrist_watch/digital_wrist_watch_diff_1k.jpg",
+     "size_bytes": 547337,
+     "sha256": "37db96583c44a92a17873c9f2655b9fdfca000a4909480e5e0c2abcfdc3c7238"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/digital_wrist_watch/textures/digital_wrist_watch_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/digital_wrist_watch/digital_wrist_watch_metal_1k.exr",
+     "size_bytes": 215664,
+     "sha256": "0c649617b6a68406e931a1a631c66665c7213e31b401e440e8ef2a0a8c7ba881"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/digital_wrist_watch/textures/digital_wrist_watch_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/digital_wrist_watch/digital_wrist_watch_nor_gl_1k.exr",
+     "size_bytes": 1015625,
+     "sha256": "da418fd3251418d9baa85defa16aaca053f215a7a607047850caf1e4d5ea9c6c"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/digital_wrist_watch/textures/digital_wrist_watch_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/digital_wrist_watch/digital_wrist_watch_rough_1k.exr",
+     "size_bytes": 644141,
+     "sha256": "40b23858439693fe0293ed789315c8d605e2c82a33a9ba336cae5cd49105b45c"
+    }
+   ]
+  },
+  {
+   "id": "gamepad",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/gamepad/",
+   "description": "game controller",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/gamepad",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 1763599,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/gamepad/gamepad_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/gamepad/gamepad_1k.blend",
+     "size_bytes": 362018,
+     "sha256": "f160d99b561a210908a6ac4915a49f7ae7e82b6345f8ee3e4c3b4b14a2cb0969"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/gamepad/textures/gamepad_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gamepad/gamepad_diff_1k.jpg",
+     "size_bytes": 309469,
+     "sha256": "d66b82f9790c304efaae5b0dc45a1dffd57ff64ec57d57d7e5a2fe1b1b067b5c"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/gamepad/textures/gamepad_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gamepad/gamepad_metal_1k.exr",
+     "size_bytes": 13310,
+     "sha256": "5f0c796a8b6049837ce11c70e7068684c887f1e200182ba377c14525df242e20"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/gamepad/textures/gamepad_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gamepad/gamepad_rough_1k.exr",
+     "size_bytes": 529950,
+     "sha256": "0b03e002c300710b21d09694e53ec89fdd6f5322805673643b072c71fc4c38a3"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/gamepad/textures/gamepad_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gamepad/gamepad_nor_gl_1k.exr",
+     "size_bytes": 548852,
+     "sha256": "274bc44c9852d23cffda89e0f14c28fcbde856f71e85a5b72ec0f7e8732a8a7c"
+    }
+   ]
+  },
+  {
+   "id": "measuring_tape_01",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/measuring_tape_01/",
+   "description": "measuring tape",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/measuring_tape_01",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 1563946,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/measuring_tape_01/measuring_tape_01_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/measuring_tape_01/measuring_tape_01_1k.blend",
+     "size_bytes": 202162,
+     "sha256": "72be0a34dcb51556165273810ef273df409273908d2c3b555b2237a993469437"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/measuring_tape_01/textures/measuring_tape_01_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/measuring_tape_01/measuring_tape_01_diff_1k.jpg",
+     "size_bytes": 83801,
+     "sha256": "7b66c2a9a5e794336d1456dd9de684ea94bf80a0f8b821c36a0fc2cdf0804052"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/measuring_tape_01/textures/measuring_tape_01_rough_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/measuring_tape_01/measuring_tape_01_rough_1k.jpg",
+     "size_bytes": 131195,
+     "sha256": "8cf15603b111db4e0bee760570a5860bcfd7fff6a17b8c1063bb710192961395"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/measuring_tape_01/textures/measuring_tape_01_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/measuring_tape_01/measuring_tape_01_nor_gl_1k.exr",
+     "size_bytes": 1113881,
+     "sha256": "aa3f428733ceac5abe470459a02cff82677138eeb16ed98eb1d9fbff1f2968ee"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/measuring_tape_01/textures/measuring_tape_01_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/measuring_tape_01/measuring_tape_01_metal_1k.exr",
+     "size_bytes": 32907,
+     "sha256": "768306fd80b4f1a19196aa1d6781ab1941f4d24e849ddb408e3d805aaed3d586"
+    }
+   ]
+  },
+  {
+   "id": "round_spectacles",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/round_spectacles/",
+   "description": "eyeglasses",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/round_spectacles",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 3434723,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/round_spectacles/round_spectacles_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/round_spectacles/round_spectacles_1k.blend",
+     "size_bytes": 389507,
+     "sha256": "0b34d54f1666b62be44b1d268789bcb399117db135096357010ac2770268dec0"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/round_spectacles/textures/round_spectacles_alpha_1k.png",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/round_spectacles/round_spectacles_alpha_1k.png",
+     "size_bytes": 431070,
+     "sha256": "b35a5f95802914a293a54bd41c6250b39de28718e57b031842ce18191ef7af7a"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/round_spectacles/textures/round_spectacles_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/round_spectacles/round_spectacles_diff_1k.jpg",
+     "size_bytes": 505715,
+     "sha256": "df3198ae2848d98f55d6696370c8b9cdf0dfa8ee41db34036aaa57d3155daae3"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/round_spectacles/textures/round_spectacles_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/round_spectacles/round_spectacles_metal_1k.exr",
+     "size_bytes": 428685,
+     "sha256": "ea8018514673543ee7d756f00d8a525df727df2462e403c1a27066a7bc373dfe"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/round_spectacles/textures/round_spectacles_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/round_spectacles/round_spectacles_nor_gl_1k.exr",
+     "size_bytes": 1069894,
+     "sha256": "e105224a57c11443877c166f6237dc87d5751a4739a5d0beffefb210fa0a6702"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/round_spectacles/textures/round_spectacles_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/round_spectacles/round_spectacles_rough_1k.exr",
+     "size_bytes": 609852,
+     "sha256": "4691c7ad26eaf16a90b89bcbb75e928d3fb756ca44d175f965d150df393ac01f"
+    }
+   ]
+  },
+  {
+   "id": "rubber_duck_toy",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/rubber_duck_toy/",
+   "description": "small toy",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/rubber_duck_toy",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 1062564,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/rubber_duck_toy/rubber_duck_toy_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/rubber_duck_toy/rubber_duck_toy_1k.blend",
+     "size_bytes": 196797,
+     "sha256": "5eddea73986b845b10e45f8eefc9d50635bbb61ea271e9cbdcfd7083c62b087b"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/rubber_duck_toy/textures/rubber_duck_toy_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rubber_duck_toy/rubber_duck_toy_diff_1k.jpg",
+     "size_bytes": 231027,
+     "sha256": "c968d6185c3ec57a430818e6af85c2ba2880c7ee19ccb1a0171730926175cfd6"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/rubber_duck_toy/textures/rubber_duck_toy_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_metal_1k.exr",
+     "size_bytes": 4784,
+     "sha256": "3c1f32ec014206b15a8510837ff535efb002ecb206b86278aa7bf28f256c5f93"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/rubber_duck_toy/textures/rubber_duck_toy_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_nor_gl_1k.exr",
+     "size_bytes": 110500,
+     "sha256": "05e61a7c61de9a432ab1a2abee0b9f0f524e6964fad9d74f389583cc72f7a954"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/rubber_duck_toy/textures/rubber_duck_toy_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_rough_1k.exr",
+     "size_bytes": 519456,
+     "sha256": "226fcf30f2ef64690bd273ae19f3a279736a51c931c0586246249592622bc883"
+    }
+   ]
+  },
+  {
+   "id": "screwdriver",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/screwdriver/",
+   "description": "screwdriver",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/screwdriver",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 1965267,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/screwdriver/screwdriver_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/screwdriver/screwdriver_1k.blend",
+     "size_bytes": 185456,
+     "sha256": "68ee754ee975f45b4cf2f04560edea2bb54e4c43d8d21869879e919827f2e35b"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/screwdriver/textures/screwdriver_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/screwdriver/screwdriver_diff_1k.jpg",
+     "size_bytes": 514204,
+     "sha256": "5d1fe3c88eedc61a1fdbd2abc8c77a857a5e804c79e2012bdce63988580fec08"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/screwdriver/textures/screwdriver_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/screwdriver/screwdriver_metal_1k.exr",
+     "size_bytes": 160840,
+     "sha256": "a516784609b0ac09d610fe6847be14de48d72ed69021988e5dac152d04e914cf"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/screwdriver/textures/screwdriver_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/screwdriver/screwdriver_nor_gl_1k.exr",
+     "size_bytes": 369220,
+     "sha256": "d58edfede3f797b3830fb6aa6ca6c0582511abc693e9a380bd4a47546874c1f0"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/screwdriver/textures/screwdriver_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/screwdriver/screwdriver_rough_1k.exr",
+     "size_bytes": 735547,
+     "sha256": "869b523c3d267f59a14e843765d2199c4363513f8bacd94939b7b62f8568f465"
+    }
+   ]
+  },
+  {
+   "id": "stationery_supplies",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/stationery_supplies/",
+   "description": "pen/pencil/eraser set",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/stationery_supplies",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 2794493,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/stationery_supplies/stationery_supplies_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/stationery_supplies/stationery_supplies_1k.blend",
+     "size_bytes": 208982,
+     "sha256": "c8069647eeb53849af038dbe1a0c54e66c0b811d63bb2f261f78a35014f8c519"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/stationery_supplies/textures/stationery_supplies_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/stationery_supplies/stationery_supplies_diff_1k.jpg",
+     "size_bytes": 646389,
+     "sha256": "a70e92052b2da3457a6059aec0fa83bc01bf0d376be814661cee0b49e4abb9ad"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/stationery_supplies/textures/stationery_supplies_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/stationery_supplies/stationery_supplies_metal_1k.exr",
+     "size_bytes": 198521,
+     "sha256": "acc742445d1079cf97c37ebdf82e518d4d3c37c6903e6bde127180ee46033f91"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/stationery_supplies/textures/stationery_supplies_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/stationery_supplies/stationery_supplies_nor_gl_1k.exr",
+     "size_bytes": 1007845,
+     "sha256": "3ff4f5d31d4f8e76b01566d58c5d077a34d609244f0a212376d78748402edc76"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/stationery_supplies/textures/stationery_supplies_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/stationery_supplies/stationery_supplies_rough_1k.exr",
+     "size_bytes": 732756,
+     "sha256": "0cd8aa8d37869c87b258d6d8999d98d8a171847187c297916c8fbff6974f15e8"
+    }
+   ]
+  },
+  {
+   "id": "vintage_lighter",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/vintage_lighter/",
+   "description": "lighter",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/vintage_lighter",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 2834965,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/vintage_lighter/vintage_lighter_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/vintage_lighter/vintage_lighter_1k.blend",
+     "size_bytes": 192792,
+     "sha256": "0e392d7d8e85cf71e7c72028bace3526c721a3cab9baff7438d09a1ebdcd8de8"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/vintage_lighter/textures/vintage_lighter_alpha_1k.png",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_lighter/vintage_lighter_alpha_1k.png",
+     "size_bytes": 12581,
+     "sha256": "00f900b7e48744a0ae72a9226d40dc59973f3e2cdeee97283fefdd76b829f80f"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/vintage_lighter/textures/vintage_lighter_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_lighter/vintage_lighter_diff_1k.jpg",
+     "size_bytes": 485089,
+     "sha256": "8cf10707143523d52df3572daf9b353b14737cb46dc0d30d47f5fc3d57311cdb"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/vintage_lighter/textures/vintage_lighter_metal_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_lighter/vintage_lighter_metal_1k.exr",
+     "size_bytes": 270814,
+     "sha256": "734bbe947b17b25755ba84bf4cfc41e3363a782e34f57cf6217c82191ffedfaf"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/vintage_lighter/textures/vintage_lighter_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_lighter/vintage_lighter_nor_gl_1k.exr",
+     "size_bytes": 1226414,
+     "sha256": "3a7b18e25a8fe6ba886f613d34af15b82287f8caad8c9e9a8824d3c5d03a9ff8"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/vintage_lighter/textures/vintage_lighter_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_lighter/vintage_lighter_rough_1k.exr",
+     "size_bytes": 647275,
+     "sha256": "c95137dca352357bb260f1ce59f5e3ba5a017f4fdf985fcccad15761ba78b94d"
+    }
+   ]
+  },
+  {
+   "id": "wooden_spoon",
+   "type": "distractor_model",
+   "dir": "data/raw/synth_assets/distractors/wooden_spoon/",
+   "description": "wooden spoon",
+   "source": "Poly Haven",
+   "source_page": "https://polyhaven.com/a/wooden_spoon",
+   "license": "CC0 (https://polyhaven.com/license)",
+   "format": "blend (textures 1k incluses)",
+   "size_bytes": 3430062,
+   "files": [
+    {
+     "path": "data/raw/synth_assets/distractors/wooden_spoon/wooden_spoon_1k.blend",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/wooden_spoon/wooden_spoon_1k.blend",
+     "size_bytes": 278792,
+     "sha256": "ed093db2c14ffbc033167e1619d7aa706eafc33ef76bd6f71304d5c97bd2547c"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/wooden_spoon/textures/wooden_spoon_nor_gl_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_spoon/wooden_spoon_nor_gl_1k.exr",
+     "size_bytes": 1913013,
+     "sha256": "103f3df6bf1042488b963ec9c117b82defd5c0fc51988c7fdc3be4b2dcdba7f0"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/wooden_spoon/textures/wooden_spoon_diff_1k.jpg",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_spoon/wooden_spoon_diff_1k.jpg",
+     "size_bytes": 416433,
+     "sha256": "3eff89d7363e54e2476749b4caa03e28547d86f6194e4c6db138ce78343de41b"
+    },
+    {
+     "path": "data/raw/synth_assets/distractors/wooden_spoon/textures/wooden_spoon_rough_1k.exr",
+     "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_spoon/wooden_spoon_rough_1k.exr",
+     "size_bytes": 821824,
+     "sha256": "89e17ceceaae53da6b28e2ad1ffe4473a346868c779d0d36b7acbb79f4be9d43"
+    }
+   ]
+  }
+ ]
+}
