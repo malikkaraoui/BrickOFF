@@ -26,9 +26,10 @@
 
 ## 3. Tâches de fond éventuellement en cours (à vérifier en reprenant)
 
-- **PRÉFLIGHT CH-S en cours** (agent, jalon S.1-pré de `docs/plan/16_PIPELINE_SYNTHETIQUE.md`) :
-  livrable attendu `docs/research/SYNTH_PREFLIGHT.md` + scripts `ml/synth/preflight/`. Si mort :
-  relire le jalon S.1-pré et relancer les 5 points de gate. Les 3 runs DET (v0, v0_1, v1) sont
+- **S.2 GÉNÉRATEUR DE SCÈNES en cours** (agent) : livrables attendus ml/synth/generate_scenes.py
+  + blender_scene.py + config_v1.yaml + 100 scènes data/processed/synth_v1_val/ + grille
+  ml/synth_val_grid.html + CHANGELOG_CHS.md. Si mort : relire le jalon S.2 du plan 16 et relancer
+  (fondations dans ml/synth/preflight/). Préflight ✅ (gate GO) et S.1 assets ✅ sont TERMINÉS. Les 3 runs DET (v0, v0_1, v1) sont
   TERMINÉS — rapports `ml/runs/det_v0/EVAL_DET_V0.md` et `ml/runs/det_v1/EVAL_DET_V1.md`.
   Meilleur modèle : `ml/runs/det_v1/best.pt` (mAP@50 test 0.773, rappel max 0.985).
 - Datasets : acquisition et intégrité TERMINÉES (jalon 1.1 clos) — ne rien relancer.
