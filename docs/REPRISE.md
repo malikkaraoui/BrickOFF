@@ -26,21 +26,17 @@
 
 ## 3. Tâches de fond éventuellement en cours (à vérifier en reprenant)
 
-- **CHAÎNE D'ENTRAÎNEMENTS DET (lancée 2026-07-05, ~8-14 h)** : run 1 `det_v0_1` (bugfix flip
-  + val photos seules) puis run 2 `det_v1` (augmentation forte : rotations, zoom-out, photométrie).
-  Suivre `ml/runs/det_v0_1/history.json` puis `ml/runs/det_v1/history.json` ; chaque run finit par
-  une éval test (`eval_test.json`). Si morte : relancer les deux commandes de
-  `docs/plan/CHANGELOG_CH2.md` (section 2.1, itérations). Mac branché secteur, couvercle ouvert.
-- Run v0 (baseline bugguée flip) : TERMINÉ, rapport `ml/runs/det_v0/EVAL_DET_V0.md` — la comparaison
-  v0 → v0_1 mesure l'effet du bugfix, v0_1 → v1 l'effet de l'augmentation forte.
+- AUCUNE tâche de fond en cours au 2026-07-05 après-midi. Les 3 runs DET (v0, v0_1, v1) sont
+  TERMINÉS — rapports `ml/runs/det_v0/EVAL_DET_V0.md` et `ml/runs/det_v1/EVAL_DET_V1.md`.
+  Meilleur modèle : `ml/runs/det_v1/best.pt` (mAP@50 test 0.773, rappel max 0.985).
 - Datasets : acquisition et intégrité TERMINÉES (jalon 1.1 clos) — ne rien relancer.
 
 ## 4. File d'attente des prochaines actions (dans l'ordre)
 
-1. Jalon 2.1 — baseline DET sur M1 (time-box 1 semaine, configs par défaut, cf. D10).
-2. Pipeline de scènes synthétiques multi-pièces (doc 14 §2.1) — Blender ✅ installé,
-   ldr_tools_blender (MIT) en salle blanche, bibliothèque LDraw à télécharger. Socle DET du produit.
-3. Jalon 1.2 — scope des 1000 classes : nécessite les CSV Rebrickable (⚠️ téléchargement MANUEL
+1. **It.3 — pipeline de scènes synthétiques réalistes multi-pièces** (doc 14 §2.1) : Blender ✅,
+   ldr_tools_blender (MIT) en salle blanche, bibliothèque LDraw + HDRI CC0 à télécharger.
+   C'est le levier principal (domain gap + occlusions + cas produit "tas").
+2. Jalon 1.2 — scope des 1000 classes : nécessite les CSV Rebrickable (⚠️ téléchargement MANUEL
    depuis rebrickable.com/downloads — pas de script, clause anti-automation, cf.
    `legal/REBRICKABLE_LICENSE.md`) : sets, inventories, inventory_parts, parts, colors, themes.
 4. Jalon 1.5 — palette LAB depuis colors.csv (script 06, à écrire).

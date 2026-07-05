@@ -1,0 +1,15 @@
+{
+  "data": "/Users/malik/Documents/BrickOFF/data/processed/detection",
+  "epochs": 80,
+  "batch": 16,
+  "lr": 0.001,
+  "device": "mps",
+  "seed": 42,
+  "limit": null,
+  "aug": "strong",
+  "val_photos_only": true,
+  "patience": 12,
+  "out": "ml/runs/det_v1",
+  "model": "ssdlite320_mobilenet_v3_large",
+  "started_at": "2026-07-05T10:44:56.070293+00:00"
+}

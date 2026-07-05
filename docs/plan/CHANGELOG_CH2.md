@@ -52,7 +52,15 @@ fine ; la chaîne repart proprement :
 Chaque run est suivi d'une éval test automatique (`eval_test.json`). Comparaison attendue :
 v0→v0_1 = effet bugfix+métrique ; v0_1→v1 = effet augmentation.
 
+### Bilan chaîne (2026-07-05 après-midi) — rapport : `ml/runs/det_v1/EVAL_DET_V1.md`
+- Test (179 photos jamais vues) : v0 0.679 → v0.1 0.763 (bugfix, +8,4 pts) → v1 0.773, avec
+  **rappel max 0.985** (le modèle voit quasi tout ; le goulot = la confiance, pas la vision).
+- Balayage de seuil : point de fonctionnement produit recommandé **0.20-0.25 + vote multi-frames
+  CH-5** (rappel 0.77-0.81 single-frame) au lieu du 0.35 initial — à valider au jalon 5.5.
+- Budget d'itérations : 2/6 consommées (bugfix hors budget).
+
 ### Prochaines étapes
-1. Bilan chaîne → tableau comparatif v0 / v0_1 / v1 sur test
-2. Pipeline de scènes synthétiques réalistes multi-pièces (doc 14 §2.1) — attaque le gap ET prépare le scan de tas
-3. Jalon 1.2 (scope classes) dès réception des CSV Rebrickable (action PO)
+1. **It.3 — scènes synthétiques réalistes multi-pièces avec occlusions** (levier principal :
+   domain gap + occlusions + le cas produit "tas"). Blender + ldr_tools_blender prêts.
+2. Jalon 1.2 (scope classes) dès réception des CSV Rebrickable (action PO)
+3. Realworld test maison (jalon 1.6) — le seul juge final
