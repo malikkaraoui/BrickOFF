@@ -26,10 +26,13 @@
 
 ## 3. Tâches de fond éventuellement en cours (à vérifier en reprenant)
 
-- **S.2 GÉNÉRATEUR DE SCÈNES en cours** (agent) : livrables attendus ml/synth/generate_scenes.py
-  + blender_scene.py + config_v1.yaml + 100 scènes data/processed/synth_v1_val/ + grille
-  ml/synth_val_grid.html + CHANGELOG_CHS.md. Si mort : relire le jalon S.2 du plan 16 et relancer
-  (fondations dans ml/synth/preflight/). Préflight ✅ (gate GO) et S.1 assets ✅ sont TERMINÉS. Les 3 runs DET (v0, v0_1, v1) sont
+- **TIR S.4 EN COURS (lancé 2026-07-05 soir, ~5,5 h)** : 10 000 images vers
+  data/processed/synth_v12/ (dataset_id synth_v1.2, seed 20260706). Suivi : compter
+  images/ ; relance idempotente (reprend les scènes manquantes) :
+  `caffeinate -i .venv/bin/python ml/synth/generate_scenes.py --n 10000 --dataset-id synth_v1.2 --out data/processed/synth_v12 --seed 20260706`
+  État CH-S : préflight ✅ gate GO · S.1 assets ✅ · S.2 générateur ✅ · S.3 réalisme ✅ (+ correctifs
+  ISP/cadrage post-spot-the-fake, qui a échoué 0/30 — assumé, la recette C de S.5 tranchera) ·
+  S.4 🔄 · S.0 photos PO ⏳ · S.5 entraînements ⏳ (attend S.4 + S.0 pour le juge). Les 3 runs DET (v0, v0_1, v1) sont
   TERMINÉS — rapports `ml/runs/det_v0/EVAL_DET_V0.md` et `ml/runs/det_v1/EVAL_DET_V1.md`.
   Meilleur modèle : `ml/runs/det_v1/best.pt` (mAP@50 test 0.773, rappel max 0.985).
 - Datasets : acquisition et intégrité TERMINÉES (jalon 1.1 clos) — ne rien relancer.
