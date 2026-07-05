@@ -1,0 +1,408 @@
+{
+  "seed": 42,
+  "n_pieces": 20,
+  "frame_end": 400,
+  "methods": [
+    {
+      "variant": "hull_scale5",
+      "method": "hull",
+      "margin": null,
+      "substeps": 20,
+      "geo_scale": 5.0,
+      "bake_s": 2.6,
+      "render_s": 0.65,
+      "settle_move_130_150": 19.35444,
+      "pile_height_units": 1.6347,
+      "pile_height_mm": 13.1,
+      "mean_radius_units": 58.4502,
+      "n_below_floor": 5,
+      "n_ejected": 8,
+      "n_nan": 0,
+      "per_piece": [
+        {
+          "name": "p00_3659",
+          "loc": [
+            6.3924,
+            0.7513,
+            0.6251
+          ],
+          "zmin": 0.1251,
+          "zmax": 1.1251,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p01_4490",
+          "loc": [
+            0.811,
+            1.8955,
+            0.6251
+          ],
+          "zmin": 0.1251,
+          "zmax": 1.1251,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p02_6182",
+          "loc": [
+            -12.0621,
+            6.7182,
+            0.625
+          ],
+          "zmin": 0.125,
+          "zmax": 1.1251,
+          "below_floor": false,
+          "ejected": true,
+          "finite": true
+        },
+        {
+          "name": "p03_88292",
+          "loc": [
+            0.6403,
+            -17.8538,
+            0.6251
+          ],
+          "zmin": 0.1251,
+          "zmax": 1.1251,
+          "below_floor": false,
+          "ejected": true,
+          "finite": true
+        },
+        {
+          "name": "p04_92950",
+          "loc": [
+            11.0924,
+            297.791,
+            -1065.8313
+          ],
+          "zmin": -1068.2432,
+          "zmax": -1063.2716,
+          "below_floor": true,
+          "ejected": true,
+          "finite": true
+        },
+        {
+          "name": "p05_15254",
+          "loc": [
+            -110.6157,
+            -269.3341,
+            -769.7315
+          ],
+          "zmin": -772.7378,
+          "zmax": -766.8219,
+          "below_floor": true,
+          "ejected": true,
+          "finite": true
+        },
+        {
+          "name": "p06_44728",
+          "loc": [
+            172.6813,
+            13.016,
+            -928.6566
+          ],
+          "zmin": -929.7663,
+          "zmax": -927.4806,
+          "below_floor": true,
+          "ejected": true,
+          "finite": true
+        },
+        {
+          "name": "p07_99207",
+          "loc": [
+            -209.6673,
+            -9.3183,
+            -761.7286
+          ],
+          "zmin": -762.5316,
+          "zmax": -760.3529,
+          "below_floor": true,
+          "ejected": true,
+          "finite": true
+        },
+        {
+          "name": "p08_3185",
+          "loc": [
+            -1.2672,
+            -4.4367,
+            0.4797
+          ],
+          "zmin": 0.125,
+          "zmax": 1.1791,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p09_3700",
+          "loc": [
+            -4.4851,
+            -0.2664,
+            0.8251
+          ],
+          "zmin": 0.1251,
+          "zmax": 1.5251,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p10_3701",
+          "loc": [
+            -14.7221,
+            1.2195,
+            0.6251
+          ],
+          "zmin": 0.1251,
+          "zmax": 1.1251,
+          "below_floor": false,
+          "ejected": true,
+          "finite": true
+        },
+        {
+          "name": "p11_32000",
+          "loc": [
+            98.4913,
+            -36.742,
+            -738.3426
+          ],
+          "zmin": -738.9805,
+          "zmax": -737.6692,
+          "below_floor": true,
+          "ejected": true,
+          "finite": true
+        },
+        {
+          "name": "p12_32316",
+          "loc": [
+            0.1706,
+            7.8145,
+            0.575
+          ],
+          "zmin": 0.125,
+          "zmax": 1.025,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p13_6541",
+          "loc": [
+            4.346,
+            -0.8888,
+            0.6251
+          ],
+          "zmin": 0.1251,
+          "zmax": 1.1251,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p14_61252",
+          "loc": [
+            -1.4012,
+            1.9402,
+            0.6435
+          ],
+          "zmin": 0.1251,
+          "zmax": 1.4377,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p15_30374",
+          "loc": [
+            -0.3974,
+            2.6918,
+            0.7692
+          ],
+          "zmin": 0.1169,
+          "zmax": 1.4215,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p16_3023",
+          "loc": [
+            -2.8889,
+            -0.0914,
+            0.425
+          ],
+          "zmin": 0.1249,
+          "zmax": 0.725,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p17_3623",
+          "loc": [
+            -2.9568,
+            2.6544,
+            0.425
+          ],
+          "zmin": 0.125,
+          "zmax": 0.725,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p18_54200",
+          "loc": [
+            -1.3549,
+            0.7954,
+            0.2194
+          ],
+          "zmin": 0.125,
+          "zmax": 0.7853,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        },
+        {
+          "name": "p19_3957",
+          "loc": [
+            -1.8141,
+            0.1875,
+            0.7637
+          ],
+          "zmin": 0.1249,
+          "zmax": 1.6347,
+          "below_floor": false,
+          "ejected": false,
+          "finite": true
+        }
+      ],
+      "shapes": [
+        {
+          "pid": "3659",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 10396
+        },
+        {
+          "pid": "4490",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 7917
+        },
+        {
+          "pid": "6182",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 10484
+        },
+        {
+          "pid": "88292",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 7883
+        },
+        {
+          "pid": "92950",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 15394
+        },
+        {
+          "pid": "15254",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 15486
+        },
+        {
+          "pid": "44728",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 16255
+        },
+        {
+          "pid": "99207",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 16309
+        },
+        {
+          "pid": "3185",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 883
+        },
+        {
+          "pid": "3700",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 6327
+        },
+        {
+          "pid": "3701",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 13483
+        },
+        {
+          "pid": "32000",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 6718
+        },
+        {
+          "pid": "32316",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 4388
+        },
+        {
+          "pid": "6541",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 3341
+        },
+        {
+          "pid": "61252",
+          "concave": true,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 2869
+        },
+        {
+          "pid": "30374",
+          "concave": false,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 194
+        },
+        {
+          "pid": "3023",
+          "concave": false,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 5255
+        },
+        {
+          "pid": "3623",
+          "concave": false,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 7931
+        },
+        {
+          "pid": "54200",
+          "concave": false,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 109
+        },
+        {
+          "pid": "3957",
+          "concave": false,
+          "shape": "CONVEX_HULL",
+          "n_vertices": 1226
+        }
+      ],
+      "render": "/Users/malik/Documents/BrickOFF/ml/synth/preflight/out/physics/pile_hull_scale5.png"
+    }
+  ]
+}

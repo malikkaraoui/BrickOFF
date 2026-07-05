@@ -1,0 +1,894 @@
+{"pid": "10197", "status": "attempt"}
+{"pid": "10197", "status": "ok", "error": null, "resolved": "10197", "import_s": 0.005, "n_vertices": 1331, "dims_mm": [8.0, 15.4, 15.4], "sim_ok": true, "render_s": 0.293, "alpha_px": 2103, "total_s": 0.308}
+{"pid": "10201", "status": "attempt"}
+{"pid": "10201", "status": "ok", "error": null, "resolved": "10201", "import_s": 0.018, "n_vertices": 16303, "dims_mm": [32.0, 11.2, 9.6], "sim_ok": true, "render_s": 0.164, "alpha_px": 2033, "total_s": 0.198}
+{"pid": "10288", "status": "attempt"}
+{"pid": "10288", "status": "ok", "error": null, "resolved": "10288", "import_s": 0.007, "n_vertices": 1757, "dims_mm": [24.27, 21.02, 8.0], "sim_ok": true, "render_s": 0.185, "alpha_px": 1901, "total_s": 0.196}
+{"pid": "10314", "status": "attempt"}
+{"pid": "10314", "status": "ok", "error": null, "resolved": "10314", "import_s": 0.005, "n_vertices": 268, "dims_mm": [32.0, 8.0, 12.8], "sim_ok": true, "render_s": 0.17, "alpha_px": 3210, "total_s": 0.177}
+{"pid": "10928", "status": "attempt"}
+{"pid": "10928", "status": "ok", "error": null, "resolved": "10928", "import_s": 0.005, "n_vertices": 936, "dims_mm": [9.94, 8.0, 9.94], "sim_ok": true, "render_s": 0.166, "alpha_px": 2799, "total_s": 0.175}
+{"pid": "11090", "status": "attempt"}
+{"pid": "11090", "status": "ok", "error": null, "resolved": "11090", "import_s": 0.005, "n_vertices": 585, "dims_mm": [6.06, 5.0, 13.61], "sim_ok": true, "render_s": 0.179, "alpha_px": 2943, "total_s": 0.187}
+{"pid": "11153", "status": "attempt"}
+{"pid": "11153", "status": "ok", "error": null, "resolved": "11153", "import_s": 0.006, "n_vertices": 266, "dims_mm": [8.0, 32.0, 9.6], "sim_ok": true, "render_s": 0.169, "alpha_px": 2108, "total_s": 0.177}
+{"pid": "11211", "status": "attempt"}
+{"pid": "11211", "status": "ok", "error": null, "resolved": "11211", "import_s": 0.014, "n_vertices": 6135, "dims_mm": [16.0, 9.6, 11.2], "sim_ok": true, "render_s": 0.182, "alpha_px": 3877, "total_s": 0.206}
+{"pid": "11212", "status": "attempt"}
+{"pid": "11212", "status": "ok", "error": null, "resolved": "11212", "import_s": 0.036, "n_vertices": 24015, "dims_mm": [24.0, 24.0, 4.8], "sim_ok": true, "render_s": 0.166, "alpha_px": 3050, "total_s": 0.222}
+{"pid": "11213", "status": "attempt"}
+{"pid": "11213", "status": "ok", "error": null, "resolved": "11213", "import_s": 0.073, "n_vertices": 69226, "dims_mm": [48.0, 48.0, 4.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 2071, "total_s": 0.287}
+{"pid": "11214", "status": "attempt"}
+{"pid": "11214", "status": "ok", "error": null, "resolved": "11214", "import_s": 0.01, "n_vertices": 1264, "dims_mm": [23.8, 6.4, 6.4], "sim_ok": true, "render_s": 0.168, "alpha_px": 1520, "total_s": 0.181}
+{"pid": "11215", "status": "attempt"}
+{"pid": "11215", "status": "ok", "error": null, "resolved": "11215", "import_s": 0.038, "n_vertices": 26861, "dims_mm": [16.0, 40.0, 14.4], "sim_ok": true, "render_s": 0.164, "alpha_px": 2595, "total_s": 0.224}
+{"pid": "11272", "status": "attempt"}
+{"pid": "11272", "status": "ok", "error": null, "resolved": "11272", "import_s": 0.012, "n_vertices": 4362, "dims_mm": [23.2, 16.0, 7.2], "sim_ok": true, "render_s": 0.172, "alpha_px": 2440, "total_s": 0.19}
+{"pid": "11458", "status": "attempt"}
+{"pid": "11458", "status": "ok", "error": null, "resolved": "11458", "import_s": 0.01, "n_vertices": 3480, "dims_mm": [16.0, 8.0, 9.4], "sim_ok": true, "render_s": 0.168, "alpha_px": 3306, "total_s": 0.184}
+{"pid": "11476", "status": "attempt"}
+{"pid": "11476", "status": "ok", "error": null, "resolved": "11476", "import_s": 0.014, "n_vertices": 5545, "dims_mm": [16.0, 13.61, 6.06], "sim_ok": true, "render_s": 0.166, "alpha_px": 2384, "total_s": 0.189}
+{"pid": "11477", "status": "attempt"}
+{"pid": "11477", "status": "ok", "error": null, "resolved": "11477", "import_s": 0.005, "n_vertices": 338, "dims_mm": [8.0, 16.0, 6.4], "sim_ok": true, "render_s": 0.171, "alpha_px": 3241, "total_s": 0.178}
+{"pid": "11478", "status": "attempt"}
+{"pid": "11478", "status": "ok", "error": null, "resolved": "11478", "import_s": 0.011, "n_vertices": 3356, "dims_mm": [7.2, 39.2, 4.0], "sim_ok": true, "render_s": 0.157, "alpha_px": 1454, "total_s": 0.172}
+{"pid": "13349", "status": "attempt"}
+{"pid": "13349", "status": "ok", "error": null, "resolved": "13349", "import_s": 0.016, "n_vertices": 10509, "dims_mm": [32.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 1899, "total_s": 0.193}
+{"pid": "13547", "status": "attempt"}
+{"pid": "13547", "status": "ok", "error": null, "resolved": "13547", "import_s": 0.014, "n_vertices": 6270, "dims_mm": [8.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.162, "alpha_px": 1846, "total_s": 0.185}
+{"pid": "13548", "status": "attempt"}
+{"pid": "13548", "status": "ok", "error": null, "resolved": "13548", "import_s": 0.01, "n_vertices": 3050, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.183, "alpha_px": 3372, "total_s": 0.199}
+{"pid": "13731", "status": "attempt"}
+{"pid": "13731", "status": "ok", "error": null, "resolved": "13731", "import_s": 0.014, "n_vertices": 6722, "dims_mm": [8.0, 80.0, 9.61], "sim_ok": true, "render_s": 0.168, "alpha_px": 975, "total_s": 0.19}
+{"pid": "14395", "status": "attempt"}
+{"pid": "14395", "status": "ok", "error": null, "resolved": "14395", "import_s": 0.021, "n_vertices": 12963, "dims_mm": [8.0, 40.0, 40.0], "sim_ok": true, "render_s": 0.165, "alpha_px": 1885, "total_s": 0.2}
+{"pid": "14417", "status": "attempt"}
+{"pid": "14417", "status": "ok", "error": null, "resolved": "14417", "import_s": 0.013, "n_vertices": 6317, "dims_mm": [16.0, 15.2, 6.4], "sim_ok": true, "render_s": 0.182, "alpha_px": 2294, "total_s": 0.207}
+{"pid": "14419", "status": "attempt"}
+{"pid": "14419", "status": "ok", "error": null, "resolved": "14419", "import_s": 0.016, "n_vertices": 7074, "dims_mm": [29.2, 8.0, 6.4], "sim_ok": true, "render_s": 0.17, "alpha_px": 1964, "total_s": 0.2}
+{"pid": "14704", "status": "attempt"}
+{"pid": "14704", "status": "ok", "error": null, "resolved": "14704", "import_s": 0.014, "n_vertices": 6425, "dims_mm": [16.0, 14.0, 6.3], "sim_ok": true, "render_s": 0.165, "alpha_px": 2838, "total_s": 0.189}
+{"pid": "14716", "status": "attempt"}
+{"pid": "14716", "status": "ok", "error": null, "resolved": "14716", "import_s": 0.009, "n_vertices": 2579, "dims_mm": [8.0, 8.0, 30.4], "sim_ok": true, "render_s": 0.176, "alpha_px": 2758, "total_s": 0.19}
+{"pid": "14720", "status": "attempt"}
+{"pid": "14720", "status": "ok", "error": null, "resolved": "14720", "import_s": 0.016, "n_vertices": 8112, "dims_mm": [23.2, 39.2, 8.0], "sim_ok": true, "render_s": 0.173, "alpha_px": 2430, "total_s": 0.195}
+{"pid": "14769", "status": "attempt"}
+{"pid": "14769", "status": "ok", "error": null, "resolved": "14769", "import_s": 0.007, "n_vertices": 982, "dims_mm": [16.0, 16.0, 3.2], "sim_ok": true, "render_s": 0.162, "alpha_px": 2421, "total_s": 0.172}
+{"pid": "15068", "status": "attempt"}
+{"pid": "15068", "status": "ok", "error": null, "resolved": "15068", "import_s": 0.006, "n_vertices": 555, "dims_mm": [16.0, 16.0, 6.4], "sim_ok": true, "render_s": 0.171, "alpha_px": 3700, "total_s": 0.179}
+{"pid": "15070", "status": "attempt"}
+{"pid": "15070", "status": "ok", "error": null, "resolved": "15070", "import_s": 0.008, "n_vertices": 2701, "dims_mm": [8.0, 11.2, 11.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 2701, "total_s": 0.177}
+{"pid": "15092", "status": "attempt"}
+{"pid": "15092", "status": "ok", "error": null, "resolved": "15092", "import_s": 0.021, "n_vertices": 12654, "dims_mm": [16.0, 16.0, 12.8], "sim_ok": true, "render_s": 0.166, "alpha_px": 3080, "total_s": 0.2}
+{"pid": "15100", "status": "attempt"}
+{"pid": "15100", "status": "ok", "error": null, "resolved": "15100", "import_s": 0.007, "n_vertices": 1684, "dims_mm": [15.6, 7.2, 8.0], "sim_ok": true, "render_s": 0.171, "alpha_px": 2612, "total_s": 0.183}
+{"pid": "15207", "status": "attempt"}
+{"pid": "15207", "status": "ok", "error": null, "resolved": "15207", "import_s": 0.005, "n_vertices": 591, "dims_mm": [32.0, 8.0, 9.6], "sim_ok": true, "render_s": 0.171, "alpha_px": 2687, "total_s": 0.179}
+{"pid": "15254", "status": "attempt"}
+{"pid": "15254", "status": "ok", "error": null, "resolved": "15254", "import_s": 0.025, "n_vertices": 15486, "dims_mm": [48.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.164, "alpha_px": 2241, "total_s": 0.206}
+{"pid": "15332", "status": "attempt"}
+{"pid": "15332", "status": "ok", "error": null, "resolved": "15332", "import_s": 0.022, "n_vertices": 13115, "dims_mm": [32.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 2956, "total_s": 0.201}
+{"pid": "15379", "status": "attempt"}
+{"pid": "15379", "status": "ok", "error": null, "resolved": "15379", "import_s": 0.011, "n_vertices": 2468, "dims_mm": [20.8, 10.4, 5.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 1738, "total_s": 0.18}
+{"pid": "15395", "status": "attempt"}
+{"pid": "15395", "status": "ok", "error": null, "resolved": "15395", "import_s": 0.008, "n_vertices": 1968, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 2422, "total_s": 0.181}
+{"pid": "15397", "status": "attempt"}
+{"pid": "15397", "status": "ok", "error": null, "resolved": "15397", "import_s": 0.019, "n_vertices": 12955, "dims_mm": [24.0, 24.0, 4.8], "sim_ok": true, "render_s": 0.164, "alpha_px": 1984, "total_s": 0.197}
+{"pid": "15460", "status": "attempt"}
+{"pid": "15460", "status": "ok", "error": null, "resolved": "15460", "import_s": 0.008, "n_vertices": 2790, "dims_mm": [8.0, 14.8, 22.4], "sim_ok": true, "render_s": 0.177, "alpha_px": 1872, "total_s": 0.197}
+{"pid": "15461", "status": "attempt"}
+{"pid": "15461", "status": "ok", "error": null, "resolved": "15461", "import_s": 0.009, "n_vertices": 2816, "dims_mm": [16.0, 7.2, 22.4], "sim_ok": true, "render_s": 0.173, "alpha_px": 2447, "total_s": 0.188}
+{"pid": "15470", "status": "attempt"}
+{"pid": "15470", "status": "ok", "error": null, "resolved": "15470", "import_s": 0.006, "n_vertices": 1145, "dims_mm": [8.0, 8.0, 7.19], "sim_ok": true, "render_s": 0.17, "alpha_px": 2568, "total_s": 0.18}
+{"pid": "15535", "status": "attempt"}
+{"pid": "15535", "status": "ok", "error": null, "resolved": "15535", "import_s": 0.006, "n_vertices": 1076, "dims_mm": [16.0, 16.0, 3.2], "sim_ok": true, "render_s": 0.176, "alpha_px": 2421, "total_s": 0.184}
+{"pid": "15573", "status": "attempt"}
+{"pid": "15573", "status": "ok", "error": null, "resolved": "15573", "import_s": 0.007, "n_vertices": 2893, "dims_mm": [16.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.161, "alpha_px": 2862, "total_s": 0.174}
+{"pid": "15672", "status": "attempt"}
+{"pid": "15672", "status": "ok", "error": null, "resolved": "15672", "import_s": 0.008, "n_vertices": 2766, "dims_mm": [8.0, 16.0, 9.6], "sim_ok": true, "render_s": 0.173, "alpha_px": 3085, "total_s": 0.186}
+{"pid": "15706", "status": "attempt"}
+{"pid": "15706", "status": "ok", "error": null, "resolved": "15706", "import_s": 0.034, "n_vertices": 21391, "dims_mm": [37.66, 36.28, 4.8], "sim_ok": true, "render_s": 0.158, "alpha_px": 1710, "total_s": 0.216}
+{"pid": "15712", "status": "attempt"}
+{"pid": "15712", "status": "ok", "error": null, "resolved": "15712", "import_s": 0.005, "n_vertices": 300, "dims_mm": [8.0, 8.0, 7.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 3824, "total_s": 0.177}
+{"pid": "16577", "status": "attempt"}
+{"pid": "16577", "status": "ok", "error": null, "resolved": "16577", "import_s": 0.031, "n_vertices": 20476, "dims_mm": [64.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.163, "alpha_px": 1697, "total_s": 0.214}
+{"pid": "17114", "status": "attempt"}
+{"pid": "17114", "status": "ok", "error": null, "resolved": "17114", "import_s": 0.02, "n_vertices": 12268, "dims_mm": [42.25, 16.0, 11.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 1934, "total_s": 0.206}
+{"pid": "17485", "status": "attempt"}
+{"pid": "17485", "status": "ok", "error": null, "resolved": "17485", "import_s": 0.01, "n_vertices": 2409, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 3380, "total_s": 0.182}
+{"pid": "18649", "status": "attempt"}
+{"pid": "18649", "status": "ok", "error": null, "resolved": "18649", "import_s": 0.014, "n_vertices": 6207, "dims_mm": [28.8, 8.0, 4.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 1951, "total_s": 0.191}
+{"pid": "18651", "status": "attempt"}
+{"pid": "18651", "status": "ok", "error": null, "resolved": "18651", "import_s": 0.008, "n_vertices": 1775, "dims_mm": [23.8, 6.4, 6.4], "sim_ok": true, "render_s": 0.161, "alpha_px": 1487, "total_s": 0.173}
+{"pid": "18653", "status": "attempt"}
+{"pid": "18653", "status": "ok", "error": null, "resolved": "18653", "import_s": 0.008, "n_vertices": 2851, "dims_mm": [24.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 2782, "total_s": 0.181}
+{"pid": "18674", "status": "attempt"}
+{"pid": "18674", "status": "ok", "error": null, "resolved": "18674", "import_s": 0.006, "n_vertices": 1508, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.168, "alpha_px": 2351, "total_s": 0.178}
+{"pid": "18677", "status": "attempt"}
+{"pid": "18677", "status": "ok", "error": null, "resolved": "18677", "import_s": 0.013, "n_vertices": 6204, "dims_mm": [16.0, 8.0, 9.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 3220, "total_s": 0.192}
+{"pid": "18838", "status": "attempt"}
+{"pid": "18838", "status": "ok", "error": null, "resolved": "18838", "import_s": 0.042, "n_vertices": 30812, "dims_mm": [96.0, 8.0, 30.4], "sim_ok": true, "render_s": 0.163, "alpha_px": 1153, "total_s": 0.231}
+{"pid": "18969", "status": "attempt"}
+{"pid": "18969", "status": "ok", "error": null, "resolved": "18969", "import_s": 0.01, "n_vertices": 3517, "dims_mm": [30.93, 29.78, 102.95], "sim_ok": true, "render_s": 0.165, "alpha_px": 1209, "total_s": 0.181}
+{"pid": "19159", "status": "attempt"}
+{"pid": "19159", "status": "ok", "error": null, "resolved": "19159", "import_s": 0.008, "n_vertices": 2228, "dims_mm": [22.43, 7.4, 23.4], "sim_ok": true, "render_s": 0.175, "alpha_px": 2439, "total_s": 0.188}
+{"pid": "20482", "status": "attempt"}
+{"pid": "20482", "status": "ok", "error": null, "resolved": "20482", "import_s": 0.005, "n_vertices": 912, "dims_mm": [8.0, 8.0, 6.4], "sim_ok": true, "render_s": 0.167, "alpha_px": 2818, "total_s": 0.176}
+{"pid": "20896", "status": "attempt"}
+{"pid": "20896", "status": "fail", "error": "no_dat_file", "resolved": null}
+{"pid": "21229", "status": "attempt"}
+{"pid": "21229", "status": "ok", "error": null, "resolved": "21229", "import_s": 0.017, "n_vertices": 9752, "dims_mm": [32.0, 32.0, 20.8], "sim_ok": true, "render_s": 0.164, "alpha_px": 2705, "total_s": 0.192}
+{"pid": "22385", "status": "attempt"}
+{"pid": "22385", "status": "ok", "error": null, "resolved": "22385", "import_s": 0.006, "n_vertices": 778, "dims_mm": [16.0, 24.0, 3.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 2092, "total_s": 0.179}
+{"pid": "22388", "status": "attempt"}
+{"pid": "22388", "status": "ok", "error": null, "resolved": "22388", "import_s": 0.004, "n_vertices": 96, "dims_mm": [8.0, 8.0, 6.4], "sim_ok": true, "render_s": 0.172, "alpha_px": 2909, "total_s": 0.178}
+{"pid": "22390", "status": "attempt"}
+{"pid": "22390", "status": "ok", "error": null, "resolved": "22390", "import_s": 0.02, "n_vertices": 10044, "dims_mm": [64.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 1473, "total_s": 0.198}
+{"pid": "22391", "status": "attempt"}
+{"pid": "22391", "status": "ok", "error": null, "resolved": "22391", "import_s": 0.013, "n_vertices": 6315, "dims_mm": [32.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.164, "alpha_px": 1953, "total_s": 0.187}
+{"pid": "22484", "status": "attempt"}
+{"pid": "22484", "status": "ok", "error": null, "resolved": "22484", "import_s": 0.005, "n_vertices": 819, "dims_mm": [6.4, 15.2, 6.4], "sim_ok": true, "render_s": 0.173, "alpha_px": 1715, "total_s": 0.185}
+{"pid": "22885", "status": "attempt"}
+{"pid": "22885", "status": "ok", "error": null, "resolved": "22885", "import_s": 0.026, "n_vertices": 16034, "dims_mm": [16.0, 9.6, 17.6], "sim_ok": true, "render_s": 0.174, "alpha_px": 4074, "total_s": 0.215}
+{"pid": "22888", "status": "attempt"}
+{"pid": "22888", "status": "ok", "error": null, "resolved": "22888", "import_s": 0.076, "n_vertices": 61513, "dims_mm": [64.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.158, "alpha_px": 1695, "total_s": 0.276}
+{"pid": "22889", "status": "attempt"}
+{"pid": "22889", "status": "ok", "error": null, "resolved": "22889", "import_s": 0.033, "n_vertices": 23738, "dims_mm": [16.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.159, "alpha_px": 1922, "total_s": 0.215}
+{"pid": "22890", "status": "attempt"}
+{"pid": "22890", "status": "ok", "error": null, "resolved": "22890", "import_s": 0.011, "n_vertices": 6317, "dims_mm": [23.2, 8.0, 6.4], "sim_ok": true, "render_s": 0.165, "alpha_px": 1982, "total_s": 0.188}
+{"pid": "22961", "status": "attempt"}
+{"pid": "22961", "status": "ok", "error": null, "resolved": "22961", "import_s": 0.006, "n_vertices": 1068, "dims_mm": [15.4, 7.2, 8.0], "sim_ok": true, "render_s": 0.165, "alpha_px": 2490, "total_s": 0.174}
+{"pid": "2357", "status": "attempt"}
+{"pid": "2357", "status": "ok", "error": null, "resolved": "2357", "import_s": 0.016, "n_vertices": 7983, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.16, "alpha_px": 3684, "total_s": 0.187}
+{"pid": "23969", "status": "attempt"}
+{"pid": "23969", "status": "ok", "error": null, "resolved": "23969", "import_s": 0.005, "n_vertices": 313, "dims_mm": [16.0, 8.0, 9.6], "sim_ok": true, "render_s": 0.179, "alpha_px": 4515, "total_s": 0.186}
+{"pid": "24014", "status": "attempt"}
+{"pid": "24014", "status": "ok", "error": null, "resolved": "24014", "import_s": 0.01, "n_vertices": 2813, "dims_mm": [26.45, 8.0, 13.31], "sim_ok": true, "render_s": 0.163, "alpha_px": 1808, "total_s": 0.18}
+{"pid": "24122", "status": "attempt"}
+{"pid": "24122", "status": "ok", "error": null, "resolved": "24122", "import_s": 0.005, "n_vertices": 986, "dims_mm": [16.0, 8.0, 6.98], "sim_ok": true, "render_s": 0.167, "alpha_px": 2609, "total_s": 0.174}
+{"pid": "2412b", "status": "attempt"}
+{"pid": "2412b", "status": "ok", "error": null, "resolved": "2412b", "import_s": 0.005, "n_vertices": 288, "dims_mm": [16.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 2943, "total_s": 0.174}
+{"pid": "2419", "status": "attempt"}
+{"pid": "2419", "status": "ok", "error": null, "resolved": "2419", "import_s": 0.045, "n_vertices": 33009, "dims_mm": [48.0, 24.0, 4.8], "sim_ok": true, "render_s": 0.16, "alpha_px": 1763, "total_s": 0.235}
+{"pid": "2420", "status": "attempt"}
+{"pid": "2420", "status": "ok", "error": null, "resolved": "2420", "import_s": 0.016, "n_vertices": 7966, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.168, "alpha_px": 2756, "total_s": 0.195}
+{"pid": "24246", "status": "attempt"}
+{"pid": "24246", "status": "ok", "error": null, "resolved": "24246", "import_s": 0.005, "n_vertices": 361, "dims_mm": [8.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 3405, "total_s": 0.178}
+{"pid": "24299", "status": "attempt"}
+{"pid": "24299", "status": "ok", "error": null, "resolved": "24299", "import_s": 0.012, "n_vertices": 5384, "dims_mm": [15.4, 16.0, 4.8], "sim_ok": true, "render_s": 0.17, "alpha_px": 2542, "total_s": 0.191}
+{"pid": "2431", "status": "attempt"}
+{"pid": "2431", "status": "ok", "error": null, "resolved": "2431", "import_s": 0.005, "n_vertices": 507, "dims_mm": [32.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 1737, "total_s": 0.174}
+{"pid": "24316", "status": "attempt"}
+{"pid": "24316", "status": "ok", "error": null, "resolved": "24316", "import_s": 0.005, "n_vertices": 303, "dims_mm": [23.8, 6.4, 6.4], "sim_ok": true, "render_s": 0.168, "alpha_px": 1522, "total_s": 0.176}
+{"pid": "24375", "status": "attempt"}
+{"pid": "24375", "status": "ok", "error": null, "resolved": "24375", "import_s": 0.006, "n_vertices": 986, "dims_mm": [7.2, 7.2, 5.6], "sim_ok": true, "render_s": 0.178, "alpha_px": 2430, "total_s": 0.189}
+{"pid": "2441", "status": "attempt"}
+{"pid": "2441", "status": "ok", "error": null, "resolved": "2441", "import_s": 0.066, "n_vertices": 54920, "dims_mm": [32.0, 56.0, 8.0], "sim_ok": true, "render_s": 0.185, "alpha_px": 1973, "total_s": 0.289}
+{"pid": "2445", "status": "attempt"}
+{"pid": "2445", "status": "ok", "error": null, "resolved": "2445", "import_s": 0.075, "n_vertices": 64344, "dims_mm": [96.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 1058, "total_s": 0.286}
+{"pid": "2450", "status": "attempt"}
+{"pid": "2450", "status": "ok", "error": null, "resolved": "2450", "import_s": 0.025, "n_vertices": 16216, "dims_mm": [24.0, 24.0, 4.8], "sim_ok": true, "render_s": 0.179, "alpha_px": 2268, "total_s": 0.222}
+{"pid": "24505", "status": "attempt"}
+{"pid": "24505", "status": "ok", "error": null, "resolved": "24505", "import_s": 0.013, "n_vertices": 4344, "dims_mm": [25.91, 7.7, 25.91], "sim_ok": true, "render_s": 0.168, "alpha_px": 2466, "total_s": 0.188}
+{"pid": "2453b", "status": "attempt"}
+{"pid": "2453b", "status": "ok", "error": null, "resolved": "2453b", "import_s": 0.008, "n_vertices": 2579, "dims_mm": [8.0, 8.0, 49.6], "sim_ok": true, "render_s": 0.169, "alpha_px": 1847, "total_s": 0.182}
+{"pid": "2454", "status": "attempt"}
+{"pid": "2454", "status": "ok", "error": null, "resolved": "2454", "import_s": 0.006, "n_vertices": 1004, "dims_mm": [16.0, 8.0, 49.6], "sim_ok": true, "render_s": 0.165, "alpha_px": 2590, "total_s": 0.173}
+{"pid": "2456", "status": "attempt"}
+{"pid": "2456", "status": "ok", "error": null, "resolved": "2456", "import_s": 0.035, "n_vertices": 32052, "dims_mm": [48.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 2667, "total_s": 0.227}
+{"pid": "2458", "status": "attempt"}
+{"pid": "2458", "status": "ok", "error": null, "resolved": "2458", "import_s": 0.013, "n_vertices": 6187, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.161, "alpha_px": 2993, "total_s": 0.184}
+{"pid": "2460", "status": "attempt"}
+{"pid": "2460", "status": "ok", "error": null, "resolved": "2460", "import_s": 0.007, "n_vertices": 1268, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 3005, "total_s": 0.179}
+{"pid": "2476a", "status": "attempt"}
+{"pid": "2476a", "status": "ok", "error": null, "resolved": "2476a", "import_s": 0.021, "n_vertices": 12216, "dims_mm": [16.0, 16.0, 12.8], "sim_ok": true, "render_s": 0.184, "alpha_px": 2823, "total_s": 0.218}
+{"pid": "2486", "status": "attempt"}
+{"pid": "2486", "status": "ok", "error": null, "resolved": "2486", "import_s": 0.009, "n_vertices": 2780, "dims_mm": [59.2, 6.4, 20.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 1202, "total_s": 0.182}
+{"pid": "24866", "status": "attempt"}
+{"pid": "24866", "status": "ok", "error": null, "resolved": "24866", "import_s": 0.006, "n_vertices": 1435, "dims_mm": [7.94, 7.82, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 2616, "total_s": 0.172}
+{"pid": "25269", "status": "attempt"}
+{"pid": "25269", "status": "ok", "error": null, "resolved": "25269", "import_s": 0.004, "n_vertices": 174, "dims_mm": [8.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 3045, "total_s": 0.175}
+{"pid": "2540", "status": "attempt"}
+{"pid": "2540", "status": "ok", "error": null, "resolved": "2540", "import_s": 0.015, "n_vertices": 6133, "dims_mm": [16.0, 14.4, 4.8], "sim_ok": true, "render_s": 0.179, "alpha_px": 2898, "total_s": 0.205}
+{"pid": "25893", "status": "attempt"}
+{"pid": "25893", "status": "ok", "error": null, "resolved": "25893", "import_s": 0.01, "n_vertices": 3249, "dims_mm": [8.0, 8.0, 7.2], "sim_ok": true, "render_s": 0.172, "alpha_px": 2694, "total_s": 0.188}
+{"pid": "26047", "status": "attempt"}
+{"pid": "26047", "status": "ok", "error": null, "resolved": "26047", "import_s": 0.009, "n_vertices": 3256, "dims_mm": [8.0, 14.4, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 2906, "total_s": 0.178}
+{"pid": "2639", "status": "attempt"}
+{"pid": "2639", "status": "ok", "error": null, "resolved": "2639", "import_s": 0.043, "n_vertices": 32053, "dims_mm": [32.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.18, "alpha_px": 2355, "total_s": 0.247}
+{"pid": "2654", "status": "attempt"}
+{"pid": "2654", "status": "ok", "error": null, "resolved": "2654", "import_s": 0.009, "n_vertices": 2094, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.172, "alpha_px": 2113, "total_s": 0.186}
+{"pid": "26601", "status": "attempt"}
+{"pid": "26601", "status": "ok", "error": null, "resolved": "26601", "import_s": 0.017, "n_vertices": 8014, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 2801, "total_s": 0.191}
+{"pid": "26604", "status": "attempt"}
+{"pid": "26604", "status": "ok", "error": null, "resolved": "26604", "import_s": 0.01, "n_vertices": 3475, "dims_mm": [9.6, 9.6, 11.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 3516, "total_s": 0.182}
+{"pid": "27255", "status": "attempt"}
+{"pid": "27255", "status": "ok", "error": null, "resolved": "27255", "import_s": 0.043, "n_vertices": 33975, "dims_mm": [48.96, 42.4, 11.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 1968, "total_s": 0.246}
+{"pid": "27262", "status": "attempt"}
+{"pid": "27262", "status": "ok", "error": null, "resolved": "27262", "import_s": 0.007, "n_vertices": 1085, "dims_mm": [32.0, 46.4, 9.6], "sim_ok": true, "render_s": 0.173, "alpha_px": 1761, "total_s": 0.183}
+{"pid": "27266", "status": "attempt"}
+{"pid": "27266", "status": "ok", "error": null, "resolved": "27266", "import_s": 0.007, "n_vertices": 1636, "dims_mm": [22.0, 22.0, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 2144, "total_s": 0.18}
+{"pid": "2730", "status": "attempt"}
+{"pid": "2730", "status": "ok", "error": null, "resolved": "2730", "import_s": 0.048, "n_vertices": 34951, "dims_mm": [80.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 1271, "total_s": 0.241}
+{"pid": "2736", "status": "attempt"}
+{"pid": "2736", "status": "ok", "error": null, "resolved": "2736", "import_s": 0.006, "n_vertices": 1072, "dims_mm": [14.8, 6.4, 6.4], "sim_ok": true, "render_s": 0.163, "alpha_px": 2108, "total_s": 0.176}
+{"pid": "27940", "status": "attempt"}
+{"pid": "27940", "status": "ok", "error": null, "resolved": "27940", "import_s": 0.006, "n_vertices": 1366, "dims_mm": [23.6, 7.2, 8.0], "sim_ok": true, "render_s": 0.166, "alpha_px": 1821, "total_s": 0.176}
+{"pid": "2853", "status": "attempt"}
+{"pid": "2853", "status": "ok", "error": null, "resolved": "2853", "import_s": 0.007, "n_vertices": 537, "dims_mm": [11.2, 15.8, 7.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 2353, "total_s": 0.175}
+{"pid": "2854", "status": "attempt"}
+{"pid": "2854", "status": "ok", "error": null, "resolved": "2854", "import_s": 0.006, "n_vertices": 842, "dims_mm": [15.2, 8.0, 7.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 3175, "total_s": 0.175}
+{"pid": "2877", "status": "attempt"}
+{"pid": "2877", "status": "ok", "error": null, "resolved": "2877", "import_s": 0.012, "n_vertices": 5471, "dims_mm": [16.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 3907, "total_s": 0.187}
+{"pid": "2904", "status": "attempt"}
+{"pid": "2904", "status": "ok", "error": null, "resolved": "2904", "import_s": 0.025, "n_vertices": 15125, "dims_mm": [16.0, 45.41, 18.67], "sim_ok": true, "render_s": 0.164, "alpha_px": 1919, "total_s": 0.202}
+{"pid": "2921", "status": "attempt"}
+{"pid": "2921", "status": "ok", "error": null, "resolved": "2921", "import_s": 0.008, "n_vertices": 2899, "dims_mm": [8.0, 13.6, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 3485, "total_s": 0.182}
+{"pid": "2926", "status": "attempt"}
+{"pid": "2926", "status": "ok", "error": null, "resolved": "2926", "import_s": 0.022, "n_vertices": 12215, "dims_mm": [43.2, 8.0, 5.6], "sim_ok": true, "render_s": 0.167, "alpha_px": 1177, "total_s": 0.202}
+{"pid": "30000", "status": "attempt"}
+{"pid": "30000", "status": "ok", "error": null, "resolved": "30000", "import_s": 0.022, "n_vertices": 12720, "dims_mm": [32.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 2291, "total_s": 0.204}
+{"pid": "3001", "status": "attempt"}
+{"pid": "3001", "status": "ok", "error": null, "resolved": "3001", "import_s": 0.031, "n_vertices": 21288, "dims_mm": [32.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 3541, "total_s": 0.214}
+{"pid": "3002", "status": "attempt"}
+{"pid": "3002", "status": "ok", "error": null, "resolved": "3002", "import_s": 0.024, "n_vertices": 15906, "dims_mm": [24.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.159, "alpha_px": 4080, "total_s": 0.198}
+{"pid": "3003", "status": "attempt"}
+{"pid": "3003", "status": "ok", "error": null, "resolved": "3003", "import_s": 0.018, "n_vertices": 10524, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 4503, "total_s": 0.197}
+{"pid": "3004", "status": "attempt"}
+{"pid": "3004", "status": "ok", "error": null, "resolved": "3004", "import_s": 0.012, "n_vertices": 5255, "dims_mm": [16.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 4177, "total_s": 0.185}
+{"pid": "30044", "status": "attempt"}
+{"pid": "30044", "status": "ok", "error": null, "resolved": "30044", "import_s": 0.006, "n_vertices": 1943, "dims_mm": [16.0, 8.0, 27.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 3223, "total_s": 0.172}
+{"pid": "30046", "status": "attempt"}
+{"pid": "30046", "status": "ok", "error": null, "resolved": "30046", "import_s": 0.006, "n_vertices": 1001, "dims_mm": [13.4, 1.6, 21.1], "sim_ok": true, "render_s": 0.168, "alpha_px": 2383, "total_s": 0.177}
+{"pid": "3005", "status": "attempt"}
+{"pid": "3005", "status": "ok", "error": null, "resolved": "3005", "import_s": 0.007, "n_vertices": 2579, "dims_mm": [8.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.161, "alpha_px": 4472, "total_s": 0.173}
+{"pid": "3007", "status": "attempt"}
+{"pid": "3007", "status": "ok", "error": null, "resolved": "3007", "import_s": 0.052, "n_vertices": 42942, "dims_mm": [64.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.162, "alpha_px": 2099, "total_s": 0.246}
+{"pid": "3008", "status": "attempt"}
+{"pid": "3008", "status": "ok", "error": null, "resolved": "3008", "import_s": 0.031, "n_vertices": 21311, "dims_mm": [64.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 1553, "total_s": 0.218}
+{"pid": "3009", "status": "attempt"}
+{"pid": "3009", "status": "ok", "error": null, "resolved": "3009", "import_s": 0.026, "n_vertices": 15959, "dims_mm": [48.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.173, "alpha_px": 2005, "total_s": 0.217}
+{"pid": "30099", "status": "attempt"}
+{"pid": "30099", "status": "ok", "error": null, "resolved": "30099", "import_s": 0.013, "n_vertices": 5640, "dims_mm": [40.0, 8.0, 40.0], "sim_ok": true, "render_s": 0.163, "alpha_px": 1754, "total_s": 0.184}
+{"pid": "3010", "status": "attempt"}
+{"pid": "3010", "status": "ok", "error": null, "resolved": "3010", "import_s": 0.019, "n_vertices": 10607, "dims_mm": [32.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 2805, "total_s": 0.202}
+{"pid": "30136", "status": "attempt"}
+{"pid": "30136", "status": "ok", "error": null, "resolved": "30136", "import_s": 0.012, "n_vertices": 5364, "dims_mm": [16.0, 7.92, 11.2], "sim_ok": true, "render_s": 0.162, "alpha_px": 3823, "total_s": 0.183}
+{"pid": "30157", "status": "attempt"}
+{"pid": "30157", "status": "ok", "error": null, "resolved": "30157", "import_s": 0.032, "n_vertices": 22690, "dims_mm": [48.0, 16.0, 8.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 1514, "total_s": 0.22}
+{"pid": "30165", "status": "attempt"}
+{"pid": "30165", "status": "ok", "error": null, "resolved": "30165", "import_s": 0.006, "n_vertices": 1388, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.164, "alpha_px": 3854, "total_s": 0.174}
+{"pid": "3020", "status": "attempt"}
+{"pid": "3020", "status": "ok", "error": null, "resolved": "3020", "import_s": 0.028, "n_vertices": 21288, "dims_mm": [32.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 2554, "total_s": 0.21}
+{"pid": "3021", "status": "attempt"}
+{"pid": "3021", "status": "ok", "error": null, "resolved": "3021", "import_s": 0.025, "n_vertices": 15906, "dims_mm": [24.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.169, "alpha_px": 2982, "total_s": 0.21}
+{"pid": "3022", "status": "attempt"}
+{"pid": "3022", "status": "ok", "error": null, "resolved": "3022", "import_s": 0.019, "n_vertices": 10524, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.16, "alpha_px": 3342, "total_s": 0.191}
+{"pid": "3023", "status": "attempt"}
+{"pid": "3023", "status": "ok", "error": null, "resolved": "3023", "import_s": 0.012, "n_vertices": 5255, "dims_mm": [16.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.161, "alpha_px": 3036, "total_s": 0.182}
+{"pid": "30237b", "status": "attempt"}
+{"pid": "30237b", "status": "ok", "error": null, "resolved": "30237", "import_s": 0.012, "n_vertices": 5489, "dims_mm": [16.0, 13.7, 11.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 3291, "total_s": 0.187}
+{"pid": "3024", "status": "attempt"}
+{"pid": "3024", "status": "ok", "error": null, "resolved": "3024", "import_s": 0.007, "n_vertices": 2579, "dims_mm": [8.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 3862, "total_s": 0.175}
+{"pid": "3028", "status": "attempt"}
+{"pid": "3028", "status": "ok", "error": null, "resolved": "3028", "import_s": 0.196, "n_vertices": 198660, "dims_mm": [96.0, 48.0, 4.8], "sim_ok": true, "render_s": 0.186, "alpha_px": 2153, "total_s": 0.497}
+{"pid": "3031", "status": "attempt"}
+{"pid": "3031", "status": "ok", "error": null, "resolved": "3031", "import_s": 0.056, "n_vertices": 43312, "dims_mm": [32.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.163, "alpha_px": 2908, "total_s": 0.248}
+{"pid": "3032", "status": "attempt"}
+{"pid": "3032", "status": "ok", "error": null, "resolved": "3032", "import_s": 0.071, "n_vertices": 65376, "dims_mm": [48.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.171, "alpha_px": 2624, "total_s": 0.283}
+{"pid": "3033", "status": "attempt"}
+{"pid": "3033", "status": "ok", "error": null, "resolved": "3033", "import_s": 0.165, "n_vertices": 165318, "dims_mm": [80.0, 48.0, 4.8], "sim_ok": true, "render_s": 0.175, "alpha_px": 2373, "total_s": 0.432}
+{"pid": "3034", "status": "attempt"}
+{"pid": "3034", "status": "ok", "error": null, "resolved": "3034", "import_s": 0.055, "n_vertices": 42816, "dims_mm": [64.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.17, "alpha_px": 1503, "total_s": 0.258}
+{"pid": "3035", "status": "attempt"}
+{"pid": "3035", "status": "ok", "error": null, "resolved": "3035", "import_s": 0.093, "n_vertices": 87440, "dims_mm": [64.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.166, "alpha_px": 2252, "total_s": 0.314}
+{"pid": "30357", "status": "attempt"}
+{"pid": "30357", "status": "ok", "error": null, "resolved": "30357", "import_s": 0.033, "n_vertices": 21633, "dims_mm": [24.0, 24.0, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 2699, "total_s": 0.214}
+{"pid": "30361c", "status": "attempt"}
+{"pid": "30361c", "status": "ok", "error": null, "resolved": "30361", "import_s": 0.008, "n_vertices": 2201, "dims_mm": [16.0, 16.0, 20.8], "sim_ok": true, "render_s": 0.169, "alpha_px": 3259, "total_s": 0.181}
+{"pid": "30363", "status": "attempt"}
+{"pid": "30363", "status": "ok", "error": null, "resolved": "30363", "import_s": 0.014, "n_vertices": 6386, "dims_mm": [16.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.183, "alpha_px": 3069, "total_s": 0.207}
+{"pid": "30367c", "status": "attempt"}
+{"pid": "30367c", "status": "ok", "error": null, "resolved": "30367c", "import_s": 0.013, "n_vertices": 4499, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 2730, "total_s": 0.19}
+{"pid": "3037", "status": "attempt"}
+{"pid": "3037", "status": "ok", "error": null, "resolved": "3037", "import_s": 0.015, "n_vertices": 11492, "dims_mm": [32.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 3398, "total_s": 0.197}
+{"pid": "3038", "status": "attempt"}
+{"pid": "3038", "status": "ok", "error": null, "resolved": "3038", "import_s": 0.017, "n_vertices": 8525, "dims_mm": [24.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 3863, "total_s": 0.198}
+{"pid": "30387", "status": "attempt"}
+{"pid": "30387", "status": "ok", "error": null, "resolved": "30387", "import_s": 0.028, "n_vertices": 16071, "dims_mm": [44.54, 8.0, 11.2], "sim_ok": true, "render_s": 0.178, "alpha_px": 1740, "total_s": 0.222}
+{"pid": "3039", "status": "attempt"}
+{"pid": "3039", "status": "ok", "error": null, "resolved": "3039", "import_s": 0.014, "n_vertices": 5643, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 4151, "total_s": 0.189}
+{"pid": "3040b", "status": "attempt"}
+{"pid": "3040b", "status": "ok", "error": null, "resolved": "3040b", "import_s": 0.009, "n_vertices": 2810, "dims_mm": [8.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 3648, "total_s": 0.184}
+{"pid": "30414", "status": "attempt"}
+{"pid": "30414", "status": "ok", "error": null, "resolved": "30414", "import_s": 0.02, "n_vertices": 12411, "dims_mm": [32.0, 9.6, 11.2], "sim_ok": true, "render_s": 0.182, "alpha_px": 2714, "total_s": 0.216}
+{"pid": "3045", "status": "attempt"}
+{"pid": "3045", "status": "ok", "error": null, "resolved": "3045", "import_s": 0.009, "n_vertices": 3045, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.178, "alpha_px": 3802, "total_s": 0.195}
+{"pid": "30503", "status": "attempt"}
+{"pid": "30503", "status": "ok", "error": null, "resolved": "30503", "import_s": 0.038, "n_vertices": 27340, "dims_mm": [32.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.163, "alpha_px": 1954, "total_s": 0.224}
+{"pid": "30552", "status": "attempt"}
+{"pid": "30552", "status": "ok", "error": null, "resolved": "30552", "import_s": 0.011, "n_vertices": 2814, "dims_mm": [7.2, 14.14, 7.2], "sim_ok": true, "render_s": 0.171, "alpha_px": 2773, "total_s": 0.187}
+{"pid": "30553", "status": "attempt"}
+{"pid": "30553", "status": "ok", "error": null, "resolved": "30553", "import_s": 0.009, "n_vertices": 2932, "dims_mm": [7.2, 14.4, 7.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 2810, "total_s": 0.185}
+{"pid": "30565", "status": "attempt"}
+{"pid": "30565", "status": "ok", "error": null, "resolved": "30565", "import_s": 0.038, "n_vertices": 30158, "dims_mm": [32.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.174, "alpha_px": 2152, "total_s": 0.235}
+{"pid": "3062", "status": "attempt"}
+{"pid": "3062", "status": "ok", "error": null, "resolved": "3062", "import_s": 0.006, "n_vertices": 1056, "dims_mm": [8.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.177, "alpha_px": 3172, "total_s": 0.186}
+{"pid": "3068", "status": "attempt"}
+{"pid": "3068", "status": "ok", "error": null, "resolved": "3068", "import_s": 0.006, "n_vertices": 465, "dims_mm": [16.0, 16.0, 3.2], "sim_ok": true, "render_s": 0.164, "alpha_px": 3252, "total_s": 0.172}
+{"pid": "3069b", "status": "attempt"}
+{"pid": "3069b", "status": "ok", "error": null, "resolved": "3069b", "import_s": 0.005, "n_vertices": 72, "dims_mm": [16.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.176, "alpha_px": 2967, "total_s": 0.183}
+{"pid": "3070b", "status": "attempt"}
+{"pid": "3070b", "status": "ok", "error": null, "resolved": "3070b", "import_s": 0.004, "n_vertices": 72, "dims_mm": [8.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.164, "alpha_px": 3945, "total_s": 0.17}
+{"pid": "3185", "status": "attempt"}
+{"pid": "3185", "status": "ok", "error": null, "resolved": "3185", "import_s": 0.005, "n_vertices": 883, "dims_mm": [32.0, 8.0, 19.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 3099, "total_s": 0.177}
+{"pid": "32000", "status": "attempt"}
+{"pid": "32000", "status": "ok", "error": null, "resolved": "32000", "import_s": 0.014, "n_vertices": 6718, "dims_mm": [16.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.159, "alpha_px": 4196, "total_s": 0.182}
+{"pid": "32002", "status": "attempt"}
+{"pid": "32002", "status": "ok", "error": null, "resolved": "32002", "import_s": 0.007, "n_vertices": 1768, "dims_mm": [12.0, 6.4, 6.4], "sim_ok": true, "render_s": 0.161, "alpha_px": 2632, "total_s": 0.172}
+{"pid": "32013", "status": "attempt"}
+{"pid": "32013", "status": "ok", "error": null, "resolved": "32013", "import_s": 0.007, "n_vertices": 1286, "dims_mm": [8.0, 15.6, 7.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 3059, "total_s": 0.177}
+{"pid": "32014", "status": "attempt"}
+{"pid": "32014", "status": "ok", "error": null, "resolved": "32014", "import_s": 0.007, "n_vertices": 1964, "dims_mm": [8.0, 15.6, 15.6], "sim_ok": true, "render_s": 0.182, "alpha_px": 2750, "total_s": 0.194}
+{"pid": "32015", "status": "attempt"}
+{"pid": "32015", "status": "ok", "error": null, "resolved": "32015", "import_s": 0.008, "n_vertices": 1909, "dims_mm": [8.0, 19.82, 16.02], "sim_ok": true, "render_s": 0.166, "alpha_px": 2258, "total_s": 0.179}
+{"pid": "32016", "status": "attempt"}
+{"pid": "32016", "status": "ok", "error": null, "resolved": "32016", "import_s": 0.007, "n_vertices": 1975, "dims_mm": [8.0, 24.42, 11.42], "sim_ok": true, "render_s": 0.167, "alpha_px": 2119, "total_s": 0.179}
+{"pid": "32017", "status": "attempt"}
+{"pid": "32017", "status": "ok", "error": null, "resolved": "32017", "import_s": 0.012, "n_vertices": 4388, "dims_mm": [7.2, 39.2, 4.0], "sim_ok": true, "render_s": 0.164, "alpha_px": 1454, "total_s": 0.181}
+{"pid": "32028", "status": "attempt"}
+{"pid": "32028", "status": "ok", "error": null, "resolved": "32028", "import_s": 0.012, "n_vertices": 5303, "dims_mm": [16.0, 11.6, 4.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 3265, "total_s": 0.188}
+{"pid": "32034", "status": "attempt"}
+{"pid": "32034", "status": "ok", "error": null, "resolved": "32034", "import_s": 0.007, "n_vertices": 1876, "dims_mm": [8.0, 24.0, 7.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 2309, "total_s": 0.174}
+{"pid": "32039", "status": "attempt"}
+{"pid": "32039", "status": "ok", "error": null, "resolved": "32039", "import_s": 0.008, "n_vertices": 1544, "dims_mm": [8.0, 15.6, 7.2], "sim_ok": true, "render_s": 0.172, "alpha_px": 3108, "total_s": 0.184}
+{"pid": "32054", "status": "attempt"}
+{"pid": "32054", "status": "ok", "error": null, "resolved": "32054", "import_s": 0.011, "n_vertices": 4770, "dims_mm": [24.0, 7.2, 7.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 1738, "total_s": 0.184}
+{"pid": "32056", "status": "attempt"}
+{"pid": "32056", "status": "ok", "error": null, "resolved": "32056", "import_s": 0.01, "n_vertices": 2866, "dims_mm": [23.2, 23.2, 4.0], "sim_ok": true, "render_s": 0.184, "alpha_px": 1990, "total_s": 0.199}
+{"pid": "32059", "status": "attempt"}
+{"pid": "32059", "status": "ok", "error": null, "resolved": "32059", "import_s": 0.066, "n_vertices": 54032, "dims_mm": [48.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 2343, "total_s": 0.275}
+{"pid": "32062", "status": "attempt"}
+{"pid": "32062", "status": "ok", "error": null, "resolved": "32062", "import_s": 0.005, "n_vertices": 482, "dims_mm": [15.6, 4.8, 4.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 1986, "total_s": 0.173}
+{"pid": "32064a", "status": "attempt"}
+{"pid": "32064a", "status": "ok", "error": null, "resolved": "32064a", "import_s": 0.012, "n_vertices": 5828, "dims_mm": [16.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.172, "alpha_px": 4196, "total_s": 0.193}
+{"pid": "32073", "status": "attempt"}
+{"pid": "32073", "status": "ok", "error": null, "resolved": "32073", "import_s": 0.004, "n_vertices": 162, "dims_mm": [39.6, 4.8, 4.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 932, "total_s": 0.17}
+{"pid": "32123b", "status": "attempt"}
+{"pid": "32123b", "status": "ok", "error": null, "resolved": "32123b", "import_s": 0.005, "n_vertices": 628, "dims_mm": [7.2, 4.0, 7.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 3613, "total_s": 0.174}
+{"pid": "32124", "status": "attempt"}
+{"pid": "32124", "status": "ok", "error": null, "resolved": "32124", "import_s": 0.022, "n_vertices": 12080, "dims_mm": [40.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.17, "alpha_px": 1393, "total_s": 0.206}
+{"pid": "32126", "status": "attempt"}
+{"pid": "32126", "status": "ok", "error": null, "resolved": "32126", "import_s": 0.008, "n_vertices": 1623, "dims_mm": [7.6, 15.6, 7.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 2665, "total_s": 0.178}
+{"pid": "32140", "status": "attempt"}
+{"pid": "32140", "status": "ok", "error": null, "resolved": "32140", "import_s": 0.01, "n_vertices": 3894, "dims_mm": [15.2, 31.2, 8.0], "sim_ok": true, "render_s": 0.163, "alpha_px": 2371, "total_s": 0.178}
+{"pid": "32184", "status": "attempt"}
+{"pid": "32184", "status": "ok", "error": null, "resolved": "32184", "import_s": 0.009, "n_vertices": 2980, "dims_mm": [8.0, 8.0, 23.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 2922, "total_s": 0.184}
+{"pid": "32187", "status": "attempt"}
+{"pid": "32187", "status": "ok", "error": null, "resolved": "32187", "import_s": 0.007, "n_vertices": 1664, "dims_mm": [13.6, 11.6, 13.6], "sim_ok": true, "render_s": 0.165, "alpha_px": 3329, "total_s": 0.177}
+{"pid": "32192", "status": "attempt"}
+{"pid": "32192", "status": "ok", "error": null, "resolved": "32192", "import_s": 0.007, "n_vertices": 1876, "dims_mm": [8.0, 22.95, 14.55], "sim_ok": true, "render_s": 0.178, "alpha_px": 2104, "total_s": 0.189}
+{"pid": "32198", "status": "attempt"}
+{"pid": "32198", "status": "ok", "error": null, "resolved": "32198", "import_s": 0.008, "n_vertices": 1644, "dims_mm": [20.8, 4.0, 20.8], "sim_ok": true, "render_s": 0.171, "alpha_px": 2461, "total_s": 0.184}
+{"pid": "32250", "status": "attempt"}
+{"pid": "32250", "status": "ok", "error": null, "resolved": "32250", "import_s": 0.014, "n_vertices": 5103, "dims_mm": [23.2, 39.2, 4.0], "sim_ok": true, "render_s": 0.173, "alpha_px": 2013, "total_s": 0.193}
+{"pid": "32278", "status": "attempt"}
+{"pid": "32278", "status": "ok", "error": null, "resolved": "32278", "import_s": 0.024, "n_vertices": 13428, "dims_mm": [7.2, 119.2, 8.0], "sim_ok": true, "render_s": 0.163, "alpha_px": 757, "total_s": 0.197}
+{"pid": "32291", "status": "attempt"}
+{"pid": "32291", "status": "ok", "error": null, "resolved": "32291", "import_s": 0.008, "n_vertices": 2688, "dims_mm": [15.2, 8.0, 15.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 3246, "total_s": 0.176}
+{"pid": "32316", "status": "attempt"}
+{"pid": "32316", "status": "ok", "error": null, "resolved": "32316", "import_s": 0.012, "n_vertices": 4388, "dims_mm": [7.2, 39.2, 8.0], "sim_ok": true, "render_s": 0.165, "alpha_px": 1979, "total_s": 0.182}
+{"pid": "32348", "status": "attempt"}
+{"pid": "32348", "status": "ok", "error": null, "resolved": "32348", "import_s": 0.013, "n_vertices": 5264, "dims_mm": [26.4, 45.6, 8.0], "sim_ok": true, "render_s": 0.166, "alpha_px": 1678, "total_s": 0.185}
+{"pid": "32449", "status": "attempt"}
+{"pid": "32449", "status": "ok", "error": null, "resolved": "32449", "import_s": 0.009, "n_vertices": 2452, "dims_mm": [7.2, 31.2, 4.0], "sim_ok": true, "render_s": 0.174, "alpha_px": 1757, "total_s": 0.187}
+{"pid": "3245", "status": "attempt"}
+{"pid": "3245", "status": "ok", "error": null, "resolved": "3245a", "import_s": 0.008, "n_vertices": 5255, "dims_mm": [16.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.166, "alpha_px": 4170, "total_s": 0.18}
+{"pid": "32523", "status": "attempt"}
+{"pid": "32523", "status": "ok", "error": null, "resolved": "32523", "import_s": 0.008, "n_vertices": 2580, "dims_mm": [7.2, 23.2, 8.0], "sim_ok": true, "render_s": 0.168, "alpha_px": 2938, "total_s": 0.18}
+{"pid": "32524", "status": "attempt"}
+{"pid": "32524", "status": "ok", "error": null, "resolved": "32524", "import_s": 0.011, "n_vertices": 6196, "dims_mm": [7.2, 55.2, 8.0], "sim_ok": true, "render_s": 0.163, "alpha_px": 1484, "total_s": 0.179}
+{"pid": "32526", "status": "attempt"}
+{"pid": "32526", "status": "ok", "error": null, "resolved": "32526", "import_s": 0.014, "n_vertices": 6214, "dims_mm": [23.2, 39.2, 8.0], "sim_ok": true, "render_s": 0.168, "alpha_px": 1932, "total_s": 0.188}
+{"pid": "32529", "status": "attempt"}
+{"pid": "32529", "status": "ok", "error": null, "resolved": "32529", "import_s": 0.013, "n_vertices": 6310, "dims_mm": [16.0, 8.0, 16.0], "sim_ok": true, "render_s": 0.16, "alpha_px": 3109, "total_s": 0.181}
+{"pid": "32530", "status": "attempt"}
+{"pid": "32530", "status": "ok", "error": null, "resolved": "32530", "import_s": 0.008, "n_vertices": 2030, "dims_mm": [16.0, 8.0, 15.6], "sim_ok": true, "render_s": 0.175, "alpha_px": 3274, "total_s": 0.186}
+{"pid": "32557", "status": "attempt"}
+{"pid": "32557", "status": "ok", "error": null, "resolved": "32557", "import_s": 0.01, "n_vertices": 3336, "dims_mm": [15.2, 8.0, 23.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 2906, "total_s": 0.181}
+{"pid": "32828", "status": "attempt"}
+{"pid": "32828", "status": "ok", "error": null, "resolved": "32828", "import_s": 0.01, "n_vertices": 3715, "dims_mm": [16.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.17, "alpha_px": 1755, "total_s": 0.186}
+{"pid": "32932", "status": "attempt"}
+{"pid": "32932", "status": "ok", "error": null, "resolved": "32932", "import_s": 0.022, "n_vertices": 12083, "dims_mm": [32.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.156, "alpha_px": 3277, "total_s": 0.191}
+{"pid": "3298", "status": "attempt"}
+{"pid": "3298", "status": "ok", "error": null, "resolved": "3298", "import_s": 0.013, "n_vertices": 5924, "dims_mm": [16.0, 24.0, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 3624, "total_s": 0.19}
+{"pid": "33291", "status": "attempt"}
+{"pid": "33291", "status": "ok", "error": null, "resolved": "33291", "import_s": 0.007, "n_vertices": 1408, "dims_mm": [9.6, 9.6, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 2010, "total_s": 0.174}
+{"pid": "33299b", "status": "attempt"}
+{"pid": "33299b", "status": "ok", "error": null, "resolved": "33299b", "import_s": 0.01, "n_vertices": 2345, "dims_mm": [7.2, 22.8, 16.0], "sim_ok": true, "render_s": 0.181, "alpha_px": 2114, "total_s": 0.195}
+{"pid": "33909", "status": "attempt"}
+{"pid": "33909", "status": "ok", "error": null, "resolved": "33909", "import_s": 0.011, "n_vertices": 5428, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.168, "alpha_px": 3326, "total_s": 0.188}
+{"pid": "3460", "status": "attempt"}
+{"pid": "3460", "status": "ok", "error": null, "resolved": "3460", "import_s": 0.032, "n_vertices": 21311, "dims_mm": [64.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 981, "total_s": 0.22}
+{"pid": "35044", "status": "attempt"}
+{"pid": "35044", "status": "ok", "error": null, "resolved": "35044", "import_s": 0.032, "n_vertices": 21643, "dims_mm": [32.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 1627, "total_s": 0.215}
+{"pid": "35336_4176", "status": "attempt"}
+{"pid": "35336_4176", "status": "ok", "error": null, "resolved": "4176", "import_s": 0.027, "n_vertices": 17723, "dims_mm": [48.0, 16.0, 20.8], "sim_ok": true, "render_s": 0.163, "alpha_px": 3294, "total_s": 0.206}
+{"pid": "3622", "status": "attempt"}
+{"pid": "3622", "status": "ok", "error": null, "resolved": "3622", "import_s": 0.016, "n_vertices": 7931, "dims_mm": [24.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 3427, "total_s": 0.196}
+{"pid": "3623", "status": "attempt"}
+{"pid": "3623", "status": "ok", "error": null, "resolved": "3623", "import_s": 0.014, "n_vertices": 7931, "dims_mm": [24.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.163, "alpha_px": 2284, "total_s": 0.188}
+{"pid": "3633", "status": "attempt"}
+{"pid": "3633", "status": "ok", "error": null, "resolved": "3633", "import_s": 0.005, "n_vertices": 711, "dims_mm": [32.0, 8.0, 9.6], "sim_ok": true, "render_s": 0.178, "alpha_px": 2148, "total_s": 0.185}
+{"pid": "3639", "status": "attempt"}
+{"pid": "3639", "status": "ok", "error": null, "resolved": "3639", "import_s": 0.032, "n_vertices": 21714, "dims_mm": [16.0, 41.6, 16.0], "sim_ok": true, "render_s": 0.165, "alpha_px": 1886, "total_s": 0.219}
+{"pid": "3640", "status": "attempt"}
+{"pid": "3640", "status": "ok", "error": null, "resolved": "3640", "import_s": 0.031, "n_vertices": 21946, "dims_mm": [16.0, 44.0, 16.0], "sim_ok": true, "render_s": 0.168, "alpha_px": 2097, "total_s": 0.22}
+{"pid": "3659", "status": "attempt"}
+{"pid": "3659", "status": "ok", "error": null, "resolved": "3659", "import_s": 0.019, "n_vertices": 10396, "dims_mm": [32.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.162, "alpha_px": 2546, "total_s": 0.194}
+{"pid": "3660", "status": "attempt"}
+{"pid": "3660", "status": "ok", "error": null, "resolved": "3660", "import_s": 0.011, "n_vertices": 6049, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.164, "alpha_px": 3157, "total_s": 0.184}
+{"pid": "3665", "status": "attempt"}
+{"pid": "3665", "status": "ok", "error": null, "resolved": "3665", "import_s": 0.009, "n_vertices": 2975, "dims_mm": [8.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 2998, "total_s": 0.183}
+{"pid": "3666", "status": "attempt"}
+{"pid": "3666", "status": "ok", "error": null, "resolved": "3666", "import_s": 0.026, "n_vertices": 15959, "dims_mm": [48.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.163, "alpha_px": 1259, "total_s": 0.206}
+{"pid": "3673", "status": "attempt"}
+{"pid": "3673", "status": "ok", "error": null, "resolved": "3673", "import_s": 0.006, "n_vertices": 1768, "dims_mm": [16.0, 6.4, 6.4], "sim_ok": true, "render_s": 0.161, "alpha_px": 2199, "total_s": 0.172}
+{"pid": "3676", "status": "attempt"}
+{"pid": "3676", "status": "ok", "error": null, "resolved": "3676", "import_s": 0.009, "n_vertices": 4025, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.181, "alpha_px": 2415, "total_s": 0.197}
+{"pid": "3679", "status": "attempt"}
+{"pid": "3679", "status": "ok", "error": null, "resolved": "3679", "import_s": 0.021, "n_vertices": 11260, "dims_mm": [14.0, 14.0, 4.8], "sim_ok": true, "render_s": 0.169, "alpha_px": 2531, "total_s": 0.205}
+{"pid": "3680", "status": "attempt"}
+{"pid": "3680", "status": "ok", "error": null, "resolved": "3680", "import_s": 0.006, "n_vertices": 960, "dims_mm": [16.0, 16.0, 3.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 3167, "total_s": 0.178}
+{"pid": "36840", "status": "attempt"}
+{"pid": "36840", "status": "ok", "error": null, "resolved": "36840", "import_s": 0.013, "n_vertices": 5404, "dims_mm": [8.0, 11.2, 8.0], "sim_ok": true, "render_s": 0.161, "alpha_px": 3068, "total_s": 0.182}
+{"pid": "36841", "status": "attempt"}
+{"pid": "36841", "status": "ok", "error": null, "resolved": "36841", "import_s": 0.011, "n_vertices": 5400, "dims_mm": [8.0, 11.2, 9.6], "sim_ok": true, "render_s": 0.159, "alpha_px": 3274, "total_s": 0.178}
+{"pid": "3700", "status": "attempt"}
+{"pid": "3700", "status": "ok", "error": null, "resolved": "3700", "import_s": 0.012, "n_vertices": 6327, "dims_mm": [16.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.159, "alpha_px": 4196, "total_s": 0.179}
+{"pid": "3701", "status": "attempt"}
+{"pid": "3701", "status": "ok", "error": null, "resolved": "3701", "import_s": 0.023, "n_vertices": 13483, "dims_mm": [32.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 2811, "total_s": 0.204}
+{"pid": "3705", "status": "attempt"}
+{"pid": "3705", "status": "ok", "error": null, "resolved": "3705", "import_s": 0.004, "n_vertices": 162, "dims_mm": [31.6, 4.8, 4.8], "sim_ok": true, "render_s": 0.168, "alpha_px": 1133, "total_s": 0.174}
+{"pid": "3706", "status": "attempt"}
+{"pid": "3706", "status": "ok", "error": null, "resolved": "3706", "import_s": 0.004, "n_vertices": 162, "dims_mm": [47.6, 4.8, 4.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 797, "total_s": 0.173}
+{"pid": "3707", "status": "attempt"}
+{"pid": "3707", "status": "ok", "error": null, "resolved": "3707", "import_s": 0.004, "n_vertices": 162, "dims_mm": [63.6, 4.8, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 625, "total_s": 0.168}
+{"pid": "3710", "status": "attempt"}
+{"pid": "3710", "status": "ok", "error": null, "resolved": "3710", "import_s": 0.018, "n_vertices": 10607, "dims_mm": [32.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.164, "alpha_px": 1804, "total_s": 0.196}
+{"pid": "3713", "status": "attempt"}
+{"pid": "3713", "status": "ok", "error": null, "resolved": "3713", "import_s": 0.006, "n_vertices": 806, "dims_mm": [7.2, 8.0, 7.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 3560, "total_s": 0.178}
+{"pid": "3747b", "status": "attempt"}
+{"pid": "3747b", "status": "ok", "error": null, "resolved": "3747b", "import_s": 0.014, "n_vertices": 7324, "dims_mm": [16.0, 24.0, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 2893, "total_s": 0.19}
+{"pid": "3749", "status": "attempt"}
+{"pid": "3749", "status": "ok", "error": null, "resolved": "3749", "import_s": 0.007, "n_vertices": 1119, "dims_mm": [15.8, 6.4, 6.4], "sim_ok": true, "render_s": 0.18, "alpha_px": 2018, "total_s": 0.191}
+{"pid": "3795", "status": "attempt"}
+{"pid": "3795", "status": "ok", "error": null, "resolved": "3795", "import_s": 0.046, "n_vertices": 32052, "dims_mm": [48.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.176, "alpha_px": 1905, "total_s": 0.248}
+{"pid": "3823", "status": "attempt"}
+{"pid": "3823", "status": "ok", "error": null, "resolved": "3823", "import_s": 0.015, "n_vertices": 6801, "dims_mm": [32.0, 16.0, 20.8], "sim_ok": true, "render_s": 0.173, "alpha_px": 3751, "total_s": 0.198}
+{"pid": "3832", "status": "attempt"}
+{"pid": "3832", "status": "ok", "error": null, "resolved": "3832", "import_s": 0.063, "n_vertices": 53580, "dims_mm": [80.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.161, "alpha_px": 1241, "total_s": 0.263}
+{"pid": "3895", "status": "attempt"}
+{"pid": "3895", "status": "ok", "error": null, "resolved": "3895", "import_s": 0.052, "n_vertices": 42107, "dims_mm": [96.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.175, "alpha_px": 1075, "total_s": 0.257}
+{"pid": "3941", "status": "attempt"}
+{"pid": "3941", "status": "ok", "error": null, "resolved": "3941", "import_s": 0.008, "n_vertices": 1484, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.173, "alpha_px": 3403, "total_s": 0.185}
+{"pid": "3942c", "status": "attempt"}
+{"pid": "3942c", "status": "ok", "error": null, "resolved": "3942c", "import_s": 0.006, "n_vertices": 1456, "dims_mm": [16.0, 16.0, 20.8], "sim_ok": true, "render_s": 0.166, "alpha_px": 2585, "total_s": 0.176}
+{"pid": "3957", "status": "attempt"}
+{"pid": "3957", "status": "ok", "error": null, "resolved": "3957", "import_s": 0.006, "n_vertices": 1226, "dims_mm": [6.4, 6.4, 38.4], "sim_ok": true, "render_s": 0.176, "alpha_px": 831, "total_s": 0.186}
+{"pid": "3958", "status": "attempt"}
+{"pid": "3958", "status": "ok", "error": null, "resolved": "3958", "import_s": 0.103, "n_vertices": 98634, "dims_mm": [48.0, 48.0, 4.8], "sim_ok": true, "render_s": 0.169, "alpha_px": 2744, "total_s": 0.33}
+{"pid": "3960", "status": "attempt"}
+{"pid": "3960", "status": "ok", "error": null, "resolved": "3960", "import_s": 0.008, "n_vertices": 4104, "dims_mm": [32.0, 32.0, 8.0], "sim_ok": true, "render_s": 0.161, "alpha_px": 2167, "total_s": 0.176}
+{"pid": "39739", "status": "attempt"}
+{"pid": "39739", "status": "ok", "error": null, "resolved": "39739", "import_s": 0.005, "n_vertices": 446, "dims_mm": [9.24, 9.24, 3.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 3170, "total_s": 0.176}
+{"pid": "4032a", "status": "attempt"}
+{"pid": "4032a", "status": "ok", "error": null, "resolved": "4032a", "import_s": 0.007, "n_vertices": 1116, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.179, "alpha_px": 2575, "total_s": 0.19}
+{"pid": "40490", "status": "attempt"}
+{"pid": "40490", "status": "ok", "error": null, "resolved": "40490", "import_s": 0.016, "n_vertices": 8004, "dims_mm": [7.2, 71.2, 8.0], "sim_ok": true, "render_s": 0.169, "alpha_px": 1184, "total_s": 0.191}
+{"pid": "4070", "status": "attempt"}
+{"pid": "4070", "status": "ok", "error": null, "resolved": "4070", "import_s": 0.009, "n_vertices": 3063, "dims_mm": [8.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.164, "alpha_px": 4187, "total_s": 0.178}
+{"pid": "4081b", "status": "attempt"}
+{"pid": "4081b", "status": "ok", "error": null, "resolved": "4081b", "import_s": 0.01, "n_vertices": 3401, "dims_mm": [8.0, 15.2, 6.4], "sim_ok": true, "render_s": 0.169, "alpha_px": 2603, "total_s": 0.187}
+{"pid": "4083", "status": "attempt"}
+{"pid": "4083", "status": "ok", "error": null, "resolved": "4083", "import_s": 0.007, "n_vertices": 2586, "dims_mm": [30.4, 6.4, 20.8], "sim_ok": true, "render_s": 0.168, "alpha_px": 1869, "total_s": 0.18}
+{"pid": "40902", "status": "attempt"}
+{"pid": "40902", "status": "ok", "error": null, "resolved": "40902", "import_s": 0.027, "n_vertices": 15456, "dims_mm": [22.4, 16.0, 11.2], "sim_ok": true, "render_s": 0.175, "alpha_px": 3143, "total_s": 0.216}
+{"pid": "41530", "status": "attempt"}
+{"pid": "41530", "status": "ok", "error": null, "resolved": "41530", "import_s": 0.013, "n_vertices": 4916, "dims_mm": [36.85, 8.0, 36.85], "sim_ok": true, "render_s": 0.168, "alpha_px": 1887, "total_s": 0.194}
+{"pid": "41532", "status": "attempt"}
+{"pid": "41532", "status": "ok", "error": null, "resolved": "41532", "import_s": 0.012, "n_vertices": 3474, "dims_mm": [7.2, 22.14, 7.2], "sim_ok": true, "render_s": 0.171, "alpha_px": 1952, "total_s": 0.189}
+{"pid": "4162", "status": "attempt"}
+{"pid": "4162", "status": "ok", "error": null, "resolved": "4162", "import_s": 0.007, "n_vertices": 1087, "dims_mm": [64.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 942, "total_s": 0.178}
+{"pid": "41677", "status": "attempt"}
+{"pid": "41677", "status": "ok", "error": null, "resolved": "41677", "import_s": 0.005, "n_vertices": 634, "dims_mm": [7.2, 15.2, 4.0], "sim_ok": true, "render_s": 0.16, "alpha_px": 2902, "total_s": 0.167}
+{"pid": "41678", "status": "attempt"}
+{"pid": "41678", "status": "ok", "error": null, "resolved": "41678", "import_s": 0.008, "n_vertices": 2506, "dims_mm": [16.0, 15.6, 8.0], "sim_ok": true, "render_s": 0.169, "alpha_px": 3662, "total_s": 0.181}
+{"pid": "41682", "status": "attempt"}
+{"pid": "41682", "status": "ok", "error": null, "resolved": "41682", "import_s": 0.013, "n_vertices": 5683, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.182, "alpha_px": 3597, "total_s": 0.205}
+{"pid": "41740", "status": "attempt"}
+{"pid": "41740", "status": "ok", "error": null, "resolved": "41740", "import_s": 0.013, "n_vertices": 5411, "dims_mm": [32.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.174, "alpha_px": 1723, "total_s": 0.196}
+{"pid": "41747", "status": "attempt"}
+{"pid": "41747", "status": "ok", "error": null, "resolved": "41747", "import_s": 0.014, "n_vertices": 6895, "dims_mm": [16.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 1659, "total_s": 0.186}
+{"pid": "41748", "status": "attempt"}
+{"pid": "41748", "status": "ok", "error": null, "resolved": "41748", "import_s": 0.012, "n_vertices": 6895, "dims_mm": [16.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.171, "alpha_px": 1982, "total_s": 0.192}
+{"pid": "41768", "status": "attempt"}
+{"pid": "41768", "status": "ok", "error": null, "resolved": "41768", "import_s": 0.019, "n_vertices": 11081, "dims_mm": [16.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 2930, "total_s": 0.196}
+{"pid": "41769", "status": "attempt"}
+{"pid": "41769", "status": "ok", "error": null, "resolved": "41769", "import_s": 0.021, "n_vertices": 11036, "dims_mm": [16.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.17, "alpha_px": 2000, "total_s": 0.206}
+{"pid": "41770", "status": "attempt"}
+{"pid": "41770", "status": "ok", "error": null, "resolved": "41770", "import_s": 0.021, "n_vertices": 11044, "dims_mm": [16.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 1890, "total_s": 0.2}
+{"pid": "4185", "status": "attempt"}
+{"pid": "4185", "status": "ok", "error": null, "resolved": "4185", "import_s": 0.011, "n_vertices": 3668, "dims_mm": [24.0, 4.0, 24.0], "sim_ok": true, "render_s": 0.167, "alpha_px": 2676, "total_s": 0.183}
+{"pid": "42003", "status": "attempt"}
+{"pid": "42003", "status": "ok", "error": null, "resolved": "42003", "import_s": 0.01, "n_vertices": 3204, "dims_mm": [8.0, 8.0, 23.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 2951, "total_s": 0.18}
+{"pid": "42022", "status": "attempt"}
+{"pid": "42022", "status": "ok", "error": null, "resolved": "42022", "import_s": 0.012, "n_vertices": 5610, "dims_mm": [8.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 1708, "total_s": 0.183}
+{"pid": "42023", "status": "attempt"}
+{"pid": "42023", "status": "ok", "error": null, "resolved": "42023", "import_s": 0.019, "n_vertices": 11171, "dims_mm": [8.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.162, "alpha_px": 1598, "total_s": 0.194}
+{"pid": "4216", "status": "attempt"}
+{"pid": "4216", "status": "ok", "error": null, "resolved": "4216", "import_s": 0.011, "n_vertices": 5352, "dims_mm": [16.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 4133, "total_s": 0.182}
+{"pid": "4218", "status": "attempt"}
+{"pid": "4218", "status": "ok", "error": null, "resolved": "4218", "import_s": 0.007, "n_vertices": 1660, "dims_mm": [68.0, 4.0, 11.12], "sim_ok": true, "render_s": 0.162, "alpha_px": 841, "total_s": 0.172}
+{"pid": "42446", "status": "attempt"}
+{"pid": "42446", "status": "ok", "error": null, "resolved": "42446", "import_s": 0.009, "n_vertices": 3137, "dims_mm": [8.0, 10.8, 10.8], "sim_ok": true, "render_s": 0.181, "alpha_px": 3125, "total_s": 0.196}
+{"pid": "4274", "status": "attempt"}
+{"pid": "4274", "status": "ok", "error": null, "resolved": "4274", "import_s": 0.007, "n_vertices": 1268, "dims_mm": [9.6, 6.4, 6.4], "sim_ok": true, "render_s": 0.165, "alpha_px": 2794, "total_s": 0.176}
+{"pid": "4282", "status": "attempt"}
+{"pid": "4282", "status": "ok", "error": null, "resolved": "4282", "import_s": 0.092, "n_vertices": 85872, "dims_mm": [128.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.173, "alpha_px": 824, "total_s": 0.324}
+{"pid": "4286", "status": "attempt"}
+{"pid": "4286", "status": "ok", "error": null, "resolved": "4286", "import_s": 0.009, "n_vertices": 2847, "dims_mm": [8.0, 24.0, 11.2], "sim_ok": true, "render_s": 0.179, "alpha_px": 2821, "total_s": 0.194}
+{"pid": "4287b", "status": "attempt"}
+{"pid": "4287b", "status": "ok", "error": null, "resolved": "4287b", "import_s": 0.009, "n_vertices": 3879, "dims_mm": [8.0, 24.0, 11.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 2462, "total_s": 0.184}
+{"pid": "43708", "status": "attempt"}
+{"pid": "43708", "status": "ok", "error": null, "resolved": "43708", "import_s": 0.012, "n_vertices": 5264, "dims_mm": [32.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.171, "alpha_px": 2278, "total_s": 0.192}
+{"pid": "43712", "status": "attempt"}
+{"pid": "43712", "status": "ok", "error": null, "resolved": "43712", "import_s": 0.021, "n_vertices": 13110, "dims_mm": [32.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.184, "alpha_px": 2277, "total_s": 0.218}
+{"pid": "43713", "status": "attempt"}
+{"pid": "43713", "status": "ok", "error": null, "resolved": "43713", "import_s": 0.036, "n_vertices": 23922, "dims_mm": [32.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.164, "alpha_px": 1926, "total_s": 0.221}
+{"pid": "43719", "status": "attempt"}
+{"pid": "43719", "status": "ok", "error": null, "resolved": "43719", "import_s": 0.019, "n_vertices": 10760, "dims_mm": [32.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.163, "alpha_px": 1826, "total_s": 0.196}
+{"pid": "43898", "status": "attempt"}
+{"pid": "43898", "status": "ok", "error": null, "resolved": "43898", "import_s": 0.007, "n_vertices": 1616, "dims_mm": [24.0, 24.0, 8.0], "sim_ok": true, "render_s": 0.18, "alpha_px": 2108, "total_s": 0.193}
+{"pid": "44126", "status": "attempt"}
+{"pid": "44126", "status": "ok", "error": null, "resolved": "44126", "import_s": 0.022, "n_vertices": 12343, "dims_mm": [16.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 2395, "total_s": 0.202}
+{"pid": "44568", "status": "attempt"}
+{"pid": "44568", "status": "ok", "error": null, "resolved": "44568", "import_s": 0.021, "n_vertices": 11641, "dims_mm": [32.0, 14.14, 5.35], "sim_ok": true, "render_s": 0.157, "alpha_px": 1823, "total_s": 0.192}
+{"pid": "4460b", "status": "attempt"}
+{"pid": "4460b", "status": "ok", "error": null, "resolved": "4460b", "import_s": 0.009, "n_vertices": 2821, "dims_mm": [8.0, 16.0, 30.4], "sim_ok": true, "render_s": 0.178, "alpha_px": 2969, "total_s": 0.191}
+{"pid": "44728", "status": "attempt"}
+{"pid": "44728", "status": "ok", "error": null, "resolved": "44728", "import_s": 0.027, "n_vertices": 16255, "dims_mm": [16.0, 11.2, 17.6], "sim_ok": true, "render_s": 0.168, "alpha_px": 3509, "total_s": 0.21}
+{"pid": "4477", "status": "attempt"}
+{"pid": "4477", "status": "ok", "error": null, "resolved": "4477", "import_s": 0.034, "n_vertices": 26663, "dims_mm": [80.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 798, "total_s": 0.224}
+{"pid": "44809", "status": "attempt"}
+{"pid": "44809", "status": "ok", "error": null, "resolved": "44809", "import_s": 0.009, "n_vertices": 2916, "dims_mm": [15.6, 15.6, 8.0], "sim_ok": true, "render_s": 0.158, "alpha_px": 3144, "total_s": 0.173}
+{"pid": "44861", "status": "attempt"}
+{"pid": "44861", "status": "ok", "error": null, "resolved": "44861", "import_s": 0.009, "n_vertices": 2996, "dims_mm": [16.0, 8.0, 7.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 2970, "total_s": 0.181}
+{"pid": "4488", "status": "attempt"}
+{"pid": "4488", "status": "ok", "error": null, "resolved": "4488", "import_s": 0.02, "n_vertices": 11039, "dims_mm": [21.6, 16.0, 8.0], "sim_ok": true, "render_s": 0.173, "alpha_px": 2734, "total_s": 0.208}
+{"pid": "4490", "status": "attempt"}
+{"pid": "4490", "status": "ok", "error": null, "resolved": "4490", "import_s": 0.017, "n_vertices": 7917, "dims_mm": [24.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.16, "alpha_px": 3271, "total_s": 0.188}
+{"pid": "4510", "status": "attempt"}
+{"pid": "4510", "status": "ok", "error": null, "resolved": "4510", "import_s": 0.029, "n_vertices": 21359, "dims_mm": [64.0, 11.6, 4.8], "sim_ok": true, "render_s": 0.159, "alpha_px": 1219, "total_s": 0.209}
+{"pid": "4519", "status": "attempt"}
+{"pid": "4519", "status": "ok", "error": null, "resolved": "4519", "import_s": 0.004, "n_vertices": 162, "dims_mm": [23.6, 4.8, 4.8], "sim_ok": true, "render_s": 0.166, "alpha_px": 1449, "total_s": 0.172}
+{"pid": "45590", "status": "attempt"}
+{"pid": "45590", "status": "ok", "error": null, "resolved": "45590", "import_s": 0.004, "n_vertices": 804, "dims_mm": [15.2, 8.0, 7.2], "sim_ok": true, "render_s": 0.16, "alpha_px": 3478, "total_s": 0.167}
+{"pid": "45677", "status": "attempt"}
+{"pid": "45677", "status": "ok", "error": null, "resolved": "45677", "import_s": 0.015, "n_vertices": 7168, "dims_mm": [32.0, 32.0, 8.0], "sim_ok": true, "render_s": 0.181, "alpha_px": 2909, "total_s": 0.205}
+{"pid": "4600", "status": "attempt"}
+{"pid": "4600", "status": "ok", "error": null, "resolved": "4600", "import_s": 0.021, "n_vertices": 11438, "dims_mm": [27.2, 16.0, 5.6], "sim_ok": true, "render_s": 0.16, "alpha_px": 1988, "total_s": 0.196}
+{"pid": "4727", "status": "attempt"}
+{"pid": "4727", "status": "ok", "error": null, "resolved": "4727", "import_s": 0.006, "n_vertices": 1392, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.164, "alpha_px": 2552, "total_s": 0.174}
+{"pid": "4733", "status": "attempt"}
+{"pid": "4733", "status": "ok", "error": null, "resolved": "4733", "import_s": 0.008, "n_vertices": 2288, "dims_mm": [11.2, 11.2, 11.2], "sim_ok": true, "render_s": 0.182, "alpha_px": 3083, "total_s": 0.195}
+{"pid": "47397", "status": "attempt"}
+{"pid": "47397", "status": "ok", "error": null, "resolved": "47397", "import_s": 0.068, "n_vertices": 55055, "dims_mm": [24.0, 96.0, 4.8], "sim_ok": true, "render_s": 0.174, "alpha_px": 946, "total_s": 0.281}
+{"pid": "47398", "status": "attempt"}
+{"pid": "47398", "status": "ok", "error": null, "resolved": "47398", "import_s": 0.065, "n_vertices": 54945, "dims_mm": [24.0, 96.0, 4.8], "sim_ok": true, "render_s": 0.164, "alpha_px": 985, "total_s": 0.268}
+{"pid": "4740", "status": "attempt"}
+{"pid": "4740", "status": "ok", "error": null, "resolved": "4740", "import_s": 0.006, "n_vertices": 1248, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.178, "alpha_px": 2055, "total_s": 0.188}
+{"pid": "4742", "status": "attempt"}
+{"pid": "4742", "status": "ok", "error": null, "resolved": "4742", "import_s": 0.007, "n_vertices": 1340, "dims_mm": [32.0, 32.0, 19.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 2671, "total_s": 0.181}
+{"pid": "47456", "status": "attempt"}
+{"pid": "47456", "status": "ok", "error": null, "resolved": "47456", "import_s": 0.014, "n_vertices": 6294, "dims_mm": [16.0, 28.0, 8.0], "sim_ok": true, "render_s": 0.17, "alpha_px": 2476, "total_s": 0.193}
+{"pid": "47753", "status": "attempt"}
+{"pid": "47753", "status": "ok", "error": null, "resolved": "47753", "import_s": 0.008, "n_vertices": 2016, "dims_mm": [32.0, 32.0, 9.6], "sim_ok": true, "render_s": 0.161, "alpha_px": 2417, "total_s": 0.173}
+{"pid": "47755", "status": "attempt"}
+{"pid": "47755", "status": "ok", "error": null, "resolved": "47755", "import_s": 0.019, "n_vertices": 10954, "dims_mm": [24.0, 32.0, 12.8], "sim_ok": true, "render_s": 0.181, "alpha_px": 2490, "total_s": 0.212}
+{"pid": "47905", "status": "attempt"}
+{"pid": "47905", "status": "ok", "error": null, "resolved": "47905", "import_s": 0.01, "n_vertices": 3475, "dims_mm": [8.0, 11.2, 11.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 3633, "total_s": 0.187}
+{"pid": "48092", "status": "attempt"}
+{"pid": "48092", "status": "ok", "error": null, "resolved": "48092", "import_s": 0.017, "n_vertices": 8228, "dims_mm": [32.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.174, "alpha_px": 2369, "total_s": 0.203}
+{"pid": "48169", "status": "attempt"}
+{"pid": "48169", "status": "ok", "error": null, "resolved": "48169", "import_s": 0.024, "n_vertices": 13486, "dims_mm": [25.6, 16.0, 11.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 3388, "total_s": 0.204}
+{"pid": "48171", "status": "attempt"}
+{"pid": "48171", "status": "ok", "error": null, "resolved": "48171", "import_s": 0.02, "n_vertices": 13902, "dims_mm": [30.65, 16.0, 13.3], "sim_ok": true, "render_s": 0.167, "alpha_px": 2511, "total_s": 0.199}
+{"pid": "48336", "status": "attempt"}
+{"pid": "48336", "status": "ok", "error": null, "resolved": "48336", "import_s": 0.013, "n_vertices": 5763, "dims_mm": [16.0, 14.4, 4.8], "sim_ok": true, "render_s": 0.17, "alpha_px": 3032, "total_s": 0.192}
+{"pid": "4865b", "status": "attempt"}
+{"pid": "4865b", "status": "ok", "error": null, "resolved": "4865b", "import_s": 0.005, "n_vertices": 297, "dims_mm": [16.0, 8.0, 9.6], "sim_ok": true, "render_s": 0.164, "alpha_px": 3960, "total_s": 0.172}
+{"pid": "4871", "status": "attempt"}
+{"pid": "4871", "status": "ok", "error": null, "resolved": "4871", "import_s": 0.02, "n_vertices": 12054, "dims_mm": [16.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 2535, "total_s": 0.201}
+{"pid": "48723", "status": "attempt"}
+{"pid": "48723", "status": "ok", "error": null, "resolved": "48723", "import_s": 0.008, "n_vertices": 2092, "dims_mm": [24.0, 24.0, 9.6], "sim_ok": true, "render_s": 0.16, "alpha_px": 1317, "total_s": 0.173}
+{"pid": "48729b", "status": "attempt"}
+{"pid": "48729b", "status": "ok", "error": null, "resolved": "48729b", "import_s": 0.005, "n_vertices": 681, "dims_mm": [8.0, 3.2, 15.32], "sim_ok": true, "render_s": 0.161, "alpha_px": 2132, "total_s": 0.17}
+{"pid": "48933", "status": "attempt"}
+{"pid": "48933", "status": "ok", "error": null, "resolved": "48933", "import_s": 0.013, "n_vertices": 6333, "dims_mm": [32.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 2462, "total_s": 0.191}
+{"pid": "48989", "status": "attempt"}
+{"pid": "48989", "status": "ok", "error": null, "resolved": "48989", "import_s": 0.014, "n_vertices": 6652, "dims_mm": [8.0, 24.0, 23.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 2683, "total_s": 0.183}
+{"pid": "49668", "status": "attempt"}
+{"pid": "49668", "status": "ok", "error": null, "resolved": "49668", "import_s": 0.008, "n_vertices": 2714, "dims_mm": [8.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.171, "alpha_px": 2249, "total_s": 0.186}
+{"pid": "50304", "status": "attempt"}
+{"pid": "50304", "status": "ok", "error": null, "resolved": "50304", "import_s": 0.05, "n_vertices": 41167, "dims_mm": [24.0, 64.0, 4.8], "sim_ok": true, "render_s": 0.16, "alpha_px": 1453, "total_s": 0.241}
+{"pid": "50305", "status": "attempt"}
+{"pid": "50305", "status": "ok", "error": null, "resolved": "50305", "import_s": 0.052, "n_vertices": 41227, "dims_mm": [24.0, 64.0, 4.8], "sim_ok": true, "render_s": 0.159, "alpha_px": 1398, "total_s": 0.241}
+{"pid": "50373", "status": "attempt"}
+{"pid": "50373", "status": "ok", "error": null, "resolved": "50373", "import_s": 0.025, "n_vertices": 15946, "dims_mm": [32.0, 28.4, 11.2], "sim_ok": true, "render_s": 0.162, "alpha_px": 2831, "total_s": 0.206}
+{"pid": "50950", "status": "attempt"}
+{"pid": "50950", "status": "ok", "error": null, "resolved": "50950", "import_s": 0.005, "n_vertices": 254, "dims_mm": [8.0, 24.0, 9.6], "sim_ok": true, "render_s": 0.162, "alpha_px": 2859, "total_s": 0.169}
+{"pid": "51739", "status": "attempt"}
+{"pid": "51739", "status": "ok", "error": null, "resolved": "51739", "import_s": 0.017, "n_vertices": 10714, "dims_mm": [30.8, 16.0, 4.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 1998, "total_s": 0.196}
+{"pid": "52031", "status": "attempt"}
+{"pid": "52031", "status": "ok", "error": null, "resolved": "52031", "import_s": 0.023, "n_vertices": 13365, "dims_mm": [48.0, 32.0, 8.0], "sim_ok": true, "render_s": 0.168, "alpha_px": 2714, "total_s": 0.208}
+{"pid": "52501", "status": "attempt"}
+{"pid": "52501", "status": "ok", "error": null, "resolved": "52501", "import_s": 0.021, "n_vertices": 11523, "dims_mm": [8.0, 48.0, 11.2], "sim_ok": true, "render_s": 0.167, "alpha_px": 1335, "total_s": 0.202}
+{"pid": "54200", "status": "attempt"}
+{"pid": "54200", "status": "ok", "error": null, "resolved": "54200", "import_s": 0.005, "n_vertices": 109, "dims_mm": [8.0, 8.0, 6.24], "sim_ok": true, "render_s": 0.17, "alpha_px": 4154, "total_s": 0.177}
+{"pid": "54383", "status": "attempt"}
+{"pid": "54383", "status": "ok", "error": null, "resolved": "54383", "import_s": 0.034, "n_vertices": 24769, "dims_mm": [23.6, 48.0, 4.8], "sim_ok": true, "render_s": 0.163, "alpha_px": 1648, "total_s": 0.219}
+{"pid": "54384", "status": "attempt"}
+{"pid": "54384", "status": "ok", "error": null, "resolved": "54384", "import_s": 0.034, "n_vertices": 24829, "dims_mm": [23.6, 48.0, 4.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 1538, "total_s": 0.223}
+{"pid": "55013", "status": "attempt"}
+{"pid": "55013", "status": "ok", "error": null, "resolved": "55013", "import_s": 0.005, "n_vertices": 303, "dims_mm": [63.8, 6.4, 6.4], "sim_ok": true, "render_s": 0.182, "alpha_px": 645, "total_s": 0.19}
+{"pid": "57519", "status": "attempt"}
+{"pid": "57519", "status": "ok", "error": null, "resolved": "57519", "import_s": 0.024, "n_vertices": 17780, "dims_mm": [40.8, 14.56, 40.46], "sim_ok": true, "render_s": 0.156, "alpha_px": 2502, "total_s": 0.203}
+{"pid": "57520", "status": "attempt"}
+{"pid": "57520", "status": "ok", "error": null, "resolved": "57520", "import_s": 0.011, "n_vertices": 4196, "dims_mm": [25.6, 8.0, 25.18], "sim_ok": true, "render_s": 0.166, "alpha_px": 2636, "total_s": 0.186}
+{"pid": "57585", "status": "attempt"}
+{"pid": "57585", "status": "ok", "error": null, "resolved": "57585", "import_s": 0.006, "n_vertices": 1308, "dims_mm": [22.14, 19.41, 8.0], "sim_ok": true, "render_s": 0.163, "alpha_px": 1586, "total_s": 0.174}
+{"pid": "57895", "status": "attempt"}
+{"pid": "57895", "status": "ok", "error": null, "resolved": "57895", "import_s": 0.006, "n_vertices": 860, "dims_mm": [29.0, 1.6, 53.4], "sim_ok": true, "render_s": 0.168, "alpha_px": 2592, "total_s": 0.178}
+{"pid": "57909b", "status": "attempt"}
+{"pid": "57909b", "status": "ok", "error": null, "resolved": "57909", "import_s": 0.02, "n_vertices": 11610, "dims_mm": [29.12, 16.0, 11.2], "sim_ok": true, "render_s": 0.159, "alpha_px": 2678, "total_s": 0.194}
+{"pid": "58090", "status": "attempt"}
+{"pid": "58090", "status": "ok", "error": null, "resolved": "58090", "import_s": 0.011, "n_vertices": 4720, "dims_mm": [30.4, 13.6, 30.4], "sim_ok": true, "render_s": 0.159, "alpha_px": 3182, "total_s": 0.178}
+{"pid": "58176", "status": "attempt"}
+{"pid": "58176", "status": "ok", "error": null, "resolved": "58176", "import_s": 0.006, "n_vertices": 1203, "dims_mm": [6.4, 6.4, 11.2], "sim_ok": true, "render_s": 0.161, "alpha_px": 2428, "total_s": 0.174}
+{"pid": "59426", "status": "attempt"}
+{"pid": "59426", "status": "ok", "error": null, "resolved": "59426", "import_s": 0.006, "n_vertices": 520, "dims_mm": [43.6, 6.4, 6.4], "sim_ok": true, "render_s": 0.166, "alpha_px": 866, "total_s": 0.175}
+{"pid": "59443", "status": "attempt"}
+{"pid": "59443", "status": "ok", "error": null, "resolved": "59443", "import_s": 0.005, "n_vertices": 776, "dims_mm": [6.8, 16.0, 6.98], "sim_ok": true, "render_s": 0.162, "alpha_px": 2939, "total_s": 0.169}
+{"pid": "60032", "status": "attempt"}
+{"pid": "60032", "status": "ok", "error": null, "resolved": "60032", "import_s": 0.015, "n_vertices": 6497, "dims_mm": [16.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.161, "alpha_px": 3287, "total_s": 0.183}
+{"pid": "6005", "status": "attempt"}
+{"pid": "6005", "status": "ok", "error": null, "resolved": "6005", "import_s": 0.009, "n_vertices": 2839, "dims_mm": [8.0, 24.0, 19.2], "sim_ok": true, "render_s": 0.18, "alpha_px": 2811, "total_s": 0.194}
+{"pid": "6014", "status": "attempt"}
+{"pid": "6014", "status": "ok", "error": null, "resolved": "6014", "import_s": 0.009, "n_vertices": 2105, "dims_mm": [10.4, 11.2, 10.4], "sim_ok": true, "render_s": 0.166, "alpha_px": 3823, "total_s": 0.179}
+{"pid": "6020", "status": "attempt"}
+{"pid": "6020", "status": "ok", "error": null, "resolved": "6020", "import_s": 0.006, "n_vertices": 1664, "dims_mm": [24.0, 59.2, 6.4], "sim_ok": true, "render_s": 0.164, "alpha_px": 1655, "total_s": 0.176}
+{"pid": "60470b", "status": "attempt"}
+{"pid": "60470b", "status": "ok", "error": null, "resolved": "60470b", "import_s": 0.012, "n_vertices": 5867, "dims_mm": [16.0, 13.61, 6.06], "sim_ok": true, "render_s": 0.164, "alpha_px": 2839, "total_s": 0.185}
+{"pid": "60471", "status": "attempt"}
+{"pid": "60471", "status": "ok", "error": null, "resolved": "60471", "import_s": 0.018, "n_vertices": 9909, "dims_mm": [16.0, 14.4, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 2516, "total_s": 0.192}
+{"pid": "60474", "status": "attempt"}
+{"pid": "60474", "status": "ok", "error": null, "resolved": "60474", "import_s": 0.047, "n_vertices": 35764, "dims_mm": [32.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.158, "alpha_px": 2202, "total_s": 0.232}
+{"pid": "60475b", "status": "attempt"}
+{"pid": "60475b", "status": "ok", "error": null, "resolved": "60475b", "import_s": 0.009, "n_vertices": 3017, "dims_mm": [8.0, 13.61, 11.2], "sim_ok": true, "render_s": 0.171, "alpha_px": 3276, "total_s": 0.186}
+{"pid": "60476", "status": "attempt"}
+{"pid": "60476", "status": "ok", "error": null, "resolved": "60476", "import_s": 0.009, "n_vertices": 2865, "dims_mm": [8.0, 13.61, 11.2], "sim_ok": true, "render_s": 0.172, "alpha_px": 3257, "total_s": 0.187}
+{"pid": "60477", "status": "attempt"}
+{"pid": "60477", "status": "ok", "error": null, "resolved": "60477", "import_s": 0.008, "n_vertices": 3109, "dims_mm": [8.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.18, "alpha_px": 2237, "total_s": 0.195}
+{"pid": "60478", "status": "attempt"}
+{"pid": "60478", "status": "ok", "error": null, "resolved": "60478", "import_s": 0.014, "n_vertices": 5731, "dims_mm": [22.4, 8.0, 4.8], "sim_ok": true, "render_s": 0.169, "alpha_px": 2334, "total_s": 0.193}
+{"pid": "60479", "status": "attempt"}
+{"pid": "60479", "status": "ok", "error": null, "resolved": "60479", "import_s": 0.04, "n_vertices": 32015, "dims_mm": [96.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.162, "alpha_px": 685, "total_s": 0.23}
+{"pid": "60481", "status": "attempt"}
+{"pid": "60481", "status": "ok", "error": null, "resolved": "60481", "import_s": 0.008, "n_vertices": 2675, "dims_mm": [8.0, 16.0, 20.8], "sim_ok": true, "render_s": 0.168, "alpha_px": 3497, "total_s": 0.181}
+{"pid": "60483", "status": "attempt"}
+{"pid": "60483", "status": "ok", "error": null, "resolved": "60483", "import_s": 0.007, "n_vertices": 1160, "dims_mm": [7.2, 15.2, 8.0], "sim_ok": true, "render_s": 0.167, "alpha_px": 3648, "total_s": 0.176}
+{"pid": "60484", "status": "attempt"}
+{"pid": "60484", "status": "ok", "error": null, "resolved": "60484", "import_s": 0.01, "n_vertices": 4430, "dims_mm": [23.2, 23.2, 8.0], "sim_ok": true, "render_s": 0.167, "alpha_px": 2439, "total_s": 0.181}
+{"pid": "60581", "status": "attempt"}
+{"pid": "60581", "status": "ok", "error": null, "resolved": "60581", "import_s": 0.02, "n_vertices": 11335, "dims_mm": [32.0, 8.0, 30.4], "sim_ok": true, "render_s": 0.159, "alpha_px": 3527, "total_s": 0.192}
+{"pid": "60592", "status": "attempt"}
+{"pid": "60592", "status": "ok", "error": null, "resolved": "60592", "import_s": 0.012, "n_vertices": 6203, "dims_mm": [16.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 3919, "total_s": 0.185}
+{"pid": "60593", "status": "attempt"}
+{"pid": "60593", "status": "ok", "error": null, "resolved": "60593", "import_s": 0.013, "n_vertices": 6203, "dims_mm": [16.0, 8.0, 30.4], "sim_ok": true, "render_s": 0.164, "alpha_px": 3252, "total_s": 0.182}
+{"pid": "60594", "status": "attempt"}
+{"pid": "60594", "status": "ok", "error": null, "resolved": "60594", "import_s": 0.014, "n_vertices": 6303, "dims_mm": [32.0, 8.0, 30.4], "sim_ok": true, "render_s": 0.177, "alpha_px": 2990, "total_s": 0.199}
+{"pid": "60596", "status": "attempt"}
+{"pid": "60596", "status": "ok", "error": null, "resolved": "60596", "import_s": 0.017, "n_vertices": 7039, "dims_mm": [32.0, 8.0, 59.2], "sim_ok": true, "render_s": 0.16, "alpha_px": 2144, "total_s": 0.183}
+{"pid": "60598", "status": "attempt"}
+{"pid": "60598", "status": "ok", "error": null, "resolved": "60598", "import_s": 0.028, "n_vertices": 17570, "dims_mm": [32.0, 16.0, 30.4], "sim_ok": true, "render_s": 0.164, "alpha_px": 4241, "total_s": 0.207}
+{"pid": "60599", "status": "attempt"}
+{"pid": "60599", "status": "ok", "error": null, "resolved": "60599", "import_s": 0.027, "n_vertices": 18812, "dims_mm": [32.0, 16.0, 59.2], "sim_ok": true, "render_s": 0.171, "alpha_px": 3249, "total_s": 0.208}
+{"pid": "6060", "status": "attempt"}
+{"pid": "6060", "status": "ok", "error": null, "resolved": "6060", "import_s": 0.01, "n_vertices": 5547, "dims_mm": [8.0, 48.0, 32.0], "sim_ok": true, "render_s": 0.165, "alpha_px": 1673, "total_s": 0.182}
+{"pid": "60607", "status": "attempt"}
+{"pid": "60607", "status": "ok", "error": null, "resolved": "60607", "import_s": 0.005, "n_vertices": 1206, "dims_mm": [3.0, 14.1, 24.8], "sim_ok": true, "render_s": 0.174, "alpha_px": 2623, "total_s": 0.184}
+{"pid": "60608", "status": "attempt"}
+{"pid": "60608", "status": "ok", "error": null, "resolved": "60608", "import_s": 0.006, "n_vertices": 914, "dims_mm": [3.2, 14.4, 24.8], "sim_ok": true, "render_s": 0.168, "alpha_px": 2172, "total_s": 0.177}
+{"pid": "60616b", "status": "attempt"}
+{"pid": "60616b", "status": "ok", "error": null, "resolved": "60616b", "import_s": 0.014, "n_vertices": 6331, "dims_mm": [28.3, 6.2, 53.4], "sim_ok": true, "render_s": 0.168, "alpha_px": 2539, "total_s": 0.191}
+{"pid": "60621", "status": "attempt"}
+{"pid": "60621", "status": "ok", "error": null, "resolved": "60621", "import_s": 0.016, "n_vertices": 7303, "dims_mm": [28.8, 6.4, 53.8], "sim_ok": true, "render_s": 0.161, "alpha_px": 2181, "total_s": 0.187}
+{"pid": "60623", "status": "attempt"}
+{"pid": "60623", "status": "ok", "error": null, "resolved": "60623", "import_s": 0.011, "n_vertices": 4439, "dims_mm": [28.4, 5.6, 53.6], "sim_ok": true, "render_s": 0.179, "alpha_px": 2185, "total_s": 0.198}
+{"pid": "6081", "status": "attempt"}
+{"pid": "6081", "status": "ok", "error": null, "resolved": "6081", "import_s": 0.022, "n_vertices": 11480, "dims_mm": [32.0, 16.0, 12.8], "sim_ok": true, "render_s": 0.166, "alpha_px": 3331, "total_s": 0.205}
+{"pid": "60897", "status": "attempt"}
+{"pid": "60897", "status": "ok", "error": null, "resolved": "60897", "import_s": 0.009, "n_vertices": 2847, "dims_mm": [8.0, 13.61, 4.8], "sim_ok": true, "render_s": 0.165, "alpha_px": 2837, "total_s": 0.18}
+{"pid": "6091", "status": "attempt"}
+{"pid": "6091", "status": "ok", "error": null, "resolved": "6091", "import_s": 0.008, "n_vertices": 2727, "dims_mm": [8.0, 16.0, 12.8], "sim_ok": true, "render_s": 0.169, "alpha_px": 3605, "total_s": 0.182}
+{"pid": "61070", "status": "attempt"}
+{"pid": "61070", "status": "ok", "error": null, "resolved": "61070", "import_s": 0.009, "n_vertices": 2848, "dims_mm": [27.2, 45.0, 31.4], "sim_ok": true, "render_s": 0.168, "alpha_px": 2869, "total_s": 0.181}
+{"pid": "61071", "status": "attempt"}
+{"pid": "61071", "status": "ok", "error": null, "resolved": "61071", "import_s": 0.008, "n_vertices": 2848, "dims_mm": [27.2, 45.0, 31.4], "sim_ok": true, "render_s": 0.169, "alpha_px": 2604, "total_s": 0.181}
+{"pid": "6111", "status": "attempt"}
+{"pid": "6111", "status": "ok", "error": null, "resolved": "6111", "import_s": 0.037, "n_vertices": 26663, "dims_mm": [80.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 1269, "total_s": 0.226}
+{"pid": "61252", "status": "attempt"}
+{"pid": "61252", "status": "ok", "error": null, "resolved": "61252", "import_s": 0.009, "n_vertices": 2869, "dims_mm": [8.0, 13.61, 6.06], "sim_ok": true, "render_s": 0.173, "alpha_px": 2671, "total_s": 0.187}
+{"pid": "61409", "status": "attempt"}
+{"pid": "61409", "status": "ok", "error": null, "resolved": "61409", "import_s": 0.004, "n_vertices": 204, "dims_mm": [8.0, 16.0, 6.19], "sim_ok": true, "render_s": 0.173, "alpha_px": 3126, "total_s": 0.179}
+{"pid": "6141", "status": "attempt"}
+{"pid": "6141", "status": "ok", "error": null, "resolved": "6141", "import_s": 0.009, "n_vertices": 3204, "dims_mm": [8.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.178, "alpha_px": 2590, "total_s": 0.194}
+{"pid": "61485", "status": "attempt"}
+{"pid": "61485", "status": "ok", "error": null, "resolved": "61485", "import_s": 0.015, "n_vertices": 6832, "dims_mm": [32.0, 32.0, 4.8], "sim_ok": true, "render_s": 0.166, "alpha_px": 2905, "total_s": 0.189}
+{"pid": "6157", "status": "attempt"}
+{"pid": "6157", "status": "ok", "error": null, "resolved": "6157", "import_s": 0.022, "n_vertices": 12056, "dims_mm": [35.2, 16.0, 6.4], "sim_ok": true, "render_s": 0.161, "alpha_px": 1602, "total_s": 0.198}
+{"pid": "6182", "status": "attempt"}
+{"pid": "6182", "status": "ok", "error": null, "resolved": "6182", "import_s": 0.018, "n_vertices": 10484, "dims_mm": [32.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.184, "alpha_px": 3195, "total_s": 0.217}
+{"pid": "6215", "status": "attempt"}
+{"pid": "6215", "status": "ok", "error": null, "resolved": "6215", "import_s": 0.02, "n_vertices": 10975, "dims_mm": [24.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.16, "alpha_px": 3955, "total_s": 0.193}
+{"pid": "6222", "status": "attempt"}
+{"pid": "6222", "status": "ok", "error": null, "resolved": "6222", "import_s": 0.048, "n_vertices": 37238, "dims_mm": [32.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.171, "alpha_px": 2821, "total_s": 0.245}
+{"pid": "6231", "status": "attempt"}
+{"pid": "6231", "status": "ok", "error": null, "resolved": "6231", "import_s": 0.004, "n_vertices": 162, "dims_mm": [8.0, 8.0, 9.6], "sim_ok": true, "render_s": 0.179, "alpha_px": 5130, "total_s": 0.185}
+{"pid": "6232", "status": "attempt"}
+{"pid": "6232", "status": "ok", "error": null, "resolved": "6232", "import_s": 0.021, "n_vertices": 11788, "dims_mm": [24.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.165, "alpha_px": 2991, "total_s": 0.199}
+{"pid": "6233", "status": "attempt"}
+{"pid": "6233", "status": "ok", "error": null, "resolved": "6233", "import_s": 0.013, "n_vertices": 3436, "dims_mm": [24.0, 24.0, 20.8], "sim_ok": true, "render_s": 0.161, "alpha_px": 2972, "total_s": 0.179}
+{"pid": "62462", "status": "attempt"}
+{"pid": "62462", "status": "ok", "error": null, "resolved": "62462", "import_s": 0.006, "n_vertices": 1190, "dims_mm": [16.0, 8.0, 8.0], "sim_ok": true, "render_s": 0.165, "alpha_px": 3177, "total_s": 0.173}
+{"pid": "63864", "status": "attempt"}
+{"pid": "63864", "status": "ok", "error": null, "resolved": "63864", "import_s": 0.005, "n_vertices": 362, "dims_mm": [24.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 2208, "total_s": 0.174}
+{"pid": "63868", "status": "attempt"}
+{"pid": "63868", "status": "ok", "error": null, "resolved": "63868", "import_s": 0.012, "n_vertices": 5545, "dims_mm": [21.61, 8.0, 6.06], "sim_ok": true, "render_s": 0.168, "alpha_px": 2160, "total_s": 0.188}
+{"pid": "63869", "status": "attempt"}
+{"pid": "63869", "status": "ok", "error": null, "resolved": "63869", "import_s": 0.011, "n_vertices": 3852, "dims_mm": [23.2, 8.0, 15.2], "sim_ok": true, "render_s": 0.173, "alpha_px": 2750, "total_s": 0.189}
+{"pid": "64225", "status": "attempt"}
+{"pid": "64225", "status": "ok", "error": null, "resolved": "64225", "import_s": 0.006, "n_vertices": 1276, "dims_mm": [32.0, 24.0, 9.6], "sim_ok": true, "render_s": 0.171, "alpha_px": 2509, "total_s": 0.18}
+{"pid": "64288", "status": "attempt"}
+{"pid": "64288", "status": "ok", "error": null, "resolved": "64288", "import_s": 0.004, "n_vertices": 1252, "dims_mm": [8.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.169, "alpha_px": 2715, "total_s": 0.177}
+{"pid": "64391", "status": "attempt"}
+{"pid": "64391", "status": "ok", "error": null, "resolved": "64391", "import_s": 0.016, "n_vertices": 5390, "dims_mm": [15.6, 54.4, 23.6], "sim_ok": true, "render_s": 0.166, "alpha_px": 1763, "total_s": 0.189}
+{"pid": "64393", "status": "attempt"}
+{"pid": "64393", "status": "ok", "error": null, "resolved": "64393", "import_s": 0.013, "n_vertices": 5381, "dims_mm": [15.6, 86.4, 23.6], "sim_ok": true, "render_s": 0.158, "alpha_px": 1166, "total_s": 0.178}
+{"pid": "64681", "status": "attempt"}
+{"pid": "64681", "status": "ok", "error": null, "resolved": "64681", "import_s": 0.013, "n_vertices": 5381, "dims_mm": [15.6, 86.4, 23.6], "sim_ok": true, "render_s": 0.166, "alpha_px": 1695, "total_s": 0.185}
+{"pid": "64683", "status": "attempt"}
+{"pid": "64683", "status": "ok", "error": null, "resolved": "64683", "import_s": 0.013, "n_vertices": 5390, "dims_mm": [15.6, 54.4, 23.6], "sim_ok": true, "render_s": 0.166, "alpha_px": 2660, "total_s": 0.185}
+{"pid": "64712", "status": "attempt"}
+{"pid": "64712", "status": "ok", "error": null, "resolved": "64712", "import_s": 0.028, "n_vertices": 17851, "dims_mm": [62.29, 31.6, 61.72], "sim_ok": true, "render_s": 0.163, "alpha_px": 2684, "total_s": 0.208}
+{"pid": "6536", "status": "attempt"}
+{"pid": "6536", "status": "ok", "error": null, "resolved": "6536", "import_s": 0.007, "n_vertices": 1878, "dims_mm": [8.0, 8.0, 15.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 3577, "total_s": 0.181}
+{"pid": "6541", "status": "attempt"}
+{"pid": "6541", "status": "ok", "error": null, "resolved": "6541", "import_s": 0.009, "n_vertices": 3341, "dims_mm": [8.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 4484, "total_s": 0.18}
+{"pid": "6553", "status": "attempt"}
+{"pid": "6553", "status": "ok", "error": null, "resolved": "6553", "import_s": 0.007, "n_vertices": 1299, "dims_mm": [8.0, 7.2, 23.4], "sim_ok": true, "render_s": 0.177, "alpha_px": 2216, "total_s": 0.187}
+{"pid": "6558", "status": "attempt"}
+{"pid": "6558", "status": "ok", "error": null, "resolved": "6558", "import_s": 0.013, "n_vertices": 5528, "dims_mm": [24.0, 6.4, 6.24], "sim_ok": true, "render_s": 0.165, "alpha_px": 1626, "total_s": 0.186}
+{"pid": "6587", "status": "attempt"}
+{"pid": "6587", "status": "ok", "error": null, "resolved": "6587", "import_s": 0.009, "n_vertices": 3004, "dims_mm": [25.4, 6.4, 6.4], "sim_ok": true, "render_s": 0.169, "alpha_px": 1402, "total_s": 0.184}
+{"pid": "6628", "status": "attempt"}
+{"pid": "6628", "status": "ok", "error": null, "resolved": "6628", "import_s": 0.009, "n_vertices": 2435, "dims_mm": [15.2, 6.4, 6.4], "sim_ok": true, "render_s": 0.166, "alpha_px": 2260, "total_s": 0.184}
+{"pid": "6632", "status": "attempt"}
+{"pid": "6632", "status": "ok", "error": null, "resolved": "6632", "import_s": 0.008, "n_vertices": 1548, "dims_mm": [7.2, 23.2, 4.0], "sim_ok": true, "render_s": 0.16, "alpha_px": 2210, "total_s": 0.171}
+{"pid": "6636", "status": "attempt"}
+{"pid": "6636", "status": "ok", "error": null, "resolved": "6636", "import_s": 0.006, "n_vertices": 797, "dims_mm": [48.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 1215, "total_s": 0.179}
+{"pid": "72454", "status": "attempt"}
+{"pid": "72454", "status": "ok", "error": null, "resolved": "72454", "import_s": 0.036, "n_vertices": 26494, "dims_mm": [32.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.163, "alpha_px": 2804, "total_s": 0.221}
+{"pid": "74261", "status": "attempt"}
+{"pid": "74261", "status": "ok", "error": null, "resolved": "74261", "import_s": 0.013, "n_vertices": 1710, "dims_mm": [16.0, 15.94, 10.5], "sim_ok": true, "render_s": 0.163, "alpha_px": 3623, "total_s": 0.18}
+{"pid": "84954", "status": "attempt"}
+{"pid": "84954", "status": "ok", "error": null, "resolved": "84954", "import_s": 0.019, "n_vertices": 11392, "dims_mm": [32.0, 24.0, 30.4], "sim_ok": true, "render_s": 0.172, "alpha_px": 3807, "total_s": 0.205}
+{"pid": "85080", "status": "attempt"}
+{"pid": "85080", "status": "ok", "error": null, "resolved": "85080", "import_s": 0.013, "n_vertices": 5440, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.162, "alpha_px": 3619, "total_s": 0.185}
+{"pid": "85861", "status": "attempt"}
+{"pid": "85861", "status": "ok", "error": null, "resolved": "85861", "import_s": 0.005, "n_vertices": 1056, "dims_mm": [8.0, 8.0, 4.8], "sim_ok": true, "render_s": 0.172, "alpha_px": 2638, "total_s": 0.181}
+{"pid": "85943", "status": "attempt"}
+{"pid": "85943", "status": "ok", "error": null, "resolved": "85943", "import_s": 0.012, "n_vertices": 7331, "dims_mm": [16.0, 19.6, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 3564, "total_s": 0.188}
+{"pid": "85984", "status": "attempt"}
+{"pid": "85984", "status": "ok", "error": null, "resolved": "85984", "import_s": 0.004, "n_vertices": 288, "dims_mm": [16.0, 8.0, 6.24], "sim_ok": true, "render_s": 0.181, "alpha_px": 3541, "total_s": 0.187}
+{"pid": "87079", "status": "attempt"}
+{"pid": "87079", "status": "ok", "error": null, "resolved": "87079", "import_s": 0.006, "n_vertices": 936, "dims_mm": [32.0, 16.0, 3.2], "sim_ok": true, "render_s": 0.172, "alpha_px": 2477, "total_s": 0.181}
+{"pid": "87081", "status": "attempt"}
+{"pid": "87081", "status": "ok", "error": null, "resolved": "87081", "import_s": 0.048, "n_vertices": 36960, "dims_mm": [32.0, 32.0, 11.2], "sim_ok": true, "render_s": 0.158, "alpha_px": 2822, "total_s": 0.233}
+{"pid": "87082", "status": "attempt"}
+{"pid": "87082", "status": "ok", "error": null, "resolved": "87082", "import_s": 0.009, "n_vertices": 2600, "dims_mm": [24.0, 7.2, 8.0], "sim_ok": true, "render_s": 0.168, "alpha_px": 1920, "total_s": 0.182}
+{"pid": "87083", "status": "attempt"}
+{"pid": "87083", "status": "ok", "error": null, "resolved": "87083", "import_s": 0.004, "n_vertices": 303, "dims_mm": [31.8, 6.4, 6.4], "sim_ok": true, "render_s": 0.17, "alpha_px": 1190, "total_s": 0.176}
+{"pid": "87087", "status": "attempt"}
+{"pid": "87087", "status": "ok", "error": null, "resolved": "87087", "import_s": 0.009, "n_vertices": 3027, "dims_mm": [8.0, 9.6, 11.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 3943, "total_s": 0.184}
+{"pid": "87544", "status": "attempt"}
+{"pid": "87544", "status": "ok", "error": null, "resolved": "87544", "import_s": 0.013, "n_vertices": 5835, "dims_mm": [16.0, 8.0, 30.4], "sim_ok": true, "render_s": 0.165, "alpha_px": 3124, "total_s": 0.184}
+{"pid": "87552", "status": "attempt"}
+{"pid": "87552", "status": "ok", "error": null, "resolved": "87552", "import_s": 0.012, "n_vertices": 5835, "dims_mm": [16.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.161, "alpha_px": 3752, "total_s": 0.18}
+{"pid": "87580", "status": "attempt"}
+{"pid": "87580", "status": "ok", "error": null, "resolved": "87580", "import_s": 0.009, "n_vertices": 3166, "dims_mm": [16.0, 16.0, 4.8], "sim_ok": true, "render_s": 0.164, "alpha_px": 3164, "total_s": 0.179}
+{"pid": "87609", "status": "attempt"}
+{"pid": "87609", "status": "ok", "error": null, "resolved": "87609", "import_s": 0.049, "n_vertices": 43008, "dims_mm": [48.0, 17.6, 8.0], "sim_ok": true, "render_s": 0.164, "alpha_px": 1815, "total_s": 0.249}
+{"pid": "87620", "status": "attempt"}
+{"pid": "87620", "status": "ok", "error": null, "resolved": "87620", "import_s": 0.01, "n_vertices": 5285, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.166, "alpha_px": 3753, "total_s": 0.186}
+{"pid": "87697", "status": "attempt"}
+{"pid": "87697", "status": "ok", "error": null, "resolved": "87697", "import_s": 0.007, "n_vertices": 1520, "dims_mm": [20.0, 11.2, 20.0], "sim_ok": true, "render_s": 0.17, "alpha_px": 3335, "total_s": 0.18}
+{"pid": "88292", "status": "attempt"}
+{"pid": "88292", "status": "ok", "error": null, "resolved": "88292", "import_s": 0.015, "n_vertices": 7883, "dims_mm": [8.0, 24.0, 20.8], "sim_ok": true, "render_s": 0.164, "alpha_px": 2759, "total_s": 0.19}
+{"pid": "88323", "status": "attempt"}
+{"pid": "88323", "status": "ok", "error": null, "resolved": "88323", "import_s": 0.011, "n_vertices": 3477, "dims_mm": [38.4, 17.92, 8.4], "sim_ok": true, "render_s": 0.171, "alpha_px": 1674, "total_s": 0.187}
+{"pid": "88646", "status": "attempt"}
+{"pid": "88646", "status": "ok", "error": null, "resolved": "88646", "import_s": 0.02, "n_vertices": 11900, "dims_mm": [32.0, 24.0, 4.8], "sim_ok": true, "render_s": 0.167, "alpha_px": 2856, "total_s": 0.202}
+{"pid": "88930", "status": "attempt"}
+{"pid": "88930", "status": "ok", "error": null, "resolved": "88930", "import_s": 0.008, "n_vertices": 1736, "dims_mm": [32.0, 16.0, 6.4], "sim_ok": true, "render_s": 0.165, "alpha_px": 3013, "total_s": 0.176}
+{"pid": "90195", "status": "attempt"}
+{"pid": "90195", "status": "ok", "error": null, "resolved": "90195", "import_s": 0.014, "n_vertices": 6403, "dims_mm": [16.0, 8.0, 20.8], "sim_ok": true, "render_s": 0.168, "alpha_px": 3406, "total_s": 0.189}
+{"pid": "90202", "status": "attempt"}
+{"pid": "90202", "status": "ok", "error": null, "resolved": "90202", "import_s": 0.007, "n_vertices": 1560, "dims_mm": [19.2, 19.2, 8.0], "sim_ok": true, "render_s": 0.185, "alpha_px": 1958, "total_s": 0.196}
+{"pid": "90609", "status": "attempt"}
+{"pid": "90609", "status": "ok", "error": null, "resolved": "90609", "import_s": 0.009, "n_vertices": 1559, "dims_mm": [15.98, 40.82, 10.25], "sim_ok": true, "render_s": 0.164, "alpha_px": 1618, "total_s": 0.18}
+{"pid": "90611", "status": "attempt"}
+{"pid": "90611", "status": "ok", "error": null, "resolved": "90611", "import_s": 0.007, "n_vertices": 1271, "dims_mm": [15.98, 32.82, 10.25], "sim_ok": true, "render_s": 0.163, "alpha_px": 1834, "total_s": 0.176}
+{"pid": "90630", "status": "attempt"}
+{"pid": "90630", "status": "ok", "error": null, "resolved": "90630", "import_s": 0.012, "n_vertices": 4667, "dims_mm": [25.12, 26.25, 10.25], "sim_ok": true, "render_s": 0.159, "alpha_px": 2461, "total_s": 0.181}
+{"pid": "92013", "status": "attempt"}
+{"pid": "92013", "status": "ok", "error": null, "resolved": "92013", "import_s": 0.02, "n_vertices": 11271, "dims_mm": [27.7, 16.0, 11.2], "sim_ok": true, "render_s": 0.173, "alpha_px": 3266, "total_s": 0.205}
+{"pid": "92092", "status": "attempt"}
+{"pid": "92092", "status": "ok", "error": null, "resolved": "92092", "import_s": 0.02, "n_vertices": 9628, "dims_mm": [32.0, 20.0, 6.4], "sim_ok": true, "render_s": 0.183, "alpha_px": 2697, "total_s": 0.21}
+{"pid": "92579", "status": "attempt"}
+{"pid": "92579", "status": "ok", "error": null, "resolved": "92579", "import_s": 0.022, "n_vertices": 11428, "dims_mm": [32.0, 70.4, 20.81], "sim_ok": true, "render_s": 0.172, "alpha_px": 2273, "total_s": 0.205}
+{"pid": "92582", "status": "attempt"}
+{"pid": "92582", "status": "ok", "error": null, "resolved": "92582", "import_s": 0.014, "n_vertices": 6416, "dims_mm": [16.0, 16.0, 7.74], "sim_ok": true, "render_s": 0.165, "alpha_px": 3086, "total_s": 0.187}
+{"pid": "92583", "status": "attempt"}
+{"pid": "92583", "status": "ok", "error": null, "resolved": "92583", "import_s": 0.015, "n_vertices": 7349, "dims_mm": [48.0, 24.0, 20.8], "sim_ok": true, "render_s": 0.164, "alpha_px": 3390, "total_s": 0.189}
+{"pid": "92589", "status": "attempt"}
+{"pid": "92589", "status": "ok", "error": null, "resolved": "92589", "import_s": 0.01, "n_vertices": 3442, "dims_mm": [28.56, 3.2, 53.6], "sim_ok": true, "render_s": 0.161, "alpha_px": 2132, "total_s": 0.177}
+{"pid": "92907", "status": "attempt"}
+{"pid": "92907", "status": "ok", "error": null, "resolved": "92907", "import_s": 0.009, "n_vertices": 2784, "dims_mm": [16.0, 15.6, 15.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 3608, "total_s": 0.181}
+{"pid": "92947", "status": "attempt"}
+{"pid": "92947", "status": "ok", "error": null, "resolved": "92947", "import_s": 0.008, "n_vertices": 2016, "dims_mm": [15.99, 15.99, 11.2], "sim_ok": true, "render_s": 0.168, "alpha_px": 3294, "total_s": 0.18}
+{"pid": "92950", "status": "attempt"}
+{"pid": "92950", "status": "ok", "error": null, "resolved": "92950", "import_s": 0.024, "n_vertices": 15394, "dims_mm": [48.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.173, "alpha_px": 1696, "total_s": 0.213}
+{"pid": "93273", "status": "attempt"}
+{"pid": "93273", "status": "ok", "error": null, "resolved": "93273", "import_s": 0.006, "n_vertices": 777, "dims_mm": [8.0, 32.0, 6.4], "sim_ok": true, "render_s": 0.164, "alpha_px": 1752, "total_s": 0.172}
+{"pid": "93274", "status": "attempt"}
+{"pid": "93274", "status": "ok", "error": null, "resolved": "93274", "import_s": 0.037, "n_vertices": 27177, "dims_mm": [32.0, 11.2, 17.6], "sim_ok": true, "render_s": 0.162, "alpha_px": 2751, "total_s": 0.227}
+{"pid": "93606", "status": "attempt"}
+{"pid": "93606", "status": "ok", "error": null, "resolved": "93606", "import_s": 0.006, "n_vertices": 1009, "dims_mm": [16.0, 32.0, 9.6], "sim_ok": true, "render_s": 0.178, "alpha_px": 2955, "total_s": 0.187}
+{"pid": "94161", "status": "attempt"}
+{"pid": "94161", "status": "ok", "error": null, "resolved": "94161", "import_s": 0.011, "n_vertices": 4206, "dims_mm": [13.4, 1.8, 21.1], "sim_ok": true, "render_s": 0.171, "alpha_px": 2649, "total_s": 0.195}
+{"pid": "98100", "status": "attempt"}
+{"pid": "98100", "status": "ok", "error": null, "resolved": "98100", "import_s": 0.012, "n_vertices": 4294, "dims_mm": [16.0, 16.0, 11.2], "sim_ok": true, "render_s": 0.17, "alpha_px": 2585, "total_s": 0.191}
+{"pid": "98138", "status": "attempt"}
+{"pid": "98138", "status": "ok", "error": null, "resolved": "98138", "import_s": 0.006, "n_vertices": 674, "dims_mm": [8.0, 8.0, 3.2], "sim_ok": true, "render_s": 0.155, "alpha_px": 2977, "total_s": 0.164}
+{"pid": "98262", "status": "attempt"}
+{"pid": "98262", "status": "ok", "error": null, "resolved": "98262", "import_s": 0.01, "n_vertices": 3984, "dims_mm": [15.75, 16.0, 11.2], "sim_ok": true, "render_s": 0.172, "alpha_px": 2310, "total_s": 0.19}
+{"pid": "98283", "status": "attempt"}
+{"pid": "98283", "status": "ok", "error": null, "resolved": "98283", "import_s": 0.012, "n_vertices": 5399, "dims_mm": [16.0, 8.0, 11.2], "sim_ok": true, "render_s": 0.18, "alpha_px": 4007, "total_s": 0.201}
+{"pid": "98560", "status": "attempt"}
+{"pid": "98560", "status": "fail", "error": "no_dat_file", "resolved": null}
+{"pid": "99008", "status": "attempt"}
+{"pid": "99008", "status": "ok", "error": null, "resolved": "99008", "import_s": 0.006, "n_vertices": 354, "dims_mm": [31.6, 4.8, 4.8], "sim_ok": true, "render_s": 0.172, "alpha_px": 1151, "total_s": 0.181}
+{"pid": "99021", "status": "attempt"}
+{"pid": "99021", "status": "ok", "error": null, "resolved": "99021", "import_s": 0.008, "n_vertices": 1962, "dims_mm": [16.0, 8.0, 14.0], "sim_ok": true, "render_s": 0.161, "alpha_px": 2236, "total_s": 0.174}
+{"pid": "99206", "status": "attempt"}
+{"pid": "99206", "status": "ok", "error": null, "resolved": "99206", "import_s": 0.026, "n_vertices": 15946, "dims_mm": [16.0, 17.6, 8.0], "sim_ok": true, "render_s": 0.165, "alpha_px": 3061, "total_s": 0.208}
+{"pid": "99207", "status": "attempt"}
+{"pid": "99207", "status": "ok", "error": null, "resolved": "99207", "import_s": 0.027, "n_vertices": 16309, "dims_mm": [16.0, 11.2, 16.0], "sim_ok": true, "render_s": 0.163, "alpha_px": 3194, "total_s": 0.206}
+{"pid": "99773", "status": "attempt"}
+{"pid": "99773", "status": "ok", "error": null, "resolved": "99773", "import_s": 0.013, "n_vertices": 5214, "dims_mm": [39.2, 23.2, 4.0], "sim_ok": true, "render_s": 0.167, "alpha_px": 1655, "total_s": 0.185}
+{"pid": "99780", "status": "attempt"}
+{"pid": "99780", "status": "ok", "error": null, "resolved": "99780", "import_s": 0.02, "n_vertices": 10881, "dims_mm": [16.0, 11.2, 8.0], "sim_ok": true, "render_s": 0.17, "alpha_px": 2854, "total_s": 0.204}
+{"pid": "99781", "status": "attempt"}
+{"pid": "99781", "status": "ok", "error": null, "resolved": "99781", "import_s": 0.014, "n_vertices": 10827, "dims_mm": [16.0, 11.2, 9.6], "sim_ok": true, "render_s": 0.161, "alpha_px": 3437, "total_s": 0.188}

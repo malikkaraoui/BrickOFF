@@ -1,0 +1,27 @@
+{
+  "n_total": 447,
+  "n_ok": 445,
+  "n_fail": 2,
+  "taux_ok": 99.55,
+  "temps_total_s": 87.0,
+  "temps_moyen_s": 0.195,
+  "echecs": [
+    {
+      "pid": "20896",
+      "erreur": "no_dat_file"
+    },
+    {
+      "pid": "98560",
+      "erreur": "no_dat_file"
+    }
+  ],
+  "alias_resolus": {
+    "30237b": "30237",
+    "30361c": "30361",
+    "3245": "3245a",
+    "35336_4176": "4176",
+    "57909b": "57909"
+  },
+  "import_moyen_s": 0.0168,
+  "render_moyen_s": 0.1681
+}
