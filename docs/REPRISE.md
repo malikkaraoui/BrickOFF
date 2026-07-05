@@ -26,16 +26,17 @@
 
 ## 3. Tâches de fond éventuellement en cours (à vérifier en reprenant)
 
-- AUCUNE tâche de fond en cours au 2026-07-05 après-midi. Les 3 runs DET (v0, v0_1, v1) sont
+- **PRÉFLIGHT CH-S en cours** (agent, jalon S.1-pré de `docs/plan/16_PIPELINE_SYNTHETIQUE.md`) :
+  livrable attendu `docs/research/SYNTH_PREFLIGHT.md` + scripts `ml/synth/preflight/`. Si mort :
+  relire le jalon S.1-pré et relancer les 5 points de gate. Les 3 runs DET (v0, v0_1, v1) sont
   TERMINÉS — rapports `ml/runs/det_v0/EVAL_DET_V0.md` et `ml/runs/det_v1/EVAL_DET_V1.md`.
   Meilleur modèle : `ml/runs/det_v1/best.pt` (mAP@50 test 0.773, rappel max 0.985).
 - Datasets : acquisition et intégrité TERMINÉES (jalon 1.1 clos) — ne rien relancer.
 
 ## 4. File d'attente des prochaines actions (dans l'ordre)
 
-1. **It.3 — pipeline de scènes synthétiques réalistes multi-pièces** (doc 14 §2.1) : Blender ✅,
-   ldr_tools_blender (MIT) en salle blanche, bibliothèque LDraw + HDRI CC0 à télécharger.
-   C'est le levier principal (domain gap + occlusions + cas produit "tas").
+1. **CH-S (plan complet : `docs/plan/16_PIPELINE_SYNTHETIQUE.md` v1.1)** : préflight (gate) →
+   S.0 set TAS (photos PO !) → assets → générateur → 10 k images → It.3 comparatif A/B/C.
 2. Jalon 1.2 — scope des 1000 classes : nécessite les CSV Rebrickable (⚠️ téléchargement MANUEL
    depuis rebrickable.com/downloads — pas de script, clause anti-automation, cf.
    `legal/REBRICKABLE_LICENSE.md`) : sets, inventories, inventory_parts, parts, colors, themes.
@@ -47,6 +48,9 @@
 
 ## 5. Actions en attente côté product owner (Malik)
 
+- [ ] **PHOTOS DE TAS (S.0, nouveau, ~3-4 h)** : ~100 scènes de tas (10-40 pièces), 3 éclairages
+  dont chaud, 3+ fonds, dont ≥ 20 scènes hors domicile principal ou 2e téléphone (holdout).
+  Protocole détaillé fourni par l'exécutant avant la première photo. Déposer dans data/raw/piles_malik/
 - [ ] Envoyer l'email Rebrickable (brouillon : `legal/REBRICKABLE_LICENSE.md`) — confirmation, non bloquant
 - [ ] Envoyer l'email Brickognize (brouillon : `legal/ML_LICENSES.md`) — débloque la pré-annotation
 - [ ] Enregistrer les domaines brickoff.app / brickoff.fr (libres au 2026-07-04)
