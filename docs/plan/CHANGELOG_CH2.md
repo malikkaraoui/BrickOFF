@@ -64,3 +64,20 @@ v0→v0_1 = effet bugfix+métrique ; v0_1→v1 = effet augmentation.
    domain gap + occlusions + le cas produit "tas"). Blender + ldr_tools_blender prêts.
 2. Jalon 1.2 (scope classes) dès réception des CSV Rebrickable (action PO)
 3. Realworld test maison (jalon 1.6) — le seul juge final
+
+## 2026-07-06 — Jalon 2.2 PRÉPARÉ : pipeline classification prêt à tirer
+
+- Livrables : `ml/cls/{dataset,train_cls,eval_cls,make_splits}.py` + chaîne `ml/runs/run_cls_baseline.sh`
+  + manifests `classes_cls_v0.json` (1 000 classes, ordre des labels HF conservé comme contrat)
+  et `splits_cls.json` (stratifiés, seedés).
+- Stratégie v0 : classes = les 1 000 de legobricks (socle synthétique) ; gdansk réel mappé sur
+  l'intersection et mélangé à 20 % pour l'ancrage réel (même logique que la victoire DET S.5).
+- Smoke test : concluant après un correctif de métrique de validation (1er run : val toujours à 0,
+  bug du split — patché) : **top-1 val 57 % / top-5 83 % après 2 epochs sur 2 000 images et
+  1 000 classes** (hasard = 0,1 %). La loss descend proprement (4,26 → 2,87).
+- Projection M1 : ~120 s / 2 000 images ⇒ epoch complète 400 k ≈ 6-7 h → l'entraînement v0
+  utilisera une fenêtre par classe (`--window 64` ≈ 64 000 images/epoch ≈ 1 h/epoch) — écart au
+  plan (« 50 epochs ») consigné : 30 epochs max avec early stopping, la patience tranchera.
+- Note d'exécution : l'agent développeur a laissé le compte-rendu inachevé (attentes passives
+  répétées) — section rédigée par l'orchestrateur à partir des artefacts réels, tous vérifiés.
+- **À lancer dès que le M1 est libre** (det_v3/It.4 en cours) : `nohup caffeinate -ims ml/runs/run_cls_baseline.sh &`
