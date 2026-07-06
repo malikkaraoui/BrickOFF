@@ -26,13 +26,13 @@
 
 ## 3. Tâches de fond éventuellement en cours (à vérifier en reprenant)
 
-- **TIR S.4 EN COURS (lancé 2026-07-05 soir, ~5,5 h)** : 10 000 images vers
-  data/processed/synth_v12/ (dataset_id synth_v1.2, seed 20260706). Suivi : compter
-  images/ ; relance idempotente (reprend les scènes manquantes) :
-  `caffeinate -i .venv/bin/python ml/synth/generate_scenes.py --n 10000 --dataset-id synth_v1.2 --out data/processed/synth_v12 --seed 20260706`
-  État CH-S : préflight ✅ gate GO · S.1 assets ✅ · S.2 générateur ✅ · S.3 réalisme ✅ (+ correctifs
-  ISP/cadrage post-spot-the-fake, qui a échoué 0/30 — assumé, la recette C de S.5 tranchera) ·
-  S.4 🔄 · S.0 photos PO ⏳ · S.5 entraînements ⏳ (attend S.4 + S.0 pour le juge). Les 3 runs DET (v0, v0_1, v1) sont
+- **CHAÎNE S.5 EN COURS (lancée 2026-07-06 matin, ~12-17 h)** : det_v2C (synth seul, sanity)
+  → det_v2B (fine-tuning de C sur réel) → det_v2A (mélange 70/30), chaque recette suivie d'une
+  éval test auto (eval_test.json). Suivi : ml/runs/det_v2{C,B,A}/history.json. Relance : les
+  3 commandes sont dans le commit "S.5" (train_baseline avec --synth-dir/--synth-frac/--init-weights).
+  État CH-S : préflight ✅ · S.1 ✅ · S.2 ✅ · S.3 ✅ · **S.4 ✅ CLOS (10 000 scènes, 0 erreur,
+  manifest versionné)** · S.5 🔄 · S.0 photos PO ⏳ **toujours attendues — sans elles, pas de
+  verdict "tas"** (les évals test actuelles restent mono-pièce). Les 3 runs DET (v0, v0_1, v1) sont
   TERMINÉS — rapports `ml/runs/det_v0/EVAL_DET_V0.md` et `ml/runs/det_v1/EVAL_DET_V1.md`.
   Meilleur modèle : `ml/runs/det_v1/best.pt` (mAP@50 test 0.773, rappel max 0.985).
 - Datasets : acquisition et intégrité TERMINÉES (jalon 1.1 clos) — ne rien relancer.
