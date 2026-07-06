@@ -57,6 +57,12 @@ def main() -> None:
     parser.add_argument("--aug", default="light", choices=["light", "strong"])
     parser.add_argument("--val-photos-only", action="store_true",
                         help="early stopping sur les photos réelles seules (la val mélangée est gonflée par les rendus)")
+    parser.add_argument("--synth-dir", type=Path, default=None,
+                        help="dataset synthétique (images/ + labels/) à mélanger ou utiliser seul")
+    parser.add_argument("--synth-frac", type=float, default=0.3,
+                        help="fraction de synthétique vue par epoch (0.3 = 70 réel/30 synth ; 1.0 = synth seul)")
+    parser.add_argument("--init-weights", type=Path, default=None,
+                        help="checkpoint de départ (fine-tuning, recette B)")
     parser.add_argument("--patience", type=int, default=8)
     parser.add_argument("--out", type=Path, default=REPO_ROOT / "ml" / "runs" / "det_v0")
     args = parser.parse_args()
@@ -65,18 +71,36 @@ def main() -> None:
     device = torch.device(args.device)
     args.out.mkdir(parents=True, exist_ok=True)
 
-    train_ds = LegoDetectionDataset(args.data / "train", train=True, limit=args.limit, aug=args.aug)
+    real_ds = LegoDetectionDataset(args.data / "train", train=True, limit=args.limit, aug=args.aug)
+    if args.synth_dir and args.synth_frac >= 1.0:
+        train_ds, sampler = LegoDetectionDataset(args.synth_dir, train=True,
+                                                 limit=args.limit, aug=args.aug), None
+    elif args.synth_dir:
+        from torch.utils.data import ConcatDataset, WeightedRandomSampler
+        synth_ds = LegoDetectionDataset(args.synth_dir, train=True, aug=args.aug)
+        train_ds = ConcatDataset([real_ds, synth_ds])
+        w_real = (1 - args.synth_frac) / len(real_ds)
+        w_synth = args.synth_frac / len(synth_ds)
+        weights = [w_real] * len(real_ds) + [w_synth] * len(synth_ds)
+        # epoch = tout le réel en espérance + le synthétique au prorata
+        sampler = WeightedRandomSampler(weights, num_samples=round(len(real_ds) / (1 - args.synth_frac)))
+    else:
+        train_ds, sampler = real_ds, None
     val_ds = LegoDetectionDataset(args.data / "val", train=False,
                                   limit=max(50, args.limit // 4) if args.limit else None,
                                   photos_only=args.val_photos_only)
-    train_dl = DataLoader(train_ds, batch_size=args.batch, shuffle=True,
+    train_dl = DataLoader(train_ds, batch_size=args.batch,
+                          shuffle=(sampler is None), sampler=sampler,
                           collate_fn=collate, num_workers=4, persistent_workers=True)
     val_dl = DataLoader(val_ds, batch_size=args.batch, collate_fn=collate,
                         num_workers=2, persistent_workers=True)
 
     # 2 classes = fond + lego_piece (convention torchvision)
     model = ssdlite320_mobilenet_v3_large(weights=None, weights_backbone="DEFAULT",
-                                          num_classes=2).to(device)
+                                          num_classes=2)
+    if args.init_weights:
+        model.load_state_dict(torch.load(args.init_weights, map_location="cpu"))
+    model = model.to(device)
     opt = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-4)
     sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=args.epochs)
 

@@ -69,6 +69,8 @@ class LegoDetectionDataset(Dataset):
             img = tv_tensors.Image(im)
         boxes = []
         for line in (self.labels_dir / (path.stem + ".txt")).read_text().splitlines():
+            if not line or line.startswith("#"):  # lignes '# hard' : ni positif ni négatif
+                continue
             _, cx, cy, bw, bh = map(float, line.split())
             boxes.append([(cx - bw / 2) * w, (cy - bh / 2) * h,
                           (cx + bw / 2) * w, (cy + bh / 2) * h])
