@@ -214,3 +214,31 @@ Re-génération à l'identique : `.venv/bin/python ml/synth/generate_scenes.py -
 | Répartition indicative (scène 26 pièces) | bake 1,6 s · rendu EEVEE 0,9 s · PNG 0,04 s · décodage+coverage 0,7 s |
 | **Projection 10 k (S.4)** | **≈ 7,2 h machine** (+ marge relances/batchs : prévoir ~8 h) |
 | À re-mesurer | après S.3 (matériaux durcis + post-process) — constat 16 |
+
+## 2026-07-06 — Jalon S.5 ✅ : les trois recettes évaluées — le synthétique gagne
+
+**Test = 179 photos réelles jamais vues (mono-pièce majoritaire — le verdict TAS attend S.0).**
+
+| Modèle | Recette | mAP@50 test | Rappel max | Rappel @0.35 |
+|---|---|---|---|---|
+| det_v1 (champion précédent) | réel seul | 0.773 | 0.985 | 0.650 |
+| det_v2C | synthétique SEUL | 0.666 | 0.982 | **0.686** |
+| det_v2B | pré-entraînement synth → fine-tuning réel | 0.809 | **1.000** | 0.631 |
+| **det_v2A** ⭐ | **mélange 70 réel / 30 synth** | **0.820 (+4,7 pts)** | 0.996 | 0.650 |
+
+Lectures :
+1. **Sanity check C : VALIDÉ haut la main.** Un modèle n'ayant jamais vu une photo réelle atteint
+   0.666 de mAP et le MEILLEUR rappel opérationnel du tableau — le pipeline de rendu (S.2-S.3)
+   transfère. L'échec du spot-the-fake n'était pas prédictif de l'utilité d'entraînement,
+   comme la littérature domain-randomization le suggérait.
+2. **La voie nominale doc 14 (mélange 70/30) l'emporte** sur le séquentiel (B), de peu (+1,1 pt).
+   Les deux battent nettement le champion réel-seul.
+3. Le rappel @0.35 ne bouge pas (~0.65) : la sous-confiance sur le réel demeure — cohérent avec
+   la recommandation d'opérer à 0.20-0.25 + vote multi-frames (EVAL_DET_V1).
+4. **Limite assumée : ce test ne contient PAS de tas.** Le gain attendu du synthétique porte sur
+   les occlusions/tas — invisible ici. Verdict réel à la livraison du set TAS (S.0, photos PO),
+   sur le critère recalibré (réduction relative des FN, stats appariées par scène).
+
+Chaîne exécutée en démon détaché (2 interruptions de session survenues — script versionné
+`ml/runs/run_s5_chain.sh`). Durées : C 19 ep., B 26 ep., A 34 ep. (~9 h de M1 au total).
+**Champion courant : `ml/runs/det_v2A/best.pt` (dataset_id synth_v1.2 au manifest).**

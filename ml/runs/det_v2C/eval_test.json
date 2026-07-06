@@ -1,0 +1,9 @@
+{
+  "split": "data/processed/detection/test",
+  "weights": "ml/runs/det_v2C/best.pt",
+  "n_images": 179,
+  "map50": 0.6663,
+  "mar100": 0.9818,
+  "recall_at_threshold": 0.6861,
+  "score_threshold": 0.35
+}

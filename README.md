@@ -30,13 +30,13 @@ La vision complète est dans **[docs/VISION.md](docs/VISION.md)**. En résumé :
 de vision sur un parc de devices homogène avant de doubler la surface (justification :
 [D01](docs/plan/ARBITRAGES/D01_PLATEFORME.md)).
 
-### Avancement V1, chantier par chantier — *mis à jour le 2026-07-05*
+### Avancement V1, chantier par chantier — *mis à jour le 2026-07-06*
 
 | Chantier | État | Dernier fait marquant |
 |---|---|---|
 | **CH-0** Légal & préalables | 🟢 **~95 %** | Licences vérifiées + revue adversaire passée ; marque libre ; brevets : risque nul pour le guidage V1.5. Restent 2 emails de confirmation (PO) |
 | **CH-1** Dataset | 🟢 **Jalons 1.1 + 1.3-DET clos** | 1,03 M d'images certifiées ; détection convertie en YOLO avec validation numérique + visuelle |
-| **CH-2** Entraînement | 🟡 **It.1+2 faites** | mAP@50 test 0.679 → 0.773, rappel max 0.985 ; **chantier CH-S ouvert** (scènes synthétiques de tas) : plan v1.1 durci par revue adversaire, préflight en cours |
+| **CH-2** Entraînement | 🟢 **It.3 gagnée** | mAP@50 test 0.679 → **0.820** grâce aux 10 000 scènes synthétiques (mélange 70/30) ; verdict TAS en attente des photos réelles |
 | **CH-3** Export CoreML | ⬜ | Attend CH-2 |
 | **CH-4** Fondations iOS | 🟢 **CLOS (4.1→4.4)** | Navigation 3 onglets, permission caméra testable (22 tests verts), CI GitHub Actions active — reste le run sur device (PO) |
 | **CH-5** Pipeline scan | ⬜ | Attend CH-3 + CH-4 |
