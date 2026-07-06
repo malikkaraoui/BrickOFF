@@ -30,7 +30,7 @@ La vision complète est dans **[docs/VISION.md](docs/VISION.md)**. En résumé :
 de vision sur un parc de devices homogène avant de doubler la surface (justification :
 [D01](docs/plan/ARBITRAGES/D01_PLATEFORME.md)).
 
-### Avancement V1, chantier par chantier — *mis à jour le 2026-07-06*
+### Avancement V1, chantier par chantier — *mis à jour le 2026-07-06 soir*
 
 | Chantier | État | Dernier fait marquant |
 |---|---|---|
@@ -40,7 +40,7 @@ de vision sur un parc de devices homogène avant de doubler la surface (justific
 | **CH-3** Export CoreML | ⬜ | Attend CH-2 |
 | **CH-4** Fondations iOS | 🟢 **CLOS (4.1→4.4)** | Navigation 3 onglets, permission caméra testable (22 tests verts), CI GitHub Actions active — reste le run sur device (PO) |
 | **CH-5** Pipeline scan | ⬜ | Attend CH-3 + CH-4 |
-| **CH-6** Inventaire | ⬜ | Attend CH-4 |
+| **CH-6** Inventaire | 🟢 **CLOS** | Persistance GRDB + annulation de scan + écran fonctionnel (48 tests verts) |
 | **CH-7** Matching | ⬜ | Attend CH-6 + CSV Rebrickable |
 | **CH-8** UI/UX | ⬜ | Design en piste parallèle (session dédiée : icône, assets stores) |
 | **CH-9** QA & beta | ⬜ | L'iPad M4 du PO sera le device d'endurance |

@@ -21,6 +21,7 @@
 | CH-1 Dataset | **jalon 1.1 ✅ clos** | 3 sources acquises + certifiées (1,03 M images, manifests versionnés). Voir `CHANGELOG_CH1.md` |
 | CH-2 Training | **jalon 2.0 ✅ clos** | Audit : feu vert, aucun critère de bascule ; corpus réel 82 % mono-pièce → tas = synthétique + jalon 1.7. Voir `CHANGELOG_CH2.md` + `ml/AUDIT_DATASET.md` |
 | CH-4 iOS | **✅ CLOS (4.1→4.4)** | 22 tests verts, CI GitHub Actions (macos-26). Reste : run sur device physique (PO). Voir `CHANGELOG_CH4.md` |
+| CH-6 Inventaire | **✅ CLOS (6.1→6.3)** | 48 tests verts, undo de scan exact, écran fonctionnel. Voir `CHANGELOG_CH6.md` |
 | Design | ⏳ parallèle | Session Claude dédiée lancée par le PO avec `docs/design/BRIEF_CLAUDE_DESIGN.md` |
 | Autres | ⬜ | Dans l'ordre du Master Plan |
 
