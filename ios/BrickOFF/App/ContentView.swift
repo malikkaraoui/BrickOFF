@@ -3,6 +3,7 @@ import SwiftUI
 /// Racine de navigation : TabView 3 onglets (Scan / Inventaire / Constructions),
 /// Réglages accessibles depuis la barre de navigation de chaque onglet (sheet).
 struct ContentView: View {
+    @Environment(AppState.self) private var appState
     @State private var isSettingsPresented = false
 
     var body: some View {
@@ -11,7 +12,7 @@ struct ContentView: View {
                 ScanView()
             }
             featureTab("Inventaire", systemImage: "square.grid.2x2") {
-                InventoryView()
+                InventoryView(repository: appState.inventoryRepository)
             }
             featureTab("Constructions", systemImage: "building.2") {
                 MatchesView()
