@@ -242,3 +242,16 @@ Lectures :
 Chaîne exécutée en démon détaché (2 interruptions de session survenues — script versionné
 `ml/runs/run_s5_chain.sh`). Durées : C 19 ep., B 26 ep., A 34 ep. (~9 h de M1 au total).
 **Champion courant : `ml/runs/det_v2A/best.pt` (dataset_id synth_v1.2 au manifest).**
+
+## 2026-07-06 soir — It.4 ✅ : l'augmentation élargie (idées PO) reprend la tête
+
+| Modèle | mAP@50 test | Rappel @0.35 | Rappel max |
+|---|---|---|---|
+| det_v2A (champion S.5) | 0.820 | 0.650 | 0.996 |
+| **det_v3 (It.4 : tilt ±45° + crop-zoom)** ⭐ | **0.826** | **0.686 (+3,6 pts)** | 0.989 |
+
+Le gain de mAP est marginal (+0,6 pt) mais le **rappel opérationnel au seuil produit bondit de
+3,6 points** — le crop-zoom a surtout appris au modèle à avoir confiance sur les cadrages
+variés. C'est le meilleur rappel@0.35 jamais mesuré à mAP quasi égal. Champion courant :
+`ml/runs/det_v3/best.pt`. Budget d'itérations : 3/6 consommées, 3 restantes — réservées au
+verdict TAS (set S.0 attendu mercredi).
