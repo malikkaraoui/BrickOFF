@@ -36,7 +36,9 @@ def build_transform(aug: str, size: int) -> v2.Compose:
             v2.RandomVerticalFlip(0.5),
             v2.RandomChoice([v2.Identity()] + [
                 v2.RandomRotation(degrees=(a, a), expand=False) for a in (90, 180, 270)]),
-            v2.RandomRotation(degrees=20, expand=False, fill=0.0),
+            v2.RandomRotation(degrees=45, expand=False, fill=0.0),
+            v2.RandomApply([v2.RandomResizedCrop((size, size), scale=(0.45, 1.0),
+                                                 ratio=(0.85, 1.18), antialias=True)], p=0.5),
             v2.RandomZoomOut(fill=0.0, side_range=(1.0, 2.2), p=0.4),
             v2.ColorJitter(brightness=0.45, contrast=0.4, saturation=0.35, hue=0.08),
             v2.RandomApply([v2.GaussianBlur(kernel_size=5, sigma=(0.1, 2.0))], p=0.3),
