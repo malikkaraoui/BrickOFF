@@ -26,10 +26,12 @@
 
 ## 3. Tâches de fond éventuellement en cours (à vérifier en reprenant)
 
-- **CHAÎNE S.5 EN COURS (lancée 2026-07-06 matin, ~12-17 h)** : det_v2C (synth seul, sanity)
-  → det_v2B (fine-tuning de C sur réel) → det_v2A (mélange 70/30), chaque recette suivie d'une
-  éval test auto (eval_test.json). Suivi : ml/runs/det_v2{C,B,A}/history.json. Relance : les
-  3 commandes sont dans le commit "S.5" (train_baseline avec --synth-dir/--synth-frac/--init-weights).
+- **CHAÎNE S.5 EN COURS — DÉMON DÉTACHÉ (relancée 2026-07-06 ~4h30, ~12-17 h)** : après deux
+  interruptions des tâches de session, la chaîne tourne en nohup hors session :
+  script `ml/runs/run_s5_chain.sh`, log `ml/runs/s5_chain.log`, ordre C→B→A avec éval test auto.
+  Relance en cas de mort : éditer le script (commenter les recettes déjà évaluées) puis
+  `nohup caffeinate -ims ml/runs/run_s5_chain.sh >> ml/runs/s5_chain.log 2>&1 &`.
+  ⚠️ MacBook branché secteur + couvercle OUVERT pendant les calculs.
   État CH-S : préflight ✅ · S.1 ✅ · S.2 ✅ · S.3 ✅ · **S.4 ✅ CLOS (10 000 scènes, 0 erreur,
   manifest versionné)** · S.5 🔄 · S.0 photos PO ⏳ **toujours attendues — sans elles, pas de
   verdict "tas"** (les évals test actuelles restent mono-pièce). Les 3 runs DET (v0, v0_1, v1) sont
