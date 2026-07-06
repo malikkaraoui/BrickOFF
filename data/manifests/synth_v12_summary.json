@@ -1,0 +1,45 @@
+{
+ "errors": [],
+ "stats": {
+  "n_scenes_expected": 10000,
+  "n_scenes_ok": 10000,
+  "n_background": 415,
+  "n_with_distractors": 2384,
+  "n_pos_total": 127606,
+  "n_hard_total": 8669,
+  "n_rejected_total": 4,
+  "n_pieces_total": 148939,
+  "regimes": {
+   "2": 3858,
+   "1": 3876,
+   "0": 1851,
+   "None": 415
+  },
+  "hdri_classes": {
+   "neutral": 2503,
+   "warm": 5026,
+   "cold": 2471
+  },
+  "floor_modes": {
+   "texture": 8003,
+   "plain": 1997
+  }
+ },
+ "coverage_pos_mean": 0.824,
+ "throughput": {
+  "wall_s_total": 24446.4,
+  "s_per_image_blender": 2.44,
+  "s_per_image_wall": 2.44,
+  "postprocess_wall_s": 746.5,
+  "s_per_image_postprocess": 0.075,
+  "s_per_image_total": 2.52,
+  "projection_10k_h_wall": 7.0
+ },
+ "postprocess": {
+  "n_done": 10000,
+  "n_skipped": 0,
+  "errors": [],
+  "wall_s": 746.5,
+  "s_per_image": 0.075
+ }
+}
