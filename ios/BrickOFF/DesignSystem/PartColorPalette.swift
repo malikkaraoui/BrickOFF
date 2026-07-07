@@ -11,6 +11,10 @@ enum PartColorPalette {
         known[colorId].map { Color(red: $0.r, green: $0.g, blue: $0.b) }
     }
 
+    /// Ids proposés par le picker de correction de couleur (écran de revue, CH-5 jalon 5.6).
+    /// v0 : les couleurs du mapping statique — la palette complète viendra du catalogue.
+    static var knownColorIds: [Int] { known.keys.sorted() }
+
     /// RGB officiels Rebrickable (hex de la table colors) pour les ids courants du scope V1.
     private static let known: [Int: (r: Double, g: Double, b: Double)] = [
         0: rgb(0x05, 0x13, 0x1D),   // Black
