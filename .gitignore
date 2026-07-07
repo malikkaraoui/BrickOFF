@@ -35,3 +35,11 @@ build/
 DerivedData/
 .gstack/
 ml/audit_grid_*.html
+
+# Artefacts ML générés localement (reproductibles — les preuves committées vivent dans ml/runs/)
+ml/runs/*.log
+ml/synth_*.png
+ml/*_grid.html
+ml/spot_the_fake/
+.venv-labelstudio/
+.claude/

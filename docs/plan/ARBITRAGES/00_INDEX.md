@@ -38,7 +38,8 @@
 | [D07](D07_HYGIENE_DOCUMENTAIRE.md) | Hygiène documentaire | `1RR-brief-design.md` = **hors projet** (autre produit) ; doublons "copie" à supprimer ; `Sans titre.md` = archive historique | ✅ Tranché (actions manuelles restantes) |
 | [D08](D08_NOM_APP.md) | Nom de l'app | **"BrickOFF" = nom de travail candidat n°1**, validation formelle en CH-0 jalon 0.2 | ✅ Tranché — clearance R8 : voie libre |
 | [D09](D09_VISUELS_SETS.md) | Visuels sets/pièces | **Jamais d'images officielles ni Rebrickable** : vignettes et rendus LDraw maison (même pipeline que l'entraînement) ; carte set sans photo de boîte | ✅ Tranché |
-| [D10](D10_INFRA_ENTRAINEMENT.md) | Infra d'entraînement | **MacBook M1 (PyTorch MPS) en nominal**, cloud en escalade chiffrée (> 48 h projetées) ; iPad M4 = device de test, pas d'entraînement (limite iPadOS) | ✅ Tranché (matériel PO) |
+| [D10](D10_INFRA_ENTRAINEMENT.md) | Infra d'entraînement | **MacBook M1 (PyTorch MPS) en nominal**, cloud en escalade chiffrée (> 48 h projetées) ; iPad M4 = device de test, pas d'entraînement (limite iPadOS) | ✅ Tranché — validée par 9 runs |
+| [D11](D11_MODELE_PRODUCTION.md) | Modèle de production DET | **SSDLite (BSD-3) candidat V1** — prouvé de bout en bout (0.826 mAP, export 7,6 Mo parité parfaite) ; YOLOX/RT-DETR = escalade si cibles realworld ratées | ✅ Tranché (07/07) |
 
 ---
 
