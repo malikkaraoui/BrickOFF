@@ -37,7 +37,7 @@ de vision sur un parc de devices homogène avant de doubler la surface (justific
 | **CH-0** Légal & préalables | 🟢 **~95 %** | Licences vérifiées + revue adversaire passée ; marque libre ; brevets : risque nul pour le guidage V1.5. Restent 2 emails de confirmation (PO) |
 | **CH-1** Dataset | 🟢 **Jalons 1.1 + 1.3-DET clos** | 1,03 M d'images certifiées ; détection convertie en YOLO avec validation numérique + visuelle |
 | **CH-2** Entraînement | 🟢 **DET It.4 / CLS en cours** | Détection : **0.826** (champion det_v3, itérations gelées jusqu'au verdict TAS) ; classification 1000 pièces : top-5 ✅ 95,7 %, top-1 en approche |
-| **CH-3** Export CoreML | 🟡 **Dry-run validé** | det_v3 → mlpackage 7,6 Mo, parité FP32 parfaite, NMS embarqué — 5 pièges documentés |
+| **CH-3** Export mobile | 🟡 **Dry-runs iOS + Android validés** | CoreML 7,6 Mo et ONNX 14,9 Mo, parité parfaite des deux côtés — la voie Android V2 est prouvée dès maintenant |
 | **CH-4** Fondations iOS | 🟢 **CLOS (4.1→4.4)** | Navigation 3 onglets, permission caméra testable (22 tests verts), CI GitHub Actions active — reste le run sur device (PO) |
 | **CH-5** Pipeline scan | 🟡 **Cœur fait** | Caméra + agrégateur multi-frames + écran de revue → inventaire (92 tests) ; reste le branchement des modèles réels |
 | **CH-6** Inventaire | 🟢 **CLOS** | Persistance GRDB + annulation de scan + écran fonctionnel (48 tests verts) |

@@ -67,7 +67,8 @@ Conséquence contractuelle : l'entrée DET du contrat §1.5 (640×640) sera amen
 
 ## 5. Voie Android (validation en cours)
 
-Le plan de base (D01 : mêmes poids PyTorch, export TFLite/ONNX en V2) est en validation PRATIQUE :
-export ONNX du champion + parité onnxruntime + recommandation de runtime 2026 — résultats dans
-`docs/research/ANDROID_EXPORT_PATH.md` et CHANGELOG_CH3. Si la parité tient comme côté CoreML,
-la promesse "iOS d'abord sans hypothéquer Android" sera tenue par des chiffres, pas des intentions.
+**✅ VALIDÉE (07/07)** : DetModel.onnx 14,9 Mo, parité PyTorch↔onnxruntime PARFAITE (IoU 1.000,
+50 images, protocole identique au CoreML), NMS embarqué en op standard, normalisation in-graph.
+Runtime V2 recommandé : ONNX Runtime Mobile + XNNPACK (NNAPI déprécié — piège évité). INT8
+dynamique testé et rejeté avec preuve. Détail : `docs/research/ANDROID_EXPORT_PATH.md`.
+Le plan de base Android (D01) est CONFIRMÉ : mêmes poids, même wrapper, deux exports.
