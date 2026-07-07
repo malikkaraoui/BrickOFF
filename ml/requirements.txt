@@ -2,8 +2,11 @@ albucore==0.0.24
 albumentations==2.0.8
 annotated-types==0.7.0
 anyio==4.14.1
+attrs==26.1.0
+cattrs==26.1.0
 certifi==2026.6.17
 click==8.4.2
+coremltools==9.0
 filelock==3.29.5
 fsspec==2026.6.0
 h11==0.16.0
@@ -24,6 +27,8 @@ packaging==26.2
 pandas==3.0.3
 pillow==12.3.0
 pillow-heif==1.4.0
+protobuf==7.35.1
+pyaml==26.7.0
 pyarrow==24.0.0
 pycocotools==2.0.11
 pydantic==2.13.4
