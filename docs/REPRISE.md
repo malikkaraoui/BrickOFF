@@ -2,7 +2,7 @@
 
 > **Si l'exécutant actuel (humain ou IA) disparaît, ce document permet de reprendre le projet
 > sans perte.** Il est mis à jour à chaque étape significative. Dernière mise à jour :
-> **2026-07-05 (matin)**.
+> **2026-07-07 (bilan d'étape committé)**.
 
 ## 1. Ordre de lecture pour reprendre à froid
 
@@ -40,18 +40,11 @@
   Meilleur modèle : `ml/runs/det_v1/best.pt` (mAP@50 test 0.773, rappel max 0.985).
 - Datasets : acquisition et intégrité TERMINÉES (jalon 1.1 clos) — ne rien relancer.
 
-## 4. File d'attente des prochaines actions (dans l'ordre)
+## 4. File d'attente des prochaines actions
 
-1. **CH-S (plan complet : `docs/plan/16_PIPELINE_SYNTHETIQUE.md` v1.1)** : préflight (gate) →
-   S.0 set TAS (photos PO !) → assets → générateur → 10 k images → It.3 comparatif A/B/C.
-2. Jalon 1.2 — scope des 1000 classes : nécessite les CSV Rebrickable (⚠️ téléchargement MANUEL
-   depuis rebrickable.com/downloads — pas de script, clause anti-automation, cf.
-   `legal/REBRICKABLE_LICENSE.md`) : sets, inventories, inventory_parts, parts, colors, themes.
-4. Jalon 1.5 — palette LAB depuis colors.csv (script 06, à écrire).
-5. CH-4 jalons 4.3 (navigation + permission caméra) et 4.4 (CI GitHub Actions).
-6. Pipeline synthétique de scènes DET (doc 14 §2.1) : partir de `research/ldr_tools_blender` (MIT),
-   s'inspirer de `research/LegoBrickClassification` (SANS copier — pas de licence).
-7. Baseline DET sur M1 (D10) une fois 1.1–1.4 faits.
+**Le plan de vol adapté fait foi : `docs/plan/17_BILAN_ENTRAINEMENTS.md` §4** (verdict TAS →
+bilan CLS → itérations post-TAS → branchement modèle réel CH-5 → CSV Rebrickable → CH-3 réel).
+Les 3 itérations DET restantes sont GELÉES jusqu'au verdict TAS. D11 : SSDLite = candidat production.
 
 ## 5. Actions en attente côté product owner (Malik)
 
