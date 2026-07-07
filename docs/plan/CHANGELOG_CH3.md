@@ -91,3 +91,35 @@ Parité FP32 = 1.0 ⇒ la ré-implémentation est bit-fidèle au postprocess tor
 .venv/bin/python ml/export/export_det.py --precision fp32 --out ml/export/DetModel_fp32.mlpackage
 .venv/bin/python ml/export/parity_check.py               # 50 images, rapport JSON + exit code
 ```
+
+## 2026-07-07 — Voie Android — dry-run (garde-fou amendement D01) ✅ VALIDÉE
+
+Pendant Android du dry-run ci-dessus, même champion det_v3. Détails, étude des runtimes
+2026 et risques : **`docs/research/ANDROID_EXPORT_PATH.md`**.
+
+- **Export OK** : `ml/export/export_det_onnx.py` — le wrapper `SSDLiteDetCore` d'
+  `export_det.py` est réutilisé TEL QUEL → `DetModel.onnx` (opset 18, FP32, **14,91 Mo**,
+  budget ≤ 15 Mo tenu sans marge — FP16/quantization statique = étape future).
+  NMS **embarqué** via l'op ONNX standard `NonMaxSuppression` (même contrat de sortie
+  qu'iOS) ; fallback `--nms external` (3234 sorties fixes) validé aussi. Normalisation
+  **in-graph** (`x*2/255 - 1` — pas d'équivalent ImageType en ONNX) : le client Android
+  envoie des pixels RGB bruts 0-255, CHW, resize scaleFill.
+- **Parité PARFAITE** (`parity_check_onnx.py`, protocole identique à `parity_check.py` :
+  50 images test, seed 42, CPU vs CPU) : IoU min/moy **1.000/1.000**, Δscore max **0.000**,
+  top-1 **39/39**, 0 orpheline → **PASS** (rapport `parity_report_det_onnx.json`).
+- **Quantization dynamique testée et REJETÉE** : 4,18 Mo mais parité effondrée
+  (IoU moy 0.79, top-1 1/38 — rapport `parity_report_det_onnx_int8dyn.json` conservé,
+  modèle supprimé). La voie taille = FP16 ou QDQ statique calibrée (jalon 3.3 Android).
+- **Runtime recommandé (étude sourcée dans le doc)** : **ONNX Runtime Mobile + XNNPACK EP**
+  (NonMaxSuppression natif, zéro conversion en plus). NNAPI déprécié depuis Android 15 —
+  à proscrire. Plan B GPU/NPU : LiteRT via litert-torch, en repartant de `--nms external`.
+- Env : `onnx`, `onnxruntime`, `onnxscript` (+ deps) ajoutés à `ml/requirements.txt`.
+  Exporter TorchScript legacy utilisé, mais chemin dynamo testé OK (pas d'impasse).
+- Reste (vrai chantier Android, V2) : validation on-device (AAR onnxruntime-android,
+  chaîne Bitmap→tensor, latence XNNPACK), FP16/QDQ + re-parité, taille de l'AAR (custom
+  build si besoin).
+
+```bash
+.venv/bin/python ml/export/export_det_onnx.py            # DetModel.onnx (NMS embarqué)
+.venv/bin/python ml/export/parity_check_onnx.py          # 50 images, rapport JSON + exit code
+```
