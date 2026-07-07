@@ -49,17 +49,19 @@
   confirmés, chaîne synthétique LDraw→Blender existante en MIT, `rebrickable-sqlite` pour CH-7,
   Brickognize pour la pré-annotation). Non normatif ; à re-vérifier à l'exécution.
 
-## Ce qui n'est PAS encore tranché (à traiter au fil des chantiers)
+## Ce qui n'est PAS encore tranché (mise à jour 07/07)
 
-- Verdict licence Rebrickable (CH-0 jalon 0.1 — nécessite lecture réelle des CGU à date)
-- Choix final YOLOX vs RT-DETR vs autre (CH-0 jalon 0.3 — l'écosystème bouge, D02 fixe seulement le critère : licence permissive)
-- NMS embarqué dans le modèle CoreML ou en Swift (CH-3 jalon 3.1)
-- Pub V1.1 : go/no-go après les chiffres de la V1 (D03)
+- Confirmation écrite Rebrickable (email PO envoyé ? — verdict CH-0 favorable, confirmation en attente)
+- Verdict TAS du chantier synthétique (attend les photos PO — conditionne les 3 itérations DET gelées)
+- Fusion de molds côté classification (attend l'éval des paires confondues, fin de cls_v0)
+- Pub V1.1 : premium "sans pub" complémentaire — go/no-go après chiffres V1 (D03)
+- ~~NMS CoreML~~ tranché : embarqué (dry-run CH-3) · ~~YOLOX vs RT-DETR~~ tranché : D11 (SSDLite candidat, escalade possible)
 
-## État d'avancement global
+## État d'avancement global (07/07/2026)
 
-**Aucun chantier n'a démarré.** Prochaine étape d'exécution : **CH-0 (préalables légaux)**,
-en intégrant D02 (framework permissif par défaut) et D08 (BrickOFF candidat n°1).
+**Suivre `../../REPRISE.md` (état instantané) et le README (feuille de route).** En bref :
+CH-0 ~95 % · CH-1 jalons 1.1/1.3-DET clos · CH-2 DET It.4 (0.826) + CLS en cours · CH-S complet
+sauf verdict TAS · CH-3 dry-run validé · CH-4 clos · CH-5 cœur fait · CH-6 clos.
 
 ## Procédure pour tout nouvel arbitrage
 

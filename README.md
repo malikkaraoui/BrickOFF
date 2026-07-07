@@ -30,13 +30,13 @@ La vision complète est dans **[docs/VISION.md](docs/VISION.md)**. En résumé :
 de vision sur un parc de devices homogène avant de doubler la surface (justification :
 [D01](docs/plan/ARBITRAGES/D01_PLATEFORME.md)).
 
-### Avancement V1, chantier par chantier — *mis à jour le 2026-07-06 soir*
+### Avancement V1, chantier par chantier — *mis à jour le 2026-07-07*
 
 | Chantier | État | Dernier fait marquant |
 |---|---|---|
 | **CH-0** Légal & préalables | 🟢 **~95 %** | Licences vérifiées + revue adversaire passée ; marque libre ; brevets : risque nul pour le guidage V1.5. Restent 2 emails de confirmation (PO) |
 | **CH-1** Dataset | 🟢 **Jalons 1.1 + 1.3-DET clos** | 1,03 M d'images certifiées ; détection convertie en YOLO avec validation numérique + visuelle |
-| **CH-2** Entraînement | 🟢 **It.3 gagnée** | mAP@50 test 0.679 → **0.820** grâce aux 10 000 scènes synthétiques (mélange 70/30) ; verdict TAS en attente des photos réelles |
+| **CH-2** Entraînement | 🟢 **DET It.4 / CLS en cours** | Détection : **0.826** (champion det_v3, itérations gelées jusqu'au verdict TAS) ; classification 1000 pièces : top-5 ✅ 95,7 %, top-1 en approche |
 | **CH-3** Export CoreML | 🟡 **Dry-run validé** | det_v3 → mlpackage 7,6 Mo, parité FP32 parfaite, NMS embarqué — 5 pièges documentés |
 | **CH-4** Fondations iOS | 🟢 **CLOS (4.1→4.4)** | Navigation 3 onglets, permission caméra testable (22 tests verts), CI GitHub Actions active — reste le run sur device (PO) |
 | **CH-5** Pipeline scan | 🟡 **Cœur fait** | Caméra + agrégateur multi-frames + écran de revue → inventaire (92 tests) ; reste le branchement des modèles réels |
@@ -47,6 +47,24 @@ de vision sur un parc de devices homogène avant de doubler la surface (justific
 | **CH-10** Release | ⬜ | Monétisation actée : gratuit + pub ([D03](docs/plan/ARBITRAGES/D03_MONETISATION.md)) |
 
 État détaillé et reprise : **[docs/REPRISE.md](docs/REPRISE.md)** · Journaux : `docs/plan/CHANGELOG_CH*.md`
+
+### Journal des entraînements (le nerf du projet)
+
+Bilan complet et leçons : **[docs/plan/17_BILAN_ENTRAINEMENTS.md](docs/plan/17_BILAN_ENTRAINEMENTS.md)**
+
+| Run | Changement unique | mAP@50 photos test | Enseignement |
+|---|---|---|---|
+| det_v0 | baseline | 0.679 | La val mélangée trompe l'arrêt |
+| det_v0.1 | bugfix supervision | 0.763 | La supervision propre vaut plus que tout tuning |
+| det_v1 | augmentation forte | 0.773 | Le modèle voit (rappel 0.985), il doute |
+| det_v2C | **synthétique seul** | 0.666 | Les 10 k scènes Blender transfèrent au réel |
+| det_v2A | mélange 70 réel/30 synth | 0.820 | La recette de référence |
+| **det_v3** ⭐ | + rotations ±45° & crop (idées PO) | **0.826** | Confiance sur cadrages imparfaits |
+| cls_v0 🔄 | classification 1 000 pièces | top-5 95,7 % ✅ / top-1 74 % | En cours — cible top-1 : 80 % |
+
+Modèle de production acté : SSDLite (BSD-3), validé de l'entraînement à l'export CoreML 7,6 Mo
+([D11](docs/plan/ARBITRAGES/D11_MODELE_PRODUCTION.md)). Prochaine porte : le **verdict TAS**
+(photos réelles de tas — le cas produit).
 
 ## Architecture (V1)
 
