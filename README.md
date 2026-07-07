@@ -37,9 +37,9 @@ de vision sur un parc de devices homogène avant de doubler la surface (justific
 | **CH-0** Légal & préalables | 🟢 **~95 %** | Licences vérifiées + revue adversaire passée ; marque libre ; brevets : risque nul pour le guidage V1.5. Restent 2 emails de confirmation (PO) |
 | **CH-1** Dataset | 🟢 **Jalons 1.1 + 1.3-DET clos** | 1,03 M d'images certifiées ; détection convertie en YOLO avec validation numérique + visuelle |
 | **CH-2** Entraînement | 🟢 **It.3 gagnée** | mAP@50 test 0.679 → **0.820** grâce aux 10 000 scènes synthétiques (mélange 70/30) ; verdict TAS en attente des photos réelles |
-| **CH-3** Export CoreML | ⬜ | Attend CH-2 |
+| **CH-3** Export CoreML | 🟡 **Dry-run validé** | det_v3 → mlpackage 7,6 Mo, parité FP32 parfaite, NMS embarqué — 5 pièges documentés |
 | **CH-4** Fondations iOS | 🟢 **CLOS (4.1→4.4)** | Navigation 3 onglets, permission caméra testable (22 tests verts), CI GitHub Actions active — reste le run sur device (PO) |
-| **CH-5** Pipeline scan | ⬜ | Attend CH-3 + CH-4 |
+| **CH-5** Pipeline scan | 🟡 **Cœur fait** | Caméra + agrégateur multi-frames + écran de revue → inventaire (92 tests) ; reste le branchement des modèles réels |
 | **CH-6** Inventaire | 🟢 **CLOS** | Persistance GRDB + annulation de scan + écran fonctionnel (48 tests verts) |
 | **CH-7** Matching | ⬜ | Attend CH-6 + CSV Rebrickable |
 | **CH-8** UI/UX | ⬜ | Design en piste parallèle (session dédiée : icône, assets stores) |
