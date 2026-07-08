@@ -1,0 +1,153 @@
+[
+  {
+    "image": "session_01__IMG_5692.jpg",
+    "keep": ["K0", "K1", "K2", "K5", "K6", "K8", "K10", "K12"],
+    "add": ["C2"],
+    "hard": [],
+    "manual": [
+      {"x": 0.220, "y": 0.1515, "w": 0.084, "h": 0.057, "hard": false},
+      {"x": 0.2747, "y": 0.212, "w": 0.0973, "h": 0.0455, "hard": false},
+      {"x": 0.6513, "y": 0.2445, "w": 0.174, "h": 0.058, "hard": false},
+      {"x": 0.8053, "y": 0.279, "w": 0.1307, "h": 0.0645, "hard": false},
+      {"x": 0.7433, "y": 0.041, "w": 0.138, "h": 0.238, "hard": false},
+      {"x": 0.8407, "y": 0.1995, "w": 0.138, "h": 0.0845, "hard": false},
+      {"x": 0.6793, "y": 0.294, "w": 0.270, "h": 0.125, "hard": false},
+      {"x": 0.132, "y": 0.2675, "w": 0.066, "h": 0.1835, "hard": false},
+      {"x": 0.4593, "y": 0.434, "w": 0.2153, "h": 0.075, "hard": false},
+      {"x": 0.3487, "y": 0.418, "w": 0.0747, "h": 0.0855, "hard": false},
+      {"x": 0.392, "y": 0.434, "w": 0.0647, "h": 0.092, "hard": false},
+      {"x": 0.1913, "y": 0.494, "w": 0.210, "h": 0.151, "hard": false},
+      {"x": 0.1933, "y": 0.542, "w": 0.2187, "h": 0.087, "hard": false},
+      {"x": 0.0553, "y": 0.541, "w": 0.116, "h": 0.080, "hard": false},
+      {"x": 0.5773, "y": 0.589, "w": 0.052, "h": 0.036, "hard": false},
+      {"x": 0.152, "y": 0.965, "w": 0.0793, "h": 0.035, "hard": false},
+      {"x": 0.1853, "y": 0.0, "w": 0.076, "h": 0.026, "hard": false},
+      {"x": 0.0, "y": 0.2175, "w": 0.0187, "h": 0.090, "hard": true},
+      {"x": 0.9747, "y": 0.306, "w": 0.0253, "h": 0.077, "hard": true}
+    ],
+    "notes": "Aveugle 28, final 28 (8 keep + 1 add + 19 manual, dont 2 hard). Zooms originale sur 4 zones. K9/K13 doublons, K7/K14 boites-union (2 pieces), K3/K4/K11/K15/K16 trop laches (IoU<0.6 vs mesures zoom) remplacees par manuels; C0/C1/C5/C6 mal cadrees remplacees. Doutes: lime coupee bord haut (~30% visible, gardee normale), tuile navy bord bas (~35%, normale), pyramide sand derriere plaque K5 (~40%)."
+  },
+  {
+    "image": "session_01__IMG_5693.jpg",
+    "keep": ["K0", "K2", "K3"],
+    "add": ["C2"],
+    "hard": [],
+    "manual": [
+      {"x": 0.0947, "y": 0.200, "w": 0.1373, "h": 0.114, "hard": false},
+      {"x": 0.0053, "y": 0.2125, "w": 0.104, "h": 0.114, "hard": false},
+      {"x": 0.4187, "y": 0.611, "w": 0.1107, "h": 0.068, "hard": false},
+      {"x": 0.5027, "y": 0.5715, "w": 0.1747, "h": 0.0615, "hard": false}
+    ],
+    "notes": "Aveugle 8, final 8. Zoom confirme que la charniere rouge = 2 pieces physiques (aile+disque pivot / aile) -> K1 (boite union) remplacee par 2 manuels. K4 union ronde navy + coin bleu supprimee; C3/C4 coupaient les pieces -> 2 manuels mesures au zoom. C6 = FP sur bois nu, ignoree. C2 (tuile trans-bleue) bien cadree."
+  },
+  {
+    "image": "session_01__IMG_5694.jpg",
+    "keep": ["K0", "K1", "K5"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.1933, "y": 0.239, "w": 0.508, "h": 0.157, "hard": false},
+      {"x": 0.0333, "y": 0.370, "w": 0.0973, "h": 0.148, "hard": false},
+      {"x": 0.100, "y": 0.3745, "w": 0.366, "h": 0.179, "hard": false},
+      {"x": 0.440, "y": 0.364, "w": 0.130, "h": 0.147, "hard": false}
+    ],
+    "notes": "Aveugle 5-6 (assemblage bleu incertain), final 7: le zoom montre que l'assemblage bleu = 3 pieces (plaque 1x2 gauche + plaque d'attelage a trou centrale + plaque 1x2 droite, joints visibles). K2/K4 boites-union et K3 lache (debordait 110px sur l'attelage) -> 4 manuels. K5 = plaque bleue coupee bord bas-gauche, ~40% visible, normale. C0 union geante ignoree."
+  },
+  {
+    "image": "session_01__IMG_5695.jpg",
+    "keep": ["K0", "K1"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.8947, "y": 0.836, "w": 0.1053, "h": 0.133, "hard": false},
+      {"x": 0.809, "y": 0.945, "w": 0.191, "h": 0.055, "hard": true}
+    ],
+    "notes": "Aveugle 4 LEGO (+ cable blanc et embout plastique = distracteurs non annotes), final 4. Aucune candidate C. 2 pieces ratees en bas a droite ajoutees en manuel apres zoom: plaque bleue 1x2 coupee bord droit (~50% visible, normale) et grande piece plate bleue coupee par le coin bas-droit (fraction visible incertaine ~20-35% -> hard)."
+  },
+  {
+    "image": "session_01__IMG_5696.jpg",
+    "keep": ["K0", "K2", "K3", "K4", "K5"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.372, "y": 0.6055, "w": 0.2093, "h": 0.2355, "hard": false},
+      {"x": 0.5107, "y": 0.631, "w": 0.1533, "h": 0.233, "hard": false}
+    ],
+    "notes": "Aveugle 7 LEGO (+ cable, chargeur Apple = distracteurs sans boite, ok), final 7. K1 couvrait les DEUX pieces rouges (plaque 2x4 + wedge 2x4, seam confirme au zoom) -> remplacee par 2 manuels. K5: connecteur Technic noir 2L avec fente = piece LEGO unique, gardee. Sliver vert bord gauche <10% ignore."
+  },
+  {
+    "image": "session_01__IMG_5697.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K5"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.430, "y": 0.394, "w": 0.2367, "h": 0.1885, "hard": false}
+    ],
+    "notes": "Aveugle 6 LEGO (+ pince a linge grise = distracteur), final 6. K4 = boite sur la pince a linge -> FP supprime. K6 ne couvrait que le centre de la plante lime 4 feuilles (IoU~0.5) -> manuel englobant. C0/C4/C5 sur la pince ignorees. K5 (plaque 1x2 vert fonce) un peu lache mais acceptable (IoU~0.62)."
+  },
+  {
+    "image": "session_01__IMG_5698.jpg",
+    "keep": ["K4", "K5"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.1067, "y": 0.844, "w": 0.1987, "h": 0.097, "hard": false}
+    ],
+    "notes": "Aveugle 3, final 3. K5 englobe bien la plante lime entiere (IoU~0.8); K0-K3/K6/K7 = 6 doublons partiels sur la meme plante, supprimes. K4 = ronde verte 1x1, bonne. Piece sand green en bas a gauche (dans l'ombre) ratee par tout -> manuel. Ombre de main/telephone non annotee. C0 et autres C = fragments/bois, ignorees."
+  },
+  {
+    "image": "session_01__IMG_5699.jpg",
+    "keep": ["K0", "K1", "K2", "K4", "K5", "K6", "K8", "K9", "K13"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.1133, "y": 0.064, "w": 0.6347, "h": 0.232, "hard": false},
+      {"x": 0.9147, "y": 0.0725, "w": 0.0853, "h": 0.0875, "hard": false},
+      {"x": 0.9453, "y": 0.444, "w": 0.0547, "h": 0.072, "hard": false},
+      {"x": 0.5013, "y": 0.515, "w": 0.1233, "h": 0.0885, "hard": false},
+      {"x": 0.0, "y": 0.6925, "w": 0.1867, "h": 0.1075, "hard": false},
+      {"x": 0.3047, "y": 0.561, "w": 0.2233, "h": 0.0585, "hard": false},
+      {"x": 0.4487, "y": 0.603, "w": 0.126, "h": 0.066, "hard": false},
+      {"x": 0.1147, "y": 0.758, "w": 0.228, "h": 0.071, "hard": false},
+      {"x": 0.0, "y": 0.7435, "w": 0.078, "h": 0.0765, "hard": false},
+      {"x": 0.040, "y": 0.772, "w": 0.076, "h": 0.0815, "hard": false},
+      {"x": 0.0, "y": 0.8215, "w": 0.0367, "h": 0.0695, "hard": true},
+      {"x": 0.0, "y": 0.8995, "w": 0.0713, "h": 0.0485, "hard": false},
+      {"x": 0.2367, "y": 0.896, "w": 0.050, "h": 0.047, "hard": false},
+      {"x": 0.332, "y": 0.0, "w": 0.098, "h": 0.029, "hard": true}
+    ],
+    "notes": "Aveugle 23, final 23 (4 zooms). K9 = pente-toit bleue unique (face gauche a l'ombre, pas 2 pieces). K7 (plaque rouge 2x12, boite 2x trop grande), K10, K15, K14 laches -> manuels mesures; K3/K11/K12 boites-union du cluster bas-gauche -> 3 manuels (brique bleue 1x2, brique 1x1 sand metallisee, wedge bleu). 2 hard: sliver navy bord haut (~15%), piece bleue a douille coincee entre bord gauche et brique 2x2 (~15-25%). C9 (ronde trans-jaune) debordait -> manuel."
+  },
+  {
+    "image": "session_01__IMG_5700.jpg",
+    "keep": ["K0", "K1", "K2", "K3"],
+    "add": ["C1", "C2", "C4"],
+    "hard": [],
+    "manual": [
+      {"x": 0.2613, "y": 0.8235, "w": 0.074, "h": 0.062, "hard": false},
+      {"x": 0.2547, "y": 0.8795, "w": 0.068, "h": 0.0505, "hard": false},
+      {"x": 0.3513, "y": 0.8815, "w": 0.076, "h": 0.1185, "hard": false},
+      {"x": 0.176, "y": 0.9225, "w": 0.0727, "h": 0.025, "hard": true}
+    ],
+    "notes": "Aveugle 10, final 11: le zoom montre que la 'chaise' sand = 2 briques headlight 1x1 empilees -> K4 (union) remplacee par 2 manuels. K5 doublon du support rouge (K3) supprime. C0/C7 mal centrees sur la brique navy coupee bord bas -> manuel (~40% visible, normale). 1 hard: sliver dore/pearl sous la plaque vert fonce du coin bas (~10-15%). C8 = ombre/bois, ignoree."
+  },
+  {
+    "image": "session_01__IMG_5701.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4"],
+    "add": ["C1", "C4", "C6", "C7"],
+    "hard": [],
+    "manual": [
+      {"x": 0.1353, "y": 0.394, "w": 0.166, "h": 0.087, "hard": false},
+      {"x": 0.0, "y": 0.519, "w": 0.1587, "h": 0.062, "hard": false},
+      {"x": 0.7567, "y": 0.4075, "w": 0.2433, "h": 0.3875, "hard": false},
+      {"x": 0.0467, "y": 0.6845, "w": 0.1953, "h": 0.0945, "hard": false},
+      {"x": 0.0287, "y": 0.945, "w": 0.2647, "h": 0.055, "hard": false},
+      {"x": 0.4733, "y": 0.895, "w": 0.120, "h": 0.105, "hard": false},
+      {"x": 0.1233, "y": 0.0, "w": 0.0913, "h": 0.0225, "hard": true},
+      {"x": 0.4373, "y": 0.9725, "w": 0.0707, "h": 0.0275, "hard": true},
+      {"x": 0.5467, "y": 0.8925, "w": 0.050, "h": 0.0725, "hard": true},
+      {"x": 0.0, "y": 0.7025, "w": 0.020, "h": 0.0485, "hard": true}
+    ],
+    "notes": "Aveugle ~18-19, final 19 (stylo navy = distracteur non annote). GROS rate detecteur: le pare-brise trans-rouge (piece majeure, coupee bord droit) n'avait AUCUNE boite -> manuel. K5 debordait sur la brique-log sand, K6/C0/C3 laches -> manuels (bracket lime, corne lime, plaque wedge navy 2x2 mesuree au zoom). 4 hard: piece verte coupee bord haut, sliver sand bord bas-centre, corne tan derriere la plante lime (~25%?), sliver mint bord gauche. Doute: plaque sand coupee bord bas-gauche gardee normale (~30-40% visible)."
+  }
+]

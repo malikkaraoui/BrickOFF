@@ -1,0 +1,119 @@
+[
+  {
+    "image": "session_01__IMG_5702.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4", "K5", "K6", "K7", "K8", "K9", "K11"],
+    "add": ["C1", "C2", "C3"],
+    "hard": [],
+    "manual": [
+      {"x": 0.0, "y": 0.0, "w": 0.17, "h": 0.048, "hard": false},
+      {"x": 0.0, "y": 0.21, "w": 0.027, "h": 0.07, "hard": true},
+      {"x": 0.787, "y": 0.0, "w": 0.05, "h": 0.014, "hard": true},
+      {"x": 0.0, "y": 0.56, "w": 0.036, "h": 0.094, "hard": true},
+      {"x": 0.911, "y": 0.57, "w": 0.089, "h": 0.042, "hard": false},
+      {"x": 0.407, "y": 0.379, "w": 0.169, "h": 0.112, "hard": false}
+    ],
+    "notes": "Aveugle 16-19, final 20 : amas bleu résolu à 4 pièces via crops (brique 1x2 + 2 pièces à téton troué formant charnière + plaque 1x2 dessous en manual) ; K10 doublon de K11 sur la 2e tuile verte, supprimé. Adds : C1 poisson, C2 brique vert foncé bord droit, C3 container sand-green. Manual : plaque rouge coin sup-gauche, corne lime bord droit, plaque bleue du bas, + 3 hard (rouge bord gauche, lime bord haut, pièce sombre bord gauche, 10-25% visibles). Clip métallique du stylo (bas droite) et sliver lime <10% en haut : non annotés. Candidates rejetées : C0/C4/C5/C6/C7/C8/C10/C11 (doublons, partiels ou table). Doute résiduel : découpage exact charnière bleue ; choix K11 vs K10 sur tuile verte 2."
+  },
+  {
+    "image": "session_01__IMG_5703.jpg",
+    "keep": ["K0", "K1", "K2", "K4"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [
+      {"x": 0.805, "y": 0.004, "w": 0.093, "h": 0.112, "hard": false},
+      {"x": 0.884, "y": 0.0, "w": 0.116, "h": 0.159, "hard": false},
+      {"x": 0.915, "y": 0.472, "w": 0.085, "h": 0.07, "hard": false},
+      {"x": 0.891, "y": 0.0, "w": 0.086, "h": 0.01, "hard": true}
+    ],
+    "notes": "Aveugle 9, final 9. K3 supprimé : une seule boîte fusionnant les 2 pièces bleues du coin sup-droit (brique 1x2 + garde-boue 1x2 avec arche, vérifié par crop) -> 2 manual. Manual aussi : brique verte 1x1 bord droit (ratée par tout le monde) + sliver vert bord haut (~10-15% -> hard). FPs rejetés : C1 (table/ombre), C2 (capuchon du stylo). Stylo et moyeu... le moyeu noir K4 est bien marqué (c)LEGO, gardé."
+  },
+  {
+    "image": "session_01__IMG_5704.jpg",
+    "keep": ["K0", "K1", "K2", "K4"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [
+      {"x": 0.813, "y": 0.162, "w": 0.114, "h": 0.135, "hard": false},
+      {"x": 0.907, "y": 0.149, "w": 0.053, "h": 0.052, "hard": false},
+      {"x": 0.947, "y": 0.133, "w": 0.053, "h": 0.071, "hard": false}
+    ],
+    "notes": "Aveugle 7-9, final 8. K3 supprimé : boîte unique sur le groupe charnière rouge = 3 pièces distinctes (plaque 1x2 verticale, plaque ronde 1x1, plaque 1x2 coupée par le bord droit, vérifié par crop) -> 3 manual. C0 ajouté : coin de plaque bleue bord droit ; le liseré sombre dessous = face latérale/sliver <10%, non annoté."
+  },
+  {
+    "image": "session_01__IMG_5705.jpg",
+    "keep": ["K0", "K1", "K2", "K4", "K5", "K6"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [
+      {"x": 0.574, "y": 0.247, "w": 0.079, "h": 0.121, "hard": false},
+      {"x": 0.627, "y": 0.238, "w": 0.062, "h": 0.047, "hard": false},
+      {"x": 0.674, "y": 0.233, "w": 0.126, "h": 0.095, "hard": false}
+    ],
+    "notes": "Aveugle 10, final 10. Même trio charnière rouge que 5704 : K3 (boîte fusionnée) supprimé -> 3 manual. C0 ajouté : tuile rouge coupée bord droit. FPs rejetés : C2 (gros objet noir rond en haut à gauche, non-LEGO), C1 (sliver de table entre plaque bleue et plaque navy). K6 gardé pour la plaque navy bord droit (boîte un peu lâche en haut)."
+  },
+  {
+    "image": "session_01__IMG_5706.jpg",
+    "keep": ["K0", "K1"],
+    "add": [],
+    "hard": [],
+    "manual": [],
+    "notes": "Aveugle 2, final 2. Scène simple : aile rouge 2x4 retournée (K0) + plaque rouge 1x2 retournée (K1), les deux bien cadrées. Aucune candidate, ombres ignorées."
+  },
+  {
+    "image": "session_01__IMG_5707.jpg",
+    "keep": ["K0", "K1", "K2", "K3"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [],
+    "notes": "Aveugle 5, final 5. C0 ajouté : tuile bleue 1x4 coupée par le bord haut, ratée par les K. Coin d'iPhone en haut à droite, bois de chaise et jean en bas : non-LEGO, correctement non annotés."
+  },
+  {
+    "image": "session_01__IMG_5708.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4", "K5", "K6", "K7", "K10", "K11", "K12", "K13", "K14"],
+    "add": ["C2", "C3", "C5", "C7", "C9", "C14"],
+    "hard": [],
+    "manual": [
+      {"x": 0.0, "y": 0.0, "w": 0.073, "h": 0.058, "hard": false},
+      {"x": 0.013, "y": 0.028, "w": 0.08, "h": 0.068, "hard": false},
+      {"x": 0.357, "y": 0.395, "w": 0.053, "h": 0.038, "hard": false},
+      {"x": 0.27, "y": 0.513, "w": 0.11, "h": 0.118, "hard": false},
+      {"x": 0.46, "y": 0.505, "w": 0.093, "h": 0.04, "hard": false},
+      {"x": 0.17, "y": 0.85, "w": 0.09, "h": 0.065, "hard": false},
+      {"x": 0.49, "y": 0.818, "w": 0.133, "h": 0.103, "hard": false},
+      {"x": 0.0, "y": 0.818, "w": 0.05, "h": 0.063, "hard": false},
+      {"x": 0.0, "y": 0.223, "w": 0.02, "h": 0.043, "hard": true}
+    ],
+    "notes": "Scène dense. Aveugle ~26+-2, final 28. Labels vérifiés par zooms : K0=plateau 6x12, K6=courbe navy, K4=base vert foncé, K13=outil navy (gardé pour l'outil, cadrage lâche à gauche). Supprimés : K8 (boîte multi-pièces sable+wedge), K9 (doublon K7 sur aile rouge). Adds : C2 plaque d'angle sand, C3 slope sand 1x1 droite, C5+C7 les 2 éléments sand 1x1 empilés (interprétés 2 pièces), C9 wedge vert foncé, C14 rond vert 1x1. Manual : brique+slope verts coin sup-gauche (2), tuile 1x1 vert foncé, plaque sand 1x4, tuile sand 1x2, slope bleu, hélice lime (la boîte K près du moyeu cadrait mal), brique verte bord gauche, sliver rouge bord gauche (hard). Rejetés : C0 (à cheval navy/plaque sand), C4/C8/C10/C11/C12/C13 (doublons, partiels, table). Doutes : sable C5/C7 1 vs 2 pièces ; outil navy compté 1 (fragments non distinguables) ; petit élément sand bord gauche sous la base K4 considéré comme partie de la base."
+  },
+  {
+    "image": "session_01__IMG_5709.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K5", "K6", "K7", "K8"],
+    "add": ["C0", "C1", "C3"],
+    "hard": [],
+    "manual": [
+      {"x": 0.686, "y": 0.844, "w": 0.192, "h": 0.156, "hard": false},
+      {"x": 0.626, "y": 0.911, "w": 0.132, "h": 0.089, "hard": false},
+      {"x": 0.853, "y": 0.928, "w": 0.147, "h": 0.072, "hard": false}
+    ],
+    "notes": "Aveugle 14+-1, final 14. Cadre rouge en C = 1 seule pièce (K3 gardé, C2 doublon interne rejeté) ; mécanisme sand du bas = 1 pièce continue (crop), K7 la cadre bien, C10 doublon. K4 supprimé : ne couvrait que la moitié gauche de la longue tuile navy (C8 = l'autre moitié) -> manual. Manual aussi : courbe vert foncé coupée en bas, plaque sand 1x2 coin bas-droit (C14 décalée vers le haut, rejetée). Adds : C0 slope navy bas-gauche, C1 rouge 1x1 à tenon latéral bord droit, C3 brique sand 1x2. Bac plastique transparent + contenu rouge occlus en haut à droite : non annotés (indistinguables). Rejetés : C4/C9 partiels sur slope imprimé, C5/C6/C7/C11/C12/C13 (table, ombre, doublons)."
+  },
+  {
+    "image": "session_01__IMG_5710.jpg",
+    "keep": ["K0", "K1", "K2", "K4"],
+    "add": ["C1"],
+    "hard": [],
+    "manual": [
+      {"x": 0.152, "y": 0.371, "w": 0.167, "h": 0.194, "hard": false},
+      {"x": 0.277, "y": 0.532, "w": 0.073, "h": 0.18, "hard": false}
+    ],
+    "notes": "Aveugle 7, final 7. Empilement rouge = 2 pièces : K1 gardé pour la plaque 2x6 du dessous (boîte legerement large), manual pour la plaque 1x6 à tenons latéraux posée dessus. Manual aussi : lame courbe rouge (C2 contenait ~40% de table à gauche, rejetée). K2 gardé pour la plante verte (quasi complète, légère troncature à droite) ; K3 + C0/C3/C4/C5 = boîtes partielles sur la plante, rejetées. C1 ajouté : curved slope rouge 1x2."
+  },
+  {
+    "image": "session_01__IMG_5711.jpg",
+    "keep": ["K0", "K1", "K2", "K3"],
+    "add": ["C0", "C2"],
+    "hard": [],
+    "manual": [],
+    "notes": "Aveugle 6, final 6. Labels vérifiés par zoom : K1=wedge inversé bleu, K2=plaque bleue 1x4 retournée, K3=aile verte retournée, K0=plaque rouge 2x4. Adds : C0 demi-cylindre bleu, C2 slope sand 1x1. Fond tissu très texturé : nombreuses candidates fantômes sur le motif (C1, C4, C7, C9, C11, C13, C14, C5, C3', C6, C8) toutes rejetées comme FPs texture ou boîtes partielles."
+  }
+]

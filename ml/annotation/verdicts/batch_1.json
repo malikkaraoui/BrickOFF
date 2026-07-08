@@ -1,0 +1,168 @@
+[
+  {
+    "image": "session_01__IMG_5669.jpg",
+    "keep": ["K0"],
+    "add": ["C2"],
+    "hard": [],
+    "manual": [
+      {"x": 0.4576, "y": 0.2794, "w": 0.0570, "h": 0.1157, "hard": false},
+      {"x": 0.4812, "y": 0.2943, "w": 0.1240, "h": 0.1438, "hard": false},
+      {"x": 0.5407, "y": 0.3042, "w": 0.1116, "h": 0.1207, "hard": false},
+      {"x": 0.6300, "y": 0.2960, "w": 0.0570, "h": 0.1091, "hard": false},
+      {"x": 0.6510, "y": 0.4233, "w": 0.1687, "h": 0.0694, "hard": false}
+    ],
+    "notes": "Aveugle: 7 pieces, final 7. Le cluster bleu = 4 pieces distinctes (2 plates 1x2 + 2 plates 3x2 a trou superposees, seams verifies au zoom) -> K2 (englobe les 4) rejetee, 4 manuelles. K0 garde la wedge bleue 4x2. K1/K3 = stylo+scene (FP). K4 trop lache pour la plate rouge 1x4 (mord sur la wedge), C4 coupe le 1er tenon -> manuelle. C2 cadre la 1x2 rouge du bas."
+  },
+  {
+    "image": "session_01__IMG_5670.jpg",
+    "keep": ["K0", "K3", "K4"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.5456, "y": 0.1230, "w": 0.0781, "h": 0.0721, "hard": false},
+      {"x": 0.6013, "y": 0.1528, "w": 0.0632, "h": 0.1266, "hard": false},
+      {"x": 0.5878, "y": 0.3981, "w": 0.0923, "h": 0.0847, "hard": false},
+      {"x": 0.5828, "y": 0.4656, "w": 0.0585, "h": 0.0741, "hard": false},
+      {"x": 0.6454, "y": 0.4762, "w": 0.0546, "h": 0.0701, "hard": false},
+      {"x": 0.6768, "y": 0.5337, "w": 0.0583, "h": 0.1157, "hard": false},
+      {"x": 0.7140, "y": 0.5387, "w": 0.0637, "h": 0.2219, "hard": false},
+      {"x": 0.7661, "y": 0.6058, "w": 0.0595, "h": 0.0909, "hard": false},
+      {"x": 0.7104, "y": 0.6779, "w": 0.1505, "h": 0.1888, "hard": false}
+    ],
+    "notes": "Aveugle: 12 pieces, final 12. K0=gros slope bleu, K3=tuile rouge 2x4, K4=plate navy 1x4 a 2 tenons (verifiee au zoom, 1 seule piece). K1 coupe la tuile bleu roi et chevauche 3 pieces; K2 englobe lavande+1x4+trans; K5 geante (stylo) -> rejetees. Aucune candidate correcte -> 9 manuelles: 2 plates rouges 1x2 (charniere = 2 pieces), coin bleu, brique ronde navy, 1x1 trans-clair, lavande 1x2, plate bleue 1x4, brique 1x1 trans-bleue, tuile bleu roi 1x4."
+  },
+  {
+    "image": "session_01__IMG_5672.jpg",
+    "keep": ["K0", "K3", "K5"],
+    "add": ["C0", "C3", "C6"],
+    "hard": [],
+    "manual": [
+      {"x": 0.4051, "y": 0.5288, "w": 0.1042, "h": 0.0652, "hard": false},
+      {"x": 0.5076, "y": 0.7242, "w": 0.1290, "h": 0.0818, "hard": false},
+      {"x": 0.6028, "y": 0.4184, "w": 0.0741, "h": 0.0759, "hard": false},
+      {"x": 0.6525, "y": 0.4234, "w": 0.1488, "h": 0.0942, "hard": false},
+      {"x": 0.7252, "y": 0.4918, "w": 0.1237, "h": 0.0729, "hard": false},
+      {"x": 0.7563, "y": 0.5315, "w": 0.0946, "h": 0.0637, "hard": false}
+    ],
+    "notes": "Aveugle: 12 pieces, final 12. K0=brique rouge 2x4, K3=plate verte 2x2, K5=brique verte incurvee. K1/K2/K6 multi-pieces (cluster bleu+cable), K4 geante (cable USB) -> rejetees. C0=brique sand 1x2, C3=bracket vert, C6=tuile 100$ (marge basse dans l'ombre, seule boite complete). C8 coupe 22% de la plate navy -> manuelle; C4 coupe le coin droit de la plate d'angle sand -> manuelle. Cluster bleu = 4 pieces (comme 5669) -> 4 manuelles."
+  },
+  {
+    "image": "session_01__IMG_5673.jpg",
+    "keep": ["K0", "K1", "K2"],
+    "add": ["C0", "C1", "C4"],
+    "hard": [],
+    "manual": [
+      {"x": 0.5711, "y": 0.4829, "w": 0.0721, "h": 0.0905, "hard": false}
+    ],
+    "notes": "Aveugle: 7 pieces, final 7. K0=wedge navy 4x2, K1=tuile bleue 1x6 (coupe ~4% de la pointe gauche, acceptable), K2=plate bleue 1x6 coupee par le bord haut. C0=petit slope bleu, C1=bracket bleu 1x2, C4=plate bleue 1x2. C3 coupe la pointe du triangle rouge (~15% largeur) -> manuelle. Doute: le triangle rouge plat ressemble a une tuile triangulaire LEGO (epaisseur/aretes coherentes), annote comme LEGO."
+  },
+  {
+    "image": "session_01__IMG_5674.jpg",
+    "keep": ["K0", "K2", "K3", "K6", "K11", "K12", "K13"],
+    "add": ["C0", "C7"],
+    "hard": [],
+    "manual": [
+      {"x": 0.2341, "y": 0.2326, "w": 0.1184, "h": 0.1024, "hard": false},
+      {"x": 0.6121, "y": 0.7488, "w": 0.1319, "h": 0.0575, "hard": false},
+      {"x": 0.5784, "y": 0.8053, "w": 0.1488, "h": 0.0982, "hard": false},
+      {"x": 0.4729, "y": 0.8363, "w": 0.0880, "h": 0.0791, "hard": false},
+      {"x": 0.7781, "y": 0.5789, "w": 0.2219, "h": 0.0650, "hard": false},
+      {"x": 0.8492, "y": 0.6531, "w": 0.1204, "h": 0.0841, "hard": false},
+      {"x": 0.7312, "y": 0.6714, "w": 0.0856, "h": 0.0459, "hard": false},
+      {"x": 0.0764, "y": 0.4996, "w": 0.1025, "h": 0.0461, "hard": false},
+      {"x": 0.2166, "y": 0.6226, "w": 0.0599, "h": 0.0461, "hard": false},
+      {"x": 0.4881, "y": 0.5752, "w": 0.0513, "h": 0.0729, "hard": false},
+      {"x": 0.7437, "y": 0.0, "w": 0.0992, "h": 0.0335, "hard": false}
+    ],
+    "notes": "Aveugle: ~20 pieces, final 20. Keeps: K0 tuile bleue 1x6, K2 plate verte 2x4, K3 wedge rouge sup, K6 tuile navy, K11 wedge verte, K12 wedge rouge inf (K7 doublon plus lache rejete), K13 plate sand 1x4. K1 englobait les 2 pieces rouges du bas (clip + garde-boue) -> 2 manuelles. K4/K10 stylo, K5 coupe la plate rouge 2x6, K8 multi, K9 coupe 27% du slope navy -> manuelles. Manuelles aussi: brique verte 2x2 (C1 coupait le bas), brique sand 1x2 (C3 coupait 14%), tuile sand (C4 coupait 7%), tuile 1x1 verte, bracket 1x1 sand (2 volets, traite comme 1 piece - leger doute), pin Technic noir, coin bleu coupe par le bord haut (~35-40% visible, non hard)."
+  },
+  {
+    "image": "session_01__IMG_5675.jpg",
+    "keep": ["K0", "K1", "K4"],
+    "add": ["C0", "C1"],
+    "hard": [],
+    "manual": [
+      {"x": 0.3085, "y": 0.5548, "w": 0.0959, "h": 0.0670, "hard": false},
+      {"x": 0.3396, "y": 0.5655, "w": 0.1333, "h": 0.1248, "hard": false},
+      {"x": 0.4620, "y": 0.6059, "w": 0.0648, "h": 0.0928, "hard": false},
+      {"x": 0.5202, "y": 0.6176, "w": 0.0476, "h": 0.0794, "hard": false},
+      {"x": 0.0, "y": 0.3671, "w": 0.0394, "h": 0.0578, "hard": true}
+    ],
+    "notes": "Aveugle: 10 pieces, final 10 (dont 1 hard). K0=plate rouge 4x6, K1=arche rouge, K4=slope navy 2x2 (coupe 3% en bas, ok). K2 englobe le cluster bleu, K3=stylo -> rejetees. C0=slope rouge 1x2 pailletee (coupe 5% a droite, acceptable), C1=plate rouge 2x2 a tenon central. Cluster bowtie bleu = 4 pieces -> 4 manuelles (C2/C4/C10/C12 toutes multi). Coin de plate navy coupe au bord gauche ~15-20% visible -> manuelle hard."
+  },
+  {
+    "image": "session_01__IMG_5676.jpg",
+    "keep": ["K0", "K3", "K4", "K5", "K6"],
+    "add": ["C2", "C5"],
+    "hard": [],
+    "manual": [
+      {"x": 0.0198, "y": 0.4303, "w": 0.1868, "h": 0.1476, "hard": false},
+      {"x": 0.1885, "y": 0.4762, "w": 0.0529, "h": 0.0521, "hard": false},
+      {"x": 0.1670, "y": 0.5246, "w": 0.0976, "h": 0.0397, "hard": false},
+      {"x": 0.0182, "y": 0.5469, "w": 0.0761, "h": 0.0670, "hard": false},
+      {"x": 0.0645, "y": 0.5407, "w": 0.0678, "h": 0.0496, "hard": false},
+      {"x": 0.0, "y": 0.6114, "w": 0.0496, "h": 0.0632, "hard": false},
+      {"x": 0.0, "y": 0.3425, "w": 0.0185, "h": 0.0575, "hard": true},
+      {"x": 0.6207, "y": 0.5018, "w": 0.0741, "h": 0.0573, "hard": false},
+      {"x": 0.5661, "y": 0.5628, "w": 0.1055, "h": 0.0382, "hard": false}
+    ],
+    "notes": "Aveugle: ~16 pieces, final 16 (dont 1 hard). K0=tuile bleue 1x6, K3=tuile rouge 2x4, K4=wedge navy, K5=tuile navy 1x3, K6=wedge bleue. K2 etait sur l'appareil photo de l'iPhone (FP non-LEGO notable). K1 englobait tout le cluster gauche -> rejetee, 6 manuelles (slope bleu, cylindre navy, coin violet, brique bleu clair, 1x1 trans, lime Technic ~50% visible). C2=plate bleue 2x2, C5=brique rouge 1x2. C0 englobait les 2 plates rouges en charniere -> 2 manuelles. Sliver lime bord gauche ~10-20% -> manuelle hard."
+  },
+  {
+    "image": "session_01__IMG_5679.jpg",
+    "keep": ["K0", "K1", "K2", "K4", "K5", "K6", "K8", "K9", "K11"],
+    "add": ["C0", "C1", "C3", "C5", "C6", "C7", "C14", "C9"],
+    "hard": ["C9"],
+    "manual": [
+      {"x": 0.2903, "y": 0.8999, "w": 0.0592, "h": 0.0568, "hard": false},
+      {"x": 0.9580, "y": 0.6270, "w": 0.0420, "h": 0.0412, "hard": true},
+      {"x": 0.0, "y": 0.0446, "w": 0.0278, "h": 0.0719, "hard": true},
+      {"x": 0.0, "y": 0.1166, "w": 0.0317, "h": 0.0422, "hard": true}
+    ],
+    "notes": "Aveugle: ~21 pieces, final 21 (dont 4 hard). Keeps: K0/K4 wedges rouges, K1 gros cockpit vert (coupe 2% de la pointe), K2 tuile sand 2x4, K5 tuile navy, K6 plate sand 1x4, K8 plate d'angle sand, K9 plate verte 2x4 bas (K12 doublon decale rejete), K11 plate verte 2x2 haut. K3/K7/K10 = pince a linge/multi -> rejetees. Adds: C0 brique verte 2x2, C1 plate verte 2x2 bord droit (~65% visible), C3 tuile dentee vert fonce, C5 slope courbe sand, C6 bracket sand 1x1, C7 slope bleu, C14 plate 1x2 vert fonce, C9 plate rouge coupee bord droit ~20% -> hard. Manuelles: tuile 1x1 verte (C13 coupait 33%), coin bleu bord droit ~25% (hard, doute), piece olive sombre et dome lime au bord gauche ~10-20% (hard). C2/C10 multi sur les pieces du bord -> rejetees."
+  },
+  {
+    "image": "session_01__IMG_5680.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4", "K5", "K10", "K11", "K15"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.9616, "y": 0.0, "w": 0.0384, "h": 0.0273, "hard": true},
+      {"x": 0.5889, "y": 0.2912, "w": 0.0999, "h": 0.1739, "hard": false},
+      {"x": 0.1739, "y": 0.5169, "w": 0.1273, "h": 0.0880, "hard": false},
+      {"x": 0.4200, "y": 0.6402, "w": 0.1101, "h": 0.0548, "hard": false},
+      {"x": 0.8042, "y": 0.5040, "w": 0.1958, "h": 0.1076, "hard": false},
+      {"x": 0.8740, "y": 0.5563, "w": 0.1174, "h": 0.0806, "hard": false},
+      {"x": 0.4888, "y": 0.6895, "w": 0.2057, "h": 0.0347, "hard": false},
+      {"x": 0.3700, "y": 0.7250, "w": 0.1521, "h": 0.0885, "hard": false},
+      {"x": 0.0, "y": 0.8534, "w": 0.0800, "h": 0.0379, "hard": false},
+      {"x": 0.0119, "y": 0.9710, "w": 0.0212, "h": 0.0290, "hard": true}
+    ],
+    "notes": "Aveugle: 19 pieces, final 19 (dont 2 hard). Keeps: K0 plate quart-de-cercle, K1 gros cockpit vert, K2 tuile 2x4 vert fonce, K3 slope vert 2x2, K4 tuile bleue 1x6 (verifiee contenue), K5 panneau vert 1x4, K10 plate verte 2x2 droite, K11 plate sand coin haut-gauche, K15 croissant vert. Rejets: K6 pince a linge, K7 englobait tuile sand + triangle sand (2 manuelles), K8 2x trop haute pour la plate bleue 2x2 (manuelle), K9 coupait pommeau+pointe de la dague (manuelle), K12 4x trop haute pour le sabre (manuelle), K13/C1/C3/C6/C7 mal cadrees sur la piece vert fonce du bord gauche (manuelle, ~60% visible), K14 coupait la pointe du slope bleu (manuelle). Aussi manuelles: plate 1x2 vert fonce, coin bleu haut-droit ~10% (hard), sliver gris coin bas-gauche (hard). Toutes les candidates C rejetees."
+  },
+  {
+    "image": "session_01__IMG_5681.jpg",
+    "keep": ["K0", "K1", "K4", "K8", "K10", "K13"],
+    "add": ["C4", "C7", "C8"],
+    "hard": [],
+    "manual": [
+      {"x": 0.6677, "y": 0.0734, "w": 0.1157, "h": 0.1756, "hard": false},
+      {"x": 0.7424, "y": 0.0422, "w": 0.2530, "h": 0.1389, "hard": false},
+      {"x": 0.8380, "y": 0.1034, "w": 0.0949, "h": 0.0655, "hard": false},
+      {"x": 0.7596, "y": 0.1734, "w": 0.2073, "h": 0.1024, "hard": false},
+      {"x": 0.9358, "y": 0.1344, "w": 0.0642, "h": 0.1401, "hard": false},
+      {"x": 0.8614, "y": 0.2245, "w": 0.1141, "h": 0.0521, "hard": false},
+      {"x": 0.8618, "y": 0.2758, "w": 0.1121, "h": 0.0384, "hard": false},
+      {"x": 0.7742, "y": 0.3163, "w": 0.0595, "h": 0.0424, "hard": false},
+      {"x": 0.8125, "y": 0.3053, "w": 0.1835, "h": 0.1121, "hard": false},
+      {"x": 0.6415, "y": 0.3485, "w": 0.0860, "h": 0.0533, "hard": false},
+      {"x": 0.3234, "y": 0.3576, "w": 0.1098, "h": 0.0950, "hard": false},
+      {"x": 0.0, "y": 0.6496, "w": 0.1968, "h": 0.0826, "hard": false},
+      {"x": 0.0, "y": 0.7334, "w": 0.0976, "h": 0.0516, "hard": false},
+      {"x": 0.0470, "y": 0.7753, "w": 0.1911, "h": 0.0461, "hard": false},
+      {"x": 0.4881, "y": 0.7369, "w": 0.0899, "h": 0.0828, "hard": false},
+      {"x": 0.0883, "y": 0.8092, "w": 0.0956, "h": 0.1878, "hard": false}
+    ],
+    "notes": "Aveugle: 26 -> corrige 25 (le 2e strip bleu du coin bas-gauche etait en fait la pointe de la plate bleue 2x2, verifie au zoom). Keeps: K0 quart-de-cercle, K1 tuile sand 2x4 (coupe 2%), K4 wedge verte, K8 panneau vert, K10 slope vert (leger chevauchement pointe du croissant), K13 dague. Adds: C4 brique bleue a tenons creux (verifiee, coupes <=5%), C7 slope inverse lime, C8 plate bleue 2x2 (coupe 8% d'un coin). 11 K rejetees (K2/K3/K5/K6/K7/K9/K11/K12/K14/K15/K16 toutes multi-pieces dans les clusters denses). 16 manuelles: brique 1x4 vert fonce, tuile bleue 1x6 diagonale, slope rouge, wedge navy, brique bleu vif bord droit (~50% visible), brique sand 1x2, plate bleue 1x2, ronde trans-verte, cimeterre, olive 1x1, croissant, tuile 2x4 vert fonce bord gauche, plate vert fonce bord gauche, sabre, triangle sand, strip tuile bleue."
+  }
+]

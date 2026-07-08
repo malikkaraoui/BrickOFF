@@ -1,0 +1,92 @@
+[
+  {
+    "image": "session_01__IMG_5712.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4", "K5"],
+    "add": [],
+    "hard": [],
+    "manual": [],
+    "notes": "Decompte aveugle 6 = final 6. Doute leve par zoom : le cluster bleu de gauche (K2) est UNE seule piece (wedge vu de dessous, bords continus, tubes anti-studs + structure nervuree sur le meme moulage). Aucun FP, aucune candidate necessaire."
+  },
+  {
+    "image": "session_01__IMG_5713.jpg",
+    "keep": ["K2", "K3", "K4"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [
+      {"x": 0.544, "y": 0.505, "w": 0.141, "h": 0.143, "hard": false},
+      {"x": 0.574, "y": 0.618, "w": 0.137, "h": 0.089, "hard": false}
+    ],
+    "notes": "Decompte aveugle 6 = final 3 keep + 1 add + 2 manual = 6. FP supprimes : K0 (chargeur, non-LEGO) et K1 (une seule boite englobant DEUX pieces : wedge verte + slope bleue, ne cadre correctement aucune des deux). Manual 1 = wedge verte 2x4, manual 2 = slope bleue ~70% visible sous la wedge (>25%, pas hard). C0 choisi plutot que C1 (plus serre sur la brique sand-green) ; C2 sur du bois nu, ignoree."
+  },
+  {
+    "image": "session_01__IMG_5714.jpg",
+    "keep": ["K0", "K1", "K2", "K4"],
+    "add": ["C2"],
+    "hard": [],
+    "manual": [
+      {"x": 0.633, "y": 0.611, "w": 0.163, "h": 0.106, "hard": false}
+    ],
+    "notes": "Decompte aveugle 6 = final 4 keep + 1 add + 1 manual = 6. FP supprimes : K5 (chargeur) ; K3 rejetee (bord haut ~125px dans la wedge verte, IoU ~0.5 avec la slope bleue). K2 contient entierement la wedge verte (leger slack en bas, acceptable). Manual = slope bleue ~70% visible sous la wedge (pas hard). C2 = brique sand-green ; autres cyan (C3-C8) sur chargeur/bois, ignorees."
+  },
+  {
+    "image": "session_01__IMG_5715.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [],
+    "notes": "Decompte aveugle 6 = final 6. FP supprime : K5 (chargeur). C0 retenue pour la brique sand-green (coupe minime de la face ombre a droite) ; C3 trop lache (deborde sur bois/plaque rouge) ; C1/C2/C4 sur le chargeur, ignorees."
+  },
+  {
+    "image": "session_01__IMG_5716.jpg",
+    "keep": ["K0", "K1", "K2", "K4", "K5"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [],
+    "notes": "Decompte aveugle 6 = final 6. FP supprime : K3 (boite lache a cheval sur wedge bleue + slope bleue, doublon). K1 (label masque par les cyan) cadre bien la wedge verte malgre l'ombre portee ; K5 = plaque bleue 1x4 ; C0 = slope sand-green. Candidates C2/C5/C8/C9/C10/C12/C13/C14 = fragments partiels, ignorees. Ombre = distracteur non annote."
+  },
+  {
+    "image": "session_01__IMG_5717.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [],
+    "notes": "Decompte aveugle 6 = final 6. Aucun FP rouge. C0 = slope sand-green ; C1 rejetee (a cheval wedge bleue + slope bleue). Grille propre."
+  },
+  {
+    "image": "session_01__IMG_5718.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [],
+    "notes": "Decompte aveugle 6 = final 6. Aucun FP. K0 un peu lache a droite (dans l'ombre) mais contient bien la wedge verte. C0 = slope sand-green."
+  },
+  {
+    "image": "session_01__IMG_5719.jpg",
+    "keep": ["K0", "K1", "K2"],
+    "add": ["C0", "C1"],
+    "hard": [],
+    "manual": [],
+    "notes": "Decompte aveugle 5 = final 5. Toutes pieces bleues. C0 = tuile 1x2 bas-droite ; C1 = brique 1x2 sombre vue de dessous (C1 rogne ~10% de la paroi gauche, accepte car meilleure candidate disponible) ; C2 rejetee (a cheval slope courbe + tuile). Noeuds du bois non annotes."
+  },
+  {
+    "image": "session_01__IMG_5720.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4", "K5"],
+    "add": ["C0"],
+    "hard": [],
+    "manual": [
+      {"x": 0.020, "y": 0.640, "w": 0.087, "h": 0.096, "hard": false},
+      {"x": 0.047, "y": 0.632, "w": 0.071, "h": 0.091, "hard": false}
+    ],
+    "notes": "Decompte aveugle 9 = final 6 keep + 1 add + 2 manual = 9. Zoom decisif sur le cluster gauche : DEUX pieces (brique 1x2 bleu vif vue de dessous + tuile navy sombre posee en travers, depassant du contour de la brique) ; C1 = boite union des deux, rejetee -> 2 manual (manual 1 = brique bleue, manual 2 = tuile navy, chacune >25% visible, pas hard). K5 contient la tuile B et C0 contient la tuile A (chevauchement leger mutuel, fits moyens mais chaque boite contient sa piece en entier). C2/C3 boites laches multi-pieces, ignorees."
+  },
+  {
+    "image": "session_01__IMG_5721.jpg",
+    "keep": ["K0", "K1", "K2", "K3", "K4", "K5"],
+    "add": [],
+    "hard": [],
+    "manual": [
+      {"x": 0.750, "y": 0.0, "w": 0.072, "h": 0.154, "hard": false}
+    ],
+    "notes": "Decompte aveugle 7 = final 6 keep + 1 manual = 7. Deux pieces coupees par le bord haut du cadre (regle 5, parties dans le cadre >25% visibles, pas hard) : la droite est bien cadree par K4 ; la gauche n'a aucune boite correcte (K6 coupe le quart bas + gros slack a gauche, IoU~0.45 ; C0 rogne gauche/bas et deborde sur la piece de droite, IoU~0.42) -> K6 supprimee, C0 ignoree, boite manual."
+  }
+]
