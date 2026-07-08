@@ -427,8 +427,12 @@ def jitter_hsv(rng: random.Random, hexstr: str, jcfg: dict) -> tuple[str, dict]:
 
 
 def sample_pieces(rng: random.Random, cfg: dict, parts_pool: dict, palette: dict,
-                  n: int) -> list[dict]:
-    """Tire N (part_id, couleur, params matière) : 70 % fréq. empiriques / 30 % uniforme."""
+                  n: int, mono_color: dict | None = None) -> list[dict]:
+    """Tire N (part_id, couleur, params matière) : 70 % fréq. empiriques / 30 % uniforme.
+
+    mono_color (v2) : si fourni, TOUTES les pièces prennent cette couleur (scène monochrome ;
+    le jitter HSV par pièce reste appliqué → réalisme). Les transparents sont désactivés.
+    """
     ids = parts_pool["ids"]
     emp_w = parts_pool["weights_empirical"]
     pm = cfg["piece_material"]
@@ -441,11 +445,14 @@ def sample_pieces(rng: random.Random, cfg: dict, parts_pool: dict, palette: dict
         else:
             pid = ids[rng.randrange(len(ids))]
             src = "uniform"
-        transparent = (ccfg.get("p_transparent", 0.0) > 0.0 and palette.get("trans")
-                       and rng.random() < ccfg["p_transparent"])
+        transparent = (mono_color is None and ccfg.get("p_transparent", 0.0) > 0.0
+                       and palette.get("trans") and rng.random() < ccfg["p_transparent"])
         if transparent:
             col = palette["trans"][rng.randrange(len(palette["trans"]))]
             csrc = "uniform_trans"
+        elif mono_color is not None:
+            col = mono_color
+            csrc = "monochrome"
         elif rng.random() < ccfg["p_uniform_solid"]:
             col = palette["solid"][rng.randrange(len(palette["solid"]))]
             csrc = "uniform_solid"
@@ -1017,7 +1024,16 @@ def generate_scene(job: dict, scene_def: dict) -> dict:
         n = rng.randint(reg["min"], reg["max"])
         params["n_regime"] = ridx
         params["n_pieces"] = n
-        specs = sample_pieces(rng, cfg, job["parts_pool"], job["palette"], n)
+        # v2 : scène monochrome (pièces de même couleur — le cas dur inannotable en réel)
+        mono_color = None
+        if rng.random() < cfg["scene"].get("p_monochrome", 0.0):
+            pal = job["palette"]
+            mono_color = pick_weighted(rng, pal["weighted"], pal["weighted_w"])
+            params["monochrome"] = mono_color["name"]
+        else:
+            params["monochrome"] = None
+        specs = sample_pieces(rng, cfg, job["parts_pool"], job["palette"], n,
+                              mono_color=mono_color)
         pieces = build_pile(rng, cfg, specs, params)
     else:
         params["n_pieces"] = 0
@@ -1045,6 +1061,9 @@ def generate_scene(job: dict, scene_def: dict) -> dict:
     rec["pieces"] = [{k: v for k, v in s.items() if k != "dat"} for s in specs]
     rec["n_labels_positive"] = lab["n_pos"]
     rec["n_labels_hard"] = lab["n_hard"]
+    # v2 : pièces totalement enfouies (coverage ~0) — exclues des labels (principe de visibilité,
+    # doc 18) ; on trace le taux d'enfouissement de la scène.
+    rec["n_buried"] = sum(1 for s in specs if s.get("status") == "dropped_invisible")
     rec["decode_s"] = lab["decode_s"]
     rec["scene_s"] = round(time.perf_counter() - t_scene, 2)
     rec["image"] = str(png.relative_to(out))
