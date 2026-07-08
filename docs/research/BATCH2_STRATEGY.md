@@ -63,3 +63,20 @@ moins de fond (globalement plus facile). Sans impact sur l'annotation. Conséque
 **générateur v2** : randomiser la focale sur **24-56 mm équiv.** (couvre ×1 et ×2), sinon le
 synthétique n'apprendrait qu'une seule perspective. Le crop-zoom (It.4) couvre déjà une partie de
 la variété d'échelle.
+
+## Structure réelle de la fournée 2 (PO, clarification)
+
+La fournée 2 n'est pas homogène — elle a 3 composantes :
+1. **~15 photos "étude 360°"** (pas des tas) : 2 pièces PROBLÉMATIQUES posées à plat, photographiées
+   sous tous les angles et éclairages (méthode "portrait 360°"). But : apprendre au modèle que ces
+   formes = UNE pièce quel que soit l'angle. Les 2 pièces cibles :
+   - **(a) l'articulée bleu clair** (charnière multi-lobes) — le détecteur la fragmente ;
+   - **(b) une pièce à ~60° (pente/wedge)** — souvent confondue avec PLUSIEURS pièces à cause de son angle.
+   Ce sont les photos 8254-8273 (annotées agents A/B : chaque pièce = 1 bbox, 6-11 pièces/photo).
+2. **Tas multicolores variés = 50 pièces** (agents C/D) : ancrage d'entraînement dense.
+3. **Tas monochromes** (33 classés, mais recouvrement avec 1.) : juge par décompte.
+
+### Implication générateur synthétique v2
+Générer les 2 pièces cibles (a) et (b) à **orientations/angles d'ouverture variés** → démultiplie
+l'étude 360° réelle par des milliers de vues synthétiques annotées parfaitement. Correction
+ciblée PAR PIÈCE = stratégie la plus efficace pour ces cas durs (plutôt que noyés dans des tas).
