@@ -1,0 +1,63 @@
+{
+  "source": "fournée 2 PO, 59 photos, zoom x2 (~50mm equiv)",
+  "annotated_pieces": 548,
+  "categories": {
+    "etude_articulee": {
+      "n_photos": 16,
+      "visible_pieces": 111,
+      "per_photo": {
+        "8254": 7,
+        "8256": 7,
+        "8257": 7,
+        "8258": 7,
+        "8263": 7,
+        "8264": 7,
+        "8266": 7,
+        "8267": 11,
+        "8268": 6,
+        "8269": 6,
+        "8270": 6,
+        "8271": 6,
+        "8272": 7,
+        "8273": 8,
+        "8255": 7,
+        "8276": 5
+      }
+    },
+    "etude_plaque_rouge_360": {
+      "n_photos": 8,
+      "visible_pieces": 8,
+      "per_photo": {
+        "8304": 1,
+        "8305": 1,
+        "8306": 1,
+        "8307": 1,
+        "8308": 1,
+        "8309": 1,
+        "8310": 1,
+        "8311": 1
+      }
+    },
+    "tas_50_multicolore": {
+      "n_photos": 9,
+      "visible_pieces": 429,
+      "per_photo": {
+        "8312": 44,
+        "8313": 48,
+        "8314": 48,
+        "8315": 46,
+        "8316": 50,
+        "8317": 49,
+        "8318": 48,
+        "8319": 49,
+        "8320": 47
+      }
+    },
+    "tas_monochrome_JUGE": {
+      "n_photos": 23,
+      "visible_pieces": 0,
+      "note": "non annotés (frontières invisibles) — juge par décompte physique PO, en attente des comptes"
+    }
+  },
+  "role": "ENTRAINEMENT It.5 (batch1 reste le juge)"
+}
