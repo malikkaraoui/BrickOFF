@@ -54,3 +54,12 @@ articulées (bleu) et les tas de pièces identiques (monochromes), à comptage v
 
 **Décompte des tas MONOCHROMES** (les variés = 50, connu). Pour les tas de pièces identiques,
 un nombre approximatif par photo suffit → les transforme en juge par le décompte.
+
+## Métadonnée de capture (PO)
+
+**Fournée 2 prise au zoom ×2** (focale équiv. ~50 mm, téléobjectif) sur toutes les photos — vs
+fournée 1 en ×1 grand-angle (~24-28 mm). Effets : perspective plus plate, pièces plus grandes,
+moins de fond (globalement plus facile). Sans impact sur l'annotation. Conséquence pour le
+**générateur v2** : randomiser la focale sur **24-56 mm équiv.** (couvre ×1 et ×2), sinon le
+synthétique n'apprendrait qu'une seule perspective. Le crop-zoom (It.4) couvre déjà une partie de
+la variété d'échelle.
