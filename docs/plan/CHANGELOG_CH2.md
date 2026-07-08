@@ -81,3 +81,25 @@ v0→v0_1 = effet bugfix+métrique ; v0_1→v1 = effet augmentation.
 - Note d'exécution : l'agent développeur a laissé le compte-rendu inachevé (attentes passives
   répétées) — section rédigée par l'orchestrateur à partir des artefacts réels, tous vérifiés.
 - **À lancer dès que le M1 est libre** (det_v3/It.4 en cours) : `nohup caffeinate -ims ml/runs/run_cls_baseline.sh &`
+
+## 2026-07-08 — Jalon 2.2 ✅ CLOS : baseline classification, cibles dépassées
+
+Arrêt volontaire à l'epoch 24 (time-box : les 2 cibles étaient dépassées depuis l'ep 19 et les
+gains devenaient marginaux ; best = epoch 21). ~30 h de M1 au total (fenêtrage 64 img/classe).
+
+| Éval finale (best.pt) | Top-1 | Top-5 | Cible |
+|---|---|---|---|
+| Test synthétique (20 000 img, 1 000 classes) | **0.825** | **0.981** | 0.80 / 0.95 ✅✅ |
+| Test photos RÉELLES (1 802 img, 155 classes vues) | **0.892** | **0.968** | (hors cible, informel) |
+
+**Paires confondues (entrée de la décision "fusion de molds", doc 14 §2.3)** — le diagnostic
+est conforme à la prédiction : les confusions sont massivement des variantes de moules ou des
+jumelles fonctionnelles : 30367c↔30367b (même pièce, moule différent !), 3737↔3708 (axes
+Technic de longueurs voisines), 3659↔4490 (arches), 4081b↔61252 (plates à clip)…
+→ La fusion en "groupes fonctionnels" est la suite logique (produit-pertinente : ces pièces
+sont interchangeables en construction). Décision à formaliser au moment du scope définitif
+(jalon 1.2, attend les CSV Rebrickable).
+
+Livrables : ml/runs/cls_v0/{config,history,eval_cls_legobricks_test,eval_cls_gdansk_photos_test}.json
+(poids hors git). Le classifieur candidat V1 existe : MobileNetV3, ~22 Mo de poids (budget CH-3
+CLS ≤ 25 Mo tenu avant même quantization).

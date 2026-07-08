@@ -36,7 +36,7 @@ de vision sur un parc de devices homogène avant de doubler la surface (justific
 |---|---|---|
 | **CH-0** Légal & préalables | 🟢 **~95 %** | Licences vérifiées + revue adversaire passée ; marque libre ; brevets : risque nul pour le guidage V1.5. Restent 2 emails de confirmation (PO) |
 | **CH-1** Dataset | 🟢 **Jalons 1.1 + 1.3-DET clos** | 1,03 M d'images certifiées ; détection convertie en YOLO avec validation numérique + visuelle |
-| **CH-2** Entraînement | 🟢 **DET It.4 / CLS en cours** | Détection : **0.826** (champion det_v3, itérations gelées jusqu'au verdict TAS) ; classification 1000 pièces : top-5 ✅ 95,7 %, top-1 en approche |
+| **CH-2** Entraînement | 🟢 **DET 0.826 · CLS validée** | Classification 1000 pièces : **top-1 82,5 % / top-5 98,1 %** (cibles 80/95 dépassées) et 89 % sur photos réelles ; verdict TAS mesuré : rappel 52 % → le travail des 3 itérations restantes |
 | **CH-3** Export mobile | 🟡 **Dry-runs iOS + Android validés** | CoreML 7,6 Mo et ONNX 14,9 Mo, parité parfaite des deux côtés — la voie Android V2 est prouvée dès maintenant |
 | **CH-4** Fondations iOS | 🟢 **CLOS (4.1→4.4)** | Navigation 3 onglets, permission caméra testable (22 tests verts), CI GitHub Actions active — reste le run sur device (PO) |
 | **CH-5** Pipeline scan | 🟡 **Cœur fait** | Caméra + agrégateur multi-frames + écran de revue → inventaire (92 tests) ; reste le branchement des modèles réels |
@@ -60,7 +60,7 @@ Bilan complet et leçons : **[docs/plan/17_BILAN_ENTRAINEMENTS.md](docs/plan/17_
 | det_v2C | **synthétique seul** | 0.666 | Les 10 k scènes Blender transfèrent au réel |
 | det_v2A | mélange 70 réel/30 synth | 0.820 | La recette de référence |
 | **det_v3** ⭐ | + rotations ±45° & crop (idées PO) | **0.826** | Confiance sur cadrages imparfaits |
-| cls_v0 🔄 | classification 1 000 pièces | top-5 95,7 % ✅ / top-1 74 % | En cours — cible top-1 : 80 % |
+| cls_v0 ✅ | classification 1 000 pièces | **top-1 82,5 / top-5 98,1** (cibles dépassées) | 89 % top-1 sur photos réelles ; confusions = variantes de moules → fusion à venir |
 
 Modèle de production acté : SSDLite (BSD-3), validé de l'entraînement à l'export CoreML 7,6 Mo
 ([D11](docs/plan/ARBITRAGES/D11_MODELE_PRODUCTION.md)). Prochaine porte : le **verdict TAS**
