@@ -40,11 +40,11 @@ sim:
   substeps: 20               # défauts Bullet — NE PAS toucher (préflight point 2)
   iterations: 20
   mass: 0.01
-  friction: 0.7
+  friction: 0.32            # v2.1 : pièces glissent et s'étalent (0.7 = trop collant)
   restitution: 0.05
-  drop_extent_base: 0.34     # demi-étendue XY du lâcher pour 20 pièces (unités), échelle sqrt(N/20)
+  drop_extent_base: 0.70     # v2.1 : versement large -> tas ÉTALÉ (fini les montagnes compactes)     # demi-étendue XY du lâcher pour 20 pièces (unités), échelle sqrt(N/20)
   drop_extent_min: 0.12
-  drop_z0: 0.25              # hauteur (bas de pièce) du 1er lâcher (unités)
+  drop_z0: 0.14             # v2.1 : lâcher plus bas -> moins de rebond/empilement              # hauteur (bas de pièce) du 1er lâcher (unités)
   drop_gap: 0.12             # jeu entre sphères englobantes au spawn (>= 2x marge hull 0,04)
   wall_margin: 0.9           # parois invisibles pendant le bake, à drop_extent + margin
   wall_height: 14.0
@@ -125,18 +125,18 @@ colors:
 piece_material:
   # S.3 : plage totale de roughness par pièce = [0.05 ; 0.35] (design inputs §2.2),
   # variation spatiale par noise partagée (rough_noise_scale) + offset UV par pièce.
-  rough_min: [0.05, 0.25]    # borne basse de la roughness bruitée, tirée par pièce
-  rough_span: [0.04, 0.10]   # rough_max = rough_min + span (max 0.35)
+  rough_min: [0.18, 0.40]    # v2.1 : ABS usagé, PAS neuf-de-boîte (0.05 = miroir)
+  rough_span: [0.06, 0.16]   # v2.1 : rough_max jusqu'a ~0.56
   rough_noise_scale: 30.0
   sss_weight: [0.05, 0.15]   # subsurface léger (ABS)
-  bump_strength: [0.005, 0.03]
+  bump_strength: [0.02, 0.07]    # v2.1 : micro-relief de surface plus marqué
   bump_noise_scale: 350.0
   # S.3 : micro-imperfections procédurales SUBTILES (pas de textures externes)
-  scratch_strength: [0.0, 0.12]  # rayures (voronoï anisotrope) ajoutées à la roughness
+  scratch_strength: [0.06, 0.28]  # v2.1 : vraies rayures d'usure (jamais 0)
   scratch_scale: 55.0            # densité des rayures (coordonnées objet étirées)
   scratch_aniso: 8.0             # étirement directionnel (rayures, pas des points)
   scratch_threshold: 0.08        # largeur des rayures (distance voronoï < seuil)
-  dust_strength: [0.0, 0.10]     # poussière (noise pondéré 'up') ajoutée à la roughness
+  dust_strength: [0.05, 0.20]     # v2.1 : poussière/traces toujours présentes
   dust_scale: 6.0
   # S.3 : jitter HSV par pièce (les vraies pièces déteignent/jaunissent)
   hsv_jitter:
@@ -161,16 +161,16 @@ floor:
 hdri:
   class_weights: {warm: 0.50, neutral: 0.25, cold: 0.25}  # ~50 % chauds (plan S.1/S.2)
   rotation_deg: [0.0, 360.0]
-  strength: [0.5, 1.4]
-key_light:                   # lampe additionnelle optionnelle (ombres marquées, biais chaud)
-  p: 0.6
-  p_area: 0.7                # sinon SUN
-  sun_energy: [2.0, 6.0]
-  area_power: [200.0, 1200.0]
-  area_size: [1.5, 5.0]
-  distance: [6.0, 14.0]
-  elevation_deg: [30.0, 75.0]
-  temp_k: [2700.0, 6500.0]
+  strength: [0.25, 0.85]     # v2.1 : HDRI atténué -> la source dominante crée du contraste (moins de fill studio)
+key_light:                   # v2.1 : source dominante quasi toujours -> lumière intérieure casual
+  p: 0.88                    # une pièce/plafonnier/fenêtre domine (fini l'éclairage studio uniforme)
+  p_area: 0.4                # 60 % SUN (ombres nettes, type plafonnier/soleil), 40 % area (fenêtre)
+  sun_energy: [3.0, 9.0]     # plus fort -> plus de contraste et d'ombres portées
+  area_power: [150.0, 900.0]
+  area_size: [0.6, 2.8]      # source plus petite -> ombres plus dures (moins softbox studio)
+  distance: [5.0, 13.0]
+  elevation_deg: [22.0, 72.0]  # inclut des angles bas -> ombres longues (lampe de côté)
+  temp_k: [2600.0, 6800.0]
 
 # --- caméra ------------------------------------------------------------
 camera:
