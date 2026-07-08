@@ -53,3 +53,4 @@ ml/piles_*.png
 ml/*_render.png
 ml/*_check.png
 ml/synth_v2*_smoke*
+ml/runs/cls_smoke*/
