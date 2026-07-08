@@ -89,6 +89,9 @@ def draw_params(rng: random.Random, cfg: dict) -> dict:
     prm["jpeg_quality"] = rng.randint(*cfg["jpeg_quality"])
     prm["sat_boost"] = round(rng.uniform(*cfg["sat_boost"]), 3)
     prm["contrast_s"] = round(rng.uniform(*cfg["contrast_s"]), 3)
+    if cfg.get("auto_exposure", {}).get("enabled"):
+        prm["auto_exposure"] = {"target": cfg["auto_exposure"]["target"],
+                                "max_gain": cfg["auto_exposure"]["max_gain"]}
     return prm
 
 
@@ -134,9 +137,19 @@ def apply_motion_blur(img: Image.Image, m: dict) -> Image.Image:
 
 def apply_sensor(img: Image.Image, prm: dict, nprng: np.random.Generator,
                  base_k: float) -> Image.Image:
-    """Vignettage + dérive AWB + bruit ISO — travaillés en linéaire."""
+    """Auto-exposition + vignettage + dérive AWB + bruit ISO — travaillés en linéaire."""
     a = np.asarray(img, dtype=np.float32) / 255.0
     lin = srgb_to_linear(a)
+    # v2.1 : auto-exposition type téléphone — remonte les scènes trop sombres vers une cible,
+    # mesurée sur le 75e percentile de luminance (le sujet éclairé, robuste au fond sombre).
+    # Ne touche jamais aux scènes déjà bien exposées (gain >= 1, plafonné).
+    ae = prm.get("auto_exposure")
+    if ae:
+        luma = 0.2126 * lin[..., 0] + 0.7152 * lin[..., 1] + 0.0722 * lin[..., 2]
+        key = float(np.percentile(luma, 75))
+        if key < ae["target"]:
+            gain = min(ae["max_gain"], ae["target"] / max(key, 1e-4))
+            lin = np.clip(lin * gain, 0.0, 1.0)
     if "vignette" in prm:
         r = radial_map(img.height, img.width)
         lin *= (1.0 - prm["vignette"] * r * r)[..., None]

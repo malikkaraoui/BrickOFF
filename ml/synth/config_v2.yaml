@@ -201,6 +201,11 @@ distractors:
 # le manifest (clé "postprocess"). Sortie : .jpg (le .png est supprimé).
 postprocess:
   enabled: true
+  # v2.1 : auto-exposition type téléphone (remonte les scènes sombres, ne touche pas aux claires)
+  auto_exposure:
+    enabled: true
+    target: 0.34        # cible du 75e percentile de luminance (linéaire)
+    max_gain: 2.2       # plafond du gain (évite de surexposer)
   # bruit ISO : gaussien (lecture) + poisson léger (photons), en linéaire
   noise_read_sigma: [0.002, 0.010]   # écart-type gaussien (échelle 0-1)
   noise_photon_fullwell: [500, 3000] # photons à pleine échelle (poisson ~ sqrt(I/N))
