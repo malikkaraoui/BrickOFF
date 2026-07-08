@@ -2,7 +2,7 @@
 
 > **Si l'exécutant actuel (humain ou IA) disparaît, ce document permet de reprendre le projet
 > sans perte.** Il est mis à jour à chaque étape significative. Dernière mise à jour :
-> **2026-07-07 (bilan d'étape committé)**.
+> **2026-07-08 (fournée 2 traitée)**.
 
 ## 1. Ordre de lecture pour reprendre à froid
 
