@@ -1,0 +1,261 @@
+{
+  "convention": "red=countable, blue=truncated (geometric, box side within 1.2% of frame edge), orange=hard(10-25% visible)",
+  "source": "50 photos PO session_01, annotées par 5 agents (passe aveugle) + corrections PO 08/07 (fusion pièces articulées/pivot)",
+  "totals": {
+    "countable": 414,
+    "truncated": 102,
+    "hard": 32
+  },
+  "per_image": {
+    "session_01__IMG_5669": {
+      "countable": 4,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5670": {
+      "countable": 11,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5672": {
+      "countable": 9,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5673": {
+      "countable": 6,
+      "truncated": 1,
+      "hard": 0
+    },
+    "session_01__IMG_5674": {
+      "countable": 18,
+      "truncated": 2,
+      "hard": 0
+    },
+    "session_01__IMG_5675": {
+      "countable": 5,
+      "truncated": 1,
+      "hard": 1
+    },
+    "session_01__IMG_5676": {
+      "countable": 14,
+      "truncated": 1,
+      "hard": 1
+    },
+    "session_01__IMG_5679": {
+      "countable": 14,
+      "truncated": 3,
+      "hard": 4
+    },
+    "session_01__IMG_5680": {
+      "countable": 11,
+      "truncated": 6,
+      "hard": 2
+    },
+    "session_01__IMG_5681": {
+      "countable": 17,
+      "truncated": 8,
+      "hard": 0
+    },
+    "session_01__IMG_5682": {
+      "countable": 7,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5683": {
+      "countable": 5,
+      "truncated": 1,
+      "hard": 2
+    },
+    "session_01__IMG_5684": {
+      "countable": 33,
+      "truncated": 5,
+      "hard": 2
+    },
+    "session_01__IMG_5685": {
+      "countable": 9,
+      "truncated": 7,
+      "hard": 2
+    },
+    "session_01__IMG_5686": {
+      "countable": 10,
+      "truncated": 5,
+      "hard": 0
+    },
+    "session_01__IMG_5687": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 1
+    },
+    "session_01__IMG_5688": {
+      "countable": 6,
+      "truncated": 1,
+      "hard": 0
+    },
+    "session_01__IMG_5689": {
+      "countable": 6,
+      "truncated": 2,
+      "hard": 0
+    },
+    "session_01__IMG_5690": {
+      "countable": 13,
+      "truncated": 3,
+      "hard": 2
+    },
+    "session_01__IMG_5691": {
+      "countable": 6,
+      "truncated": 1,
+      "hard": 1
+    },
+    "session_01__IMG_5692": {
+      "countable": 22,
+      "truncated": 4,
+      "hard": 2
+    },
+    "session_01__IMG_5693": {
+      "countable": 6,
+      "truncated": 1,
+      "hard": 0
+    },
+    "session_01__IMG_5694": {
+      "countable": 4,
+      "truncated": 1,
+      "hard": 0
+    },
+    "session_01__IMG_5695": {
+      "countable": 2,
+      "truncated": 1,
+      "hard": 1
+    },
+    "session_01__IMG_5696": {
+      "countable": 7,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5697": {
+      "countable": 5,
+      "truncated": 1,
+      "hard": 0
+    },
+    "session_01__IMG_5698": {
+      "countable": 3,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5699": {
+      "countable": 14,
+      "truncated": 7,
+      "hard": 2
+    },
+    "session_01__IMG_5700": {
+      "countable": 7,
+      "truncated": 2,
+      "hard": 0
+    },
+    "session_01__IMG_5701": {
+      "countable": 9,
+      "truncated": 6,
+      "hard": 4
+    },
+    "session_01__IMG_5702": {
+      "countable": 8,
+      "truncated": 6,
+      "hard": 3
+    },
+    "session_01__IMG_5703": {
+      "countable": 4,
+      "truncated": 3,
+      "hard": 1
+    },
+    "session_01__IMG_5704": {
+      "countable": 4,
+      "truncated": 2,
+      "hard": 0
+    },
+    "session_01__IMG_5705": {
+      "countable": 5,
+      "truncated": 3,
+      "hard": 0
+    },
+    "session_01__IMG_5706": {
+      "countable": 2,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5707": {
+      "countable": 3,
+      "truncated": 2,
+      "hard": 0
+    },
+    "session_01__IMG_5708": {
+      "countable": 22,
+      "truncated": 5,
+      "hard": 1
+    },
+    "session_01__IMG_5709": {
+      "countable": 5,
+      "truncated": 9,
+      "hard": 0
+    },
+    "session_01__IMG_5710": {
+      "countable": 5,
+      "truncated": 1,
+      "hard": 0
+    },
+    "session_01__IMG_5711": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5712": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5713": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5714": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5715": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5716": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5717": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5718": {
+      "countable": 6,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5719": {
+      "countable": 5,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5720": {
+      "countable": 8,
+      "truncated": 0,
+      "hard": 0
+    },
+    "session_01__IMG_5721": {
+      "countable": 6,
+      "truncated": 1,
+      "hard": 0
+    }
+  }
+}
