@@ -1,0 +1,8 @@
+{
+  "model": "det_v3 (champion)",
+  "judge": "dense_holdout (4 tas batch2 jamais vus)",
+  "map50": 0.0639,
+  "recall@0.20": 0.1813,
+  "recall@0.25": 0.0415,
+  "note": "reference JUSTE a battre par It.5b (det_v4b)"
+}
