@@ -1,0 +1,18 @@
+{
+  "dataset_id": "synth_v2 (v2.1 réalisme)",
+  "n_scenes": 12000,
+  "n_background": 335,
+  "n_monochrome": 3396,
+  "n_tres_denses(>=46)": 3022,
+  "labels_positifs": 342541,
+  "labels_hard": 13082,
+  "pieces_enfouies_exclues": 7958,
+  "distracteurs": 5084,
+  "taux_enfouissement_moyen": 0.0227,
+  "n_pieces_min_med_max": [
+    0,
+    29,
+    75
+  ],
+  "config": "config_v2.yaml (denses étalés + monochromes 30% + focale 24-56mm + auto-exposition + matière usée)"
+}
