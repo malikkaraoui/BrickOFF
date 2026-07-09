@@ -255,3 +255,14 @@ Le gain de mAP est marginal (+0,6 pt) mais le **rappel opérationnel au seuil pr
 variés. C'est le meilleur rappel@0.35 jamais mesuré à mAP quasi égal. Champion courant :
 `ml/runs/det_v3/best.pt`. Budget d'itérations : 3/6 consommées, 3 restantes — réservées au
 verdict TAS (set S.0 attendu mercredi).
+
+## 2026-07-09 — It.5 (det_v4) : ne bat pas le mesurable, mais révèle un juge trompeur
+
+Détail : `ml/runs/det_v4/EVAL_IT5.md`.
+- Juge SPARSE (batch1 corrigé) : det_v3 mAP 0.656 → det_v4 **0.576** (léger recul, décalage vers le dense).
+- Mono-pièce : 0.826 → 0.802 (légère régression).
+- **Juge DENSE (9 tas batch2 de 50)** : det_v3 (juste) rappel@0.20 = **0.203** — le champion ne
+  trouve que 20 % des pièces d'un vrai tas ! det_v4 (biaisé/mémorisé) monte à 0.566.
+- **Leçon** : batch1 (éparpillé) mesurait le mauvais cas ; le dense progresse mais non prouvable
+  (fuite train/test). **Champion conservé : det_v3.** Bloquant It.6 : un JUGE DENSE holdout propre
+  (photos PO dédiées jamais entraînées OU décomptes monochromes).

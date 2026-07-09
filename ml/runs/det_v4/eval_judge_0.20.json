@@ -1,0 +1,9 @@
+{
+  "split": "data/processed/realworld_piles/decision",
+  "weights": "ml/runs/det_v4/best.pt",
+  "n_images": 50,
+  "map50": 0.5763,
+  "mar100": 0.8391,
+  "recall_at_threshold": 0.5717,
+  "score_threshold": 0.2
+}
