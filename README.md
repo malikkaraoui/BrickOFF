@@ -36,7 +36,7 @@ de vision sur un parc de devices homogène avant de doubler la surface (justific
 |---|---|---|
 | **CH-0** Légal & préalables | 🟢 **~95 %** | Licences vérifiées + revue adversaire passée ; marque libre ; brevets : risque nul pour le guidage V1.5. Restent 2 emails de confirmation (PO) |
 | **CH-1** Dataset | 🟢 **Jalons 1.1 + 1.3-DET clos** | 1,03 M d'images certifiées ; détection convertie en YOLO avec validation numérique + visuelle |
-| **CH-2** Entraînement | 🟢 **DET 0.826 · CLS validée** | Classification 1000 pièces : **top-1 82,5 % / top-5 98,1 %** (cibles 80/95 dépassées) et 89 % sur photos réelles ; verdict TAS mesuré : rappel 52 % → le travail des 3 itérations restantes |
+| **CH-2** Entraînement | 🟢 **It.5b : dense prouvé** | Sur juge dense équitable, rappel 18%→51% (×2,8) grâce au synthétique v2.1 + tas réels ; det_v4b = champion produit |
 | **CH-3** Export mobile | 🟡 **Dry-runs iOS + Android validés** | CoreML 7,6 Mo et ONNX 14,9 Mo, parité parfaite des deux côtés — la voie Android V2 est prouvée dès maintenant |
 | **CH-4** Fondations iOS | 🟢 **CLOS (4.1→4.4)** | Navigation 3 onglets, permission caméra testable (22 tests verts), CI GitHub Actions active — reste le run sur device (PO) |
 | **CH-5** Pipeline scan | 🟡 **Cœur fait** | Caméra + agrégateur multi-frames + écran de revue → inventaire (92 tests) ; reste le branchement des modèles réels |

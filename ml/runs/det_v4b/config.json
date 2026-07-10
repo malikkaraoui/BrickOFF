@@ -1,0 +1,18 @@
+{
+  "data": "data/processed/detection_it5",
+  "epochs": 60,
+  "batch": 16,
+  "lr": 0.001,
+  "device": "mps",
+  "seed": 42,
+  "limit": null,
+  "aug": "strong",
+  "val_photos_only": true,
+  "synth_dir": "data/processed/synth_v2",
+  "synth_frac": 0.3,
+  "init_weights": null,
+  "patience": 12,
+  "out": "ml/runs/det_v4b",
+  "model": "ssdlite320_mobilenet_v3_large",
+  "started_at": "2026-07-09T23:44:56.701405+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "split": "data/processed/judge_dense_holdout",
+  "weights": "ml/runs/det_v4b/best.pt",
+  "n_images": 4,
+  "map50": 0.0879,
+  "mar100": 0.3316,
+  "recall_at_threshold": 0.513,
+  "score_threshold": 0.2
+}

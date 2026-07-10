@@ -266,3 +266,13 @@ Détail : `ml/runs/det_v4/EVAL_IT5.md`.
 - **Leçon** : batch1 (éparpillé) mesurait le mauvais cas ; le dense progresse mais non prouvable
   (fuite train/test). **Champion conservé : det_v3.** Bloquant It.6 : un JUGE DENSE holdout propre
   (photos PO dédiées jamais entraînées OU décomptes monochromes).
+
+## 2026-07-10 — It.5b (det_v4b) ✅ : le travail dense PROUVÉ (juge holdout équitable)
+
+Détail : `ml/runs/det_v4b/EVAL_IT5b.md`. Juge dense HOLDOUT propre (4 tas jamais entraînés) :
+- **Rappel@0.20 : det_v3 0.181 → det_v4b 0.513** (×2,8, PROUVÉ, pas de mémorisation).
+- mAP dense 0.064 → 0.088 (le modèle trouve les pièces ; localisation dense = prochain chantier).
+- Sparse : mAP 0.656 → 0.607 (léger recul) mais rappel@0.20 0.568 → 0.595 (hausse).
+- Mono-pièce : 0.826 → 0.822 (aucune régression).
+**Nouveau champion produit : det_v4b.** Prochain : juge dense définitif (50 photos PO à venir),
+puis It.6 sur la précision/localisation en dense.
